@@ -1,5 +1,6 @@
 <?php
 use \yii\helpers\Url;
+use app\components\LoginWidget;
 
 ?>
 
@@ -12,11 +13,11 @@ use \yii\helpers\Url;
                 <div class="grid grid_6">
                     <div class="nicdark_focus">
                         <h6 class="white">
-                            <i class="icon-calendar-outlilne"></i>&nbsp;&nbsp;<a class="white"
+                            <i class="icon-calendar-outlilne"></i><a class="white"
                                                                                  href="events.html">OUR
                                 EVENTS</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">·</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <i class="icon-pencil-1"></i>&nbsp;&nbsp;<a class="white" href="blog-masonry.html">NEWS</a>
+                            <span class="grey">·</span>
+                            <i class="icon-pencil-1"></i><a class="white" href="blog-masonry.html">NEWS</a>
 
                         </h6>
                     </div>
@@ -24,11 +25,15 @@ use \yii\helpers\Url;
                 <div class="grid grid_5 right">
                     <div class="nicdark_focus right">
                         <h6 class="white">
-                            <i class="icon-plus-outline"></i>&nbsp;&nbsp;<a class="white nicdark_mpopup_ajax"
-                                                                            href="form-register.html">REGISTER</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">·</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <i class="icon-lock-1"></i>&nbsp;&nbsp;<a class="white nicdark_mpopup_ajax"
-                                                                      href="form-login.html">LOG IN</a>
+
+                            <i class="icon-leaf-1"></i><a class="white"
+                                                                      href="<?=Url::to('admin')?>">ADMIN</a>
+                            <span class="grey">·</span>
+                            <i class="icon-plus-outline"></i><a class="white nicdark_mpopup_window"
+                                                                            href="#register_window">REGISTER</a>
+                            <span class="grey">·</span>
+                            <i class="icon-lock-1"></i><a class="white nicdark_mpopup_window"
+                                                                      href="#login_window">LOG IN</a>
                         </h6>
                     </div>
                 </div>
@@ -36,54 +41,11 @@ use \yii\helpers\Url;
                 <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"><i
                         class="icon-basket-1"></i></a>
 
-                <!--info window for languages-->
-                <div id="nicdark_window" class="nicdark_bg_white nicdark_radius zoom-anim-dialog mfp-hide">
+                <?= LoginWidget::widget() ?>
 
-                    <div class="nicdark_textevidence nicdark_bg_red nicdark_radius_top">
-                        <div class="nicdark_margin20">
-                            <h4 class="white">LANGUAGES</h4>
-                        </div>
-                    </div>
+                <?php /*echo $this->render('//partials/popup/login'); */ ?><!--
+                --><?php /*echo $this->render('//partials/popup/register'); */ ?>
 
-                    <div class="nicdark_margin20">
-
-                        <ul class="nicdark_list border">
-
-                            <li class="nicdark_border_grey">
-                                <p><a class="grey" href="index-2.html">ENGLISH</a><a href="index-2.html"
-                                                                                     class="nicdark_btn right nicdark_opacity"><img
-                                            alt="" width="30" src="img/flag/img1.png"></a></p>
-                                <div class="nicdark_space15"></div>
-                            </li>
-
-                            <li class="nicdark_border_grey">
-                                <div class="nicdark_space15"></div>
-                                <p><a class="grey" href="index-2.html">RUSSIAN</a><a href="index-2.html"
-                                                                                     class="nicdark_btn right nicdark_opacity"><img
-                                            alt="" width="30" src="img/flag/img2.png"></a></p>
-                                <div class="nicdark_space15"></div>
-                            </li>
-
-                            <li class="nicdark_border_grey">
-                                <div class="nicdark_space15"></div>
-                                <p><a class="grey" href="index-2.html">ARABIC</a><a href="index-2.html"
-                                                                                    class="nicdark_btn right nicdark_opacity"><img
-                                            alt="" width="30" src="img/flag/img3.png"></a></p>
-                                <div class="nicdark_space15"></div>
-                            </li>
-
-                            <li class="nicdark_border_grey">
-                                <div class="nicdark_space15"></div>
-                                <p><a class="grey" href="index-2.html">ITALIAN</a><a href="index-2.html"
-                                                                                     class="nicdark_btn right nicdark_opacity"><img
-                                            alt="" width="30" src="img/flag/img4.png"></a></p>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-                <!--end window-->
 
             </div>
         </div>
@@ -111,15 +73,15 @@ use \yii\helpers\Url;
                             </li>
 
                             <li class="orange">
-                                <a href="<?=Url::to('schools')?>">ШКОЛЫ</a>
+                                <a href="<?= Url::to('schools') ?>">ШКОЛЫ</a>
                             </li>
 
                             <li class="orange">
-                                <a href="index-2.html">Блоги</a>
+                                <a href="<?= Url::to('blog') ?>">БЛОГИ</a>
                             </li>
 
                             <li class="orange">
-                                <a href="index-2.html">Видео</a>
+                                <a href="<?= Url::to('video') ?>">ВИДЕО</a>
                             </li>
 
                             <li class="orange">
@@ -138,12 +100,12 @@ use \yii\helpers\Url;
 
 
                             <li class="orange">
-                                <a href="index-2.html">Тренинги</a>
+                                <a href="<?= Url::to('trainings') ?>">ТРЕНИНГИ</a>
                             </li>
 
 
                             <li class="orange">
-                                <a href="index-2.html">Психологи</a>
+                                <a href="<?= Url::to('psychologists') ?>">ПСИХОЛОГИ</a>
                             </li>
                         </ul>
                     </nav>
