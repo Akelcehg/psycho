@@ -16,8 +16,6 @@ use app\components\RegisterWidget;
                     <div class="nicdark_focus right">
                         <h6 class="white">
 
-                            <i class="icon-leaf-1"></i><a class="white" href="<?= Url::to('admin') ?>">ADMIN</a>
-                            <span class="grey">·</span>
                             <?php if (Yii::$app->user->isGuest) { ?>
                                 <i class="icon-plus-outline"></i><a class="white nicdark_mpopup_window"
                                                                     href="#register_window">REGISTER</a>
@@ -26,10 +24,19 @@ use app\components\RegisterWidget;
                                                               href="#login_window">LOG IN</a>
                                 <span class="grey">·</span>
                             <?php } else { ?>
-                            <i class="icon-lock-1"></i><a class="white nicdark_right_sidebar_btn_open"
-                                                          href="#login_window">User Panel</a>
-                                <i class="icon-lock-1"></i><a class="white"
-                                                              href="<?= Url::to(['site/logout'])?>" data-method="post">Logout</a>
+                                <!--<i class="icon-leaf-1"></i><a class="white" href="<?/*= Url::to('admin') */?>">ADMIN</a>-->
+
+                                <!--<span class="grey">·</span>-->
+                                <!--<i class="icon-lock-1"></i><a class="white nicdark_right_sidebar_btn_open"
+                                                              href="#login_window">User Panel</a>-->
+
+                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right" href="<?= Url::to(['site/logout']) ?>" data-method="post">Logout</a>
+                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right" href="<?= Url::to('admin') ?>">ADMIN</a>
+
+
+                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right">User Panel</a>
+                                <!--<i class="icon-lock-1"></i><a class="white"
+                                                              href="<?/*= Url::to(['site/logout']) */?>" data-method="post">Logout</a>-->
 
                             <?php } ?>
                         </h6>

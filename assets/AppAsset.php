@@ -26,6 +26,7 @@ class AppAsset extends AssetBundle
         'http://fonts.googleapis.com/css?family=Montez',
     ];
     public $js = [
+        'js/client/main/jquery.min.js',
         'js/client/main/jquery-ui.js',
         'js/client/main/excanvas.js',
         'js/client/plugins/revslider/jquery.themepunch.tools.min.js',
@@ -40,7 +41,7 @@ class AppAsset extends AssetBundle
         'js/client/plugins/parallax/jquery.parallax-1.1.3.js',
         'js/client/plugins/countto/jquery.countTo.js',
         'js/client/plugins/countdown/jquery.countdown.js',
-        'js/client/settings.js',
+        'js/client/init.js',
 
     ];
     public $depends = [
