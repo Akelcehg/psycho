@@ -136,7 +136,7 @@ JQUERY UI
 
 
 /* 3- START NICDARKSHADOW: applica l'ombra in base al colore dato usando la classe nicdark_bg_colore*/
-.nicdark_shadow.nicdark_bg_grey{ box-shadow: 0px 4px 0px 0px #f1f1f1; }
+/*.nicdark_shadow.nicdark_bg_grey{ box-shadow: 0px 4px 0px 0px #f1f1f1; }
 .nicdark_shadow.nicdark_bg_grey2{ box-shadow: 0px 4px 0px 0px #e5e5e5; }
 .nicdark_shadow.nicdark_bg_greydark{ box-shadow: 0px 4px 0px 0px #404547; }
 .nicdark_shadow.nicdark_bg_greydark2{ box-shadow: 0px 4px 0px 0px #353b3d; }
@@ -151,7 +151,7 @@ JQUERY UI
 .nicdark_shadow.nicdark_bg_violetdark{ box-shadow: 0px 4px 0px 0px #a675af; }
 .nicdark_shadow.nicdark_bg_orangedark{ box-shadow: 0px 4px 0px 0px #d8734c; }
 .nicdark_shadow.nicdark_bg_reddark{ box-shadow: 0px 4px 0px 0px #bf6363; }
-.nicdark_shadow.nicdark_bg_yellowdark{ box-shadow: 0px 4px 0px 0px #d4ae49; }
+.nicdark_shadow.nicdark_bg_yellowdark{ box-shadow: 0px 4px 0px 0px #d4ae49; }*/
 /*END NICDARKSHADOW*/
 
 

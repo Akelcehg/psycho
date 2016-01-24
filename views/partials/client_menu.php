@@ -1,7 +1,7 @@
 <div class="nicdark_right_sidebar nicdark_bg_greydark nicdark_nicescrool">
 
-    <a class="nicdark_right_sidebar_btn_close nicdark_btn_icon small nicdark_bg_red nicdark_radius white nicdark_absolute_right10 nicdark_shadow"><i class="icon-logout"></i></a>
-
+    <a class="nicdark_right_sidebar_btn_close nicdark_btn_icon small nicdark_bg_red nicdark_radius white nicdark_absolute_right10 nicdark_shadow"><i
+            class="icon-logout"></i></a>
 
 
     <!--start CART-->
@@ -17,12 +17,15 @@
         <div class="nicdark_margin20">
             <ul class="nicdark_list nicdark_relative">
                 <li>
-                    <a href="single-product.php"><img alt="" class="nicdark_absolute nicdark_radius nicdark_opacity nicdark_width100"
+                    <a href="single-product.php"><img alt=""
+                                                      class="nicdark_absolute nicdark_radius nicdark_opacity nicdark_width100"
                                                       src="http://upsihologa.com.ua/users/upload/foto/sweetketti.jpg"></a>
                     <div class="nicdark_activity nicdark_marginleft100" style="margin-left:120px;">
                         <h5 class="grey subtitle">BOOK CHILDREN</h5>
                         <div class="nicdark_space10"></div>
-                        <a href="shop-cart.php" class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i class="icon-basket-1"></i>Профиль</a>
+                        <a href="shop-cart.php"
+                           class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
+                                class="icon-basket-1"></i>Профиль</a>
                     </div>
                     <div class="nicdark_space20"></div>
                 </li>
@@ -35,24 +38,75 @@
     </div>
 
     <div class="nicdark_margin10">
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Школы</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
 
-        <a href="shop-cart.php" class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i class="icon-basket-1"></i>Школы</a>
+<!--        <div class="col-md-12" style="padding-left: 0;">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="shop.php"
+                       class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Школы</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="shop.php"
+                       class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="shop.php"
+                       class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="shop.php"
+                       class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="shop.php"
+                       class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="shop.php"
+                       class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+                </div>
+            </div>
+        </div>-->
 
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
-        <a href="shop.php" class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Школы</a>
+
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
+
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
+
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+
+        <a href="shop-cart.php" class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
+                class="icon-basket-1"></i>Школы</a>
+
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Kids</a>
+        <a href="shop.php"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
     </div>
 
 </div>

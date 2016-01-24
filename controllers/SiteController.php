@@ -2,12 +2,14 @@
 
 namespace app\controllers;
 
+use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\widgets\ActiveForm;
 
 class SiteController extends Controller
 {
@@ -48,6 +50,21 @@ class SiteController extends Controller
     public function actionIndex() {
         return $this->render('index');
     }
+
+    public function actionSignup() {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+
 
     public function actionLogin() {
         if (!\Yii::$app->user->isGuest) {

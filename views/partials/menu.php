@@ -1,6 +1,7 @@
 <?php
 use \yii\helpers\Url;
 use app\components\LoginWidget;
+use app\components\RegisterWidget;
 
 ?>
 
@@ -8,40 +9,35 @@ use app\components\LoginWidget;
 
     <div class="nicdark_menu_boxed">
 
-        <div class="nicdark_section nicdark_bg_greydark nicdark_displaynone_responsive">
+        <div class="nicdark_section nicdark_bg_greydark">
             <div class="nicdark_container nicdark_clearfix">
-                <div class="grid grid_6">
-                    <div class="nicdark_focus">
-                        <h6 class="white">
-                            <i class="icon-calendar-outlilne"></i><a class="white"
-                                                                                 href="events.html">OUR
-                                EVENTS</a>
-                            <span class="grey">·</span>
-                            <i class="icon-pencil-1"></i><a class="white" href="blog-masonry.html">NEWS</a>
 
-                        </h6>
-                    </div>
-                </div>
-                <div class="grid grid_5 right">
+                <div class="grid grid_12 right">
                     <div class="nicdark_focus right">
                         <h6 class="white">
 
-                            <i class="icon-leaf-1"></i><a class="white"
-                                                                      href="<?=Url::to('admin')?>">ADMIN</a>
+                            <i class="icon-leaf-1"></i><a class="white" href="<?= Url::to('admin') ?>">ADMIN</a>
                             <span class="grey">·</span>
-                            <i class="icon-plus-outline"></i><a class="white nicdark_mpopup_window"
-                                                                            href="#register_window">REGISTER</a>
-                            <span class="grey">·</span>
-                            <i class="icon-lock-1"></i><a class="white nicdark_mpopup_window"
-                                                                      href="#login_window">LOG IN</a>
+                            <?php if (Yii::$app->user->isGuest) { ?>
+                                <i class="icon-plus-outline"></i><a class="white nicdark_mpopup_window"
+                                                                    href="#register_window">REGISTER</a>
+                                <span class="grey">·</span>
+                                <i class="icon-lock-1"></i><a class="white nicdark_mpopup_window"
+                                                              href="#login_window">LOG IN</a>
+                                <span class="grey">·</span>
+                            <?php } else { ?>
+                            <i class="icon-lock-1"></i><a class="white nicdark_right_sidebar_btn_open"
+                                                          href="#login_window">User Panel</a>
+                                <i class="icon-lock-1"></i><a class="white"
+                                                              href="<?= Url::to(['site/logout'])?>" data-method="post">Logout</a>
+
+                            <?php } ?>
                         </h6>
                     </div>
                 </div>
 
-                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"><i
-                        class="icon-basket-1"></i></a>
-
                 <?= LoginWidget::widget() ?>
+                <?= RegisterWidget::widget() ?>
 
                 <?php /*echo $this->render('//partials/popup/login'); */ ?><!--
                 --><?php /*echo $this->render('//partials/popup/register'); */ ?>
