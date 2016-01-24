@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Url;
+?>
+
 <div class="nicdark_space3 nicdark_bg_gradient"></div>
 
 <!--start section-->
@@ -85,37 +89,37 @@
 
             <div class="grid nomargin grid_4 percentage">
                 <div class="nicdark_margin10">
-                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="img/footer/img1.jpg">
+                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="<?=Url::base()?>/img/footer/img1.jpg">
                 </div>
             </div>
 
             <div class="grid nomargin grid_4 percentage">
                 <div class="nicdark_margin10">
-                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="img/footer/img2.jpg">
+                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="<?=Url::base()?>/img/footer/img2.jpg">
                 </div>
             </div>
 
             <div class="grid nomargin grid_4 percentage">
                 <div class="nicdark_margin10">
-                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="img/footer/img3.jpg">
+                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="<?=Url::base()?>/img/footer/img3.jpg">
                 </div>
             </div>
 
             <div class="grid nomargin grid_4 percentage">
                 <div class="nicdark_margin10">
-                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="img/footer/img4.jpg">
+                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="<?=Url::base()?>/img/footer/img4.jpg">
                 </div>
             </div>
 
             <div class="grid nomargin grid_4 percentage">
                 <div class="nicdark_margin10">
-                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="img/footer/img5.jpg">
+                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="<?=Url::base()?>/img/footer/img5.jpg">
                 </div>
             </div>
 
             <div class="grid nomargin grid_4 percentage">
                 <div class="nicdark_margin10">
-                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="img/footer/img6.jpg">
+                    <img alt="" class="nicdark_radius nicdark_opacity nicdark_focus" src="<?=Url::base()?>/img/footer/img6.jpg">
                 </div>
             </div>
 

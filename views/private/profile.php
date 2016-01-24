@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Url;
+?>
+
 <div class="nicdark_space50"></div>
 <div class="nicdark_space20"></div>
 
@@ -9,7 +13,7 @@
         <div class="nicdark_space50"></div>
 
         <div class="grid grid_3">
-            <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;" src="img/team/img9.jpg">
+            <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;" src="<?=Url::base()?>/img/team/img9.jpg">
 
             <div class="nicdark_space10"></div>
 

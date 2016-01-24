@@ -2,6 +2,7 @@
 use \yii\helpers\Url;
 use app\components\LoginWidget;
 use app\components\RegisterWidget;
+use yii\helpers\Html;
 
 ?>
 
@@ -24,19 +25,18 @@ use app\components\RegisterWidget;
                                                               href="#login_window">LOG IN</a>
                                 <span class="grey">·</span>
                             <?php } else { ?>
-                                <!--<i class="icon-leaf-1"></i><a class="white" href="<?/*= Url::to('admin') */?>">ADMIN</a>-->
+                                <!--<i class="icon-leaf-1"></i><a class="white" href="<? /*= Url::to('admin') */ ?>">ADMIN</a>-->
 
                                 <!--<span class="grey">·</span>-->
                                 <!--<i class="icon-lock-1"></i><a class="white nicdark_right_sidebar_btn_open"
                                                               href="#login_window">User Panel</a>-->
-
-                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right" href="<?= Url::to(['site/logout']) ?>" data-method="post">Logout</a>
-                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right" href="<?= Url::to('admin') ?>">ADMIN</a>
-
-
-                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right">User Panel</a>
+                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"
+                                   href="<?= Url::to(['site/logout']) ?>" data-method="post">ВЫЙТИ</a>
+                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"
+                                   href="<?= Url::to('admin') ?>">ADMIN</a>
+                                <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right">МЕНЮ</a>
                                 <!--<i class="icon-lock-1"></i><a class="white"
-                                                              href="<?/*= Url::to(['site/logout']) */?>" data-method="post">Logout</a>-->
+                                                              href="<? /*= Url::to(['site/logout']) */ ?>" data-method="post">Logout</a>-->
 
                             <?php } ?>
                         </h6>
@@ -61,9 +61,9 @@ use app\components\RegisterWidget;
                 <div class="grid grid_12 percentage">
 
                     <div class="nicdark_space20"></div>
-
                     <div class="nicdark_logo nicdark_marginleft10">
-                        <a href="/"><img alt="" src="img/logo.png"></a>
+
+                        <a href="/"><img alt="" src="<?=Url::base()?>/img/logo.png"></a>
                     </div>
 
                     <!-- <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"><i class="icon-basket-1"></i></a> -->

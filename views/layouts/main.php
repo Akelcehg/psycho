@@ -28,8 +28,7 @@ AppAsset::register($this);
     <div class="nicdark_site_fullwidth nicdark_clearfix">
         <div class="nicdark_overlay"></div>
 
-        <?php echo $this->render('//partials/menu'); ?>
-        <?php echo $this->render('//partials/client_menu'); ?>
+        <?php echo $this->render('//partials/header'); ?>
 
         <?= $content ?>
     </div>
