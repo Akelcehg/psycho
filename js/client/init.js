@@ -1,5 +1,6 @@
 jQuery(document).ready(function () {
 
+    $('[data-toggle="tooltip"]').tooltip();
 
     //START SLIDE
     jQuery('.nicdark_slide1').show().revolution(

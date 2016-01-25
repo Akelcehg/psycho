@@ -63,7 +63,7 @@ use yii\helpers\Html;
                     <div class="nicdark_space20"></div>
                     <div class="nicdark_logo nicdark_marginleft10">
 
-                        <a href="/"><img alt="" src="<?=Url::base()?>/img/logo.png"></a>
+                        <a href="<?=Url::base()?>"><img alt="" src="<?=Url::base()?>/img/logo.png"></a>
                     </div>
 
                     <!-- <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"><i class="icon-basket-1"></i></a> -->

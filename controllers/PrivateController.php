@@ -11,4 +11,10 @@ class PrivateController extends \yii\web\Controller
 
     }
 
+    public function actionSchools() {
+
+        return $this->render('schools');
+
+    }
+
 }
