@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-class BlogController extends \yii\web\Controller
+class ArticleController extends \yii\web\Controller
 {
     public function actionIndex() {
         return $this->render('index');

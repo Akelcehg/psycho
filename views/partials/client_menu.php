@@ -45,7 +45,8 @@ use yii\helpers\Url;
 
     <div class="nicdark_margin10">
 
-        <a href="<?=Url::to('private/schools')?>" class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
+        <a href="<?= Url::to(Url::base() . '/private/schools') ?>"
+           class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
                 class="icon-graduation-cap-1"></i>Школы</a>
 
         <a href="shop.php"

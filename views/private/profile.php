@@ -182,7 +182,15 @@ use yii\helpers\Url;
             </div>
 
             <div class="nicdark_space20"></div>
-            <a href="#" class="nicdark_btn nicdark_bg_green white nicdark_radius medium">Обновить</a>
+
+            <a href="#" class="nicdark_btn nicdark_bg_green white nicdark_radius small">Обновить</a>
+
+            <h3 style="display: inline;">
+                <a href="#" class="nicdark_btn_icon nicdark_bg_orangedark nicdark_radius_circle white"
+                   data-toggle="tooltip" data-placement="top" title="Типо подсказка для тупых людей.">
+                    <i class="icon-help-circled"></i>
+                </a>
+            </h3>
 
         </div>
 
@@ -294,7 +302,16 @@ use yii\helpers\Url;
 
             </div>
             <div class="nicdark_space20"></div>
-            <a href="#" class="nicdark_btn nicdark_bg_green white nicdark_radius medium">Обновить</a>
+
+            <a href="#" class="nicdark_btn nicdark_bg_green white nicdark_radius small">Обновить</a>
+
+            <h3 style="display: inline;">
+                <a href="#" class="nicdark_btn_icon nicdark_bg_orangedark nicdark_radius_circle white"
+                   data-toggle="tooltip" data-placement="top" title="Типо подсказка для тупых людей.">
+                    <i class="icon-help-circled"></i>
+                </a>
+            </h3>
+
         </div>
 
         <div class="nicdark_space20"></div>

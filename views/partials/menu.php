@@ -33,7 +33,7 @@ use yii\helpers\Html;
                                 <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"
                                    href="<?= Url::to(['site/logout']) ?>" data-method="post">ВЫЙТИ</a>
                                 <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right"
-                                   href="<?= Url::to('admin') ?>">ADMIN</a>
+                                   href="<?= Url::to(Url::base().'/admin') ?>">ADMIN</a>
                                 <a class="nicdark_btn_icon nicdark_zoom nicdark_bg_yellow_hover nicdark_right_sidebar_btn_open nicdark_marginright10 nicdark_bg_orange extrasmall nicdark_radius white right">МЕНЮ</a>
                                 <!--<i class="icon-lock-1"></i><a class="white"
                                                               href="<? /*= Url::to(['site/logout']) */ ?>" data-method="post">Logout</a>-->
@@ -80,7 +80,7 @@ use yii\helpers\Html;
                             </li>
 
                             <li class="orange">
-                                <a href="<?= Url::to('blog') ?>">БЛОГИ</a>
+                                <a href="<?= Url::to('article') ?>">СТАТЬИ</a>
                             </li>
 
                             <li class="orange">
