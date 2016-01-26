@@ -42,6 +42,8 @@ class AppAsset extends AssetBundle
         'js/client/plugins/countto/jquery.countTo.js',
         'js/client/plugins/countdown/jquery.countdown.js',
         'js/client/init.js',
+        'js/client/ckeditor.js',
+        'js/client/sample.js',
 
     ];
     public $depends = [

@@ -217,5 +217,5 @@ use yii\helpers\Url;
 
     ga('create', 'UA-49425562-7', 'auto');
     ga('send', 'pageview');
-
+    initSample();
 </script>

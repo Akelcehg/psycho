@@ -49,8 +49,9 @@ use yii\helpers\Url;
            class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
                 class="icon-graduation-cap-1"></i>Школы</a>
 
-        <a href="shop.php"
-           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Школы</a>
+        <a href="<?= Url::to(Url::base() . '/account/article') ?>"
+           class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
+                class="icon-graduation-cap-1"></i>Статьи</a>
 
 
         <a href="shop-cart.php" class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
