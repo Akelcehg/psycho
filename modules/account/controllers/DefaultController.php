@@ -1,10 +1,11 @@
 <?php
 
-namespace app\controllers;
+namespace app\modules\account\controllers;
 
-class PrivateController extends \yii\web\Controller
+use yii\web\Controller;
+
+class DefaultController extends Controller
 {
-
     public function actionProfile() {
 
         return $this->render('profile');
@@ -16,5 +17,4 @@ class PrivateController extends \yii\web\Controller
         return $this->render('schools');
 
     }
-
 }

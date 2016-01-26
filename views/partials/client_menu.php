@@ -29,7 +29,7 @@ use yii\helpers\Url;
                     <div class="nicdark_activity nicdark_marginleft100" style="margin-left:120px;">
                         <h5 class="grey subtitle">BOOK CHILDREN</h5>
                         <div class="nicdark_space10"></div>
-                        <a href="<?= Url::to('private/profile') ?>"
+                        <a href="<?= Url::to(Url::base() . '/account/profile') ?>"
                            class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
                                 class="icon-basket-1"></i>Профиль</a>
                     </div>
@@ -45,7 +45,7 @@ use yii\helpers\Url;
 
     <div class="nicdark_margin10">
 
-        <a href="<?= Url::to(Url::base() . '/private/schools') ?>"
+        <a href="<?= Url::to(Url::base() . '/account/school') ?>"
            class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
                 class="icon-graduation-cap-1"></i>Школы</a>
 
