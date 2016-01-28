@@ -78,7 +78,7 @@
 
 <div class="nicdark_container nicdark_clearfix">
 
-    <div class="nicdark_space50"></div>
+    <div class="nicdark_space50"></div>    
 
     <p><span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>orem commodo
         lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non

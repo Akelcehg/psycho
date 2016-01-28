@@ -11,8 +11,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\widgets\ActiveForm;
 
-class SiteController extends Controller
-{
+class SiteController extends Controller {
+
     public function behaviors() {
         return [
             'access' => [
@@ -61,28 +61,29 @@ class SiteController extends Controller
             }
         }
         return $this->render('signup', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
-
     public function actionLogin() {
+
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
         $model = new LoginForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
+
         return $this->render('login', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
     public function actionLogout() {
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 
@@ -94,11 +95,12 @@ class SiteController extends Controller
             return $this->refresh();
         }
         return $this->render('contact', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
-    public function actionAbout() {
+    public function actionAbout() {        
         return $this->render('about');
     }
+
 }

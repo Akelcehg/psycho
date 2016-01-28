@@ -8,5 +8,5 @@ class TrainingsController extends \yii\web\Controller
     {
         return $this->render('index');
     }
-
+    
 }
