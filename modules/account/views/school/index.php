@@ -1,6 +1,6 @@
 <?php
-use yii\helpers\Url;
 
+use yii\helpers\Url;
 ?>
 
 <div class="nicdark_space100"></div>
@@ -38,7 +38,7 @@ use yii\helpers\Url;
             <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
 
                 <div class="nicdark_textevidence nicdark_width_percentage20 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="<?=Url::base()?>/img/team/img1.jpg">
+                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="<?= Url::base() ?>/img/team/img1.jpg">
                 </div>
 
                 <div class="nicdark_textevidence nicdark_width_percentage70 nicdark_width100_responsive">

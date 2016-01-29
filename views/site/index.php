@@ -1,5 +1,5 @@
 <section class="nicdark_section">
-
+	                   
     <div class="tp-banner-container">
         <div class="nicdark_slide1" style="max-height: 650px; height: 650px;">
 
@@ -137,7 +137,7 @@
 
                 <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
                     <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
+                    <div class="nicdark_space5"></div>                    
                     <a title="CURRICULUM" href="single-teacher.html"
                        class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"><i
                             class="icon-download-outline"></i></a>

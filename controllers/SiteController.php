@@ -9,7 +9,6 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use yii\widgets\ActiveForm;
 
 class SiteController extends Controller {
 
@@ -52,7 +51,7 @@ class SiteController extends Controller {
     }
 
     public function actionSignup() {
-        $model = new SignupForm();
+        $model = new SignupForm();        
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
@@ -60,6 +59,7 @@ class SiteController extends Controller {
                 }
             }
         }
+        
         return $this->render('signup', [
                     'model' => $model,
         ]);
@@ -82,8 +82,8 @@ class SiteController extends Controller {
         ]);
     }
 
-    public function actionLogout() {
-        Yii::$app->user->logout();
+    public function actionLogout() {        
+        Yii::$app->user->logout();        
         return $this->goHome();
     }
 
@@ -99,7 +99,7 @@ class SiteController extends Controller {
         ]);
     }
 
-    public function actionAbout() {        
+    public function actionAbout() {
         return $this->render('about');
     }
 
