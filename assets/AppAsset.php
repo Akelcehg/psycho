@@ -26,7 +26,7 @@ class AppAsset extends AssetBundle
         'http://fonts.googleapis.com/css?family=Montez',
     ];
     public $js = [
-        'js/client/main/jquery.min.js',
+        //'js/client/main/jquery.min.js',
         'js/client/main/jquery-ui.js',
         'js/client/main/excanvas.js',
         'js/client/plugins/revslider/jquery.themepunch.tools.min.js',
@@ -44,7 +44,8 @@ class AppAsset extends AssetBundle
         'js/client/init.js',
         'js/client/ckeditor.js',
         'js/client/sample.js',
-
+        'js/client/flex.js',
+        'js/client/scripts.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

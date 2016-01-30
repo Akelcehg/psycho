@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Profile;
 
 class SiteController extends Controller {
 
@@ -54,9 +55,13 @@ class SiteController extends Controller {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
-                if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
-                }
+                $profile = new Profile();
+                if ($profile->initProfile($user->id)) {
+                    if (Yii::$app->getUser()->login($user)) {
+                        return $this->goHome();
+                    }
+                } else
+                    var_dump($profile);
             }
         }
 
