@@ -13,13 +13,10 @@ class ProfileController extends Controller {
 
         if ($profile->load(Yii::$app->request->post())) {
             
-            //$profile['education'] = nl2br($profile['education']);
-
-            
             if ($profile->save()) {
                 return $this->render('index', [
                             'profileModel' => $profile,
-                            'message' => 'Обновлено'
+                            'message' => 'Профиль успешно обновлён'
                 ]);
             }
         } else {

@@ -15,12 +15,21 @@ use yii\helpers\Html;
 
         <div class="nicdark_space50"></div>
 
+        <?php if (isset($message)): ?>
+            <div class="nicdark_alerts nicdark_bg_green nicdark_radius nicdark_shadow" id="profileUpdateAlert" style="text-align: center;">
+                <p class="white nicdark_size_medium"><i class="icon-cancel-circled-outline iconclose"></i>
+                    <?= $message ?></p>
+                <i class="icon-ok-outline nicdark_iconbg right medium green"></i>
+            </div>
+        <?php endif; ?>
+
         <?php
         $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
                     'id' => 'profileForm']);
         ?>
 
         <div class="grid grid_3">
+
             <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;"
                  src="<?= Url::base() ?>/img/team/img_blank.jpg">
 
@@ -35,11 +44,23 @@ use yii\helpers\Html;
             </div>
 
             <div style="text-align: center;">
-                <?= $form->field($profileModel, 'firstname')->textInput() ?>
+                <?=
+                $form->field($profileModel, 'firstname')->textInput([
+                    'style' => 'text-align:center;'
+                ])
+                ?>
                 <div class="nicdark_space10"></div>
-                <?= $form->field($profileModel, 'lastname')->textInput() ?>
+                <?=
+                $form->field($profileModel, 'lastname')->textInput([
+                    'style' => 'text-align:center;'
+                ])
+                ?>
                 <div class="nicdark_space10"></div>
-                <?= $form->field($profileModel, 'secondname')->textInput() ?>
+                <?=
+                $form->field($profileModel, 'secondname')->textInput([
+                    'style' => 'text-align:center;'
+                ])
+                ?>
             </div>
 
         </div>
@@ -130,7 +151,9 @@ use yii\helpers\Html;
                 </div>
 
                 <div class="nicdark_space10"></div>
-
+                <div style="color: white;">
+                    <?= Html::submitButton('Обновить', ['class' => 'nicdark_btn fullwidth nicdark_bg_green medium nicdark_shadow nicdark_radius white']) ?>
+                </div>
 
             </div>
 
