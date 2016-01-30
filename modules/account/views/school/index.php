@@ -12,15 +12,14 @@ use yii\helpers\Url;
         <div class="grid grid_4">
 
             <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
-                <div class="nicdark_margin20 nicdark_relative">
+                <div class="nicdark_margin10 nicdark_relative">
 
                     <a href="#"
-                       class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_red extrabig nicdark_radius_circle white nicdark_absolute nicdark_shadow"><i
+                       class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_red medium nicdark_radius_circle white nicdark_absolute"><i
                             class="icon-plus"></i></a>
 
-                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">
-                        <h4>Добавить школу</h4>
-                        <div class="nicdark_space20"></div>
+                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">                        
+                        <h4>Добавить школу</h4>                        
                         <p>Lorem ipsum dolor sit amet, consec adipiscing elit.</p>
                     </div>
 

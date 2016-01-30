@@ -99,6 +99,7 @@ jQuery(document).ready(function () {
     var display_hours = "";
     var display_minutes = "";
     var display_seconds = "";
+    
     //call
     $(".nicdark_countdown").countdown({
         date: endDate,

@@ -88,7 +88,7 @@ use yii\helpers\Html;
                             </li>
 
                             <li class="orange">
-                                <a href="index-2.html">Форум</a>
+                                <a href="<?= Url::to('discussion') ?>">ФОРУМ</a>
                             </li>
 
                             <li class="orange">

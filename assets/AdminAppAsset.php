@@ -17,21 +17,21 @@ class AdminAppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-    public $css = [
-        //'css/admin/bootstrap.min.css',
-        'css/admin/metisMenu.min.css',
-        'css/admin/timeline.css',
-        'css/admin/sb-admin-2.css',
-        'css/admin/morris.css',
-        'css/admin/font-awesome.min.css',
+    public $css = [        
+        'css/admin/sb-admin.css',        
+        'css/admin/plugins/morris.css',
+        'css/admin/font-awesome/css/font-awesome.min.css',
     ];
     public $js = [
         'js/admin/bootstrap.min.js',
-        'js/admin/metisMenu.min.js',
-        'js/admin/raphael-min.js',
-        'js/admin/morris.min.js',
-        'js/admin/morris-data.js',
-        'js/admin/sb-admin-2.js',
+        'js/admin/plugins/morris/raphael.min.js',
+        'js/admin/plugins/morris/morris.min.js',
+        'js/admin/plugins/morris/morris-data.js',
+        'js/admin/plugins/flot/jquery.flot.js',
+        'js/admin/plugins/flot/jquery.flot.tooltip.min.js',
+        'js/admin/plugins/flot/jquery.flot.resize.js',
+        'js/admin/plugins/flot/jquery.flot.pie.js',
+        'js/admin/plugins/flot/flot-data.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

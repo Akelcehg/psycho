@@ -1,6 +1,6 @@
 /*
-	Author: Nicdark
-	Author URI: http://www.nicdarkthemes.com/
+        Author: Nicdark
+        Author URI: http://www.nicdarkthemes.com/
 */
 
 @import "nicdark_shortcodes.css";
@@ -12,13 +12,13 @@
 
 
 /****************************************************************************
-	Table of Content
+        Table of Content
 ***************************************************************************
 
 
 SOME BASIC CLASSES
-	1- body
-	2-container
+        1- body
+        2-container
     3-site
     4-section
     5-grid
@@ -29,7 +29,7 @@ SOME BASIC CLASSES
 
 
 /* 1- START NICDARK FRAMEWORK*/
-body{ margin:0px; padding:0px; overflow-x:hidden; background-color: #ccc;}
+body{ margin:0px; padding:0px; overflow-x:hidden; background-color: #ccc; }
 body.nicdark_boxed_img{ background-image: url(../../img/img4.jpg) !important; background-size: cover; background-attachment: fixed; }
 
 /* 2 - CONTAINER */
