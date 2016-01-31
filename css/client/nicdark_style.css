@@ -29,7 +29,7 @@ SOME BASIC CLASSES
 
 
 /* 1- START NICDARK FRAMEWORK*/
-body{ margin:0px; padding:0px; overflow-x:hidden; background-color: #ccc; }
+body{ margin:0px; padding:0px; overflow-x:hidden; background-color: #ccc;}
 body.nicdark_boxed_img{ background-image: url(../../img/img4.jpg) !important; background-size: cover; background-attachment: fixed; }
 
 /* 2 - CONTAINER */

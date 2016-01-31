@@ -26,15 +26,176 @@
 
 
 <section class="nicdark_section">
-    
+
     <div class="nicdark_space40"></div>
-    
+
+    <section class="nicdark_section nicdark_bg_blue nicdark_shadow">
+
+        <div class="nicdark_container nicdark_clearfix">
+            <div class="grid grid_12 nomargin nicdark_bg_blue nicdark_shadow nicdark_radius_left">
+                <div class="nicdark_focus">
+                    <h2 class="white">
+                        <i class="icon-clipboard big white"></i>
+                        Название группы
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <div class="nicdark_container nicdark_clearfix">
-        
-                
-        
+        <div class="grid grid_12">
+            <div class="row">
+                <div class="grid grid_8">
+                    <p>
+                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
+                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
+                            arcu.
+                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
+                    </p>
+                </div>
+                <div class="grid grid_2">
+                    <h5 class="grey">Ответов : 5</h5>
+                </div>
+                <div class="grid grid_2">
+
+                    <div class="nicdark_activity">
+                        <h5 class="grey">Admin</h5>
+                        <div class="nicdark_space10"></div>
+                        <p>Dec 21, 2015</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid grid_12">
+            <div class="row">
+                <div class="grid grid_8">
+                    <p>
+                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
+                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
+                            arcu.
+                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
+                    </p>
+                </div>
+                <div class="grid grid_2">
+                    <h5 class="grey">Ответов : 5</h5>
+                </div>
+                <div class="grid grid_2">
+
+                    <div class="nicdark_activity">
+                        <h5 class="grey">Admin</h5>
+                        <div class="nicdark_space10"></div>
+                        <p>Dec 21, 2015</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
-    
+
+    <div class="nicdark_space20"></div>
+
+    <section class="nicdark_section nicdark_bg_blue nicdark_shadow">
+
+        <div class="nicdark_container nicdark_clearfix">
+            <div class="grid grid_12 nomargin nicdark_bg_blue nicdark_shadow nicdark_radius_left">
+                <div class="nicdark_focus">
+                    <h2 class="white">
+                        <i class="icon-clipboard big white"></i>
+                        Название группы
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="nicdark_container nicdark_clearfix">
+        <div class="grid grid_12">
+            <div class="row">
+                <div class="grid grid_8">
+                    <p>
+                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
+                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
+                            arcu.
+                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
+                    </p>
+                </div>
+                <div class="grid grid_2">
+                    <h5 class="grey">Ответов : 5</h5>
+                </div>
+                <div class="grid grid_2">
+
+                    <div class="nicdark_activity">
+                        <h5 class="grey">Admin</h5>
+                        <div class="nicdark_space10"></div>
+                        <p>Dec 21, 2015</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="grid grid_12">
+            <div class="row">
+                <div class="grid grid_8">
+                    <p>
+                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
+                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
+                            arcu.
+                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
+                    </p>
+                </div>
+                <div class="grid grid_2">
+                    <h5 class="grey">Ответов : 5</h5>
+                </div>
+                <div class="grid grid_2">
+
+                    <div class="nicdark_activity">
+                        <h5 class="grey">Admin</h5>
+                        <div class="nicdark_space10"></div>
+                        <p>Dec 21, 2015</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid grid_12">
+            <div class="row">
+                <div class="grid grid_8">
+                    <p>
+                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
+                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
+                            arcu.
+                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
+                    </p>
+                </div>
+                <div class="grid grid_2">
+                    <h5 class="grey">Ответов : 5</h5>
+                </div>
+                <div class="grid grid_2">
+
+                    <div class="nicdark_activity">
+                        <h5 class="grey">Admin</h5>
+                        <div class="nicdark_space10"></div>
+                        <p>Dec 21, 2015</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
     <div class="nicdark_space40"></div>
-    
+
 </section>

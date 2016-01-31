@@ -16,10 +16,10 @@ use yii\helpers\Html;
         <div class="nicdark_space50"></div>
 
         <?php if (isset($message)): ?>
-            <div class="nicdark_alerts nicdark_bg_green nicdark_radius nicdark_shadow" id="profileUpdateAlert" style="text-align: center;">
+            <div class="nicdark_alerts nicdark_bg_blue nicdark_radius nicdark_shadow" id="profileUpdateAlert" style="text-align: center;">
                 <p class="white nicdark_size_medium"><i class="icon-cancel-circled-outline iconclose"></i>
                     <?= $message ?></p>
-                <i class="icon-ok-outline nicdark_iconbg right medium green"></i>
+                <i class="icon-ok-outline nicdark_iconbg right medium white"></i>
             </div>
         <?php endif; ?>
 
@@ -152,7 +152,7 @@ use yii\helpers\Html;
 
                 <div class="nicdark_space10"></div>
                 <div style="color: white;">
-                    <?= Html::submitButton('Обновить', ['class' => 'nicdark_btn fullwidth nicdark_bg_green medium nicdark_shadow nicdark_radius white']) ?>
+                    <?= Html::submitButton('Сохранить изменения профиля', ['class' => 'nicdark_btn fullwidth nicdark_bg_green medium nicdark_shadow nicdark_radius white']) ?>
                 </div>
 
             </div>

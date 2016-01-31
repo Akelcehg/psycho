@@ -209,7 +209,7 @@ JQUERY UI
 /*size*/
 .nicdark_btn_icon.extrasmall{ padding: 5px; font-size: 14px; }
 .nicdark_btn_icon.small{ padding: 10px; font-size: 15px; }
-.nicdark_btn_icon.medium{ padding: 15px; font-size: 17px; }
+.nicdark_btn_icon.medium{ padding: 15px; font-size: 15px; }
 .nicdark_btn_icon.big{ padding: 20px; font-size: 19px; }
 /*extra big*/
 .nicdark_btn_icon.extrabig > i{ display: inline-block; width: 40px; height: 40px; }
