@@ -46,4 +46,34 @@ class PsychologistDirections extends \yii\db\ActiveRecord
         ];
     }
 
+    public function setNewPsychologistDirections($psychologistId, $directionsArray) {
+
+        if (count($directionsArray) > 0) {
+            $this->deletePsychologistDirections($psychologistId);
+
+            return $this->insertNewData($psychologistId, $directionsArray);
+        } else {
+            return $this->deletePsychologistDirections($psychologistId);
+        }
+    }
+
+    private function insertNewData($psychologistId, $directionsArray) {
+
+        $command = Yii::$app->db->createCommand();
+        $valuesArray = [];
+
+        for ($i = 0; $i < count($directionsArray); $i++) {
+            array_push($valuesArray, [$psychologistId, $directionsArray[$i]]);
+        }
+
+        $command->batchInsert('psychologist_directions',
+            ['psychologist_id', 'direction_id'], $valuesArray);
+
+        return $command->execute();
+    }
+
+    private function deletePsychologistDirections($psychologistId) {
+        return PsychologistDirections::deleteAll('psychologist_id = ' . $psychologistId);
+    }
+
 }
