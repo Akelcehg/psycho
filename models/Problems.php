@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Query;
 
 /**
  * This is the model class for table "problems".
@@ -17,16 +18,14 @@ class Problems extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'problems';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['name'], 'required'],
             [['updated_at', 'created_at'], 'safe'],
@@ -37,13 +36,25 @@ class Problems extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'name' => 'Name',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
         ];
+    }
+
+    public function getPsychologistProblems($psychologistId) {
+        $querry = new Query();
+
+        $querry->select('problems.*,psychologist_problems.psychologist_id as active')
+            ->from('problems')
+            ->join('left join', 'psychologist_problems',
+                'problems.id = psychologist_problems.problem_id and
+                psychologist_problems.psychologist_id= ' . $psychologistId
+            )->orderBy('problems.id');
+
+        return $querry->all();
     }
 }

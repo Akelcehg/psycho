@@ -3,7 +3,9 @@
 namespace app\modules\account\controllers;
 
 use app\models\Directions;
+use app\models\Problems;
 use app\models\PsychologistDirections;
+use app\models\PsychologistProblems;
 use yii\web\Controller;
 use app\models\Profile;
 use Yii;
@@ -15,7 +17,10 @@ class ProfileController extends Controller
     public function actionIndex() {
 
         $profile = $this->findModel(Yii::$app->user->id);
+
         $directions = new Directions();
+        $problems = new Problems();
+
         $currentPsychologistId = Yii::$app->user->id;
 
         if ($profile->load(Yii::$app->request->post())) {
@@ -24,14 +29,16 @@ class ProfileController extends Controller
                 return $this->render('index', [
                     'profileModel' => $profile,
                     'message' => 'Профиль успешно обновлён',
-                    'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId)
+                    'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
+                    'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId)
                 ]);
             }
         } else {
 
             return $this->render('index', [
                 'profileModel' => $profile,
-                'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId)
+                'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
+                'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId)
             ]);
         }
     }
@@ -49,7 +56,14 @@ class ProfileController extends Controller
     }
 
     public function actionUpdateProblems() {
-        return "dsa";
+        $problemsArray = Yii::$app->request->post('problems');
+
+        $currentPsychologistId = Yii::$app->user->id;
+
+        $psychologistProblems = new PsychologistProblems();
+        if ($psychologistProblems->setNewPsychologistProblems($currentPsychologistId, $problemsArray))
+            return $this->redirect('index');
+        else throw new NotFoundHttpException('The requested page does not exist.');
     }
 
     protected function findModel($id) {

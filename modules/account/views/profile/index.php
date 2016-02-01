@@ -175,7 +175,6 @@ use yii\helpers\Html;
 
             <?php
             $form = ActiveForm::begin([
-                'id' => 'profileForm',
                 'action' => Url::base() . '/account/profile/update-directions'
             ]);
             ?>
@@ -229,6 +228,13 @@ use yii\helpers\Html;
 <section class="nicdark_section">
     <div class="nicdark_container nicdark_clearfix">
         <div class="grid grid_12">
+
+            <?php
+            $form = ActiveForm::begin([
+                'action' => Url::base() . '/account/profile/update-problems'
+            ]);
+            ?>
+
             <div class="nicdark_archive1 nicdark_bg_grey nicdark_shadow">
                 <div class="nicdark_textevidence nicdark_bg_violet">
                     <h4 class="white nicdark_margin20">С какими поблемами работаете</h4>
@@ -243,101 +249,30 @@ use yii\helpers\Html;
 
                 <ul class="nicdark_list border">
 
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">DSAdasdasd asd a</p>
+                    <?php foreach ($psychologistProblems as $problem): ?>
+                        <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
+                            <div class="nicdark_margin20">
+                                <div class="nicdark_activity">
+                                    <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
+                                           type="checkbox" name="problems[]" value="<?= $problem['id'] ?>"
+                                        <?php if ($problem['active'] != NULL) echo "checked" ?>
+                                    >
+                                    <p style="display: inline;"><?= $problem['name'] ?></p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">DSAdasdasd asd a</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">999asd asd a</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">das1 21asd a</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">DSAdasdasd asd a</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">DSAdasdasd asd a</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">sd asd a</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">DSAdasdasd asd a</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">fwfewfew</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nicdark_border_grey" style="display: table-cell; width:auto;">
-                        <div class="nicdark_margin20">
-                            <div class="nicdark_activity">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey medium subtitle"
-                                       type="checkbox" name="option1" value="Lorem ipsum dolor sit amet">
-                                <p style="display: inline;">DSAdasdasd asd a</p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    <?php endforeach; ?>
 
                 </ul>
 
             </div>
             <div class="nicdark_space20"></div>
+            <div class="row">
+                <div class="col-md-3" style="color: white;">
+                    <?= Html::submitButton('Сохранить проблемы', ['class' => 'nicdark_btn fullwidth nicdark_bg_green medium nicdark_shadow nicdark_radius white']) ?>
+                </div>
+            </div>
+            <?php ActiveForm::end(); ?>
 
 
         </div>
