@@ -3,6 +3,7 @@
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+
 ?>
 
 <div class="nicdark_space50"></div>
@@ -16,7 +17,8 @@ use yii\helpers\Html;
         <div class="nicdark_space50"></div>
 
         <?php if (isset($message)): ?>
-            <div class="nicdark_alerts nicdark_bg_blue nicdark_radius nicdark_shadow" id="profileUpdateAlert" style="text-align: center;">
+            <div class="nicdark_alerts nicdark_bg_blue nicdark_radius nicdark_shadow" id="profileUpdateAlert"
+                 style="text-align: center;">
                 <p class="white nicdark_size_medium"><i class="icon-cancel-circled-outline iconclose"></i>
                     <?= $message ?></p>
                 <i class="icon-ok-outline nicdark_iconbg right medium white"></i>
@@ -25,7 +27,7 @@ use yii\helpers\Html;
 
         <?php
         $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
-                    'id' => 'profileForm']);
+            'id' => 'profileForm']);
         ?>
 
         <div class="grid grid_3">
@@ -70,7 +72,6 @@ use yii\helpers\Html;
 
                 <h3 class="subtitle greydark">
                     Образование
-
 
 
                     <a href="#" class="nicdark_btn_icon nicdark_bg_orangedark nicdark_radius_circle white"
@@ -144,7 +145,7 @@ use yii\helpers\Html;
 
                         <div class="nicdark_space30"></div>
 
-                    </div>                    
+                    </div>
 
                     <i class="icon-money-1 nicdark_iconbg left big green"></i>
 
@@ -172,7 +173,7 @@ use yii\helpers\Html;
         <div class="grid grid_12">
             <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
                 <div class="nicdark_textevidence nicdark_bg_red nicdark_radius_top">
-                    <h4 class="white nicdark_margin20">MENU WIDGET</h4>
+                    <h4 class="white nicdark_margin20">Ваши направления в психотерапии</h4>
                     <h3 style="display: inline;">
                         <a href="#" class="nicdark_btn_icon nicdark_bg_orangedark nicdark_radius_circle white"
                            data-toggle="tooltip" data-placement="top" title="Типо подсказка для тупых людей.">
@@ -230,7 +231,7 @@ use yii\helpers\Html;
         <div class="grid grid_12">
             <div class="nicdark_archive1 nicdark_bg_grey nicdark_shadow">
                 <div class="nicdark_textevidence nicdark_bg_violet">
-                    <h4 class="white nicdark_margin20">MENU WIDGET</h4>
+                    <h4 class="white nicdark_margin20">С какими поблемами работаете</h4>
                     <h3 style="display: inline;">
                         <a href="#" class="nicdark_btn_icon nicdark_bg_orangedark nicdark_radius_circle white"
                            data-toggle="tooltip" data-placement="top" title="Типо подсказка для тупых людей.">
