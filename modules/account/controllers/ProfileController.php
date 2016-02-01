@@ -3,6 +3,7 @@
 namespace app\modules\account\controllers;
 
 use app\models\Directions;
+use app\models\Image;
 use app\models\Problems;
 use app\models\PsychologistDirections;
 use app\models\PsychologistProblems;
@@ -10,6 +11,7 @@ use yii\web\Controller;
 use app\models\Profile;
 use Yii;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 
 class ProfileController extends Controller
 {
@@ -21,6 +23,8 @@ class ProfileController extends Controller
         $directions = new Directions();
         $problems = new Problems();
 
+        $imagesModel = new Image();
+
         $currentPsychologistId = Yii::$app->user->id;
 
         if ($profile->load(Yii::$app->request->post())) {
@@ -30,7 +34,9 @@ class ProfileController extends Controller
                     'profileModel' => $profile,
                     'message' => 'Профиль успешно обновлён',
                     'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
-                    'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId)
+                    'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId),
+                    'imagesModel' => $imagesModel,
+                    'logo' => $imagesModel->getProfilePhoto()
                 ]);
             }
         } else {
@@ -38,7 +44,9 @@ class ProfileController extends Controller
             return $this->render('index', [
                 'profileModel' => $profile,
                 'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
-                'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId)
+                'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId),
+                'imagesModel' => $imagesModel,
+                'logo' => $imagesModel->getProfilePhoto()
             ]);
         }
     }
@@ -72,6 +80,15 @@ class ProfileController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionUpdatePhoto() {
+
+        $imagesModel = new Image();
+        //var_dump($imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file'));
+        $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
+        if ($imagesModel->upload()) return $this->redirect('index');
+        else throw new NotFoundHttpException('The requested page does not exist.');
     }
 
 }

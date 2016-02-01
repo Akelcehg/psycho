@@ -3,6 +3,7 @@
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+use app\models\Image;
 
 ?>
 
@@ -25,25 +26,49 @@ use yii\helpers\Html;
             </div>
         <?php endif; ?>
 
-        <?php
-        $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
-            'id' => 'profileForm']);
-        ?>
 
         <div class="grid grid_3">
 
-            <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;"
-                 src="<?= Url::base() ?>/img/team/img_blank.jpg">
 
+            <?php if ($logo) { ?>
+                <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;"
+                     src="<?= Url::base() .'/'. $logo ?>">
+
+            <?php } else { ?>
+                <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;"
+                     src="<?= Url::base() ?>/img/team/img_blank.jpg">
+            <?php } ?>
             <div class="nicdark_space10"></div>
 
-            <div class="nicdark_focus center">
-                <div class="nicdark_margin10">
+            <div class="nicdark_focus center nicdark_margin10">
+                <!--<div class="nicdark_margin10">
+
                     <a href="#"
                        class="nicdark_press nicdark_tooltip right nicdark_btn_icon nicdark_bg_blue nicdark_shadow small nicdark_radius white"><i
                             class="icon-plus"></i></a>
+
+                </div>-->
+
+                <?php
+                $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
+                    'action' => Url::base() . '/account/profile/update-photo'
+                ]);
+                ?>
+
+                <?= $form->field($imagesModel, 'image_file')->fileInput() ?>
+
+                <div style="color: white;">
+                    <?= Html::submitButton('Обновить фото', ['class' => 'nicdark_press nicdark_tooltip right nicdark_btn_icon nicdark_bg_blue nicdark_shadow small nicdark_radius white']) ?>
                 </div>
+                <?php ActiveForm::end(); ?>
             </div>
+
+
+            <?php
+            $form = ActiveForm::begin([
+                'id' => 'profileForm'
+            ]);
+            ?>
 
             <div style="text-align: center;">
                 <?=
