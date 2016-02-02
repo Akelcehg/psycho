@@ -1,0 +1,11 @@
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+ul.nav.navbar-nav.side-nav li a {
+    color: white;
+}
+
+ul.nav.navbar-right li a.dropdown-toggle {
+    color: white;
+}

@@ -17,10 +17,11 @@ class AdminAppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-    public $css = [        
-        'css/admin/sb-admin.css',        
+    public $css = [
+        'css/admin/sb-admin.css',
         'css/admin/plugins/morris.css',
         'css/admin/font-awesome/css/font-awesome.min.css',
+        'css/admin/style.css',
     ];
     public $js = [
         'js/admin/bootstrap.min.js',
