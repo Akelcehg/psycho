@@ -34,16 +34,14 @@ class Schools extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'schools';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['name', 'city_id', 'year', 'status', 'accreditation', 'document_end', 'qualification_levels', 'address', 'phone', 'school_directions', 'faculties', 'required_documents'], 'required'],
             [['description', 'qualification_levels', 'school_directions', 'faculties', 'required_documents'], 'string'],
@@ -56,8 +54,7 @@ class Schools extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'logo' => 'Logo',

@@ -45,6 +45,18 @@ class Directions extends \yii\db\ActiveRecord
         ];
     }
 
+    public function getPsychologistDirectionsList($psychologistId) {
+        $querry = new Query();
+        $querry->select('directions.*')
+            ->from('directions')
+            ->join('join', 'psychologist_directions',
+                'directions.id = psychologist_directions.direction_id and
+                psychologist_directions.psychologist_id= ' . $psychologistId
+            )->orderBy('directions.id');
+
+        return $querry->all();
+    }
+
     public function getPsychologistDirections($psychologistId) {
         $querry = new Query();
         /*$rawQuerry = Yii::$app->db;

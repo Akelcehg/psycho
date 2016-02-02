@@ -145,6 +145,7 @@ use app\models\Image;
 
             </div>
         </div>
+        
         <div class="grid grid_3">
             <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
 

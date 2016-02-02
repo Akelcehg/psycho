@@ -2,6 +2,7 @@
 
 use yii\grid\GridView;
 use yii\widgets\ListView;
+use yii\helpers\Url;
 
 ?>
 
@@ -396,7 +397,7 @@ use yii\widgets\ListView;
             'itemView' => function ($data, $key, $index, $widget) {
                 return "<div class=\"grid grid_2\">
                                 <div class=\"nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center\">
-
+                                <a href='" . Url::base() . '/psychologists/profile?id=' . $data['user_id'] . "'>
                                     <div class=\"nicdark_textevidence nicdark_bg_greydark nicdark_radius_top\">
                                         <h4 class=\"white nicdark_margin10\">" .
                 $data['firstname'] . $data['lastname'] . $data['secondname'] .
@@ -410,6 +411,7 @@ use yii\widgets\ListView;
                                             Телестно Ориентированное Чтототерапия
                                         </h5>
                                     </div>
+                                    </a>
                                 </div>
                             </div>";
             },

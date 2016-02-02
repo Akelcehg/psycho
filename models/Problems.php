@@ -57,4 +57,17 @@ class Problems extends \yii\db\ActiveRecord
 
         return $querry->all();
     }
+
+    public function getPsychologistProblemsList($psychologistId) {
+        $querry = new Query();
+
+        $querry->select('problems.*')
+            ->from('problems')
+            ->join('join', 'psychologist_problems',
+                'problems.id = psychologist_problems.problem_id and
+                psychologist_problems.psychologist_id= ' . $psychologistId
+            )->orderBy('problems.id');
+
+        return $querry->all();
+    }
 }

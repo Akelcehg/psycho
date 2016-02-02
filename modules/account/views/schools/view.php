@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'logo',
             'name',
             'description:ntext',
             'city_id',
@@ -45,8 +44,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'school_directions:ntext',
             'faculties:ntext',
             'required_documents:ntext',
-            'photos',
-            'videos',
             'updated_at',
             'created_at',
         ],

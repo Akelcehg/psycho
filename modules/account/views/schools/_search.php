@@ -17,15 +17,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'logo') ?>
-
     <?= $form->field($model, 'name') ?>
 
     <?= $form->field($model, 'description') ?>
 
     <?= $form->field($model, 'city_id') ?>
 
-    <?php // echo $form->field($model, 'year') ?>
+    <?= $form->field($model, 'year') ?>
 
     <?php // echo $form->field($model, 'status') ?>
 
@@ -48,10 +46,6 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'faculties') ?>
 
     <?php // echo $form->field($model, 'required_documents') ?>
-
-    <?php // echo $form->field($model, 'photos') ?>
-
-    <?php // echo $form->field($model, 'videos') ?>
 
     <?php // echo $form->field($model, 'updated_at') ?>
 

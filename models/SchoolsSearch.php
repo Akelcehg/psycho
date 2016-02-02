@@ -18,8 +18,8 @@ class SchoolsSearch extends Schools
     public function rules()
     {
         return [
-            [['id', 'city_id', 'year', 'status', 'accreditation', 'document_end', 'photos', 'videos'], 'integer'],
-            [['logo', 'name', 'description', 'qualification_levels', 'address', 'phone', 'site', 'map_coordinates', 'school_directions', 'faculties', 'required_documents', 'updated_at', 'created_at'], 'safe'],
+            [['id', 'city_id', 'year', 'status', 'accreditation', 'document_end'], 'integer'],
+            [['name', 'description', 'qualification_levels', 'address', 'phone', 'site', 'map_coordinates', 'school_directions', 'faculties', 'required_documents', 'updated_at', 'created_at'], 'safe'],
         ];
     }
 
@@ -62,14 +62,11 @@ class SchoolsSearch extends Schools
             'status' => $this->status,
             'accreditation' => $this->accreditation,
             'document_end' => $this->document_end,
-            'photos' => $this->photos,
-            'videos' => $this->videos,
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
         ]);
 
-        $query->andFilterWhere(['like', 'logo', $this->logo])
-            ->andFilterWhere(['like', 'name', $this->name])
+        $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'qualification_levels', $this->qualification_levels])
             ->andFilterWhere(['like', 'address', $this->address])
