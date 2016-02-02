@@ -7,7 +7,7 @@ use yii\helpers\Url;
 <div class="nicdark_right_sidebar nicdark_bg_greydark nicdark_nicescrool">
 
     <a class="nicdark_right_sidebar_btn_close nicdark_btn_icon small nicdark_bg_red nicdark_radius white nicdark_absolute_right10 nicdark_shadow"><i
-            class="icon-logout"></i></a>
+            class="icon-cancel-circled"></i></a>
 
 
     <!--start CART-->
@@ -23,9 +23,21 @@ use yii\helpers\Url;
         <div class="nicdark_margin20">
             <ul class="nicdark_list nicdark_relative">
                 <li>
-                    <!--<a href="single-product.php"><img alt=""
-                                                      class="nicdark_absolute nicdark_radius nicdark_opacity nicdark_width100"
-                                                      src="http://upsihologa.com.ua/users/upload/foto/sweetketti.jpg"></a>-->
+
+                    <?php if ($psychologistPhoto) { ?>
+                        <div class="grid grid_3">
+                            <img alt=""
+                                 class="nicdark_absolute nicdark_radius nicdark_opacity nicdark_width100"
+                                 src="<?= Url::base() . '/' . $psychologistPhoto ?>">
+                        </div>
+                    <?php } else { ?>
+
+                        <img alt=""
+                             class="nicdark_absolute nicdark_radius nicdark_opacity nicdark_width100"
+                             src="<?= Url::base() ?>/img/team/img_blank.jpg">
+
+                    <?php } ?>
+
                     <div class="nicdark_activity nicdark_marginleft100" style="margin-left:120px;">
                         <h5 class="grey subtitle">BOOK CHILDREN</h5>
                         <div class="nicdark_space10"></div>

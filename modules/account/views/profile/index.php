@@ -32,7 +32,7 @@ use app\models\Image;
 
             <?php if ($logo) { ?>
                 <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;"
-                     src="<?= Url::base() .'/'. $logo ?>">
+                     src="<?= Url::base() . '/' . $logo ?>">
 
             <?php } else { ?>
                 <img alt="" class="nicdark_radius nicdark_opacity" style="float:left;width:100%;"
@@ -55,10 +55,10 @@ use app\models\Image;
                 ]);
                 ?>
 
-                <?= $form->field($imagesModel, 'image_file')->fileInput() ?>
+                <?= $form->field($imagesModel, 'image_file')->fileInput()->label('Выберите фото') ?>
 
-                <div style="color: white;">
-                    <?= Html::submitButton('Обновить фото', ['class' => 'nicdark_press nicdark_tooltip right nicdark_btn_icon nicdark_bg_blue nicdark_shadow small nicdark_radius white']) ?>
+                <div style="color: white; display: table; margin: 0 auto;">
+                    <?= Html::submitButton('Сохранить фото', ['class' => 'nicdark_press nicdark_tooltip right nicdark_btn_icon nicdark_bg_blue nicdark_shadow small nicdark_radius white']) ?>
                 </div>
                 <?php ActiveForm::end(); ?>
             </div>
