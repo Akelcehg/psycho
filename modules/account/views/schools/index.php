@@ -1,6 +1,38 @@
 <?php
 
+use yii\helpers\Html;
+use yii\widgets\ListView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\models\SchoolsSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Schools';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<!--<div class="schools-index">
+
+    <h1><? /*= Html::encode($this->title) */ ?></h1>
+    <?php /*echo $this->render('_search', ['model' => $searchModel]); */ ?>
+
+    <p>
+        <? /*= Html::a('Create Schools', ['create'], ['class' => 'btn btn-success']) */ ?>
+    </p>
+
+    <? /*= ListView::widget([
+        'dataProvider' => $dataProvider,
+        'itemOptions' => ['class' => 'item'],
+        'itemView' => function ($model, $key, $index, $widget) {
+            return Html::a(Html::encode($model->name), ['view', 'id' => $model->id]);
+        },
+    ]) */ ?>
+
+</div>-->
+
+<?php
+
 use yii\helpers\Url;
+
 ?>
 
 <div class="nicdark_space100"></div>
@@ -14,12 +46,12 @@ use yii\helpers\Url;
             <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
                 <div class="nicdark_margin10 nicdark_relative">
 
-                    <a href="#"
+                    <a href="/psycho/account/schools/create"
                        class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_red medium nicdark_radius_circle white nicdark_absolute"><i
                             class="icon-plus"></i></a>
 
-                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">                        
-                        <h4>Добавить школу</h4>                        
+                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">
+                        <h4>Добавить школу</h4>
                         <p>Lorem ipsum dolor sit amet, consec adipiscing elit.</p>
                     </div>
 
@@ -34,10 +66,15 @@ use yii\helpers\Url;
     <div class="nicdark_container nicdark_clearfix">
         <div class="grid grid_12">
 
-            <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
+            <?= ListView::widget([
+                'dataProvider' => $dataProvider,
+                'itemOptions' => ['class' => 'item'],
+                'summary' => '',
+                'itemView' => function ($model, $key, $index, $widget) {
+                    return '<div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
 
                 <div class="nicdark_textevidence nicdark_width_percentage20 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="<?= Url::base() ?>/img/team/img1.jpg">
+                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="' . Url::base() . '/img/team/img1.jpg">
                 </div>
 
                 <div class="nicdark_textevidence nicdark_width_percentage70 nicdark_width100_responsive">
@@ -74,7 +111,9 @@ use yii\helpers\Url;
                     <div class="nicdark_space20"></div>
                 </div>
 
-            </div>
+            </div>';
+                },
+            ]) ?>
 
         </div>
 
