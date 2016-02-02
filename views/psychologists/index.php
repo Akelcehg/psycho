@@ -1,3 +1,10 @@
+<?php
+
+use yii\grid\GridView;
+use yii\widgets\ListView;
+
+?>
+
 <section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img-teachers-1">
 
     <div class="nicdark_filter greydark">
@@ -382,372 +389,31 @@
             <div class="nicdark_space10"></div>
         </div>
 
-
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия<br>
-                        Телестно Ориентированное Чтототерапия<br>
-                        Телестно Ориентированное Чтототерапия<br>
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="grid grid_2">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
-                    <h4 class="white nicdark_margin10">Наталья Валериевна Михалькова</h4>
-                </div>
-
-                <img class="nicdark_opacity" alt="" src="img/team/img5.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
-                    <h5 class="white nicdark_margin5" style="text-align:left;">
-                        Телестно Ориентированное Чтототерапия
-                    </h5>
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-        <div class="nicdark_space50"></div>
+        <!------------------------------------------------------------------------------------------------------------->
+        <?= ListView::widget([
+            'dataProvider' => $dataProvider,
+            'summary' => '',
+            'itemView' => function ($data, $key, $index, $widget) {
+                return "<div class=\"grid grid_2\">
+                                <div class=\"nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center\">
+
+                                    <div class=\"nicdark_textevidence nicdark_bg_greydark nicdark_radius_top\">
+                                        <h4 class=\"white nicdark_margin10\">" .
+                $data['firstname'] . $data['lastname'] . $data['secondname'] .
+                "</h4>
+                                    </div>
+
+                                    <img class=\"nicdark_opacity\" alt=\"\" src=\"img/team/img5.jpg\">
+
+                                    <div class=\"nicdark_textevidence nicdark_bg_blue\" style=\"min-height:150px;\">
+                                        <h5 class=\"white nicdark_margin5\" style=\"text-align:left;\">
+                                            Телестно Ориентированное Чтототерапия
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>";
+            },
+        ]); ?>
 
 
     </div>
