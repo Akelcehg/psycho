@@ -1,5 +1,5 @@
 <section class="nicdark_section">
-	                   
+
     <div class="tp-banner-container">
         <div class="nicdark_slide1" style="max-height: 650px; height: 650px;">
 
@@ -8,7 +8,7 @@
                 <!--start first-->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
                     data-title="FRIENDS">
-                    <img src="img/slide/img3.jpg" alt="" data-lazyload="img/slide/img3.jpg"
+                    <img src="img/slide/1st.jpg" alt="" data-lazyload="img/slide/1st.jpg"
                          data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
                 </li>
                 <!--end first-->
@@ -17,7 +17,7 @@
                 <!--start second-->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on"
                     data-title="LESSON">
-                    <img src="img/slide/img8.jpg" alt="" data-lazyload="img/slide/img8.jpg"
+                    <img src="img/slide/1st.jpg" alt="" data-lazyload="img/slide/1st.jpg"
                          data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                 </li>
                 <!--end second-->
@@ -35,7 +35,8 @@
 
         <div class="grid grid_12 percentage nomargin">
             <div class="nicdark_textevidence center">
-                <div class="nicdark_textevidence nicdark_width_percentage25 nicdark_bg_blue nicdark_shadow nicdark_radius_left">
+                <div
+                    class="nicdark_textevidence nicdark_width_percentage25 nicdark_bg_blue nicdark_shadow nicdark_radius_left">
                     <div class="nicdark_textevidence">
                         <div class="nicdark_margin30">
                             <h2 class="white subtitle"><a class="white" href="courses.php">COURSES</a></h2>
@@ -59,7 +60,8 @@
                         <i class="nicdark_zoom icon-music-2 nicdark_iconbg left extrabig orange nicdark_displaynone_ipadland nicdark_displaynone_ipadpotr"></i>
                     </div>
                 </div>
-                <div class="nicdark_textevidence nicdark_width_percentage25 nicdark_bg_green nicdark_shadow nicdark_radius_right">
+                <div
+                    class="nicdark_textevidence nicdark_width_percentage25 nicdark_bg_green nicdark_shadow nicdark_radius_right">
                     <div class="nicdark_textevidence">
                         <div class="nicdark_margin30">
                             <h2 class="white subtitle"><a class="white" href="teachers.php">TEACHERS</a></h2>
@@ -78,9 +80,10 @@
 
 <div class="nicdark_container nicdark_clearfix">
 
-    <div class="nicdark_space50"></div>    
+    <div class="nicdark_space50"></div>
 
-    <p class="blue"><span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>orem commodo
+    <p class="blue_custom"><span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>orem
+        commodo
         lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non
         turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor
         arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at
@@ -137,7 +140,7 @@
 
                 <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
                     <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>                    
+                    <div class="nicdark_space5"></div>
                     <a title="CURRICULUM" href="single-teacher.html"
                        class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"><i
                             class="icon-download-outline"></i></a>

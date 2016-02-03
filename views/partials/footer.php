@@ -52,7 +52,7 @@ use yii\helpers\Url;
                 <div class="nicdark_space10"></div>
 
                 <a href="#"
-                   class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
+                   class="nicdark_btn nicdark_bg_greydark_custom small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Teacher</a>
                 <a href="#"
                    class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Baby</a>
                 <a href="#"
