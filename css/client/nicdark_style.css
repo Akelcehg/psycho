@@ -109,7 +109,7 @@ p.grey,h1.grey,h2.grey,h3.grey,h4.grey,h5.grey,h6.grey,a.grey,i.grey,span.grey, 
 p.greydark,h1.greydark,h2.greydark,h3.greydark,h4.greydark,h5.greydark,h6.greydark,a.greydark,i.greydark,span.greydark, input[type="text"].greydark, textarea.greydark, input[type="submit"].greydark, select.greydark{ color:#868585; }
 p.greydark2,h1.greydark2,h2.greydark2,h3.greydark2,h4.greydark2,h5.greydark2,h6.greydark2,a.greydark2,i.greydark2,span.greydark2, input[type="text"].greydark2, textarea.greydark2, input[type="submit"].greydark2, select.greydark2{ color:#353b3d; }
 p.green,h1.green,h2.green,h3.green,h4.green,h5.green,h6.green,a.green,i.green,span.green, input[type="text"].green, textarea.green, input[type="submit"].green, select.green{ color:#6fc191; }
-p.blue,h1.blue,h2.blue,h3.blue,h4.blue,h5.blue,h6.blue,a.blue,i.blue,span.blue, input[type="text"].blue, textarea.blue, input[type="submit"].blue, select.blue{ color:#74cee4; }
+p.blue,h1.blue,h2.blue,h3.blue,h4.blue,h5.blue,h6.blue,a.blue,i.blue,span.blue, input[type="text"].blue, textarea.blue, input[type="submit"].blue, select.blue{ color: #3361a7; }
 p.violet,h1.violet,h2.violet,h3.violet,h4.violet,h5.violet,h6.violet,a.violet,i.violet,span.violet, input[type="text"].violet, textarea.violet, input[type="submit"].violet, select.violet{ color:#c389ce; }
 p.yellow,h1.yellow,h2.yellow,h3.yellow,h4.yellow,h5.yellow,h6.yellow,a.yellow,i.yellow,span.yellow, input[type="text"].yellow, textarea.yellow, input[type="submit"].yellow, select.yellow{ color:#edbf47; }
 p.orange,h1.orange,h2.orange,h3.orange,h4.orange,h5.orange,h6.orange,a.orange,i.orange,span.orange, input[type="text"].orange, textarea.orange, input[type="submit"].orange, select.orange{ color:#ec774b; }
