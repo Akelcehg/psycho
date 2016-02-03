@@ -48,10 +48,6 @@ use yii\helpers\Html;
                     <?= LoginWidget::widget() ?>
                     <?= RegisterWidget::widget() ?>
 
-                    <?php /*echo $this->render('//partials/popup/login'); */ ?><!--
-                --><?php /*echo $this->render('//partials/popup/register'); */ ?>
-
-
                 </div>
             </div>
         </div>

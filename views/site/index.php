@@ -11,16 +11,21 @@
                     <img src="img/slide/1st.jpg" alt="" data-lazyload="img/slide/1st.jpg"
                          data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
                 </li>
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
+                    data-title="FRIENDS">
+                    <img src="img/slide/1st.jpg" alt="" data-lazyload="img/slide/1st.jpg"
+                         data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
+                </li>
                 <!--end first-->
 
 
-                <!--start second-->
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on"
+                <!--
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
                     data-title="LESSON">
                     <img src="img/slide/1st.jpg" alt="" data-lazyload="img/slide/1st.jpg"
                          data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                 </li>
-                <!--end second-->
+                -->
 
             </ul>
 
