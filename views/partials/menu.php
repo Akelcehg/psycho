@@ -58,7 +58,8 @@ use yii\helpers\Html;
 
         <div class="nicdark_space3 nicdark_bg_gradient"></div>
 
-        <div class="nicdark_section nicdark_bg_white nicdark_shadow nicdark_radius_bottom">
+        <div class="nicdark_section nicdark_bg_white nicdark_shadow nicdark_radius_bottom"
+             style="border: 1px solid rgba(0,0,255,0.1);">
             <div class="nicdark_container nicdark_clearfix">
 
                 <div class="grid grid_12 percentage">

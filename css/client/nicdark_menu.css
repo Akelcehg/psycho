@@ -1,8 +1,10 @@
 /********************************************************COLOR************************************************/
 
 
-.nicdark_menu > li > a:hover { color: #868585; }
-.nicdark_menu > li > a { color: #a4a4a4; }
+/*.nicdark_menu > li > a:hover { color: #868585; }*/
+.nicdark_menu > li > a:hover { color: rgb(19, 29, 64); }
+/*.nicdark_menu > li > a { color: #a4a4a4; }*/
+.nicdark_menu > li > a { color: rgba(30, 45, 101, 1); }
 /*divider and triangle color*/
 .nicdark_menu > .grey > a:after, .nicdark_menu > .grey .sub-menu li:first-child:before, .nicdark_menu > .grey .sub-menu li ul li:first-child:before{ color: #f9f9f9; }
 .nicdark_menu > .greydark > a:after, .nicdark_menu > .greydark .sub-menu li:first-child:before, .nicdark_menu > .greydark .sub-menu li ul li:first-child:before{ color: #495052; }
