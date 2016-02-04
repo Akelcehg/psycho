@@ -7,18 +7,23 @@ use app\models\Image;
 use app\models\Problems;
 use app\models\Profile;
 use app\models\ProfileSearch;
+use app\models\PsychologistTop;
 use Yii;
+use yii\data\ActiveDataProvider;
 
 class PsychologistsController extends \yii\web\Controller
 {
     public function actionIndex() {
 
         $searchModel = new ProfileSearch();
+
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $psychologistsTop = new PsychologistTop();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'psychologistsTopDataProvider' => $psychologistsTop->getTopPsychologists()
         ]);
     }
 

@@ -122,18 +122,26 @@ use yii\helpers\Url;
         </div>
 
 
-        <div class="grid grid_6">
+        <?= ListView::widget([
+            'dataProvider' => $psychologistsTopDataProvider,
+            'summary' => '',
+            'itemView' => function ($data, $key, $index, $widget) {
+                return '<div class="grid grid_6">
 
             <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
 
+                <a href="' . Url::base() . '/psychologists/profile?id=' . $data["user_id"] . '">
                 <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
                     <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img1.jpg">
                 </div>
+                </a>
 
                 <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
                     <div class="nicdark_margin20">
 
-                        <h4 class="white"><a class="white" href="single-teacher.html">JULIETTE LIGHT</a></h4>
+                        <h4 class="white"><a class="white" href="' . Url::base() . '/psychologists/profile?id=' . $data["user_id"] . '">
+                        ' . $data['firstname'] . $data['lastname'] . $data['secondname'] . '
+                        </a></h4>
                         <div class="nicdark_space20"></div>
                         <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
                         </div>
@@ -166,146 +174,9 @@ use yii\helpers\Url;
 
             </div>
 
-        </div>
-
-        <div class="grid grid_6">
-
-            <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
-
-                <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img2.jpg">
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
-                    <div class="nicdark_margin20">
-
-                        <h4 class="white"><a class="white" href="single-teacher.html">JENNY MGRAYAN</a></h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
-                        </div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet, ipsum
-                            dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i class="icon-graduation-cap-1"></i>
-                            Know Me :)</a>
-
-                    </div>
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
-                    <a title="CURRICULUM" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_bluedark nicdark_radius_circle white"><i
-                            class="icon-download-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="DOCUMENTS" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_bluedark nicdark_radius_circle white"><i
-                            class="icon-attach-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="COURSES" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_bluedark nicdark_radius_circle white"><i
-                            class="icon-mic-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="grid grid_6">
-
-            <div class="nicdark_archive1 nicdark_bg_yellow nicdark_radius nicdark_shadow">
-
-                <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img3.jpg">
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
-                    <div class="nicdark_margin20">
-
-                        <h4 class="white"><a class="white" href="single-teacher.html">MARGARET GREY</a></h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
-                        </div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet, ipsum
-                            dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i class="icon-graduation-cap-1"></i>
-                            Know Me :)</a>
-
-                    </div>
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
-                    <a title="CURRICULUM" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_yellowdark nicdark_radius_circle white"><i
-                            class="icon-download-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="DOCUMENTS" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_yellowdark nicdark_radius_circle white"><i
-                            class="icon-attach-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="COURSES" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_yellowdark nicdark_radius_circle white"><i
-                            class="icon-mic-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="grid grid_6">
-
-            <div class="nicdark_archive1 nicdark_bg_violet nicdark_radius nicdark_shadow">
-
-                <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img4.jpg">
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
-                    <div class="nicdark_margin20">
-
-                        <h4 class="white"><a class="white" href="single-teacher.html">NICK HOPE</a></h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
-                        </div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet, ipsum
-                            dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i class="icon-graduation-cap-1"></i>
-                            Know Me :)</a>
-
-                    </div>
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
-                    <a title="CURRICULUM" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_violetdark nicdark_radius_circle white"><i
-                            class="icon-download-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="DOCUMENTS" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_violetdark nicdark_radius_circle white"><i
-                            class="icon-attach-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="COURSES" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_violetdark nicdark_radius_circle white"><i
-                            class="icon-mic-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                </div>
-
-            </div>
-
-        </div>
+        </div>';
+            },
+        ]); ?>
 
 
         <div class="nicdark_space50"></div>

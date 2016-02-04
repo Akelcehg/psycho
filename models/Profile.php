@@ -19,7 +19,8 @@ use Yii;
  * @property string $updated_at
  * @property string $created_at
  */
-class Profile extends \yii\db\ActiveRecord {
+class Profile extends \yii\db\ActiveRecord
+{
 
     /**
      * @inheritdoc
@@ -61,7 +62,6 @@ class Profile extends \yii\db\ActiveRecord {
     }
 
     public function initProfile($userId) {
-
         $this->user_id = $userId;
         $this->has_diplom = 0;
         $this->updated_at = time();
