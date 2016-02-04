@@ -145,10 +145,11 @@ use yii\helpers\Url;
                         <div class="nicdark_space20"></div>
                         <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
                         </div>
-                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_space50"></div>
+                        <!--<div class="nicdark_space20"></div>
                         <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet, ipsum
                             dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_space20"></div> -->
                         <a href="single-teacher.html" class="white nicdark_btn"><i class="icon-graduation-cap-1"></i>
                             Know Me :)</a>
 

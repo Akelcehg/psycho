@@ -57,9 +57,9 @@ use yii\helpers\Url;
 
     <div class="nicdark_margin10">
 
-        <a href="<?= Url::to(Url::base() . '/account/schools') ?>"
+        <a href="<?= Url::to(Url::base() . '/account/educational-institution') ?>"
            class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
-                class="icon-graduation-cap-1"></i>Школы</a>
+                class="icon-graduation-cap-1"></i>Учебные заведения</a>
 
         <a href="<?= Url::to(Url::base() . '/account/article') ?>"
            class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i

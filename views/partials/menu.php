@@ -76,7 +76,7 @@ use yii\helpers\Html;
                             </li>
 
                             <li class="orange">
-                                <a href="<?= Url::to('schools') ?>">ШКОЛЫ</a>
+                                <a href="<?= Url::to('educational-institution') ?>">УЧЕБНЫЕ ЗАВЕДЕНИЯ</a>
                             </li>
 
                             <li class="orange">

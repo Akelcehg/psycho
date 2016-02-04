@@ -12,10 +12,9 @@ use yii\filters\VerbFilter;
 /**
  * SchoolsController implements the CRUD actions for Schools model.
  */
-class SchoolsController extends Controller
+class EducationalInstitutionController extends Controller
 {
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -30,8 +29,7 @@ class SchoolsController extends Controller
      * Lists all Schools models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new SchoolsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -46,8 +44,7 @@ class SchoolsController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -58,8 +55,7 @@ class SchoolsController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new Schools();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -77,8 +73,7 @@ class SchoolsController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -96,8 +91,7 @@ class SchoolsController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -110,8 +104,7 @@ class SchoolsController extends Controller
      * @return Schools the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = Schools::findOne($id)) !== null) {
             return $model;
         } else {
