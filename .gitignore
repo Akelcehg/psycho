@@ -18,3 +18,4 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 /assets/
+/nbproject/private/

@@ -3,18 +3,19 @@
 namespace app\modules\account\controllers;
 
 use Yii;
-use app\models\Schools;
-use app\models\SchoolsSearch;
+use app\models\EducationalInstitution;
+use app\models\EducationalInstitutionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * SchoolsController implements the CRUD actions for Schools model.
+ * EducationalInstitutionController implements the CRUD actions for EducationalInstitution model.
  */
 class EducationalInstitutionController extends Controller
 {
-    public function behaviors() {
+    public function behaviors()
+    {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -26,11 +27,12 @@ class EducationalInstitutionController extends Controller
     }
 
     /**
-     * Lists all Schools models.
+     * Lists all EducationalInstitution models.
      * @return mixed
      */
-    public function actionIndex() {
-        $searchModel = new SchoolsSearch();
+    public function actionIndex()
+    {
+        $searchModel = new EducationalInstitutionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -40,23 +42,25 @@ class EducationalInstitutionController extends Controller
     }
 
     /**
-     * Displays a single Schools model.
+     * Displays a single EducationalInstitution model.
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id) {
+    public function actionView($id)
+    {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Schools model.
+     * Creates a new EducationalInstitution model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate() {
-        $model = new Schools();
+    public function actionCreate()
+    {
+        $model = new EducationalInstitution();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -68,12 +72,13 @@ class EducationalInstitutionController extends Controller
     }
 
     /**
-     * Updates an existing Schools model.
+     * Updates an existing EducationalInstitution model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id) {
+    public function actionUpdate($id)
+    {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -86,26 +91,28 @@ class EducationalInstitutionController extends Controller
     }
 
     /**
-     * Deletes an existing Schools model.
+     * Deletes an existing EducationalInstitution model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id) {
+    public function actionDelete($id)
+    {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Schools model based on its primary key value.
+     * Finds the EducationalInstitution model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Schools the loaded model
+     * @return EducationalInstitution the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id) {
-        if (($model = Schools::findOne($id)) !== null) {
+    protected function findModel($id)
+    {
+        if (($model = EducationalInstitution::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Schools;
+use app\models\EducationalInstitution;
 
 /**
- * SchoolsSearch represents the model behind the search form about `app\models\Schools`.
+ * EducationalInstitutionSearch represents the model behind the search form about `app\models\EducationalInstitution`.
  */
-class SchoolsSearch extends Schools
+class EducationalInstitutionSearch extends EducationalInstitution
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class SchoolsSearch extends Schools
     public function rules()
     {
         return [
-            [['id', 'city_id', 'year', 'status', 'accreditation', 'document_end'], 'integer'],
-            [['name', 'description', 'qualification_levels', 'address', 'phone', 'site', 'map_coordinates', 'school_directions', 'faculties', 'required_documents', 'updated_at', 'created_at'], 'safe'],
+            [['id', 'city_id', 'year'], 'integer'],
+            [['name', 'description', 'status', 'accreditation', 'document_end', 'qualification_levels', 'address', 'phone', 'site', 'map_coordinates', 'training_program', 'required_documents', 'updated_at', 'created_at'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class SchoolsSearch extends Schools
      */
     public function search($params)
     {
-        $query = Schools::find();
+        $query = EducationalInstitution::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -59,22 +59,21 @@ class SchoolsSearch extends Schools
             'id' => $this->id,
             'city_id' => $this->city_id,
             'year' => $this->year,
-            'status' => $this->status,
-            'accreditation' => $this->accreditation,
-            'document_end' => $this->document_end,
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'status', $this->status])
+            ->andFilterWhere(['like', 'accreditation', $this->accreditation])
+            ->andFilterWhere(['like', 'document_end', $this->document_end])
             ->andFilterWhere(['like', 'qualification_levels', $this->qualification_levels])
             ->andFilterWhere(['like', 'address', $this->address])
             ->andFilterWhere(['like', 'phone', $this->phone])
             ->andFilterWhere(['like', 'site', $this->site])
             ->andFilterWhere(['like', 'map_coordinates', $this->map_coordinates])
-            ->andFilterWhere(['like', 'school_directions', $this->school_directions])
-            ->andFilterWhere(['like', 'faculties', $this->faculties])
+            ->andFilterWhere(['like', 'training_program', $this->training_program])
             ->andFilterWhere(['like', 'required_documents', $this->required_documents]);
 
         return $dataProvider;

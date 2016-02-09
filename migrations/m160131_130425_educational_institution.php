@@ -18,7 +18,7 @@ class m160131_130425_educational_institution extends Migration
             'description' => Schema::TYPE_TEXT . ' NOT NULL',
             'city_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'year' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'status' => 'ENUM(``,`государственная`, `не государственная`) DEFAULT ``',
+            'status' => 'ENUM("","государственная", "не государственная") DEFAULT ""',
             'accreditation' => Schema::TYPE_TEXT,
             'document_end' => Schema::TYPE_STRING . ' NOT NULL',
             'qualification_levels' => Schema::TYPE_TEXT . ' NOT NULL',

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Schools */
+/* @var $model app\models\EducationalInstitution */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Schools', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Educational Institutions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="schools-view">
+<div class="educational-institution-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -34,15 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'city_id',
             'year',
             'status',
-            'accreditation',
+            'accreditation:ntext',
             'document_end',
             'qualification_levels:ntext',
             'address',
             'phone',
             'site',
             'map_coordinates',
-            'school_directions:ntext',
-            'faculties:ntext',
+            'training_program:ntext',
             'required_documents:ntext',
             'updated_at',
             'created_at',

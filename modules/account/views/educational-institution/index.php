@@ -46,7 +46,7 @@ use yii\helpers\Url;
             <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
                 <div class="nicdark_margin10 nicdark_relative">
 
-                    <a href="/psycho/account/schools/create"
+                    <a href="/psycho/account/educational-institution/create"
                        class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_red medium nicdark_radius_circle white nicdark_absolute"><i
                             class="icon-plus"></i></a>
 

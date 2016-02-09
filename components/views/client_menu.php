@@ -55,20 +55,13 @@ use yii\helpers\Url;
         <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
     </div>
 
-    <div class="nicdark_margin10">
+    <div class="grid grid_12 nomargin percentage">
 
         <a href="<?= Url::to(Url::base() . '/account/educational-institution') ?>"
-           class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
-                class="icon-graduation-cap-1"></i>Учебные заведения</a>
-
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Учебные
+            заведения</a>
         <a href="<?= Url::to(Url::base() . '/account/article') ?>"
-           class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
-                class="icon-graduation-cap-1"></i>Статьи</a>
-
-
-        <a href="shop-cart.php" class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white"><i
-                class="icon-basket-1"></i>Школы</a>
-
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Статьи</a>
 
     </div>
 

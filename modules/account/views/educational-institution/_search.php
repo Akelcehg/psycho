@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\SchoolsSearch */
+/* @var $model app\models\EducationalInstitutionSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="schools-search">
+<div class="educational-institution-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -41,9 +41,7 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'map_coordinates') ?>
 
-    <?php // echo $form->field($model, 'school_directions') ?>
-
-    <?php // echo $form->field($model, 'faculties') ?>
+    <?php // echo $form->field($model, 'training_program') ?>
 
     <?php // echo $form->field($model, 'required_documents') ?>
 

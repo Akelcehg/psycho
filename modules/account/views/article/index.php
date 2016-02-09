@@ -13,7 +13,6 @@ use yii\helpers\Url;
             <div class="grid-container">
                 <div class="grid-width-100">
                     <div id="editor">
-
                     </div>
                 </div>
             </div>
