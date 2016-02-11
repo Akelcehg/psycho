@@ -61,6 +61,7 @@ class SiteController extends Controller {
                         return $this->goHome();
                     }
                 } else
+
                     var_dump($profile);
             }
         }

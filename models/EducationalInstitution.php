@@ -30,18 +30,16 @@ class EducationalInstitution extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'educational_institution';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-            [['name', 'description', 'city_id', 'year', 'document_end', 'qualification_levels', 'address', 'phone', 'map_coordinates', 'training_program', 'required_documents'], 'required'],
+            [['status', 'name', 'description', 'city_id', 'year', 'document_end', 'qualification_levels', 'address', 'phone', 'map_coordinates', 'training_program', 'required_documents'], 'required'],
             [['description', 'status', 'accreditation', 'qualification_levels', 'training_program', 'required_documents'], 'string'],
             [['city_id', 'year'], 'integer'],
             [['updated_at', 'created_at'], 'safe'],
@@ -52,8 +50,7 @@ class EducationalInstitution extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'name' => 'Name',

@@ -22,6 +22,7 @@ class AppAsset extends AssetBundle
         'css/client/nicdark_responsive.css',
         'css/client/revslider/settings.css',
         'css/client/map.css',
+        'css/client/style.css',
         'http://fonts.googleapis.com/css?family=Montserrat:400,700',
         'http://fonts.googleapis.com/css?family=Raleway',
         'http://fonts.googleapis.com/css?family=Montez',

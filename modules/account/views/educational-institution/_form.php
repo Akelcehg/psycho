@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'year')->textInput() ?>
 
-    <?= $form->field($model, 'status')->dropDownList(['' => '', 'государственная' => 'государственная', 'не государственная' => 'не государственная',], ['prompt' => '']) ?>
+    <?= $form->field($model, 'status')->dropDownList(['государственная' => 'государственная', 'не государственная' => 'не государственная',], ['prompt' => 'Выберите статус']) ?>
 
     <?= $form->field($model, 'accreditation')->textarea(['rows' => 6]) ?>
 
@@ -152,17 +152,15 @@ use yii\widgets\ActiveForm;
             }, function (responses) {
                 if (responses && responses.length > 0) {
                     console.log(responses);
-//                    updateMarkerAddress(responses[0].formatted_address);
-                    //$('#educationalinstitution-address').val($('#pac-input').val());
                     $('#educationalinstitution-address').val(responses[0].formatted_address);
                 } else {
                     updateMarkerAddress('Cannot determine address at this location.');
                 }
             });
 
-            console.log(marker.getPosition().lat());
-            console.log(marker.getPosition().lng());
-
+            $('#educationalinstitution-map_coordinates').val(
+                marker.getPosition().lat() + ';' + marker.getPosition().lng()
+            );
             markers.push(marker);
         }
 
