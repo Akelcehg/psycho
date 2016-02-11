@@ -1,3 +1,7 @@
-.img-responsive.article-list {
-
+.article-text p{
+    /*color: rgba(30, 45, 101, 1)*/
+    color: black;
+    font-size: 14px;
+    line-height: 160%;
+    font-family: Verdana,sans-serif;
 }

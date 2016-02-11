@@ -60,7 +60,7 @@ use yii\helpers\Html;
 
                 <div class="grid grid_12 percentage">
 
-                    <div class="nicdark_space20"></div>
+                    <div class="nicdark_space10"></div>
                     <div class="nicdark_logo nicdark_marginleft10">
 
                         <a href="<?= Url::base() ?>"><img alt="" src="<?= Url::base() ?>/img/logo.png"></a>
@@ -113,7 +113,7 @@ use yii\helpers\Html;
                         </ul>
                     </nav>
 
-                    <div class="nicdark_space20"></div>
+                    <div class="nicdark_space10"></div>
 
                 </div>
 
