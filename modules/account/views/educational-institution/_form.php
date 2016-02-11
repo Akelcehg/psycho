@@ -139,9 +139,25 @@ use yii\widgets\ActiveForm;
 
             removeMarkers();
 
+            //console.log ($('#pac-input').val());
+
             var marker = new google.maps.Marker({
                 position: location,
                 map: map
+            });
+            var geocoder;
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                latLng: marker.getPosition()
+            }, function (responses) {
+                if (responses && responses.length > 0) {
+                    console.log(responses);
+//                    updateMarkerAddress(responses[0].formatted_address);
+                    //$('#educationalinstitution-address').val($('#pac-input').val());
+                    $('#educationalinstitution-address').val(responses[0].formatted_address);
+                } else {
+                    updateMarkerAddress('Cannot determine address at this location.');
+                }
             });
 
             console.log(marker.getPosition().lat());

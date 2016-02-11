@@ -43,7 +43,7 @@ class AppAsset extends AssetBundle
         'js/client/plugins/countto/jquery.countTo.js',
         'js/client/plugins/countdown/jquery.countdown.js',
         //"https://maps.googleapis.com/maps/api/js?key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places",
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
+        'https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
         'js/client/init.js',
         'js/client/ckeditor.js',
         'js/client/sample.js',
