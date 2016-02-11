@@ -21,20 +21,18 @@ class Article extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'article';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['psychologist_id', 'is_owner', 'text', 'title'], 'required'],
             [['psychologist_id', 'is_owner'], 'integer'],
-            [['text','title'], 'string'],
+            [['text', 'title'], 'string'],
             [['updated_at', 'created_at'], 'safe'],
             [['source'], 'string', 'max' => 255]
         ];
@@ -43,8 +41,7 @@ class Article extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'psychologist_id' => 'Psychologist ID',
@@ -56,4 +53,20 @@ class Article extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
         ];
     }
+
+
+    public function catch_that_image($text) {
+//        global $post, $posts;
+        $first_img = '';
+        ob_start();
+        ob_end_clean();
+        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $text, $matches);
+        $first_img = $matches[1][0];
+
+        if (empty($first_img)) {
+            $first_img = "/path/to/default.png";
+        }
+        return $first_img;
+    }
+
 }

@@ -1,6 +1,7 @@
 <?php
 
 use yii\widgets\ListView;
+use app\models\Article;
 
 ?>
 
@@ -54,6 +55,9 @@ use yii\widgets\ListView;
                             'itemOptions' => ['class' => 'item'],
                             'summary' => '',
                             'itemView' => function ($model, $key, $index, $widget) {
+                                $a = new Article();
+                                $plainBody = strip_tags($model['text']);
+                                $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
                                 return '
 
                             <h2>
@@ -64,8 +68,11 @@ use yii\widgets\ListView;
                             </p>
                             <p><span class="glyphicon glyphicon-time"></span> Posted on ' . $model['created_at'] . '</p>
                             <div class="nicdark_space10"></div>
+                            <div>
+                                <img class="img-responsive" src="' . $a->catch_that_image($model['text']) . '"/>
+                            </div>
                             <div class="article-list-div">
-                            ' . substr($model['text'], 0, 450) . '
+                            ' . $abrvBody . '
                             </div>
                             <div class="nicdark_space10"></div>
                             <a class="btn btn-primary" href="/psycho/article/view?id=' . $model["id"] . '">Read More <span
