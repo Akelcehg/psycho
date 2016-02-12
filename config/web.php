@@ -30,7 +30,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'site / error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -44,10 +44,10 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<alias:about|login>' => 'site/<alias>',
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                ' < alias:about | login > ' => 'site /<alias>',
+                ' < controller:\w +>/<id:\d +>' => ' < controller>/view',
+                ' < controller:\w +>/<action:\w +>/<id:\d +>' => ' < controller>/<action > ',
+                '<controller:\w +>/<action:\w +>' => ' < controller>/<action > ',
             ]
         ],
         'log' => [
@@ -59,7 +59,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . ' /db.php'),
+        'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
 ];

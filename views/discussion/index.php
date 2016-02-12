@@ -29,19 +29,23 @@
 
     <div class="nicdark_space40"></div>
 
-    <section class="nicdark_section nicdark_bg_blue nicdark_shadow">
 
-        <div class="nicdark_container nicdark_clearfix">
-            <div class="grid grid_12 nomargin nicdark_bg_blue nicdark_shadow nicdark_radius_left">
-                <div class="nicdark_focus">
-                    <h2 class="white">
-                        <i class="icon-clipboard big white"></i>
-                        Название группы
-                    </h2>
+    <section class="nicdark_section nicdark_bg_blue_custom nicdark_shadow">
+        <div class="white_mask">
+            <div class="nicdark_container nicdark_clearfix">
+
+                <div class="grid grid_12 nomargin nicdark_shadow nicdark_radius_left">
+
+                    <div class="nicdark_focus">
+                        <h2 class="white">
+                            <i class="icon-clipboard big white"></i>
+                            Название группы
+                        </h2>
+                    </div>
                 </div>
+
             </div>
         </div>
-
     </section>
 
     <div class="nicdark_container nicdark_clearfix">
@@ -101,19 +105,22 @@
 
     <div class="nicdark_space20"></div>
 
-    <section class="nicdark_section nicdark_bg_blue nicdark_shadow">
+    <section class="nicdark_section nicdark_bg_blue_custom nicdark_shadow">
+        <div class="white_mask">
+            <div class="nicdark_container nicdark_clearfix">
 
-        <div class="nicdark_container nicdark_clearfix">
-            <div class="grid grid_12 nomargin nicdark_bg_blue nicdark_shadow nicdark_radius_left">
-                <div class="nicdark_focus">
-                    <h2 class="white">
-                        <i class="icon-clipboard big white"></i>
-                        Название группы
-                    </h2>
+                <div class="grid grid_12 nomargin nicdark_shadow nicdark_radius_left">
+
+                    <div class="nicdark_focus">
+                        <h2 class="white">
+                            <i class="icon-clipboard big white"></i>
+                            Название группы
+                        </h2>
+                    </div>
                 </div>
+
             </div>
         </div>
-
     </section>
 
     <div class="nicdark_container nicdark_clearfix">

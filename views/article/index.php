@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use yii\widgets\ListView;
 use app\models\Article;
 
@@ -89,15 +91,24 @@ use app\models\Article;
 
                         <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
                             <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
-                                <h4 class="white nicdark_margin20">SEARCH</h4>
+                                <?php $form = ActiveForm::begin([
+                                    'action' => ['index'],
+                                    'method' => 'get',
+                                ]); ?>
+                                <h4 class="white nicdark_margin20">Поиск</h4>
                                 <i class="icon-search-outline nicdark_iconbg right medium yellow"></i>
                             </div>
+
                             <div class="nicdark_margin20">
-                                <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey small subtitle"
-                                       type="text" value="" size="200" placeholder="KEYWORD">
+                                <?= $form->field($searchModel, 'text')->input('text', [
+                                    'class' => 'nicdark_bg_white nicdark_radius small subtitle',
+                                    'placeholder' => 'KEYWORD',
+                                    'size' => "200"
+                                ])->label(false) ?>
                                 <div class="nicdark_space20"></div>
-                                <input class="nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white"
-                                       type="submit" value="SEND">
+                                <div class="form-group">
+                                    <?= Html::submitInput('Искать', ['class' => 'nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white']) ?>
+                                </div>
                             </div>
                         </div>
                         <div class="nicdark_space20"></div>
