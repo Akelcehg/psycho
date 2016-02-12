@@ -1,6 +1,9 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
+use app\models\Country;
+use app\models\City;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
@@ -16,7 +19,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'city_id')->textInput() ?>
+    <?= $form->field($model, 'city_id')->dropDownList(
+        ArrayHelper::map(City::find()->where([
+            'region_id' => '10373'
+        ])->orderBy('name')->all(), 'city_id', 'name')) ?>
 
     <?= $form->field($model, 'year')->textInput() ?>
 
@@ -59,14 +65,6 @@ use yii\widgets\ActiveForm;
 
 
 <script>
-    // This example adds a search box to a map, using the Google Place Autocomplete
-    // feature. People can enter geographical searches. The search box will return a
-    // pick list containing a mix of places and predicted search terms.
-
-    // This example requires the Places library. Include the libraries=places
-    // parameter when you first load the API. For example:
-    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
     function initAutocomplete() {
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: -33.8688, lng: 151.2195},
