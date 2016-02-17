@@ -1,3 +1,10 @@
+<?php
+
+use yii\widgets\LinkPager;
+use yii\widgets\ListView;
+
+?>
+
 <section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img1">
 
     <div class="nicdark_filter greydark">
@@ -339,7 +346,12 @@
     <!--start nicdark_container-->
     <div class="nicdark_container nicdark_clearfix">
 
-        <div class="grid grid_4 nicdark_relative">
+
+        <?= ListView::widget([
+            'dataProvider' => $dataProvider,
+            'summary' => '',
+            'itemView' => function ($data, $key, $index, $widget) {
+                return ' <div class="grid grid_4 nicdark_relative">
 
             <div class="nicdark_btn_iconbg nicdark_bg_yellow nicdark_absolute extrabig nicdark_shadow nicdark_radius">
                 <div>
@@ -348,138 +360,29 @@
             </div>
 
             <div class="nicdark_activity nicdark_marginleft100">
-                <h4>CUSTOM FOOD</h4>
+                <h4>' . $data['name'] . '</h4>
                 <div class="nicdark_space20"></div>
-                <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed
-                    ultricies diam.</p>
+                <p>' . $data['description'] . '</p>
                 <div class="nicdark_space20"></div>
-                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i> More</a>
-                <div class="nicdark_space20"></div>
-            </div>
-
-        </div>
-
-        <div class="grid grid_4 nicdark_relative">
-
-            <div class="nicdark_btn_iconbg nicdark_bg_orange nicdark_absolute extrabig nicdark_shadow nicdark_radius">
-                <div>
-                    <i class="icon-stopwatch nicdark_iconbg left big white"></i>
-                </div>
-            </div>
-
-            <div class="nicdark_activity nicdark_marginleft100">
-                <h4>MANY SPORTS</h4>
-                <div class="nicdark_space20"></div>
-                <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed
-                    ultricies diam.</p>
-                <div class="nicdark_space20"></div>
-                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i> More</a>
+                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i>Подробнее</a>
                 <div class="nicdark_space20"></div>
             </div>
 
-        </div>
+        </div>';
+            },
 
-        <div class="grid grid_4 nicdark_relative">
-
-            <div class="nicdark_btn_iconbg nicdark_bg_green nicdark_absolute extrabig nicdark_shadow nicdark_radius">
-                <div>
-                    <i class="icon-cab nicdark_iconbg left big white"></i>
-                </div>
-            </div>
-
-            <div class="nicdark_activity nicdark_marginleft100">
-                <h4>BUS SERVICE</h4>
-                <div class="nicdark_space20"></div>
-                <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed
-                    ultricies diam.</p>
-                <div class="nicdark_space20"></div>
-                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i> More</a>
-                <div class="nicdark_space20"></div>
-            </div>
-
-        </div>
-
-
-        <div class="grid grid_4 nicdark_relative">
-
-            <div class="nicdark_btn_iconbg nicdark_bg_blue nicdark_absolute extrabig nicdark_shadow nicdark_radius">
-                <div>
-                    <i class="icon-headphones-1 nicdark_iconbg left big white"></i>
-                </div>
-            </div>
-
-            <div class="nicdark_activity nicdark_marginleft100">
-                <h4>MUSIC LESSON</h4>
-                <div class="nicdark_space20"></div>
-                <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed
-                    ultricies diam.</p>
-                <div class="nicdark_space20"></div>
-                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i> More</a>
-            </div>
-
-        </div>
-
-        <div class="grid grid_4 nicdark_relative">
-
-            <div class="nicdark_btn_iconbg nicdark_bg_violet nicdark_absolute extrabig nicdark_shadow nicdark_radius">
-                <div>
-                    <i class="icon-map nicdark_iconbg left big white"></i>
-                </div>
-            </div>
-
-            <div class="nicdark_activity nicdark_marginleft100">
-                <h4>EXCURSIONS</h4>
-                <div class="nicdark_space20"></div>
-                <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed
-                    ultricies diam.</p>
-                <div class="nicdark_space20"></div>
-                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i> More</a>
-            </div>
-
-        </div>
-
-        <div class="grid grid_4 nicdark_relative">
-
-            <div class="nicdark_btn_iconbg nicdark_bg_red nicdark_absolute extrabig nicdark_shadow nicdark_radius">
-                <div>
-                    <i class="icon-globe-2 nicdark_iconbg left big white"></i>
-                </div>
-            </div>
-
-            <div class="nicdark_activity nicdark_marginleft100">
-                <h4>LANGUAGES</h4>
-                <div class="nicdark_space20"></div>
-                <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed
-                    ultricies diam.</p>
-                <div class="nicdark_space20"></div>
-                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i> More</a>
-            </div>
-
-        </div>
+            'pager' => [
+                'firstPageLabel' => 'Первая',
+                'lastPageLabel' => 'Последняя',
+                'prevPageLabel' => '<i class="icon-left-open-outline"></i>',
+                'nextPageLabel' => '<i class="icon-right-open-outline"></i>',
+                'maxButtonCount' => 3,
+            ],
+        ]); ?>
 
     </div>
-    <!--end nicdark_container-->
+
+    <div class="nicdark_space50"></div>
 
 </section>
-<!--start section-->
-<div class="nicdark_section">
 
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-        <div class="grid grid_6 nicdark_aligncenter_iphoneland nicdark_aligncenter_iphonepotr">
-            <a class="nicdark_disable_floatright_iphoneland nicdark_disable_floatright_iphonepotr nicdark_btn nicdark_bg_green medium right nicdark_shadow nicdark_radius white nicdark_press"><i
-                    class="icon-left-open-outline"></i>&nbsp;&nbsp;&nbsp;PREV</a>
-        </div>
-        <div class="grid grid_6 nicdark_aligncenter_iphoneland nicdark_aligncenter_iphonepotr">
-            <a class=" nicdark_btn nicdark_bg_green medium nicdark_shadow nicdark_radius white nicdark_press">NEXT&nbsp;&nbsp;&nbsp;<i
-                    class="icon-right-open-outline"></i></a>
-        </div>
-
-        <div class="nicdark_space50"></div>
-
-    </div>
-    <!--end nicdark_container-->
-
-</div>
-<!--end section--><!--end-->

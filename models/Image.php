@@ -30,15 +30,11 @@ class Image extends Model
 
         if (!file_exists('img/profile_photos')) mkdir('img/profile_photos');
 
-
         if ($this->validate()) {
             FileHelper::removeDirectory($directory);
             if (!file_exists($directory)) mkdir($directory);
 
-            //$this->image_file->saveAs($directory . $this->image_file->baseName . '.' . $this->image_file->extension);
-
             $this->image_file->saveAs($directory . 'logo' . '.' . $this->image_file->extension);
-
 
             $image = null;
             switch (strtolower($this->image_file->extension)) {
@@ -60,6 +56,7 @@ class Image extends Model
 
             $max_width = 100;
             $max_height = 250;
+
             $old_width = imagesx($image);
             $old_height = imagesy($image);
             $scale = min($max_width / $old_width, $max_height / $old_height);
@@ -103,6 +100,14 @@ class Image extends Model
         $logo = glob($directory . "logo_small.*");
         if ($logo) return $logo[0];
         else return null;
+    }
+
+    public function saveProfilePhoto() {
+        return true;
+    }
+
+    public function saveFile($dir, $fileName, $height, $width, $saveOriginal, $nameOriginal) {
+        return true;
     }
 
 }

@@ -1,7 +1,30 @@
-.article-text p{
+.article-text p {
     /*color: rgba(30, 45, 101, 1)*/
     color: black;
     font-size: 14px;
     line-height: 160%;
-    font-family: Verdana,sans-serif;
+    font-family: Verdana, sans-serif;
+}
+
+ul.pagination {
+    display: table;
+    margin: 0 auto;
+}
+
+ul.pagination li a, ul.pagination li.disabled span {
+    color: white;
+    padding: 10px 20px;
+    font-size: 17px;
+    background-color: #6fc191;
+    display: inline-block;
+    text-align: center;
+
+}
+
+ul.pagination a:hover,
+ul.pagination .active a:hover,
+ul.pagination .active a,
+ul.pagination li.disabled span:hover {
+    color: white;
+    background-color: rgb(37, 130, 76);
 }

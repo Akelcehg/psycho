@@ -45,6 +45,9 @@ class EducationalInstitutionSearch extends EducationalInstitution
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 6,
+            ],
         ]);
 
         $this->load($params);
