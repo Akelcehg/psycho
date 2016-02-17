@@ -62,7 +62,8 @@ use yii\helpers\Url;
             заведения</a>
         <a href="<?= Url::to(Url::base() . '/account/article') ?>"
            class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Статьи</a>
-
+        <a href="<?= Url::to(Url::base() . '/account/event') ?>"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Мероприятия</a>
     </div>
 
 </div>
