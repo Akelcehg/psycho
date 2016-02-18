@@ -15,8 +15,7 @@ class EventSearch extends Events
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id', 'type', 'price', 'organizer_id', 'is_user_organizer'], 'integer'],
             [['direction', 'name', 'about', 'date', 'duration', 'schedule', 'address', 'phone', 'site', 'map_coordinates', 'updated_at', 'created_at'], 'safe'],
@@ -26,8 +25,7 @@ class EventSearch extends Events
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,12 +37,14 @@ class EventSearch extends Events
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Events::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 8,
+            ],
         ]);
 
         $this->load($params);
