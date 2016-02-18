@@ -64,6 +64,10 @@ use yii\helpers\Url;
            class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Статьи</a>
         <a href="<?= Url::to(Url::base() . '/account/event') ?>"
            class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Мероприятия</a>
+        <a href="<?= Url::to(Url::base() . '/account/training') ?>"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Тренинги</a>
+        <a href="<?= Url::to(Url::base() . '/account/video') ?>"
+           class="nicdark_btn nicdark_bg_greydark2 small nicdark_shadow nicdark_radius white subtitle nicdark_margin10">Видео</a>
     </div>
 
 </div>

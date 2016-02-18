@@ -1,3 +1,9 @@
+<?php
+
+use yii\widgets\ListView;
+
+?>
+
 <section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img1">
 
     <div class="nicdark_filter greydark">
@@ -31,18 +37,18 @@
     <div class="nicdark_container nicdark_clearfix">
 
         <div class="grid grid_12">
-            <h1 class="subtitle greydark">OUR EVENTS</h1>
-            <div class="nicdark_space20"></div>
-            <h3 class="subtitle grey">DON'T MISS OUR EVENTS</h3>
+            <h1 class="subtitle greydark">Тренинги</h1>
             <div class="nicdark_space20"></div>
             <div class="nicdark_divider left big"><span class="nicdark_bg_green nicdark_radius"></span></div>
             <div class="nicdark_space10"></div>
         </div>
 
 
-        <div class="grid grid_3">
-
-            <!--archive1-->
+        <?= ListView::widget([
+            'dataProvider' => $dataProvider,
+            'summary' => '',
+            'itemView' => function ($data, $key, $index, $widget) {
+                return '<div class="grid grid_3">
             <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
 
                 <a href="single-event.html"
@@ -53,277 +59,38 @@
                 <img alt="" src="img/events/img1.jpg">
 
                 <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">A DAY IN THE PARK</h4>
+                    <h4 class="white nicdark_margin20">' . $data['name'] . '</h4>
                 </div>
 
                 <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> New York, Times Square</h5>
+                    <h5 class="white"><i class="icon-pin-outline"></i>' . $data['address'] . '</h5>
                     <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
+                    <h5 class="white">
+                        <p style="padding:0px;color:white;">' . nl2br($data['schedule']) . '</p>
+                    </h5>
                     <div class="nicdark_space20"></div>
                     <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
                     <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
+                    <p class="white">' . substr($data['about'], 0, 100) . '</p>
                     <div class="nicdark_space20"></div>
                     <a href="single-event.html"
-                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
+                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">
+                       Подробнее</a>
                 </div>
 
             </div>
-            <!--archive1-->
 
-        </div>
-        <div class="grid grid_3">
+        </div>';
+            },
 
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">21<br/>
-                    <small>DEC</small>
-                </a>
-
-                <img alt="" src="img/events/img1.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">A DAY IN THE PARK</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> New York, Times Square</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">21<br/>
-                    <small>DEC</small>
-                </a>
-
-                <img alt="" src="img/events/img1.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">A DAY IN THE PARK</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> New York, Times Square</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">21<br/>
-                    <small>DEC</small>
-                </a>
-
-                <img alt="" src="img/events/img1.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">A DAY IN THE PARK</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> New York, Times Square</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">21<br/>
-                    <small>DEC</small>
-                </a>
-
-                <img alt="" src="img/events/img1.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">A DAY IN THE PARK</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> New York, Times Square</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-
-
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">10<br/>
-                    <small>MAY</small>
-                </a>
-
-                <img alt="" src="img/events/img2.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">ART SESSION</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> Our School</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class="nicdark_press nicdark_btn nicdark_bg_bluedark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_yellow nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">24<br/>
-                    <small>MAR</small>
-                </a>
-
-                <img alt="" src="img/events/img3.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">WATERCOLOR PRACTICE</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> Secondary School</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class="nicdark_press nicdark_btn nicdark_bg_yellowdark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">30<br/>
-                    <small>DEC</small>
-                </a>
-
-                <img alt="" src="img/events/img4.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">SPORT TRAINING</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> Central Park (NY)</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt
-                        rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class="nicdark_press nicdark_btn nicdark_bg_orangedark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
+            'pager' => [
+                'firstPageLabel' => 'Первая',
+                'lastPageLabel' => 'Последняя',
+                'prevPageLabel' => '<i class="icon-left-open-outline"></i>',
+                'nextPageLabel' => '<i class="icon-right-open-outline"></i>',
+                'maxButtonCount' => 3,
+            ],
+        ]); ?>
 
         <div class="nicdark_space50"></div>
 
