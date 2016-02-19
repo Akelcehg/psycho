@@ -10,29 +10,36 @@ use yii\grid\GridView;
 $this->title = 'Videos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="videos-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<div class="nicdark_space100"></div>
+<div class="nicdark_space50"></div>
 
-    <p>
-        <?= Html::a('Create Videos', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+<section class="nicdark_section">
+    <div class="nicdark_container nicdark_clearfix">
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'link',
-            'user_id',
-            'updated_at',
-            'created_at',
+        <h1><?= Html::encode($this->title) ?></h1>
+        <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+        <p>
+            <?= Html::a('Create Videos', ['create'], ['class' => 'btn btn-success']) ?>
+        </p>
 
-</div>
+        <?= GridView::widget([
+            'dataProvider' => $dataProvider,
+            'filterModel' => $searchModel,
+            'columns' => [
+                ['class' => 'yii\grid\SerialColumn'],
+
+                'id',
+                'link',
+                'user_id',
+                'updated_at',
+                'created_at',
+
+                ['class' => 'yii\grid\ActionColumn'],
+            ],
+        ]); ?>
+
+    </div>
+</section>

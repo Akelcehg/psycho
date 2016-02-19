@@ -9,6 +9,7 @@ class m160218_130230_videos extends Migration
         $this->createTable('videos', [
             'id' => Schema::TYPE_PK,
 
+            'title' => Schema::TYPE_STRING . ' NOT NULL',
             'link' => Schema::TYPE_STRING . ' NOT NULL',
             'user_id' => Schema::TYPE_INTEGER . ' NOT NULL',
 

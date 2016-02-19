@@ -10,12 +10,17 @@ $this->title = 'Create Videos';
 $this->params['breadcrumbs'][] = ['label' => 'Videos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="videos-create">
+<div class="nicdark_space100"></div>
+<div class="nicdark_space50"></div>
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<section class="nicdark_section">
+    <div class="nicdark_container nicdark_clearfix">
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+        <h1><?= Html::encode($this->title) ?></h1>
 
-</div>
+        <?= $this->render('_form', [
+            'model' => $model,
+        ]) ?>
+
+    </div>
+</section>

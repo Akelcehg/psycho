@@ -39,16 +39,24 @@
                 <!-- Blog Entries Column -->
                 <div class="col-md-8">
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe class="embed-responsive-item nicdark_zoom nicdark_mpopup_iframe"
-                                        src="http://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                                        allowfullscreen=""></iframe>
+                                        src="https://www.youtube.com/embed/CXfK-Ltlw88"
+                                        allowfullscreen="true"></iframe>
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-md-6">
+                        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="420" height="315"
+                                        src="http://www.youtube.com/embed/XGSy3_Czz8k">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
