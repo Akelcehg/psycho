@@ -55,7 +55,7 @@ class SiteController extends Controller {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
-                $profile = new Profile();                                
+                $profile = new Profile();
                 if ($profile->initProfile($user->id)) {
                     if (Yii::$app->getUser()->login($user)) {
                         return $this->goHome();
@@ -67,7 +67,7 @@ class SiteController extends Controller {
         }
 
         return $this->render('signup', [
-                    'model' => $model,
+            'model' => $model,
         ]);
     }
 
@@ -84,7 +84,7 @@ class SiteController extends Controller {
         }
 
         return $this->render('login', [
-                    'model' => $model,
+            'model' => $model,
         ]);
     }
 
@@ -101,7 +101,7 @@ class SiteController extends Controller {
             return $this->refresh();
         }
         return $this->render('contact', [
-                    'model' => $model,
+            'model' => $model,
         ]);
     }
 
