@@ -1,7 +1,7 @@
 <?php
 
-use yii\widgets\LinkPager;
 use yii\widgets\ListView;
+use yii\helpers\Url;
 
 ?>
 
@@ -364,7 +364,7 @@ use yii\widgets\ListView;
                 <div class="nicdark_space20"></div>
                 <p>' . $data['description'] . '</p>
                 <div class="nicdark_space20"></div>
-                <a href="#" class="nicdark_btn grey"><i class="icon-right-open-outline"></i>Подробнее</a>
+                <a href="' . Url::base() . '/educational-institution/description?id=' . $data['id'] . '" class="nicdark_btn grey"><i class="icon-right-open-outline"></i>Подробнее</a>
                 <div class="nicdark_space20"></div>
             </div>
 

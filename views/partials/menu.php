@@ -76,19 +76,20 @@ use yii\helpers\Html;
                             </li>
 
                             <li class="orange">
-                                <a href="<?= Url::to('educational-institution') ?>">УЧЕБНЫЕ ЗАВЕДЕНИЯ</a>
+                                <a href="<?= Url::base() . '/' . Url::to('educational-institution') ?>">УЧЕБНЫЕ
+                                    ЗАВЕДЕНИЯ</a>
                             </li>
 
                             <li class="orange">
-                                <a href="<?= Url::to('article') ?>">СТАТЬИ</a>
+                                <a href="<?= Url::base() . '/' . Url::to('article') ?>">СТАТЬИ</a>
                             </li>
 
                             <li class="orange">
-                                <a href="<?= Url::to('video') ?>">ВИДЕО</a>
+                                <a href="<?= Url::base() . '/' . Url::to('video') ?>">ВИДЕО</a>
                             </li>
 
                             <li class="orange">
-                                <a href="<?= Url::to('discussion') ?>">ФОРУМ</a>
+                                <a href="<?= Url::base() . '/' . Url::to('discussion') ?>">ФОРУМ</a>
                             </li>
 
                             <li class="orange">
@@ -103,12 +104,12 @@ use yii\helpers\Html;
 
 
                             <li class="orange">
-                                <a href="<?= Url::to('trainings') ?>">ТРЕНИНГИ</a>
+                                <a href="<?= Url::base() . '/' . Url::to('trainings') ?>">ТРЕНИНГИ</a>
                             </li>
 
 
                             <li class="orange">
-                                <a href="<?= Url::to('psychologists') ?>">ПСИХОЛОГИ</a>
+                                <a href="<?= Url::base() . '/' . Url::to('psychologists') ?>">ПСИХОЛОГИ</a>
                             </li>
                         </ul>
                     </nav>

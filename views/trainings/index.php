@@ -1,6 +1,7 @@
 <?php
 
 use yii\widgets\ListView;
+use yii\helpers\Url;
 
 ?>
 
@@ -62,7 +63,7 @@ use yii\widgets\ListView;
                     <small>DEC</small>
                 </a>
 
-                <img alt="" src="../img/events/img1.jpg">
+                <img alt="" src="' . Url::base() . '/img/events/img1.jpg">
 
                 <div class="nicdark_textevidence nicdark_bg_greydark">
                     <h4 class="white nicdark_margin20">' . $data['name'] . '</h4>
@@ -81,7 +82,7 @@ use yii\widgets\ListView;
                     <div class="nicdark_space20"></div>
                     <p class="white">' . substr($data['about'], 0, 100) . '</p>
                     <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
+                    <a href="' . Url::base() . '/trainings/description?id=' . $data['id'] . '"
                        class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">
                        Подробнее</a>
                 </div>

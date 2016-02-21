@@ -2,21 +2,31 @@
 
 namespace app\controllers;
 
+use app\models\Events;
 use app\models\EventSearch;
 use Yii;
+use yii\base\Event;
 
-class TrainingsController extends \yii\web\Controller
-{
+class TrainingsController extends \yii\web\Controller {
     public function actionIndex() {
         $searchModel = new EventSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //var_dump($dataProvider->count);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'itemsOnPage'=>$dataProvider->count
+            'itemsOnPage' => $dataProvider->count
         ]);
+    }
+
+    public function actionDescription($id) {
+
+        $training = Events::find(['id' => $id]);
+
+        return $this->render('training', [
+            'training' => $training
+        ]);
+
     }
 
 }

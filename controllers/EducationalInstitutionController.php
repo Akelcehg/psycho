@@ -7,8 +7,7 @@ use app\models\EducationalInstitutionSearch;
 use Yii;
 use yii\data\Pagination;
 
-class EducationalInstitutionController extends \yii\web\Controller
-{
+class EducationalInstitutionController extends \yii\web\Controller {
     public function actionIndex() {
 
         $searchModel = new EducationalInstitutionSearch();
@@ -18,6 +17,16 @@ class EducationalInstitutionController extends \yii\web\Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider
         ]);
+    }
+
+    public function actionDescription($id) {
+
+        $educationInstitute = EducationalInstitution::findOne(['id' => $id]);
+
+        return $this->render('institute', [
+            'educationInstitute' => $educationInstitute
+        ]);
+
     }
 
 }
