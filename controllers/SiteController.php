@@ -5,6 +5,8 @@ namespace app\controllers;
 use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Html;
+use yii\helpers\Json;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
@@ -73,7 +75,25 @@ class SiteController extends Controller {
 
     public function actionLogin() {
 
-        if (!\Yii::$app->user->isGuest) {
+        $model = new LoginForm();
+
+        $model->load(Yii::$app->request->post());
+        $error = [];
+
+        //return Json::encode(['ok'],200);
+        if (!$model->validate() && !$model->login()) {
+            foreach ($model->getErrors() as $attribute => $errors) {
+                //$error['0']=$errors;
+                array_push($error, $errors);
+            }
+            return JSON::encode($error, 200);
+        }
+
+        if ($model->login()) {
+            return $this->goBack();
+        }
+
+        /*if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
@@ -84,7 +104,7 @@ class SiteController extends Controller {
         }
         return $this->render('login', [
             'model' => $model,
-        ]);
+        ]);*/
     }
 
     public function actionLogout() {

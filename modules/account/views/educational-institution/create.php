@@ -17,11 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <section class="nicdark_section">
     <div class="nicdark_container nicdark_clearfix">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+        <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+        <?= $this->render('_form', [
+            'model' => $model,
+        ]) ?>
 
-</div>
+    </div>
 </section>
