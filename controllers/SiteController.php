@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Events;
+use app\models\PsychologistTop;
 use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
@@ -50,7 +52,14 @@ class SiteController extends Controller {
     }
 
     public function actionIndex() {
-        return $this->render('index');
+
+        $topPsychologists = new PsychologistTop();
+        $eventsList = new Events();
+
+        return $this->render('index', [
+            'topPsychologists' => $topPsychologists->getTopPsychologists(4),
+            'eventsList' => $eventsList->getEvents(4)
+        ]);
     }
 
     public function actionSignup() {

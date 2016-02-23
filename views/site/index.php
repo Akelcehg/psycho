@@ -1,3 +1,10 @@
+<?php
+
+use yii\helpers\Url;
+use yii\widgets\ListView;
+
+?>
+
 <section class="nicdark_section">
 
     <div class="tp-banner-container">
@@ -118,27 +125,34 @@
         </div>
 
 
-        <div class="grid grid_6">
+        <?php
+        foreach ($topPsychologists as $index => $data):
+            echo '<div class="grid grid_6">
 
             <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
 
+                <a href="' . Url::base() . '/psychologists/profile?id=' . $data["user_id"] . '">
                 <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
                     <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img1.jpg">
                 </div>
+                </a>
 
                 <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
                     <div class="nicdark_margin20">
 
-                        <h4 class="white"><a class="white" href="single-teacher.html">JULIETTE LIGHT</a></h4>
+                        <h4 class="white"><a class="white" href="' . Url::base() . '/psychologists/profile?id=' . $data["user_id"] . '">
+                        ' . $data['firstname'] . $data['lastname'] . $data['secondname'] . '
+                        </a></h4>
                         <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet,
-                            ipsum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i
-                                class="icon-graduation-cap-1"></i> Know Me :)</a>
+                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
+                        </div>
+                        <div class="nicdark_space50"></div>
+                        <!--<div class="nicdark_space20"></div>
+                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet, ipsum
+                            dolor sit amet.</p>
+                        <div class="nicdark_space20"></div> -->
+                        <a href="single-teacher.html" class="white nicdark_btn"><i class="icon-graduation-cap-1"></i>
+                            Know Me :)</a>
 
                     </div>
                 </div>
@@ -162,146 +176,8 @@
 
             </div>
 
-        </div>
-
-        <div class="grid grid_6">
-
-            <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
-
-                <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img2.jpg">
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
-                    <div class="nicdark_margin20">
-
-                        <h4 class="white"><a class="white" href="single-teacher.html">JENNY MGRAYAN</a></h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet,
-                            ipsum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i
-                                class="icon-graduation-cap-1"></i> Know Me :)</a>
-
-                    </div>
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
-                    <a title="CURRICULUM" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_bluedark nicdark_radius_circle white"><i
-                            class="icon-download-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="DOCUMENTS" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_bluedark nicdark_radius_circle white"><i
-                            class="icon-attach-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="COURSES" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_bluedark nicdark_radius_circle white"><i
-                            class="icon-mic-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="grid grid_6">
-
-            <div class="nicdark_archive1 nicdark_bg_yellow nicdark_radius nicdark_shadow">
-
-                <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img3.jpg">
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
-                    <div class="nicdark_margin20">
-
-                        <h4 class="white"><a class="white" href="single-teacher.html">MARGARET GREY</a></h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet,
-                            ipsum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i
-                                class="icon-graduation-cap-1"></i> Know Me :)</a>
-
-                    </div>
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
-                    <a title="CURRICULUM" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_yellowdark nicdark_radius_circle white"><i
-                            class="icon-download-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="DOCUMENTS" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_yellowdark nicdark_radius_circle white"><i
-                            class="icon-attach-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="COURSES" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_yellowdark nicdark_radius_circle white"><i
-                            class="icon-mic-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="grid grid_6">
-
-            <div class="nicdark_archive1 nicdark_bg_violet nicdark_radius nicdark_shadow">
-
-                <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img4.jpg">
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage50 nicdark_width100_responsive">
-                    <div class="nicdark_margin20">
-
-                        <h4 class="white"><a class="white" href="single-teacher.html">NICK HOPE</a></h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet,
-                            ipsum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i
-                                class="icon-graduation-cap-1"></i> Know Me :)</a>
-
-                    </div>
-                </div>
-
-                <div class="nicdark_textevidence nicdark_width_percentage10 nicdark_displaynone_responsive">
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
-                    <a title="CURRICULUM" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_violetdark nicdark_radius_circle white"><i
-                            class="icon-download-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="DOCUMENTS" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_violetdark nicdark_radius_circle white"><i
-                            class="icon-attach-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                    <a title="COURSES" href="single-teacher.html"
-                       class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_violetdark nicdark_radius_circle white"><i
-                            class="icon-mic-outline"></i></a>
-                    <div class="nicdark_space20"></div>
-                </div>
-
-            </div>
-
-        </div>
+        </div>';
+        endforeach; ?>
 
 
     </div>
@@ -349,9 +225,14 @@
         </div>
 
 
-        <div class="grid grid_3">
+        <?php foreach ($eventsList as $index => $data):
+            $string = strip_tags($data['schedule']);
+            if (strlen($string) > 100) {
+                $stringCut = substr($string, 0, 100);
+                $string = substr($stringCut, 0, strrpos($stringCut, ' ')) . '...';
+            }
 
-            <!--archive1-->
+            $template = '<div class="grid grid_3">
             <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
 
                 <a href="single-event.html"
@@ -359,144 +240,35 @@
                     <small>DEC</small>
                 </a>
 
-                <img alt="" src="img/events/img1.jpg">
+                <img alt="" src="' . Url::base() . '/img/events/img1.jpg">
 
                 <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">A DAY IN THE PARK</h4>
+                    <h4 class="white nicdark_margin20">' . $data['name'] . '</h4>
                 </div>
 
                 <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> New York, Times Square</h5>
+                <div style="min-height:50px;">
+                    <h5 class="white"><i class="icon-pin-outline"></i>' . $data['address'] . '</h5>
+                    </div>
                     <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
+                    <h5 class="white">
+                        <p style="padding:0px;color:white;">' . nl2br($string) . '</p>
+                    </h5>
                     <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span
-                            class="nicdark_bg_white nicdark_radius"></span></div>
+                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
                     <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-                        tincidunt rutrum.</p>
+                    <p class="white">' . substr($data['about'], 0, 100) . '</p>
                     <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
+                    <a href="' . Url::base() . '/trainings/description?id=' . $data['id'] . '"
+                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">
+                       Подробнее</a>
                 </div>
-
             </div>
-            <!--archive1-->
-
-        </div>
-
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">10<br/>
-                    <small>MAY</small>
-                </a>
-
-                <img alt="" src="img/events/img2.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">ART SESSION</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> Our School</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span
-                            class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-                        tincidunt rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class="nicdark_press nicdark_btn nicdark_bg_bluedark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_yellow nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">24<br/>
-                    <small>MAR</small>
-                </a>
-
-                <img alt="" src="img/events/img3.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">WATERCOLOR PRACTICE</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> Secondary School</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span
-                            class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-                        tincidunt rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class="nicdark_press nicdark_btn nicdark_bg_yellowdark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-
-        <div class="grid grid_3">
-
-            <!--archive1-->
-            <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">30<br/>
-                    <small>DEC</small>
-                </a>
-
-                <img alt="" src="img/events/img4.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">SPORT TRAINING</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                    <h5 class="white"><i class="icon-pin-outline"></i> Central Park (NY)</h5>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white"><i class="icon-clock-1"></i> 9:00 To 14:00</h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span
-                            class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-                        tincidunt rutrum.</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-event.html"
-                       class="nicdark_press nicdark_btn nicdark_bg_orangedark white nicdark_radius nicdark_shadow medium">CHECK
-                        IT</a>
-                </div>
-
-            </div>
-            <!--archive1-->
-
-        </div>
-
+        </div>';
+            //if ($index + 1 == 4) $template .= '<div align="center" style="display: block; block; width: 100%; clear:both"></div>';
+            echo $template;
+        endforeach;
+        ?>
         <div class="nicdark_space50"></div>
 
     </div>

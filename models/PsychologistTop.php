@@ -14,8 +14,7 @@ use yii\db\Query;
  * @property string $updated_at
  * @property string $created_at
  */
-class PsychologistTop extends \yii\db\ActiveRecord
-{
+class PsychologistTop extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
@@ -46,18 +45,21 @@ class PsychologistTop extends \yii\db\ActiveRecord
         ];
     }
 
-    public function getTopPsychologists() {
+    public function getTopPsychologists($amount = null) {
         $query = new Query();
-
         $query->select('profile.*')
             ->from('profile')
             ->join('join', 'psychologist_top',
                 'psychologist_top.psychologist_id = profile.user_id')->orderBy('profile.id');
 
-        $psychologistsTopDataProvider = new ActiveDataProvider([
+        if ($amount) {
+            $query->limit($amount);
+            return $query->all();
+        }
+
+        return $psychologistsTopDataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-
-        return $psychologistsTopDataProvider;
+        //return $psychologistsTopDataProvider;
     }
 }

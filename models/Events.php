@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\data\ActiveDataProvider;
 
 /**
  * This is the model class for table "events".
@@ -25,21 +26,18 @@ use Yii;
  * @property string $updated_at
  * @property string $created_at
  */
-class Events extends \yii\db\ActiveRecord
-{
+class Events extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'events';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['type', 'direction', 'name', 'about', 'date', 'duration', 'schedule', 'price', 'address', 'phone', 'map_coordinates', 'organizer_id', 'is_user_organizer'], 'required'],
             [['type', 'price', 'organizer_id', 'is_user_organizer'], 'integer'],
@@ -52,8 +50,7 @@ class Events extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'type' => 'Type',
@@ -73,5 +70,17 @@ class Events extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
         ];
+    }
+
+    public function getEvents($amount = null) {
+        $query = Events::find();
+        if ($amount) {
+            $query->limit($amount);
+        }
+        //var_dump($query->all());
+        return $query->all();
+        /*return $dataProvider = new ActiveDataProvider([
+            'query' => $query
+        ]);*/
     }
 }
