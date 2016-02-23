@@ -1,7 +1,6 @@
 <?php
 
 use yii\helpers\Url;
-use yii\widgets\ListView;
 
 ?>
 
@@ -338,149 +337,95 @@ use yii\widgets\ListView;
 
                 </div>
             </div>
-            <div class="grid grid_4 nicdark_masonry_item excursions">
-                <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">SEE OUR NEW DOWNLOAD AREA</h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
-                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
-                                class="icon-doc-text-1 "></i> Read More</a>
-                    </div>
-
-                    <i class="icon-pencil-1 nicdark_iconbg right medium green"></i>
-
-                </div>
-            </div>
             <div class="grid grid_4 nicdark_masonry_item educational">
-                <div class="nicdark_archive1 nicdark_bg_violet nicdark_radius nicdark_shadow">
-
-                    <a href="single-post-right-sidebar.html"
-                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_violet nicdark_border_violetdark white medium nicdark_radius_circle nicdark_absolute_left"><i
-                            class="icon-link-outline"></i></a>
-
-                    <img alt="" src="img/blog/img2.jpg">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">SAY HALLO TO OUR TEACHERS</h4>
-                    </div>
-
-                    <i class="icon-picture-outline nicdark_iconbg right medium violet"></i>
-
-                </div>
-            </div>
-            <div class="grid grid_4 nicdark_masonry_item excursions">
-                <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
-
-                    <a href="single-post-right-sidebar.html"
-                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_orange nicdark_border_orangedark white medium nicdark_radius_circle nicdark_absolute_left"><i
-                            class="icon-link-outline"></i></a>
-
-                    <img alt="" src="img/blog/img4.jpg">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">MUSIC ACTIVITIES FOR ALL</h4>
-                    </div>
-
-                    <i class="icon-camera-outline nicdark_iconbg right medium orange"></i>
-
-                </div>
-            </div>
-            <div class="grid grid_4 nicdark_masonry_item excursions">
-                <div class="nicdark_archive1 nicdark_bg_red nicdark_radius nicdark_shadow">
-
-                    <a href="single-post-right-sidebar.html"
-                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_red nicdark_border_reddark white medium nicdark_radius_circle nicdark_absolute_left"><i
-                            class="icon-link-outline"></i></a>
-
-                    <img alt="" src="img/blog/img3.jpg">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">CHRISTMAS PARTY !</h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
-                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
-                                class="icon-doc-text-1 "></i> Read More</a>
-                    </div>
-
-                    <i class="icon-pencil-1 nicdark_iconbg right medium red"></i>
-
-                </div>
-            </div>
-            <div class="grid grid_4 nicdark_masonry_item excursions">
-                <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
-
-                    <a href="single-post-right-sidebar.html"
-                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_green nicdark_border_greendark white medium nicdark_radius_circle nicdark_absolute_left"><i
-                            class="icon-link-outline"></i></a>
-
-                    <img alt="" src="img/blog/img5.jpg">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">BIO SPECIAL MEAL</h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
-                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
-                                class="icon-doc-text-1 "></i> Read More</a>
-                    </div>
-
-                    <i class="icon-picture-outline nicdark_iconbg right medium green"></i>
-
-                </div>
-            </div>
-            <div class="grid grid_4 nicdark_masonry_item educational">
-                <div class="nicdark_archive1 nicdark_bg_yellow nicdark_radius nicdark_shadow">
-
-                    <a href="single-post-right-sidebar.html"
-                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_yellow nicdark_border_yellowdark white medium nicdark_radius_circle nicdark_absolute_left"><i
-                            class="icon-link-outline"></i></a>
-
-                    <img alt="" src="img/blog/img7.jpg">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">BEST COOKING ACTIVITIES !</h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
-                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
-                                class="icon-doc-text-1 "></i> Read More</a>
-                    </div>
-
-                    <i class="icon-picture-outline nicdark_iconbg right medium yellow"></i>
-
-                </div>
-            </div>
-            <div class="grid grid_4 nicdark_masonry_item excursions">
                 <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
 
                     <a href="single-post-right-sidebar.html"
                        class="nicdark_zoom nicdark_btn_icon nicdark_bg_blue nicdark_border_bluedark white medium nicdark_radius_circle nicdark_absolute_left"><i
                             class="icon-link-outline"></i></a>
 
-                    <img alt="" src="img/blog/img8.jpg">
+                    <img alt="" src="img/blog/img1.jpg">
 
                     <div class="nicdark_margin20">
-                        <h4 class="white">END OF THE SCHOOL YEAR</h4>
+                        <h4 class="white">OUR SCHOOL ANNIVERSARY</h4>
+                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_divider left small"><span
+                                class="nicdark_bg_white nicdark_radius"></span></div>
+                        <div class="nicdark_space20"></div>
+                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
+                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
+                        <div class="nicdark_space20"></div>
+                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
+                                class="icon-doc-text-1 "></i> Read More</a>
+                    </div>
+
+                    <i class="icon-camera-outline nicdark_iconbg right medium blue"></i>
+
+                </div>
+            </div>
+            <div class="grid grid_4 nicdark_masonry_item educational">
+                <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
+
+                    <a href="single-post-right-sidebar.html"
+                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_blue nicdark_border_bluedark white medium nicdark_radius_circle nicdark_absolute_left"><i
+                            class="icon-link-outline"></i></a>
+
+                    <img alt="" src="img/blog/img1.jpg">
+
+                    <div class="nicdark_margin20">
+                        <h4 class="white">OUR SCHOOL ANNIVERSARY</h4>
+                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_divider left small"><span
+                                class="nicdark_bg_white nicdark_radius"></span></div>
+                        <div class="nicdark_space20"></div>
+                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
+                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
+                        <div class="nicdark_space20"></div>
+                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
+                                class="icon-doc-text-1 "></i> Read More</a>
+                    </div>
+
+                    <i class="icon-camera-outline nicdark_iconbg right medium blue"></i>
+
+                </div>
+            </div>
+            <div class="grid grid_4 nicdark_masonry_item educational">
+                <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
+
+                    <a href="single-post-right-sidebar.html"
+                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_blue nicdark_border_bluedark white medium nicdark_radius_circle nicdark_absolute_left"><i
+                            class="icon-link-outline"></i></a>
+
+                    <img alt="" src="img/blog/img1.jpg">
+
+                    <div class="nicdark_margin20">
+                        <h4 class="white">OUR SCHOOL ANNIVERSARY</h4>
+                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_divider left small"><span
+                                class="nicdark_bg_white nicdark_radius"></span></div>
+                        <div class="nicdark_space20"></div>
+                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
+                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
+                        <div class="nicdark_space20"></div>
+                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
+                                class="icon-doc-text-1 "></i> Read More</a>
+                    </div>
+
+                    <i class="icon-camera-outline nicdark_iconbg right medium blue"></i>
+
+                </div>
+            </div>
+            <div class="grid grid_4 nicdark_masonry_item educational">
+                <div class="nicdark_archive1 nicdark_bg_blue nicdark_radius nicdark_shadow">
+
+                    <a href="single-post-right-sidebar.html"
+                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_blue nicdark_border_bluedark white medium nicdark_radius_circle nicdark_absolute_left"><i
+                            class="icon-link-outline"></i></a>
+
+                    <img alt="" src="img/blog/img1.jpg">
+
+                    <div class="nicdark_margin20">
+                        <h4 class="white">OUR SCHOOL ANNIVERSARY</h4>
                         <div class="nicdark_space20"></div>
                         <div class="nicdark_divider left small"><span
                                 class="nicdark_bg_white nicdark_radius"></span></div>
@@ -497,44 +442,6 @@ use yii\widgets\ListView;
                 </div>
             </div>
 
-            <div class="grid grid_4 nicdark_masonry_item excursions">
-                <div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
-
-                    <a href="single-post-right-sidebar.html"
-                       class="nicdark_zoom nicdark_btn_icon nicdark_bg_orange nicdark_border_orangedark white medium nicdark_radius_circle nicdark_absolute_left"><i
-                            class="icon-link-outline"></i></a>
-
-                    <img alt="" src="img/blog/img6.jpg">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">EXCURSION PRESENTATION</h4>
-                    </div>
-
-                    <i class="icon-picture-outline nicdark_iconbg right medium orange"></i>
-
-                </div>
-            </div>
-
-            <div class="grid grid_4 nicdark_masonry_item excursions">
-                <div class="nicdark_archive1 nicdark_bg_red nicdark_radius nicdark_shadow">
-
-                    <div class="nicdark_margin20">
-                        <h4 class="white">DOCTOR IN THE SCHOOL</h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span
-                                class="nicdark_bg_white nicdark_radius"></span></div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor
-                            sit amet, consectetur adip iscing elit psum dolor sit amet.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-post-right-sidebar.html" class="white nicdark_btn"><i
-                                class="icon-doc-text-1 "></i> Read More</a>
-                    </div>
-
-                    <i class="icon-pencil-1 nicdark_iconbg right medium red"></i>
-
-                </div>
-            </div>
 
         </div>
         <!--end nicdark_masonry_container-->
