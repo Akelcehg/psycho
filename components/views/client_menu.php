@@ -24,19 +24,12 @@ use yii\helpers\Url;
             <ul class="nicdark_list nicdark_relative">
                 <li>
 
-                    <?php if ($psychologistPhoto) { ?>
+
                         <div class="grid grid_3">
                             <img alt=""
                                  class="nicdark_absolute nicdark_radius nicdark_opacity nicdark_width100"
                                  src="<?= Url::base() . '/' . $psychologistPhoto ?>">
                         </div>
-                    <?php } else { ?>
-
-                        <img alt=""
-                             class="nicdark_absolute nicdark_radius nicdark_opacity nicdark_width100"
-                             src="<?= Url::base() ?>/img/team/img_blank.jpg">
-
-                    <?php } ?>
 
                     <div class="nicdark_activity nicdark_marginleft100" style="margin-left:120px;">
                         <h5 class="grey subtitle">BOOK CHILDREN</h5>

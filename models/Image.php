@@ -3,10 +3,10 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\helpers\FileHelper;
+use yii\helpers\Url;
 use yii\web\UploadedFile;
 
-class Image extends Model
-{
+class Image extends Model {
     /**
      * @var UploadedFile
      */
@@ -25,6 +25,7 @@ class Image extends Model
     }
 
     public function upload() {
+
         $psychologistId = \Yii::$app->user->id;
         $directory = 'img/profile_photos/' . $psychologistId . '/';
 
@@ -71,10 +72,37 @@ class Image extends Model
             imagejpeg($new, NULL, 90);
             $data = ob_get_clean();
 
+            /*     imagedestroy($image);
+                 imagedestroy($new);*/
+
+            file_put_contents($directory . 'logo_small' . '.' . $this->image_file->extension, $data);
+
+
+            $list_width = 400;
+            $list_height = 400;
+            $old_width = imagesx($image);
+            $old_height = imagesy($image);
+            $scale = min($list_width / $old_width, $list_height / $old_height);
+            $new_width = ceil($scale * $old_width);
+            $new_height = ceil($scale * $old_height);
+            $new = imagecreatetruecolor($new_width, $new_height);
+            imagecopyresampled($new, $image,
+                0, 0, 0, 0,
+                $new_width, $new_height, $old_width, $old_height);
+
+            ob_start();
+            imagejpeg($new, NULL, 90);
+            $data = ob_get_clean();
+
             imagedestroy($image);
             imagedestroy($new);
 
-            file_put_contents($directory . 'logo_small' . '.' . $this->image_file->extension, $data);
+            file_put_contents($directory . 'logo_medium' . '.' . $this->image_file->extension, $data);
+
+            $this->saveImageWithTransparentBg(400, 400,
+                imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension), $new_width, $new_height,
+                $directory . 'logo_medium' . '.png');
+
 
             return true;
         } else {
@@ -92,6 +120,33 @@ class Image extends Model
         else return null;
     }
 
+    public static function getUserProfilePhoto($psychologistId) {
+
+        $directory = 'img/profile_photos/' . $psychologistId . '/';
+
+        $logo = glob($directory . "logo.*");
+        if ($logo) return Url::base() . '/' . $logo[0];
+        else return Url::base() . '/img/team/img_blank_small.jpg';
+    }
+
+    public static function getUserMediumProfilePhoto($psychologistId) {
+
+        $directory = 'img/profile_photos/' . $psychologistId . '/';
+
+        $logo = glob($directory . "logo_medium.png");
+        if ($logo) return Url::base() . '/' . $logo[0];
+        else return Url::base() . '/img/team/img_blank_small.jpg';
+    }
+
+    public static function getUserSmallProfilePhoto($psychologistId) {
+
+        $directory = 'img/profile_photos/' . $psychologistId . '/';
+
+        $logo = glob($directory . "logo_small.*");
+        if ($logo) return Url::base() . '/' . $logo[0];
+        else return Url::base() . '/img/team/img_blank_small.jpg';
+    }
+
     public function getSmallProfilePhoto() {
 
         $psychologistId = \Yii::$app->user->id;
@@ -99,15 +154,34 @@ class Image extends Model
 
         $logo = glob($directory . "logo_small.*");
         if ($logo) return $logo[0];
-        else return null;
+        else return 'img/team/img_blank_small.jpg';
     }
 
-    public function saveProfilePhoto() {
-        return true;
+    public function saveImageWithTransparentBg($width, $height, $img, $new_width, $new_height, $path) {
+        $image = imagecreatetruecolor($width, $height);
+        imagealphablending($image, false);
+        $col = imagecolorallocatealpha($image, 255, 255, 255, 127);
+        imagefilledrectangle($image, 0, 0, $width, $height, $col);
+        imagealphablending($image, true);
+
+        $this->pasteImageOnTransparentBg($image, $img, $new_width, $new_height);
+
+        //$fn = md5(microtime() . "img/profile_photos") . ".png";
+        imagealphablending($image, false);
+        imagesavealpha($image, true);
+
+        if (imagepng($image, $path, 1)) ; /*{
+            echo "img/profile_photos/$fn";
+        }*/
+
+        imagedestroy($image);
+
     }
 
-    public function saveFile($dir, $fileName, $height, $width, $saveOriginal, $nameOriginal) {
-        return true;
+    public function pasteImageOnTransparentBg($background, $image, $originalWidth, $originalHeight) {
+        //imagecopymerge($background, $image, 400 - $originalWidth, 0, 0, 0, $originalWidth, $originalHeight, 100);
+        imagecopymerge($background, $image, 0, 0, 0, 0, $originalWidth, $originalHeight, 100);
+        imagealphablending($background, true);
     }
 
 }
