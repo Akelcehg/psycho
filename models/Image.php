@@ -135,7 +135,7 @@ class Image extends Model {
 
         $logo = glob($directory . "logo_medium.png");
         if ($logo) return Url::base() . '/' . $logo[0];
-        else return Url::base() . '/img/team/img_blank_small.jpg';
+        else return Url::base() . '/img/team/img_blank.jpg';
     }
 
     public static function getUserSmallProfilePhoto($psychologistId) {

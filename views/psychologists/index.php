@@ -133,8 +133,8 @@ use app\models\Image;
 
                 <a href="' . Url::base() . '/psychologists/profile?id=' . $data["user_id"] . '">
                 <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="img-responsive" src="'.Image::getUserMediumProfilePhoto($data["user_id"]).'">
-                    <!-- <img alt="" class="nicdark_radius_left nicdark_opacity" src=".Url::base()./img/team/img5.jpg'.'"> -->
+                    <img alt="" class="img-responsive" src="' . Image::getUserMediumProfilePhoto($data["user_id"]) . '">
+                    <!-- <img alt="" class="nicdark_radius_left nicdark_opacity" src=".Url::base()./img/team/img5.jpg' . '"> -->
                 </div>
                 </a>
 
@@ -273,9 +273,9 @@ use app\models\Image;
                                 <a href="' . Url::base() . '/psychologists/profile?id=' . $data['user_id'] . '">
                                     <div class="nicdark_textevidence nicdark_bg_greydark nicdark_radius_top">
                                         <h4 class="white nicdark_margin10">' .
-                $data["firstname"] . $data["lastname"] . $data["secondname"] .'</h4>
+                $data["firstname"] . $data["lastname"] . $data["secondname"] . '</h4>
                                     </div>
-                                    <img class="nicdark_opacity" alt="" src="'.Image::getUserMediumProfilePhoto($data["user_id"]).'">
+                                    <img class="nicdark_opacity" alt="" src="' . Image::getUserMediumProfilePhoto($data["user_id"]) . '">
 
                                     <div class="nicdark_textevidence nicdark_bg_blue" style="min-height:150px;">
                                         <h5 class="white nicdark_margin5" style="text-align:left;">

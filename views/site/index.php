@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Url;
+use app\models\Image;
 
 ?>
 
@@ -132,7 +133,7 @@ use yii\helpers\Url;
 
                 <a href="' . Url::base() . '/psychologists/profile?id=' . $data["user_id"] . '">
                 <div class="nicdark_textevidence nicdark_width_percentage40 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="img/team/img1.jpg">
+                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="' . Image::getUserMediumProfilePhoto($data["user_id"]) . '">
                 </div>
                 </a>
 
