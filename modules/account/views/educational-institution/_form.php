@@ -15,45 +15,86 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+    <div class="grid grid_6">
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+        <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
+            <h4 class="white nicdark_margin20">INFORMATION</h4>
+            <i class="icon-globe-1 nicdark_iconbg right medium yellow"></i>
+        </div>
 
-    <?= $form->field($model, 'city_id')->dropDownList(
-        ArrayHelper::map(City::find()->where([
-            'region_id' => '10373'
-        ])->orderBy('name')->all(), 'city_id', 'name')) ?>
+        <div class="nicdark_space20"></div>
 
-    <?= $form->field($model, 'year')->textInput() ?>
+        <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->dropDownList(['государственная' => 'государственная', 'не государственная' => 'не государственная',], ['prompt' => 'Выберите статус']) ?>
+        <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'accreditation')->textarea(['rows' => 6]) ?>
+    </div>
+    <div class="grid grid_6">
 
-    <?= $form->field($model, 'document_end')->textInput(['maxlength' => true]) ?>
+        <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
+            <h4 class="white nicdark_margin20">INFORMATION</h4>
+            <i class="icon-globe-1 nicdark_iconbg right medium yellow"></i>
+        </div>
 
-    <?= $form->field($model, 'qualification_levels')->textarea(['rows' => 6]) ?>
+        <div class="nicdark_space20"></div>
 
-    <div class="nicdark_space20"></div>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div id="map"></div>
-    <div class="nicdark_space20"></div>
+        <?= $form->field($model, 'city_id')->dropDownList(
+            ArrayHelper::map(City::find()->where([
+                'region_id' => '10373'
+            ])->orderBy('name')->all(), 'city_id', 'name')) ?>
 
-    <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'year')->textInput() ?>
 
-    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'status')->dropDownList(['государственная' => 'государственная', 'не государственная' => 'не государственная',], ['prompt' => 'Выберите статус']) ?>
 
-    <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'accreditation')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'map_coordinates')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'document_end')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'training_program')->textarea(['rows' => 6]) ?>
+        <?= $form->field($model, 'qualification_levels')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'required_documents')->textarea(['rows' => 6]) ?>
+        <div class="nicdark_space20"></div>
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
+        <div class="nicdark_space20"></div>
 
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+        <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+        <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'map_coordinates')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'training_program')->textarea(['rows' => 6]) ?>
+
+        <?= $form->field($model, 'required_documents')->textarea(['rows' => 6]) ?>
+
+        <?= $form->field($model, 'updated_at')->textInput() ?>
+
+        <?= $form->field($model, 'created_at')->textInput() ?>
+
+    </div>
+    <!--<div class="grid grid_4">
+
+        <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
+            <h4 class="white nicdark_margin20">INFORMATION</h4>
+            <i class="icon-globe-1 nicdark_iconbg right medium yellow"></i>
+        </div>
+        <div class="nicdark_space20"></div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+
+    </div>-->
+
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

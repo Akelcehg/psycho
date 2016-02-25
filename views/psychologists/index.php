@@ -1,6 +1,5 @@
 <?php
 
-use yii\grid\GridView;
 use yii\widgets\ListView;
 use yii\helpers\Url;
 use app\models\Image;
