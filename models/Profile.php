@@ -19,8 +19,7 @@ use Yii;
  * @property string $updated_at
  * @property string $created_at
  */
-class Profile extends \yii\db\ActiveRecord
-{
+class Profile extends \yii\db\ActiveRecord {
 
     /**
      * @inheritdoc
@@ -58,6 +57,12 @@ class Profile extends \yii\db\ActiveRecord
             'has_diplom' => 'Has Diplom',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
+        ];
+    }
+
+    public function relations() {
+        return [
+            'problems' => array(self::HAS_MANY, 'PsychologistProblems', 'psychologist_id')
         ];
     }
 

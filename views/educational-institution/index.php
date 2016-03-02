@@ -106,7 +106,7 @@ use yii\helpers\Url;
         <?= ListView::widget([
             'dataProvider' => $educationsTop,
             'summary' => '',
-            'itemView' => function ($data, $key, $index, $widget) {
+            'itemView' => function ($data, $key, $index, $widget) {                
                 return '
                 <div class="grid grid_3">
 

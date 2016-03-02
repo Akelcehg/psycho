@@ -10,13 +10,11 @@ use app\models\Profile;
 /**
  * ProfileSearch represents the model behind the search form about `app\models\Profile`.
  */
-class ProfileSearch extends Profile
-{
+class ProfileSearch extends Profile {
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id', 'user_id', 'price', 'has_diplom'], 'integer'],
             [['firstname', 'lastname', 'secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
@@ -26,8 +24,7 @@ class ProfileSearch extends Profile
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,8 +36,7 @@ class ProfileSearch extends Profile
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Profile::find();
 
         $dataProvider = new ActiveDataProvider([

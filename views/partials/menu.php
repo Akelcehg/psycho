@@ -76,9 +76,13 @@ use yii\helpers\Html;
                             </li>
 
                             <li class="orange">
-                                <a href="<?= Url::base() . '/' . Url::to('educational-institution') ?>">УЧЕБНЫЕ
-                                    ЗАВЕДЕНИЯ</a>
+                                <a href="index-2.html">ИНТЕРЕСНОЕ</a>
+                                <ul class="sub-menu" style="display: none;">
+                                    <li><a href="courses.php">ТЕСТЫ</a></li>
+                                    <li><a href="courses.php">БИБЛИОТЕКА</a></li>
+                                </ul>
                             </li>
+
 
                             <li class="orange">
                                 <a href="<?= Url::base() . '/' . Url::to('article') ?>">СТАТЬИ</a>
@@ -87,30 +91,25 @@ use yii\helpers\Html;
                             <li class="orange">
                                 <a href="<?= Url::base() . '/' . Url::to('video') ?>">ВИДЕО</a>
                             </li>
-
-                            <li class="orange">
-                                <a href="<?= Url::base() . '/' . Url::to('discussion') ?>">ФОРУМ</a>
-                            </li>
-
-                            <li class="orange">
-                                <a href="index-2.html">Интересное</a>
-                                <ul class="sub-menu" style="display: none;">
-                                    <li><a href="courses.php">выфвфыв</a></li>
-                                    <li><a href="courses.php">выфвфы</a></li>
-                                    <li><a href="courses.php">выфвфывфвф</a></li>
-                                    <li><a href="courses.php">выфвфы</a></li>
-                                </ul>
-                            </li>
-
-
                             <li class="orange">
                                 <a href="<?= Url::base() . '/' . Url::to('trainings') ?>">ТРЕНИНГИ</a>
                             </li>
 
+                            <!--                            <li class="orange">
+                                <a href="<? /*= Url::base() . '/' . Url::to('discussion') */ ?>">ФОРУМ</a>
+                            </li>-->
+
+                            <li class="orange">
+                                <a href="<?= Url::base() . '/' . Url::to('educational-institution') ?>">
+                                    УЧЕБНЫЕ ЗАВЕДЕНИЯ
+                                </a>
+                            </li>
 
                             <li class="orange">
                                 <a href="<?= Url::base() . '/' . Url::to('psychologists') ?>">ПСИХОЛОГИ</a>
                             </li>
+
+
                         </ul>
                     </nav>
 

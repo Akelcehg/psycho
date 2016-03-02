@@ -1,8 +1,11 @@
-.article-text p {
-    /*color: rgba(30, 45, 101, 1)*/
+p {
     color: black;
     font-size: 14px;
     line-height: 160%;
+    font-family: Verdana, sans-serif;
+}
+
+a{
     font-family: Verdana, sans-serif;
 }
 
@@ -27,4 +30,29 @@ ul.pagination .active a,
 ul.pagination li.disabled span:hover {
     color: white;
     background-color: rgb(37, 130, 76);
+}
+
+.psycho_top_windows {
+    /*background: #fcfcfc;*/
+    background: #e8e8e8;
+    border: solid 1px #bde0ed;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 1px 0 1px rgb(163, 215, 237);
+}
+
+.events_top_windows {
+    background: #e8e8e8;
+    border: solid 1px #bde0ed;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 1px 0 1px rgb(163, 215, 237);
+}
+
+.news_top_windows {
+    /*background: #e8e8e8;*/
+    border: solid 1px #bde0ed;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 1px 0 1px rgb(163, 215, 237);
 }

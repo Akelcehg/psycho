@@ -9,10 +9,8 @@ use app\models\Profile;
 use app\models\ProfileSearch;
 use app\models\PsychologistTop;
 use Yii;
-use yii\data\ActiveDataProvider;
 
-class PsychologistsController extends \yii\web\Controller
-{
+class PsychologistsController extends \yii\web\Controller {
     public function actionIndex() {
 
         $searchModel = new ProfileSearch();
@@ -23,7 +21,8 @@ class PsychologistsController extends \yii\web\Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'psychologistsTopDataProvider' => $psychologistsTop->getTopPsychologists()
+            'psychologistsTopDataProvider' => $psychologistsTop->getTopPsychologists(),
+            'allProblems' => Problems::find()->all()
         ]);
     }
 

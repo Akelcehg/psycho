@@ -54,8 +54,7 @@ class SiteController extends Controller {
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
-        $eventsList = new Events();
-
+        $eventsList = new Events();                 
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => $eventsList->getEvents(4)

@@ -80,6 +80,10 @@ JQUERY UI
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.nicdark_bg_blue_light {
+    background-color: #337ab7;
+}
+
 .nicdark_bg_blue_custom {
     background-color: #0C3474;
 }

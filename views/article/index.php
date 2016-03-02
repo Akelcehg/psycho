@@ -8,12 +8,10 @@ use app\models\Article;
 ?>
 
 
-<!--start section-->
 <section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img-single-teacher-1">
 
     <div class="nicdark_filter greydark">
 
-        <!--start nicdark_container-->
         <div class="nicdark_container nicdark_clearfix">
 
             <div class="grid grid_12">
@@ -29,12 +27,10 @@ use app\models\Article;
             </div>
 
         </div>
-        <!--end nicdark_container-->
 
     </div>
 
 </section>
-<!--end section-->
 
 <section class="nicdark_section">
 
