@@ -15,28 +15,32 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body id="start_nicdark_framework">
+<body>
 <?php $this->beginBody() ?>
+<div class="wrapper">
 
-<div class="nicdark_site">
-    <div class="nicdark_site_fullwidth nicdark_clearfix">
-        <div class="nicdark_overlay"></div>
+    <?php echo $this->render('//partials/header'); ?>
 
-        <?php echo $this->render('//partials/header'); ?>
+
+    <div class="contant">
 
         <?= $content ?>
+
     </div>
+
+    <?php echo $this->render('//partials/footer'); ?>
+
 </div>
 
 
 <?php $this->endBody() ?>
-<?php echo $this->render('//partials/footer'); ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>

@@ -18,18 +18,35 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/client/nicdark_style.css',
-        'css/client/nicdark_responsive.css',
+        'css/client/style.css',
+        'css/client/color3.css',
+        'css/client/transitions.css',
+        'css/client/bootstrap.css',
+        'css/client/bootstrap-responsive.css',
+        'css/client/jquery.bxslider.css',
+        'css/client/owl.carousel.css',
+        'css/client/font-awesome.min.css',
+        'css/client/parallax.css',
+
+        /*'css/client/nicdark_responsive.css',
         'css/client/revslider/settings.css',
         'css/client/map.css',
-        'css/client/style.css',
-        //'http://fonts.googleapis.com/css?family=Montserrat:400,700',
-        //'http://fonts.googleapis.com/css?family=Raleway',
-        //'http://fonts.googleapis.com/css?family=Montez',
+        'css/client/style.css',*/
+
     ];
     public $js = [
+        'js/client/jquery-1.11.0.min.js',
+        'js/client/bootstrap.min.js',
+        'js/client/jquery.bxslider.min.js',
+        'https://maps.googleapis.com/maps/api/js?v=3.exp',
+        'js/client/owl.carousel.js',
+        'js/client/modernizr.js',
+        'js/client/skrollr.min.js',
+        'js/client/functions.js',
+
+
         //'js/client/main/jquery.min.js',
-        'js/client/main/jquery-ui.js',
+        /*'js/client/main/jquery-ui.js',
         'js/client/main/excanvas.js',
         'js/client/plugins/revslider/jquery.themepunch.tools.min.js',
         'js/client/plugins/revslider/jquery.themepunch.revolution.min.js',
@@ -42,19 +59,19 @@ class AppAsset extends AssetBundle
         'js/client/plugins/inview/jquery.inview.min.js',
         'js/client/plugins/parallax/jquery.parallax-1.1.3.js',
         'js/client/plugins/countto/jquery.countTo.js',
-        'js/client/plugins/countdown/jquery.countdown.js',
+        'js/client/plugins/countdown/jquery.countdown.js',*/
         //"https://maps.googleapis.com/maps/api/js?key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places",
 
-        'https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
+        //'https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
 
-        'js/client/init.js',
-        'js/client/ckeditor.js',
-        'js/client/sample.js',
+        /*'js/client/init.js',*/
+        /*'js/client/ckeditor.js',*/
+        /*'js/client/sample.js',
         'js/client/flex.js',
-        'js/client/scripts.js',
+        'js/client/scripts.js',*/
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\bootstrap\BootstrapAsset',
     ];
 }
