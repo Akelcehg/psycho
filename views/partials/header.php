@@ -86,7 +86,7 @@ use yii\helpers\Url;
     <div class="top-strip">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="images/logo3.png" alt=""></a>
+                <a href="index.html"><img src="<?=Url::base()?>/images/logo3.png" alt=""></a>
             </div>
             <!--ACCOUNT SECTION START-->
             <div class="account">

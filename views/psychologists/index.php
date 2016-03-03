@@ -1,9 +1,11 @@
 <section>
     <div class="container">
+
         <div class="sec-header">
             <h2>Our Teachers</h2>
             <p>Discover courses by topic</p>
         </div>
+
         <div class="row">
             <div class="span3">
                 <div class="card">
@@ -103,36 +105,88 @@
 
     <div class="container">
 
-        <div class="sec-header">
-            <h2>Our Teachers</h2>
-            <p>Discover courses by topic</p>
-        </div>
-
-
         <div class="row">
-            <div class="span12" style="background-color: white; padding: 15px; margin-bottom: 15px;">
-                <form>
-                    <div class="row-fluid">
-                        <div class="span2">
-                            <input type="text" placeholder="Name" class="input-block-level">
-                        </div>
-                        <div class="span2">
-                            <input type="text" placeholder="E-mail" class="input-block-level">
-                        </div>
-                        <div class="span2">
-                            <input type="text" placeholder="Website" class="input-block-level">
-                        </div>
-                    </div>
-                    <div>
-                            <input type="submit" value="Найти">
-                    </div>
-                </form>
-
+            <div style="margin-bottom: 20px;">
+                <a href="#" class="btn-style btn-large" data-toggle="modal" data-target="#myModal">Найти психолога</a>
             </div>
-
         </div>
 
         <div class="contact-us">
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
             <div class="admin">
                 <div class="thumb">
                     <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
@@ -190,3 +244,142 @@
     </div>
 
 </section>
+
+
+<!-- Modal -->
+<div class="modal large fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" style="color: #c7012e; text-align: center;" id="myModalLabel">Поиск
+                    психолога</h3>
+            </div>
+
+            <div class="modal-body">
+
+                <form>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <input type="text" placeholder="Name" class="input-block-level">
+                        </div>
+
+                        <div class="span4">
+                            <input type="text" placeholder="Name" class="input-block-level">
+                        </div>
+
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <input type="text" placeholder="Name" class="input-block-level">
+                        </div>
+                        <div class="span4">
+                            <input type="text" placeholder="E-mail" class="input-block-level">
+                        </div>
+                        <div class="span4">
+                            <input type="text" placeholder="Website" class="input-block-level">
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1"
+                                           value="option1"
+                                           checked>
+                                    Option one is this and that
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="float: right;">
+                        <button class="btn-style">Найти</button>
+                    </div>
+            </div>
+            </form>
+
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+    </div>
+</div>
+</div>

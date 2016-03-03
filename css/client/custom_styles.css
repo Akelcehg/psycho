@@ -44,3 +44,8 @@
 .admin .thumb {
     border: none;
 }
+
+.modal.large {
+    width: 80%; /* respsonsive width */
+    margin-left:-40%; /* width/2) */
+}
