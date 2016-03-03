@@ -1,3 +1,5 @@
+<?php echo $this->render('//partials/slider'); ?>
+
 <section>
     <div class="container">
         <!--SECTION HEADER START-->

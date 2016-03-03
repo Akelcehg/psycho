@@ -1,3 +1,9 @@
+<?php
+
+use yii\helpers\Url;
+
+?>
+
 <header class="header-6">
     <!--NAVIGATION START-->
     <div class="navigation-bar">
@@ -8,30 +14,31 @@
                 <div class="span8">
                     <div class="navigation">
                         <div class="navbar">
-                            <div class="navbar-inner" >
+                            <div class="navbar-inner">
                                 <div class="container">
-                                    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+                                    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"
+                                            type="button">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                     </button>
                                     <div class="nav-collapse collapse">
                                         <ul>
-                                            <li><a href="javascript:void(0)">Home</a>
-                                                <ul>
+                                            <li><a href="<?=Url::base()?>">Главная</a>
+                                                <!--<ul>
                                                     <li><a href="index.html">Home Page Default</a></li>
                                                     <li><a href="index-1.html">Home Page 1</a></li>
                                                     <li><a href="index-2.html">Home Page 2</a></li>
                                                     <li><a href="index-3.html">Home Page 3</a></li>
                                                     <li><a href="index-4.html">Home Page 4</a></li>
                                                     <li><a href="index-sidemenu.html">Home Page 5</a></li>
-                                                </ul>
+                                                </ul>-->
                                             </li>
-                                            <li><a href="javascript:void(0)">Blog</a>
-                                                <ul>
+                                            <li><a href="<?=Url::to('psychologists')?>">Психологи</a>
+                                                <!--<ul>
                                                     <li><a href="blog.html">Blog</a></li>
                                                     <li><a href="blog-detail.html">Blog Detail</a></li>
-                                                </ul>
+                                                </ul>-->
                                             </li>
                                             <li><a href="services.html">Services</a></li>
                                             <li><a href="javascript:void(0)">Events</a>
@@ -88,7 +95,8 @@
                     <li><a href="#">Sign Out</a></li>
                     <li>
                         <div class="dropdown">
-                            <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                            <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown" data-target="#"
+                               href="/page.html">
                                 My Account
                                 <b class="caret"></b>
                             </a>
@@ -107,19 +115,3 @@
     <!--TOP STRIP END-->
 
 </header>
-<!--HEADER END-->
-<!--BANNER START-->
-<div class="banner">
-    <ul class="bxslider">
-        <li><img src="images/slider/1st.jpg" alt=""> </li>
-    </ul>
-    <div class="newsletters">
-        <h1>Start 30-Day free trial today.</h1>
-        <h4>Search for online courses on Web development, Yoga, Guitar lessons, or anything else.</h4>
-        <div class="subscribe">
-            <input type="text" class="input-block-level">
-            <button>Subscribe</button>
-        </div>
-    </div>
-</div>
-<!--BANNER END-->

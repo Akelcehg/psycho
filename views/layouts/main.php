@@ -27,7 +27,6 @@ AppAsset::register($this);
 
     <?php echo $this->render('//partials/header'); ?>
 
-
     <div class="contant">
 
         <?= $content ?>

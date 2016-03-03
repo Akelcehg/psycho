@@ -27,6 +27,7 @@ class AppAsset extends AssetBundle
         'css/client/owl.carousel.css',
         'css/client/font-awesome.min.css',
         'css/client/parallax.css',
+        'css/client/custom_styles.css',
 
         /*'css/client/nicdark_responsive.css',
         'css/client/revslider/settings.css',
@@ -43,6 +44,7 @@ class AppAsset extends AssetBundle
         'js/client/modernizr.js',
         'js/client/skrollr.min.js',
         'js/client/functions.js',
+        'js/client/card_blur.js',
 
 
         //'js/client/main/jquery.min.js',
