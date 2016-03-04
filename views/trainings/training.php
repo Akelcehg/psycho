@@ -1,213 +1,160 @@
-<section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img-single-excursion">
-
-    <div class="nicdark_filter greydark">
-
-        <!--start nicdark_container-->
-        <div class="nicdark_container nicdark_clearfix">
-
-            <div class="grid grid_12">
-                <div class="nicdark_space100"></div>
-                <div class="nicdark_space100"></div>
-                <h1 class="white subtitle">A DAY AT THE ZOO</h1>
-                <div class="nicdark_space10"></div>
-                <h3 class="subtitle white">DON'T MISS THIS DAY, SUBSCRIBE NOW !</h3>
-                <div class="nicdark_space20"></div>
-                <div class="nicdark_divider left big"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                <div class="nicdark_space40"></div>
-                <div class="nicdark_space50"></div>
-            </div>
-
-        </div>
-        <!--end nicdark_container-->
-
+<div class="page-heading">
+    <div class="container">
+        <h2>Event Detail</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
     </div>
-
-</section>
-<!--end section-->
-
-
-<!--start section-->
-<section class="nicdark_section">
-
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-        <div class="nicdark_space50"></div>
-
-
-        <div class="grid grid_8">
-
-            <p><span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>orem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.</p>
-
-
-            <div class="nicdark_space50"></div>
-
-            <h3 class="subtitle greydark">MORE INFORMATIONS</h3>
-            <div class="nicdark_space20"></div>
-            <div class="nicdark_divider left small"><span class="nicdark_bg_violet nicdark_radius"></span></div>
-            <div class="nicdark_space20"></div>
-
-
-            <!--start nicdark_tabs-->
-            <div class="nicdark_tab">
-
-                <ul class="nicdark_tabslist">
-                    <li><a title="THIS IS A TOOLTIP" href="#tabs-1" class="nicdark_tooltip nicdark_btn nicdark_bg_violet medium nicdark_radius_top white">DESCRIPTION</a></li>
-                    <li><a href="#tabs-2" class="nicdark_btn nicdark_bg_green medium nicdark_radius_top white">THE TOUR</a></li>
-                    <li><a href="#tabs-3" class="nicdark_btn nicdark_bg_blue medium nicdark_radius_top white">WHAT DO YOU NEED ?</a></li>
-                    <li><a href="#tabs-4" class="nicdark_btn nicdark_bg_yellow medium nicdark_radius_top white">INCLUDED</a></li>
-                </ul>
-
-                <div class="nicdark_tabs nicdark_bg_grey nicdark_radius nicdark_shadow">
-                    <div class="nicdark_margin20" id="tabs-1">
-                        <p>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.</p>
-                    </div>
-
-                    <div class="nicdark_margin20" id="tabs-2">
-                        <p>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.</p>
-                    </div>
-
-                    <div class="nicdark_margin20" id="tabs-3">
-                        <p>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.</p>
-                    </div>
-
-                    <div class="nicdark_margin20" id="tabs-4">
-                        <p>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.<br/><br/>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Sed dictum vel orci nec rhoncus. Donec quis porttitor arcu. Nulla ut justo quis augue commodo mattis nec vel ante.</p>
+</div>
+<!--BANNER END-->
+<!--CONTANT START-->
+<div class="contant">
+    <div class="container">
+        <div class="event-page">
+            <!--EVENT START-->
+            <div class="row events">
+                <div class="span6">
+                    <div class="thumb">
+                        <a href="#"><img src="../images/events1.jpg" alt=""></a>
                     </div>
                 </div>
-
-            </div>
-            <!--end nicdark_tabs-->
-
-
-            <div class="nicdark_space50"></div>
-
-            <h3 class="subtitle greydark">WHERE</h3>
-            <div class="nicdark_space20"></div>
-            <div class="nicdark_divider left small"><span class="nicdark_bg_blue nicdark_radius"></span></div>
-            <div class="nicdark_space20"></div>
-
-            <div class="nicdark_textevidence">
-                <iframe class="nicdark_iframe nicdark_margintop40_negative" src="https://mapsengine.google.com/map/embed?mid=zefx5FZI0Z00.kzO3GPnCnDZQ" height="300" ></iframe>
-            </div>
-
-        </div>
-
-
-        <div class="grid grid_4">
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
-                <div class="nicdark_margin20 nicdark_relative">
-                    <a href="#" class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_blue extrabig nicdark_radius_circle white nicdark_absolute nicdark_shadow"><i class="icon-location-outline"></i></a>
-                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">
-                        <h4>TIMES SQUARE (NY)</h4>
-                        <div class="nicdark_space20"></div>
-                        <p>Lorem ipsum dolor sit amet, consec adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nicdark_space20"></div>
-
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
-                <div class="nicdark_margin20 nicdark_relative">
-                    <a href="#" class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_green extrabig nicdark_radius_circle white nicdark_absolute nicdark_shadow"><i class="icon-wristwatch"></i></a>
-                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">
-                        <h4>START AT 8:00 AM</h4>
-                        <div class="nicdark_space20"></div>
-                        <p>Lorem ipsum dolor sit amet, consec adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nicdark_space20"></div>
-
-            <div class="nicdark_archive1 nicdark_bg_greydark nicdark_radius nicdark_shadow">
-                <div class="nicdark_margin20 nicdark_relative">
-                    <a href="#" class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_yellow extrabig nicdark_radius_circle white nicdark_absolute nicdark_shadow"><i class="icon-file-pdf"></i></a>
-                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">
-                        <h4 class="white">PROGRAM PDF</h4>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, consec adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nicdark_space20"></div>
-
-
-            <div class="nicdark_archive1 nicdark_bg_red nicdark_radius nicdark_shadow">
-                <div class="nicdark_margin20 nicdark_relative">
-                    <a href="#" class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_reddark extrabig nicdark_radius_circle white nicdark_absolute nicdark_shadow"><i class="icon-download-outline"></i></a>
-                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">
-                        <h4 class="white">ENTRY FORM</h4>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem ipsum dolor sit amet, consec adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="nicdark_space20"></div>
-
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
-                <div class="nicdark_textevidence nicdark_bg_orange nicdark_radius_top">
-                    <h4 class="white nicdark_margin20">PROGRAM OF THE DAY</h4>
-                    <i class="icon-doc-text nicdark_iconbg right medium orange"></i>
-                </div>
-                <ul class="nicdark_list border">
-
-                    <li class="nicdark_border_grey">
-                        <div class="nicdark_margin20 nicdark_relative">
-                            <a href="#" class="nicdark_btn_icon small nicdark_radius_circle grey nicdark_absolute nicdark_border_grey2"><i class="icon-clock"></i></a>
-                            <div class="nicdark_activity nicdark_marginleft60">
-                                <h5 class="grey">MEETING IN TIMES SQUARE</h5>
-                                <div class="nicdark_space10"></div>
-                                <p>Lorem ipsum dolor sit amet conse adip elit. Pellentesque tinci dolor sit amet.</p>
-                            </div></div>
-                    </li>
-                    <li class="nicdark_border_grey">
-                        <div class="nicdark_margin20 nicdark_relative">
-                            <a href="#" class="nicdark_btn_icon small nicdark_radius_circle grey nicdark_absolute nicdark_border_grey2"><i class="icon-clock"></i></a>
-                            <div class="nicdark_activity nicdark_marginleft60">
-                                <h5 class="grey">TRAVELLING TO THE ZOO</h5>
-                                <div class="nicdark_space10"></div>
-                                <p>Lorem ipsum dolor sit amet conse adip elit. Pellentesque tinci dolor sit amet.</p>
-                            </div></div>
-                    </li>
-                    <li class="nicdark_border_grey">
-                        <div class="nicdark_margin20 nicdark_relative">
-                            <a href="#" class="nicdark_btn_icon small nicdark_radius_circle grey nicdark_absolute nicdark_border_grey2"><i class="icon-clock"></i></a>
-                            <div class="nicdark_activity nicdark_marginleft60">
-                                <h5 class="grey">ZOO VISIT</h5>
-                                <div class="nicdark_space10"></div>
-                                <p>Lorem ipsum dolor sit amet conse adip elit. Pellentesque tinci dolor sit amet.</p>
+                <!--EVENT CONTANT START-->
+                <div class="span6">
+                    <div class="text">
+                        <!--EVENT HEADER START-->
+                        <div class="event-header">
+                            <span>Mon July 2</span>
+                            <h2>Learn Creative Skills, Shape Your Future</h2>
+                            <div class="data-tags">
+                                <a href="#">Technology</a>
                             </div>
                         </div>
-                    </li>
-                    <li class="nicdark_border_grey">
-                        <div class="nicdark_margin20 nicdark_relative">
-                            <a href="#" class="nicdark_btn_icon small nicdark_radius_circle grey nicdark_absolute nicdark_border_grey2"><i class="icon-clock"></i></a>
-                            <div class="nicdark_activity nicdark_marginleft60">
-                                <h5 class="grey">LUNCH BREAK</h5>
-                                <div class="nicdark_space10"></div>
-                                <p>Lorem ipsum dolor sit amet conse adip elit. Pellentesque tinci dolor sit amet.</p>
-                            </div>
+                        <!--EVENT HEADER END-->
+                        <!--EVENT BODY START-->
+                        <div class="event-body">
+                            <p>The point of using Lorem Ipsum is that it has a making it look like English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default model
+                                text.</p>
                         </div>
-                    </li>
-
-                </ul>
+                        <!--EVENT BODY END-->
+                        <!--EVENT VANUE START-->
+                        <div class="event-vanue">
+                            <table>
+                                <tr>
+                                    <td><p class="color">Date:</p></td>
+                                    <td><a href="#"><i class="fa fa-calendar-o"></i>06 Dec, 20140 - 14 Dec, 2014</a> <a
+                                            href="#"><i class="fa fa-clock-o"></i>7:30 am - 9:00 pm</a></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="color">Venue:</p></td>
+                                    <td><a href="#">103, C Block, West Street, New York, BMC, US</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--EVENT VANUE END-->
+                        <!--EVENT FOOTER START-->
+                        <div class="event-footer">
+                            <a href="#" class="btn-style">Register</a>
+                        </div>
+                        <!--EVENT FOOTER END-->
+                    </div>
+                </div>
+                <!--EVENT CONTANT END-->
             </div>
-
+            <!--EVENT DETAIL TEXT START-->
+            <div class="text-detail">
+                <p>This Course will help you learn some interesting information about the WooTeam and the WooThemes
+                    ecosystem.Ut imperdiet ipsum vel est congue, a vestibulum orci faucibus. Mauris dictum orci ornare
+                    arcu placerat, eu porta quam sollicitudin. Fusce in dapibus turpis. Curabitur imperdiet fermentum
+                    tellus.</p>
+                <h2>The Event Program</h2>
+                <ul>
+                    <li><a href="#">Quisque ut mattis dolor, a gravida turpis.</a></li>
+                    <li><a href="#">At vero eos et accusamus et iusto odio dignissimos</a></li>
+                    <li><a href="#">Ducimus qui blanditiis praesentium voluptatum</a></li>
+                    <li><a href="#">Deleniti atque corrupti quosed dolores</a></li>
+                    <li><a href="#">Quas molestias excepturi sint occaecati</a></li>
+                </ul>
+                <p>Nunc suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
+                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.Nunc
+                    suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
+                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.</p>
+                <p>Nunc suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
+                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.Nunc
+                    suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
+                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.</p>
+            </div>
+            <!--EVENT DETAIL TEXT END-->
+            <!--EVENT LOCATION MAP START-->
+            <div class="event-location-map">
+                <div id="map-canvas"></div>
+            </div>
+            <!--EVENT LOCATION MAP END-->
+            <!--ADMIN START-->
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img alt="" src="../images/admin.jpg"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2><a href="#">Administrator</a></h2>
+                    <p class="profession">Photographer</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
+            <!--ADMIN END-->
+            <div class="row">
+                <div class="span8">
+                    <div class="leave-reply">
+                        <h2>Leave Us a Reply</h2>
+                        <form>
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    <input type="text" placeholder="Name" class="input-block-level">
+                                </div>
+                                <div class="span4">
+                                    <input type="text" placeholder="E-mail" class="input-block-level">
+                                </div>
+                                <div class="span4">
+                                    <input type="text" placeholder="Website" class="input-block-level">
+                                </div>
+                                <div class="text-area">
+                                    <textarea placeholder="Comments" class="input-block-level"></textarea>
+                                    <button class="btn-style">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="campaign">
+                        <h4>Campaign Launched on 25 January, 2014 at LONDON, UK</h4>
+                        <p>share THIS CAMPAIGN</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                            <a href="#"><i class="fa fa-comment-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--EVENT END-->
         </div>
 
-
-        <div class="nicdark_space50"></div>
-
-
     </div>
-    <!--end nicdark_container-->
-
-</section>
-<!--end section-->

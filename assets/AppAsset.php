@@ -42,7 +42,7 @@ class AppAsset extends AssetBundle
         'https://maps.googleapis.com/maps/api/js?v=3.exp',
         'js/client/owl.carousel.js',
         'js/client/modernizr.js',
-        'js/client/skrollr.min.js',
+//        'js/client/skrollr.min.js',
         'js/client/functions.js',
         'js/client/card_blur.js',
         'js/client/scripts.js',

@@ -20,8 +20,6 @@ use yii\helpers\Url;
                             <li><a href="#">Left Sidebar</a></li>
                             <li><a href="#">Sitemap Page Setting</a></li>
                             <li><a href="#">Site Style Changer</a></li>
-                            <li><a href="#">Bredcrums</a></li>
-                            <li><a href="#">Bottom Sidebar</a></li>
                         </ul>
                     </div>
                 </div>

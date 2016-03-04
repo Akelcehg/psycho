@@ -10,9 +10,9 @@ use yii\helpers\Html;
     <div class="navigation-bar">
         <div class="container">
             <div class="row">
-                <div class="span4">
+                <div class="span2">
                 </div>
-                <div class="span8">
+                <div class="span10">
                     <div class="navigation">
                         <div class="navbar">
                             <div class="navbar-inner">
@@ -35,10 +35,10 @@ use yii\helpers\Html;
                                                     <li><a href="index-sidemenu.html">Home Page 5</a></li>
                                                 </ul>-->
                                             </li>
-                                            <li><a href="<?= Url::to('psychologists') ?>">Интересное</a></li>
-                                            <li><a href="<?= Url::to('psychologists') ?>">Статьи</a></li>
-                                            <li><a href="<?= Url::to('psychologists') ?>">Видео</a></li>
-                                            <li><a href="<?= Url::to('psychologists') ?>">Тренинги</a></li>
+                                            <li><a href="<?= Url::to('interesting') ?>">Интересное</a></li>
+                                            <li><a href="<?= Url::to('article') ?>">!!Статьи</a></li>
+                                            <li><a href="<?= Url::to('psychologists') ?>">!!Видео</a></li>
+                                            <li><a href="<?= Url::to('trainings') ?>">Тренинги</a></li>
                                             <li><a href="<?= Url::to('psychologists') ?>">Учебные заведения</a></li>
                                             <li><a href="<?= Url::to('psychologists') ?>">Психологи</a></li>
                                         </ul>

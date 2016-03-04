@@ -1,110 +1,228 @@
-<?php
-
-use yii\widgets\ListView;
-use yii\helpers\Url;
-
-?>
-
-<section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img1">
-
-    <div class="nicdark_filter greydark">
-
-        <!--start nicdark_container-->
-        <div class="nicdark_container nicdark_clearfix">
-
-            <div class="grid grid_12">
-                <div class="nicdark_space100"></div>
-                <div class="nicdark_space100"></div>
-                <h1 class="white subtitle">PRICE</h1>
-                <div class="nicdark_space10"></div>
-                <h3 class="subtitle white">OUR PACKAGES AT THE BEST PRICE</h3>
-                <div class="nicdark_space20"></div>
-                <div class="nicdark_divider left big"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                <div class="nicdark_space40"></div>
-                <div class="nicdark_space50"></div>
-            </div>
-
-        </div>
-        <!--end nicdark_container-->
-
+<div class="page-heading">
+    <div class="container">
+        <h2>Events</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
     </div>
+</div>
 
-</section>
-
-
-<section class="nicdark_section">
-    <div class="nicdark_space40"></div>
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-        <div class="grid grid_12">
-            <h1 class="subtitle greydark">Тренинги</h1>
-            <div class="nicdark_space20"></div>
-            <div class="nicdark_divider left big"><span class="nicdark_bg_green nicdark_radius"></span></div>
-            <div class="nicdark_space10"></div>
-        </div>
-
-
-        <?= ListView::widget([
-            'dataProvider' => $dataProvider,
-            'summary' => '',
-            'itemView' => function ($data, $key, $index, $widget) {
-                $string = strip_tags($data['schedule']);
-                if (strlen($string) > 100) {
-                    $stringCut = substr($string, 0, 100);
-                    $string = substr($stringCut, 0, strrpos($stringCut, ' ')) . '...';
-                }
-
-                $template = '<div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_green nicdark_radius nicdark_shadow">
-
-                <a href="single-event.html"
-                   class="nicdark_btn nicdark_bg_greydark white medium nicdark_radius nicdark_absolute_left">21<br/>
-                    <small>DEC</small>
-                </a>
-
-                <img alt="" src="' . Url::base() . '/img/events/img1.jpg">
-
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">' . $data['name'] . '</h4>
-                </div>
-
-                <div class="nicdark_margin20">
-                <div style="min-height:50px;">
-                    <h5 class="white"><i class="icon-pin-outline"></i>' . $data['address'] . '</h5>
+<div class="contant">
+    <div class="container">
+        <div class="event-page">
+            <!--EVENT START-->
+            <div class="row events">
+                <div class="span6">
+                    <div class="thumb">
+                        <a href="#"><img src="images/events1.jpg" alt=""></a>
                     </div>
-                    <div class="nicdark_space10"></div>
-                    <h5 class="white">
-                        <p style="padding:0px;color:white;">' . nl2br($string) . '</p>
-                    </h5>
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                    <div class="nicdark_space20"></div>
-                    <p class="white">' . substr($data['about'], 0, 100) . '</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="' . Url::base() . '/trainings/description?id=' . $data['id'] . '"
-                       class=" nicdark_press nicdark_btn nicdark_bg_greendark white nicdark_radius nicdark_shadow medium">
-                       Подробнее</a>
                 </div>
+                <!--EVENT CONTANT START-->
+                <div class="span6">
+                    <div class="text">
+                        <!--EVENT HEADER START-->
+                        <div class="event-header">
+                            <span>Mon July 2</span>
+                            <h2>Learn Creative Skills, Shape Your Future</h2>
+                            <div class="data-tags">
+                                <a href="#">Technology</a>
+                            </div>
+                        </div>
+                        <!--EVENT HEADER END-->
+                        <!--EVENT BODY START-->
+                        <div class="event-body">
+                            <p>The point of using Lorem Ipsum is that it has a making it look like English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default model
+                                text.</p>
+                        </div>
+                        <!--EVENT BODY END-->
+                        <!--EVENT VANUE START-->
+                        <div class="event-vanue">
+                            <table>
+                                <tr>
+                                    <td><p class="color">Date:</p></td>
+                                    <td><a href="#"><i class="fa fa-calendar-o"></i>06 Dec, 20140 - 14 Dec, 2014</a> <a
+                                            href="#"><i class="fa fa-clock-o"></i>7:30 am - 9:00 pm</a></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="color">Venue:</p></td>
+                                    <td><a href="#">103, C Block, West Street, New York, BMC, US</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--EVENT VANUE END-->
+                        <!--EVENT FOOTER START-->
+                        <div class="event-footer">
+                            <a href="#" class="btn-style">Register</a>
+                        </div>
+                        <!--EVENT FOOTER END-->
+                    </div>
+                </div>
+                <!--EVENT CONTANT END-->
             </div>
-        </div>';
-
-                if ($index + 1 == $widget->dataProvider->count) $template .= '<div align="center" style="display: block; block; width: 100%; clear:both"></div>';
-                return $template;
-            },
-
-            'pager' => [
-                'firstPageLabel' => 'Первая',
-                'lastPageLabel' => 'Последняя',
-                'prevPageLabel' => '<i class="icon-left-open-outline"></i>',
-                'nextPageLabel' => '<i class="icon-right-open-outline"></i>',
-                'maxButtonCount' => 3,
-            ],
-        ]); ?>
-
-        <div class="nicdark_space50"></div>
-
+            <!--EVENT END-->
+            <!--EVENT START-->
+            <div class="row events">
+                <div class="span6">
+                    <div class="thumb">
+                        <a href="#"><img src="images/events2.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--EVENT CONTANT START-->
+                <div class="span6">
+                    <div class="text">
+                        <!--EVENT HEADER START-->
+                        <div class="event-header">
+                            <span>Mon July 2</span>
+                            <h2>Learn Creative Skills, Shape Your Future</h2>
+                            <div class="data-tags">
+                                <a href="#">Technology</a>
+                            </div>
+                        </div>
+                        <!--EVENT HEADER END-->
+                        <!--EVENT BODY START-->
+                        <div class="event-body">
+                            <p>The point of using Lorem Ipsum is that it has a making it look like English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default model
+                                text.</p>
+                        </div>
+                        <!--EVENT BODY END-->
+                        <!--EVENT VANUE START-->
+                        <div class="event-vanue">
+                            <table>
+                                <tr>
+                                    <td><p class="color">Date:</p></td>
+                                    <td><a href="#"><i class="fa fa-calendar-o"></i>06 Dec, 20140 - 14 Dec, 2014</a> <a
+                                            href="#"><i class="fa fa-clock-o"></i>7:30 am - 9:00 pm</a></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="color">Venue:</p></td>
+                                    <td><a href="#">103, C Block, West Street, New York, BMC, US</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--EVENT VANUE END-->
+                        <!--EVENT FOOTER START-->
+                        <div class="event-footer">
+                            <a href="#" class="btn-style">Register</a>
+                        </div>
+                        <!--EVENT FOOTER END-->
+                    </div>
+                </div>
+                <!--EVENT CONTANT END-->
+            </div>
+            <!--EVENT END-->
+            <!--EVENT START-->
+            <div class="row events">
+                <div class="span6">
+                    <div class="thumb">
+                        <a href="#"><img src="images/events3.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--EVENT CONTANT START-->
+                <div class="span6">
+                    <div class="text">
+                        <!--EVENT HEADER START-->
+                        <div class="event-header">
+                            <span>Mon July 2</span>
+                            <h2>Learn Creative Skills, Shape Your Future</h2>
+                            <div class="data-tags">
+                                <a href="#">Technology</a>
+                            </div>
+                        </div>
+                        <!--EVENT HEADER END-->
+                        <!--EVENT BODY START-->
+                        <div class="event-body">
+                            <p>The point of using Lorem Ipsum is that it has a making it look like English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default model
+                                text.</p>
+                        </div>
+                        <!--EVENT BODY END-->
+                        <!--EVENT VANUE START-->
+                        <div class="event-vanue">
+                            <table>
+                                <tr>
+                                    <td><p class="color">Date:</p></td>
+                                    <td><a href="#"><i class="fa fa-calendar-o"></i>06 Dec, 20140 - 14 Dec, 2014</a> <a
+                                            href="#"><i class="fa fa-clock-o"></i>7:30 am - 9:00 pm</a></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="color">Venue:</p></td>
+                                    <td><a href="#">103, C Block, West Street, New York, BMC, US</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--EVENT VANUE END-->
+                        <!--EVENT FOOTER START-->
+                        <div class="event-footer">
+                            <a href="#" class="btn-style">Register</a>
+                        </div>
+                        <!--EVENT FOOTER END-->
+                    </div>
+                </div>
+                <!--EVENT CONTANT END-->
+            </div>
+            <!--EVENT END-->
+            <!--EVENT START-->
+            <div class="row events">
+                <div class="span6">
+                    <div class="thumb">
+                        <a href="#"><img src="images/events4.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--EVENT CONTANT START-->
+                <div class="span6">
+                    <div class="text">
+                        <!--EVENT HEADER START-->
+                        <div class="event-header">
+                            <span>Mon July 2</span>
+                            <h2>Learn Creative Skills, Shape Your Future</h2>
+                            <div class="data-tags">
+                                <a href="#">Technology</a>
+                            </div>
+                        </div>
+                        <!--EVENT HEADER END-->
+                        <!--EVENT BODY START-->
+                        <div class="event-body">
+                            <p>The point of using Lorem Ipsum is that it has a making it look like English. Many desktop
+                                publishing packages and web page editors now use Lorem Ipsum as their default model
+                                text.</p>
+                        </div>
+                        <!--EVENT BODY END-->
+                        <!--EVENT VANUE START-->
+                        <div class="event-vanue">
+                            <table>
+                                <tr>
+                                    <td><p class="color">Date:</p></td>
+                                    <td><a href="#"><i class="fa fa-calendar-o"></i>06 Dec, 20140 - 14 Dec, 2014</a> <a
+                                            href="#"><i class="fa fa-clock-o"></i>7:30 am - 9:00 pm</a></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="color">Venue:</p></td>
+                                    <td><a href="#">103, C Block, West Street, New York, BMC, US</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--EVENT VANUE END-->
+                        <!--EVENT FOOTER START-->
+                        <div class="event-footer">
+                            <a href="#" class="btn-style">Register</a>
+                        </div>
+                        <!--EVENT FOOTER END-->
+                    </div>
+                </div>
+                <!--EVENT CONTANT END-->
+            </div>
+            <!--EVENT END-->
+        </div>
+        <div class="pagination">
+            <ul>
+                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
     </div>
-    <!--end nicdark_container-->
-
-</section>
+</div>

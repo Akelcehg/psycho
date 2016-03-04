@@ -2141,14 +2141,14 @@ TWEET SECTION START
 .bottom-footer {
     float: left;
     width: 100%;
-    padding: 0px 0px 30px 0px
+    padding: 0px 0px 15px 0px
 }
 
 .copyright {
     float: left;
     width: 100%;
     background-color: #000;
-    padding: 40px 0px;
+    padding: 10px 0px;
     text-align: right;
 }
 
@@ -2538,7 +2538,7 @@ BLOG PAGE START
 }
 
 .blog-contant .thumb:before, .events .thumb:before {
-    position: absolute;
+    /*position: absolute;
     left: 0px;
     top: 0px;
     right: 0px;
@@ -2547,7 +2547,7 @@ BLOG PAGE START
     content: "";
     width: 90%;
     height: 80%;
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: rgba(0, 0, 0, 0.2)*/
 }
 
 .blog-contant .thumb:hover:before, .events .thumb:hover:before {

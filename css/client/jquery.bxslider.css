@@ -96,14 +96,14 @@ ul.bxslider{
 
 .bx-wrapper .bx-prev {
 	left: 0px;
-	background: url(../img/controls.png) no-repeat  right;
+	/*background: url(../img/controls.png) no-repeat  right;*/
 	opacity:0.4;
 	filter:alpha(opacity=40);
 }
 
 .bx-wrapper .bx-next {
 	right: 0px;
-	background: url(../img/controls.png) no-repeat left;
+	/*background: url(../img/controls.png) no-repeat left;*/
 	opacity:0.4;
 	filter:alpha(opacity=40);
 }

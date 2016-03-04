@@ -19,7 +19,7 @@ class TrainingsController extends \yii\web\Controller {
         ]);
     }
 
-    public function actionDescription($id) {
+    public function actionView($id) {
 
         $training = Events::find(['id' => $id]);
 
