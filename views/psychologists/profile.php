@@ -216,12 +216,13 @@
                         <p><i class="fa fa-map-marker"></i> Germany</p>
                         <p><i class="fa fa-link"></i> <a href="#" class="color">jackymichaels.com</a></p>
                         <p><i class="fa fa-clock-o"></i> Joind June 2005</p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, </p>
                     </div>
                 </div>
                 <!--TUTOR PROFILE END-->
                 <!--ADDRESS WIDGET START-->
-                
+
             </div>
             <div class="span9">
                 <!--COURSE DETAIL START-->
@@ -229,7 +230,7 @@
 
 
                     <div class="tutor-duration" style="background-color: white;">
-                        <div class="duration">
+                        <div class="duration" style="margin-top: 20px;">
 
                             <div class="share-course">
 
@@ -332,7 +333,6 @@
                             </div>
                         </div>
 
-                        <p>Et harum quidem rerum facilis est et expedita distinctio </p>
                         <a href="#" class="enroll">Enroll Now</a>
                     </div>
                 </div>

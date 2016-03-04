@@ -4807,7 +4807,7 @@ EDIT PROFILE PAGE START
 
 .tutor-duration .duration {
     float: left;
-    padding: 10px 30px;
+    padding: 0px 30px;
 }
 
 .tutor-duration .duration ul {
@@ -4917,7 +4917,8 @@ EDIT PROFILE PAGE START
     font-size: 16px;
     text-align: center;
     padding: 7px 0px;
-    color: #666666;
+    /*color: #666666;*/
+    color: #c7012e;
 }
 
 .share-course ul li:hover a {
