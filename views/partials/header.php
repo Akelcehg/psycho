@@ -35,43 +35,12 @@ use yii\helpers\Html;
                                                     <li><a href="index-sidemenu.html">Home Page 5</a></li>
                                                 </ul>-->
                                             </li>
-                                            <li><a href="<?= Url::to('psychologists') ?>">Психологи</a>
-                                                <!--<ul>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-detail.html">Blog Detail</a></li>
-                                                </ul>-->
-                                            </li>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="javascript:void(0)">Events</a>
-                                                <ul>
-                                                    <li><a href="events.html">Events</a></li>
-                                                    <li><a href="events-detail.html">Event Detail</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="javascript:void(0)">Courses</a>
-                                                <ul>
-                                                    <li><a href="courses.html">Courses</a></li>
-                                                    <li><a href="courses-detail.html">Course Detail</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="javascript:void(0)">Pages</a>
-                                                <ul>
-                                                    <li><a href="about-us.html">About us</a></li>
-                                                    <li><a href="404.html">Error 404</a></li>
-                                                    <li><a href="faq.html">FAQs</a></li>
-                                                    <li><a href="gallery.html">Gallery</a></li>
-                                                    <li><a href="news.html">News</a></li>
-                                                    <li><a href="our-lessons.html">Our Lessons</a></li>
-                                                    <li><a href="search-result.html">Search Result</a></li>
-                                                    <li><a href="signin.html">Sign In</a></li>
-                                                    <li><a href="student-login.html">Student Login</a></li>
-                                                    <li><a href="student-profile.html">Student Profile</a></li>
-                                                    <li><a href="teacher-profile.html">Teacher Profile</a></li>
-                                                    <li><a href="team.html">Our Team</a></li>
-                                                    <li><a href="edit-profile.html">Edit Your Profile</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                            <li><a href="<?= Url::to('psychologists') ?>">Интересное</a></li>
+                                            <li><a href="<?= Url::to('psychologists') ?>">Статьи</a></li>
+                                            <li><a href="<?= Url::to('psychologists') ?>">Видео</a></li>
+                                            <li><a href="<?= Url::to('psychologists') ?>">Тренинги</a></li>
+                                            <li><a href="<?= Url::to('psychologists') ?>">Учебные заведения</a></li>
+                                            <li><a href="<?= Url::to('psychologists') ?>">Психологи</a></li>
                                         </ul>
                                     </div>
                                 </div>

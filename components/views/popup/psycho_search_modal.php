@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal large fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal large fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 
@@ -11,18 +11,7 @@
             </div>
 
             <div class="modal-body">
-
-                d<br>
-                d<br>
-                d<br>
-                d<br>
-                d<br>
-                d<br>
-                d<br>
-                d<br>
-                d<br>
-
-                <!--<form>
+                <form>
                     <div class="row-fluid">
                         <div class="span4">
                             <input type="text" placeholder="Name" class="input-block-level">
@@ -135,7 +124,7 @@
                         <button class="btn-style">Найти</button>
                     </div>
 
-                </form>-->
+                </form>
 
             </div>
             <!-- <div class="modal-footer">
