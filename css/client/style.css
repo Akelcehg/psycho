@@ -4122,7 +4122,7 @@ SEARCH RESULT PAGE START
 .error-404 {
     font-size: 400px;
     line-height: 400px;
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 10px 0px;
 
 }
 
@@ -4801,12 +4801,13 @@ EDIT PROFILE PAGE START
     float: left;
     width: 100%;
     background-color: #f5f5f5;
+    border-bottom: 1px solid #eaeaea;
     position: relative;
 }
 
 .tutor-duration .duration {
     float: left;
-    padding: 20px 30px;
+    padding: 10px 30px;
 }
 
 .tutor-duration .duration ul {
@@ -4881,7 +4882,7 @@ EDIT PROFILE PAGE START
 .share-course {
     float: left;
     width: 100%;
-    border-bottom: solid 1px #eaeaea;
+    /*border-bottom: solid 1px #eaeaea;*/
     margin: 0px 0px 20px 0px;
 }
 
@@ -4898,14 +4899,14 @@ EDIT PROFILE PAGE START
     margin: 0px;
     float: left;
     margin: 0px 0px 0px 10px;
-    padding: 20px 0px;
+    /*padding: 20px 0px;*/
 
 }
 
 .share-course ul li {
     float: left;
     margin: 0px 0px 0px 10px;
-    border: solid 2px #eaeaea;
+    border: solid 1px #c7012e;
     border-radius: 3px;
 }
 

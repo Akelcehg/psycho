@@ -39,7 +39,7 @@ use yii\helpers\Html;
                                             <li><a href="<?= Url::to('article') ?>">!!Статьи</a></li>
                                             <li><a href="<?= Url::to('psychologists') ?>">!!Видео</a></li>
                                             <li><a href="<?= Url::to('trainings') ?>">Тренинги</a></li>
-                                            <li><a href="<?= Url::to('psychologists') ?>">Учебные заведения</a></li>
+                                            <li><a href="<?= Url::to('educational_institution') ?>">Учебные заведения</a></li>
                                             <li><a href="<?= Url::to('psychologists') ?>">Психологи</a></li>
                                         </ul>
                                     </div>
