@@ -45,6 +45,7 @@ class AppAsset extends AssetBundle
         'js/client/skrollr.min.js',
         'js/client/functions.js',
         'js/client/card_blur.js',
+        'js/client/scripts.js',
 
 
         //'js/client/main/jquery.min.js',

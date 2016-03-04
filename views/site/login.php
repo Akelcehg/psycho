@@ -1,47 +1,81 @@
 <?php
 
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model app\models\LoginForm */
-
+use yii\widgets\ActiveForm;
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
-
-    <?php $form = ActiveForm::begin([
-        'id' => 'login-form',
-        'options' => ['class' => 'form-horizontal'],
-        'fieldConfig' => [
-            'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            'labelOptions' => ['class' => 'col-lg-1 control-label'],
-        ],
-    ]); ?>
-
-        <?= $form->field($model, 'username') ?>
-
-        <?= $form->field($model, 'password')->passwordInput() ?>
-
-        <?= $form->field($model, 'rememberMe')->checkbox([
-            'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-        ]) ?>
-
-        <div class="form-group">
-            <div class="col-lg-offset-1 col-lg-11">
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-            </div>
-        </div>
-
-    <?php ActiveForm::end(); ?>
-
-    <div class="col-lg-offset-1" style="color:#999;">
-        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
+<div class="page-heading">
+    <div class="container">
+        <h2>Sign In</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
     </div>
+</div>
+<!--BANNER END-->
+<!--CONTANT START-->
+<div class="contant">
+    <div class="container">
+        <!--        <div class="buttons">
+                    <button class="btn1 login-btn"><i class="fa fa-facebook"></i>Login with Facebook</button>
+
+                    <button class="btn2 login-btn"><i class="fa fa-google-plus"></i>Login with Google</button>
+
+                    <button class="btn3 login-btn"><i class="fa fa-yahoo"></i>Login with Yahoo</button>
+
+                    <button class="btn4 login-btn"><i class="fa fa-linkedin"></i>Login with Linkein</button>
+
+                    <button class="btn5 login-btn"><i class="fa fa-windows"></i>Login with Window Live</button>
+
+                </div>-->
+        <div class="row">
+            <div class="span3"></div>
+            <div class="span6">
+                <div class="form-box">
+
+                    <?php $form = ActiveForm::begin(); ?>
+
+                    <div class="form-body">
+                        <fieldset>
+                            <legend>Login Below:</legend>
+
+                            <!--<label>Email Address</label>-->
+
+                            <!--<input type="text" placeholder="Enter your E-mail ID" class="input-block-level">-->
+
+                            <?= $form->field($model, 'email')->textInput(['autofocus' => true, 'class' => "input-block-level"]) ?>
+
+                            <!--<label>Password</label>-->
+
+                            <!--<input type="password" placeholder="Enter Password" class="input-block-level">-->
+
+                            <?= $form->field($model, 'password')->passwordInput(['class' => 'input-block-level']) ?>
+
+
+                            <div class="form-group">
+                                <div class="col-lg-offset-1 col-lg-11">
+                                    <?= Html::submitButton('Login', ['class' => 'btn-style', 'name' => 'login-button']) ?>
+                                </div>
+                            </div>
+
+                            <!--<button type="submit" class="btn-style">Submit</button>-->
+                        </fieldset>
+                    </div>
+                    <div class="footer">
+                        <ul>
+                            <li><a href="#">Forgot My Password</a></li>
+                            <li><a href="#">Re-send Confirmation Email</a></li>
+                            <li><a href="#">Sign up Today for Free!</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                        <button class="btn-style">Register</button>
+                    </div>
+
+                    <?php ActiveForm::end(); ?>
+                </div>
+            </div>
+            <div class="span3"></div>
+
+        </div>
+    </div>
+
 </div>

@@ -9,7 +9,7 @@ use Yii;
 use app\models\LoginForm;
 use yii\base\Widget;
 
-class LoginWidget extends Widget
+class PsychoSearchWidget extends Widget
 {
 
     public function init() {
@@ -18,13 +18,7 @@ class LoginWidget extends Widget
 
     public function run() {
 
-        //return $modal = $this->render('popup/payment_modal');
-
-        $model = new LoginForm();
-
-        return $this->render('popup/login', [
-            'model' => $model,
-        ]);
+        return $this->render('popup/psycho_search_modal');
 
     }
 }

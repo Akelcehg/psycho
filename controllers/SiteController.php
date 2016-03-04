@@ -54,7 +54,7 @@ class SiteController extends Controller {
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
-        $eventsList = new Events();                 
+        $eventsList = new Events();
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => $eventsList->getEvents(4)
@@ -83,36 +83,17 @@ class SiteController extends Controller {
 
     public function actionLogin() {
 
-        $model = new LoginForm();
-
-        $model->load(Yii::$app->request->post());
-        $error = [];
-
-        //return Json::encode(['ok'],200);
-        if (!$model->validate() && !$model->login()) {
-            foreach ($model->getErrors() as $attribute => $errors) {
-                //$error['0']=$errors;
-                array_push($error, $errors);
-            }
-            return JSON::encode($error, 200);
-        }
-
-        if ($model->login()) {
-            return $this->goBack();
-        }
-
-        /*if (!\Yii::$app->user->isGuest) {
+        if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-
         $model = new LoginForm();
-
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
         return $this->render('login', [
             'model' => $model,
-        ]);*/
+        ]);
+
     }
 
     public function actionLogout() {

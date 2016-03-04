@@ -47,5 +47,9 @@
 
 .modal.large {
     width: 80%; /* respsonsive width */
-    margin-left:-40%; /* width/2) */
+    margin-left: -40%; /* width/2) */
+}
+
+#account{
+    color: white;
 }

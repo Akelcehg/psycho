@@ -44,10 +44,10 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ' < alias:about | login > ' => 'site /<alias>',
-                ' < controller:\w +>/<id:\d +>' => ' < controller>/view',
-                ' < controller:\w +>/<action:\w +>/<id:\d +>' => ' < controller>/<action > ',
-                '<controller:\w +>/<action:\w +>' => ' < controller>/<action > ',
+                '<alias:login|about>' => 'site/<alias>',
+                /*'<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',*/
             ]
         ],
         'log' => [

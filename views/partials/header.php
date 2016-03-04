@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Url;
+use yii\helpers\Html;
 
 ?>
 
@@ -24,7 +25,7 @@ use yii\helpers\Url;
                                     </button>
                                     <div class="nav-collapse collapse">
                                         <ul>
-                                            <li><a href="<?=Url::base()?>">Главная</a>
+                                            <li><a href="<?= Url::base() ?>">Главная</a>
                                                 <!--<ul>
                                                     <li><a href="index.html">Home Page Default</a></li>
                                                     <li><a href="index-1.html">Home Page 1</a></li>
@@ -34,7 +35,7 @@ use yii\helpers\Url;
                                                     <li><a href="index-sidemenu.html">Home Page 5</a></li>
                                                 </ul>-->
                                             </li>
-                                            <li><a href="<?=Url::to('psychologists')?>">Психологи</a>
+                                            <li><a href="<?= Url::to('psychologists') ?>">Психологи</a>
                                                 <!--<ul>
                                                     <li><a href="blog.html">Blog</a></li>
                                                     <li><a href="blog-detail.html">Blog Detail</a></li>
@@ -86,14 +87,41 @@ use yii\helpers\Url;
     <div class="top-strip">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="<?=Url::base()?>/images/logo3.png" alt=""></a>
+                <a href="index.html"><img src="<?= Url::base() ?>/images/logo3.png" alt=""></a>
             </div>
             <!--ACCOUNT SECTION START-->
             <div class="account">
                 <ul>
-                    <li><a href="#">Subscribe</a></li>
-                    <li><a href="#">Sign Out</a></li>
-                    <li>
+                    <?php if (Yii::$app->user->isGuest) { ?>
+                        <li><a href="<?= Url::to('signup') ?>">Регистрация</a></li>
+                        <li><a href="<?= Url::to('login') ?>">Войти</a></li>
+                    <?php } else { ?>
+
+                        <li>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown"
+                                   data-target="#"
+                                   href="/page.html">
+                                    My Account
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="account">
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Account Setting</a></li>
+                                    <li><a href="#">Privacy Setting</a></li>
+                                    <li>
+                                        <?= Html::a('Выйти', ['site/logout'], [
+                                            'data' => [
+                                                'method' => 'post',
+                                            ],
+                                        ]) ?>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    <?php } ?>
+                    <!--<li>
                         <div class="dropdown">
                             <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown" data-target="#"
                                href="/page.html">
@@ -106,7 +134,7 @@ use yii\helpers\Url;
                                 <li><a href="#">Privacy Setting</a></li>
                             </ul>
                         </div>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!--ACCOUNT SECTION START-->
