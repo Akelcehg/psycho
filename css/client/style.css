@@ -462,7 +462,15 @@ HEADER STYLE 6
     color: #fff;
 }
 
-.header-6 .language .dropdown-toggle, .header-6 .account ul li a {
+.header-6 .account ul li a {
+    color: #fff;
+}
+
+.header-6 .account ul ul li:hover a {
+    color: #fff;
+}
+
+.header-6 .account ul ul li a {
     color: #32383b;
 }
 
