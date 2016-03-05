@@ -1,4 +1,4 @@
-<section>
+<section style="padding: 0;">
     <div class="container" id="forum">
 
         <div class="table-responsive">
