@@ -1,141 +1,100 @@
-<section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img1">
+<div style="margin-bottom: 25px;"></div>
 
-    <div class="nicdark_filter greydark">
+<div class="contant">
+    <div class="container">
+        <div class="row">
+            <div class="span9">
 
-        <!--start nicdark_container-->
-        <div class="nicdark_container nicdark_clearfix">
 
-            <div class="grid grid_12">
-                <div class="nicdark_space100"></div>
-                <div class="nicdark_space100"></div>
-                <h1 class="white subtitle">PRICE</h1>
-                <div class="nicdark_space10"></div>
-                <h3 class="subtitle white">OUR PACKAGES AT THE BEST PRICE</h3>
-                <div class="nicdark_space20"></div>
-                <div class="nicdark_divider left big"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                <div class="nicdark_space40"></div>
-                <div class="nicdark_space50"></div>
-            </div>
-
-        </div>
-        <!--end nicdark_container-->
-
-    </div>
-
-</section>
-<!--end section-->
-
-<section class="nicdark_section">
-
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-        <div class="nicdark_space20"></div>
-
-        <div class="container">
-
-            <div class="row">
-
-                <!-- Blog Entries Column -->
-                <div class="col-md-8">
-
-                    <div class="col-md-6">
-                        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item nicdark_zoom nicdark_mpopup_iframe"
-                                        src="https://www.youtube.com/embed/CXfK-Ltlw88"
-                                        allowfullscreen="true"></iframe>
-                            </div>
-                        </div>
+                <div class="row">
+                    <div style="margin-bottom: 15px;float: left;">
+                        <a href="http://www.youtube.com/watch?v=k6mFF3VmVAs" data-toggle="lightbox"
+                           data-gallery="youtubevideos" class="span3">
+                            <img src="//i1.ytimg.com/vi/yP11r5n5RNg/mqdefault.jpg" class="img-responsive">
+                        </a>
                     </div>
-                    <div class="col-md-6">
-                        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe width="420" height="315"
-                                        src="http://www.youtube.com/embed/XGSy3_Czz8k">
-                                </iframe>
-                            </div>
-                        </div>
+                    <div style="margin-bottom: 15px; float: left;">
+                        <a href="http://youtu.be/iQ4D273C7Ac" data-toggle="lightbox" data-gallery="youtubevideos"
+                           class="span3">
+                            <img src="//i1.ytimg.com/vi/iQ4D273C7Ac/mqdefault.jpg" class="img-responsive">
+                        </a>
+                    </div>
+                    <div style="margin-bottom: 15px; float: left;">
+                        <a href="//www.youtube.com/embed/b0jqPvpn3sY" data-toggle="lightbox"
+                           data-gallery="youtubevideos" class="span3">
+                            <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
+                        </a>
                     </div>
 
-
+                    <div style="margin-bottom: 15px; float: left;">
+                        <a href="//www.youtube.com/embed/b0jqPvpn3sY" data-toggle="lightbox"
+                           data-gallery="youtubevideos" class="span3">
+                            <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
+                        </a>
+                    </div>
+                    <div style="margin-bottom: 15px; float: left;">
+                        <a href="//www.youtube.com/embed/b0jqPvpn3sY" data-toggle="lightbox"
+                           data-gallery="youtubevideos" class="span3">
+                            <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Blog Sidebar Widgets Column -->
-                <div class="col-md-4">
+
+                <!--                    <div class="span2">
+                                        <div class="box lesson">
+                                            <iframe src="http://player.vimeo.com/video/89700179?badge=0"></iframe>
+
+                                        </div>
+                                    </div>-->
 
 
-                    <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
-                        <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
-                            <h4 class="white nicdark_margin20">SEARCH</h4>
-                            <i class="icon-search-outline nicdark_iconbg right medium yellow"></i>
-                        </div>
-                        <div class="nicdark_margin20">
-                            <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey small subtitle"
-                                   type="text" value="" size="200" placeholder="KEYWORD">
-                            <div class="nicdark_space20"></div>
-                            <input class="nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white"
-                                   type="submit" value="SEND">
-                        </div>
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span3">
+                <!--SIDEBAR START-->
+                <div class="sidebar">
+                    <!--SEARCH WIDGET START-->
+                    <div class="widget widget-search-course">
+                        <h2><i class="fa fa-search"></i> Search Course</h2>
+
+                        <p><input type="text" class="input-block-level" placeholder="Search by Keyword"></p>
+                        <button class="btn-style">Search</button>
                     </div>
-
-                    <div class="nicdark_space20"></div>
-
-                    <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
-                        <div class="nicdark_textevidence nicdark_bg_orange nicdark_radius_top">
-                            <h4 class="white nicdark_margin20">TAG</h4>
-                            <i class="icon-tags-1 nicdark_iconbg right medium orange"></i>
-                        </div>
-                        <div class="nicdark_margin10">
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Baby</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Kids</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Baby</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Kids</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Baby</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Kids</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Baby</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Kids</a>
-                            <a href="#"
-                               class="nicdark_btn nicdark_bg_grey2 small nicdark_shadow nicdark_radius grey subtitle nicdark_margin10">Teacher</a>
-                        </div>
+                    <div class="widget widget-tags">
+                        <h2>Papular Tags</h2>
+                        <ul>
+                            <li><a href="#">resource</a></li>
+                            <li><a href="#">design</a></li>
+                            <li><a href="#">art</a></li>
+                            <li><a href="#">icon</a></li>
+                            <li><a href="#">Photoshop</a></li>
+                            <li><a href="#">Template</a></li>
+                            <li><a href="#">resource</a></li>
+                            <li><a href="#">design</a></li>
+                            <li><a href="#">art</a></li>
+                            <li><a href="#">icon</a></li>
+                            <li><a href="#">Photoshop</a></li>
+                            <li><a href="#">Template</a></li>
+                        </ul>
                     </div>
-
-                    <div class="nicdark_space20"></div>
-
 
                 </div>
-
+                <!--SIDEBAR END-->
             </div>
-            <!-- /.row -->
-
         </div>
-
-
-        <div class="nicdark_space20"></div>
 
     </div>
 
 
-</section>
+</div>
