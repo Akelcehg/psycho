@@ -38,7 +38,7 @@ use yii\helpers\Html;
                                             <li><a href="<?= Url::base() ?>/interesting">Интересное</a></li>
                                             <li><a href="<?= Url::base() ?>/article">Статьи</a></li>
                                             <li><a href="<?= Url::base() ?>/video">Видео</a></li>
-                                            <li><a href="<?= Url::base() ?>/discussion">????Обсуждения</a></li>
+                                            <li><a href="<?= Url::base() ?>/discussion">Форум</a></li>
                                             <li><a href="<?= Url::base() ?>/trainings">Тренинги</a></li>
                                             <li><a href="<?= Url::base() ?>/educational-institution">Учебные
                                                     заведения</a></li>

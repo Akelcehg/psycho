@@ -1,208 +1,122 @@
-<section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img1">
+<section>
+    <div class="container" id="forum">
 
-    <div class="nicdark_filter greydark">
-
-        <!--start nicdark_container-->
-        <div class="nicdark_container nicdark_clearfix">
-
-            <div class="grid grid_12">
-                <div class="nicdark_space100"></div>
-                <div class="nicdark_space100"></div>
-                <h1 class="white subtitle">PRICE</h1>
-                <div class="nicdark_space10"></div>
-                <h3 class="subtitle white">OUR PACKAGES AT THE BEST PRICE</h3>
-                <div class="nicdark_space20"></div>
-                <div class="nicdark_divider left big"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                <div class="nicdark_space40"></div>
-                <div class="nicdark_space50"></div>
+        <div class="table-responsive">
+        <table class="table forum table-striped">
+                <thead>
+                <tr>
+                    <th class="cell-stat"></th>
+                    <th>
+                        <h3>Important</h3>
+                    </th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+                    <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                    <td>
+                        <h4><a href="#">Frequently Asked Questions</a><br>
+                            <small>Some description</small>
+                        </h4>
+                    </td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">9 542</a></td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">89 897</a></td>
+                    <td class="hidden-xs hidden-sm">by <a href="#">John Doe</a><br>
+                        <small><i class="fa fa-clock-o"></i> 3 months ago</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                    <td>
+                        <h4><a href="#">Frequently Asked Questions</a><br>
+                            <small>Some description</small>
+                        </h4>
+                    </td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">9 542</a></td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">89 897</a></td>
+                    <td class="hidden-xs hidden-sm">by <a href="#">John Doe</a><br>
+                        <small><i class="fa fa-clock-o"></i> 3 months ago</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+                    <td>
+                        <h4><a href="#">Important changes</a><br>
+                            <small>Category description</small>
+                        </h4>
+                    </td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                    <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br>
+                        <small><i class="fa fa-clock-o"></i> 1 years ago</small>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="table forum table-striped">
+                <thead>
+                <tr>
+                    <th class="cell-stat"></th>
+                    <th>
+                        <h3>Suggestions</h3>
+                    </th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+                    <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center"><i class="fa fa-heart fa-2x text-primary"></i></td>
+                    <td>
+                        <h4><a href="#">More more more</a><br>
+                            <small>Category description</small>
+                        </h4>
+                    </td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                    <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br>
+                        <small><i class="fa fa-clock-o"></i> 3 months ago</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"><i class="fa fa-magic fa-2x text-primary"></i></td>
+                    <td>
+                        <h4><a href="#">Haha</a><br>
+                            <small>Category description</small>
+                        </h4>
+                    </td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                    <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                    <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br>
+                        <small><i class="fa fa-clock-o"></i> 1 years ago</small>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="table forum table-striped">
+                <thead>
+                <tr>
+                    <th class="cell-stat"></th>
+                    <th>
+                        <h3>Open discussion</h3>
+                    </th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
+                    <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+                    <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td colspan="4" class="center">No topics have been added yet.</td>
+                </tr>
+                </tbody>
+            </table>
             </div>
-
-        </div>
-        <!--end nicdark_container-->
 
     </div>
-
-</section>
-
-
-<section class="nicdark_section">
-
-    <div class="nicdark_space40"></div>
-
-
-    <section class="nicdark_section nicdark_bg_blue_custom nicdark_shadow">
-        <div class="white_mask">
-            <div class="nicdark_container nicdark_clearfix">
-
-                <div class="grid grid_12 nomargin nicdark_shadow nicdark_radius_left">
-
-                    <div class="nicdark_focus">
-                        <h2 class="white">
-                            <i class="icon-clipboard big white"></i>
-                            Название группы
-                        </h2>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="nicdark_container nicdark_clearfix">
-        <div class="grid grid_12">
-            <div class="row">
-                <div class="grid grid_8">
-                    <p>
-                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
-                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
-                            arcu.
-                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
-                    </p>
-                </div>
-                <div class="grid grid_2">
-                    <h5 class="grey">Ответов : 5</h5>
-                </div>
-                <div class="grid grid_2">
-
-                    <div class="nicdark_activity">
-                        <h5 class="grey">Admin</h5>
-                        <div class="nicdark_space10"></div>
-                        <p>Dec 21, 2015</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div class="grid grid_12">
-            <div class="row">
-                <div class="grid grid_8">
-                    <p>
-                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
-                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
-                            arcu.
-                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
-                    </p>
-                </div>
-                <div class="grid grid_2">
-                    <h5 class="grey">Ответов : 5</h5>
-                </div>
-                <div class="grid grid_2">
-
-                    <div class="nicdark_activity">
-                        <h5 class="grey">Admin</h5>
-                        <div class="nicdark_space10"></div>
-                        <p>Dec 21, 2015</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="nicdark_space20"></div>
-
-    <section class="nicdark_section nicdark_bg_blue_custom nicdark_shadow">
-        <div class="white_mask">
-            <div class="nicdark_container nicdark_clearfix">
-
-                <div class="grid grid_12 nomargin nicdark_shadow nicdark_radius_left">
-
-                    <div class="nicdark_focus">
-                        <h2 class="white">
-                            <i class="icon-clipboard big white"></i>
-                            Название группы
-                        </h2>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="nicdark_container nicdark_clearfix">
-        <div class="grid grid_12">
-            <div class="row">
-                <div class="grid grid_8">
-                    <p>
-                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
-                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
-                            arcu.
-                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
-                    </p>
-                </div>
-                <div class="grid grid_2">
-                    <h5 class="grey">Ответов : 5</h5>
-                </div>
-                <div class="grid grid_2">
-
-                    <div class="nicdark_activity">
-                        <h5 class="grey">Admin</h5>
-                        <div class="nicdark_space10"></div>
-                        <p>Dec 21, 2015</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <div class="grid grid_12">
-            <div class="row">
-                <div class="grid grid_8">
-                    <p>
-                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
-                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
-                            arcu.
-                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
-                    </p>
-                </div>
-                <div class="grid grid_2">
-                    <h5 class="grey">Ответов : 5</h5>
-                </div>
-                <div class="grid grid_2">
-
-                    <div class="nicdark_activity">
-                        <h5 class="grey">Admin</h5>
-                        <div class="nicdark_space10"></div>
-                        <p>Dec 21, 2015</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div class="grid grid_12">
-            <div class="row">
-                <div class="grid grid_8">
-                    <p>
-                        <span class="white nicdark_dropcap nicdark_bg_yellow nicdark_radius nicdark_shadow">L</span>
-                        <a href="#">roin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec
-                            arcu.
-                            Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</a>
-                    </p>
-                </div>
-                <div class="grid grid_2">
-                    <h5 class="grey">Ответов : 5</h5>
-                </div>
-                <div class="grid grid_2">
-
-                    <div class="nicdark_activity">
-                        <h5 class="grey">Admin</h5>
-                        <div class="nicdark_space10"></div>
-                        <p>Dec 21, 2015</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="nicdark_space40"></div>
-
 </section>
