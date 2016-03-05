@@ -3,11 +3,101 @@
 <div class="contant">
     <div class="container">
         <div class="row">
-            <div class="span9">
+            <div class="span8">
 
 
                 <div class="row">
-                    <div style="margin-bottom: 15px;float: left;">
+                    <!--<div class="videos">
+                        <a href="/mify-o-psihologah-2.html"><img src="	http://img.youtube.com/vi/CWUeglOYVAw/default.jpg" alt="видео психология"></a>
+                        <a href="/mify-o-psihologah-2.html" title="Мифы о психологах. Часть 2">Мифы о психологах. Часть 2</a>
+                    </div>-->
+
+                    <div class="latest-news">
+                        <!--NEWS LIST ITEM START-->
+                        <div class="news-contant">
+                            <div class="thumb">
+                                <a href="/mify-o-psihologah-2.html">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <h2>Learn Creative Skills, Shape Your Future</h2>
+
+                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                <a href="#" class="btn-style">Смотреть видео</a>
+                            </div>
+                        </div>
+
+                        <div class="news-contant">
+                            <div class="thumb">
+                                <a href="/mify-o-psihologah-2.html">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <h2>Learn Creative Skills, Shape Your Future</h2>
+
+                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                <a href="#" class="btn-style">Смотреть видео</a>
+                            </div>
+                        </div>
+                        <div class="news-contant">
+                            <div class="thumb">
+                                <a href="/mify-o-psihologah-2.html">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <h2>Learn Creative Skills, Shape Your Future</h2>
+
+                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                <a href="#" class="btn-style">Смотреть видео</a>
+                            </div>
+                        </div>
+                        <div class="news-contant">
+                            <div class="thumb">
+                                <a href="/mify-o-psihologah-2.html">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <h2>Learn Creative Skills, Shape Your Future</h2>
+
+                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                <a href="#" class="btn-style">Смотреть видео</a>
+                            </div>
+                        </div>
+                        <div class="news-contant">
+                            <div class="thumb">
+                                <a href="/mify-o-psihologah-2.html">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <h2>Learn Creative Skills, Shape Your Future</h2>
+
+                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                <a href="#" class="btn-style">Смотреть видео</a>
+                            </div>
+                        </div>
+                        <div class="news-contant">
+                            <div class="thumb">
+                                <a href="/mify-o-psihologah-2.html">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <h2>Learn Creative Skills, Shape Your Future</h2>
+
+                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                <a href="#" class="btn-style">Смотреть видео</a>
+                            </div>
+                        </div>
+                        <!--NEWS LIST ITEM END-->
+                    </div>
+
+
+                <!--    <div style="margin-bottom: 15px;float: left;">
                         <a href="http://www.youtube.com/watch?v=k6mFF3VmVAs" data-toggle="lightbox"
                            data-gallery="youtubevideos" class="span3">
                             <img src="//i1.ytimg.com/vi/yP11r5n5RNg/mqdefault.jpg" class="img-responsive">
@@ -42,7 +132,7 @@
                            data-gallery="youtubevideos" class="span3">
                             <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
                         </a>
-                    </div>
+                    </div>-->
                 </div>
 
 
@@ -66,7 +156,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="span3">
+            <div class="span4">
                 <!--SIDEBAR START-->
                 <div class="sidebar">
                     <!--SEARCH WIDGET START-->
