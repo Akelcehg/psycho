@@ -20,6 +20,11 @@
                         </a>
                     </div>
                     <div style="margin-bottom: 15px; float: left;">
+                        <div style="position: absolute; color: black; padding: 5px;">
+                            <div class="span3">
+                                <p>dasd asd dasdas das daswegwer gwe dasd as dsa</p>
+                            </div>
+                        </div>
                         <a href="//www.youtube.com/embed/b0jqPvpn3sY" data-toggle="lightbox"
                            data-gallery="youtubevideos" class="span3">
                             <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
