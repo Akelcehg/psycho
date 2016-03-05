@@ -257,13 +257,13 @@
             } else {
                 rel = "";
             }
-            width = this.checkDimensions(this.$element.data('width') || 560);
-            height = width / (560 / 315);
+            width = this.checkDimensions(this.$element.data('width') || 530);
+            height = width / (530 / 315);
             return this.showVideoIframe('//www.youtube.com/embed/' + id + '?badge=0&autoplay=1&html5=1' + rel, width, height);
         },
         showVimeoVideo: function(id) {
             var height, width;
-            width = this.checkDimensions(this.$element.data('width') || 560);
+            width = this.checkDimensions(this.$element.data('width') || 530);
             height = width / (500 / 281);
             return this.showVideoIframe(id + '?autoplay=1', width, height);
         },
@@ -290,7 +290,7 @@
         },
         loadRemoteContent: function(url) {
             var disableExternalCheck, width;
-            width = this.$element.data('width') || 560;
+            width = this.$element.data('width') || 530;
             this.resize(width);
             disableExternalCheck = this.$element.data('disableExternalCheck') || false;
             if (!disableExternalCheck && !this.isExternal(url)) {
