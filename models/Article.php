@@ -16,8 +16,7 @@ use Yii;
  * @property string $updated_at
  * @property string $created_at
  */
-class Article extends \yii\db\ActiveRecord
-{
+class Article extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */

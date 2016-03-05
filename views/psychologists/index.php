@@ -117,6 +117,11 @@ use app\components\PsychoSearchWidget;
             </div>
         </div>
 
+        <div class="contant">
+
+        </div>
+
+
         <div class="contact-us">
             <div class="admin">
                 <div class="thumb">
@@ -253,3 +258,109 @@ use app\components\PsychoSearchWidget;
 
 
 <?= PsychoSearchWidget::widget() ?>
+
+
+
+<div class="contant">
+    <div class="container">
+        <!--DEEN PROFILES START-->
+        <div class="row">
+            <div class="span3">
+                <!--DEEN PROFILE START-->
+                <div class="deen-profile">
+                    <div class="thumb" style="float: none; margin: 0;">
+                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
+                    </div>
+                    <div class="text">
+                        <h2 style="text-align: center;">Jenny Sheen</h2>
+                        <small>Designation: Deen</small>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <div class="share-course">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--DEEN PROFILE END-->
+            </div>
+            <div class="span3">
+                <!--DEEN PROFILE START-->
+                <div class="deen-profile">
+                    <div class="thumb" style="float: none; margin: 0;">
+                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
+                    </div>
+                    <div class="text">
+                        <h2 style="text-align: center;">Jenny Sheen</h2>
+                        <small>Designation: Deen</small>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <div class="share-course">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--DEEN PROFILE END-->
+            </div>
+            <div class="span3">
+                <!--DEEN PROFILE START-->
+                <div class="deen-profile">
+                    <div class="thumb" style="float: none; margin: 0;">
+                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
+                    </div>
+                    <div class="text">
+                        <h2 style="text-align: center;">Jenny Sheen</h2>
+                        <small>Designation: Deen</small>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <div class="share-course">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--DEEN PROFILE END-->
+            </div>
+            <div class="span3">
+                <!--DEEN PROFILE START-->
+                <div class="deen-profile">
+                    <div class="thumb" style="float: none; margin: 0;">
+                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
+                    </div>
+                    <div class="text">
+                        <h2 style="text-align: center;">Jenny Sheen</h2>
+                        <small>Designation: Deen</small>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <div class="share-course">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--DEEN PROFILE END-->
+            </div>
+
+        </div>
+        <!--DEEN PROFILES END-->
+
+    </div>
+
+</div>

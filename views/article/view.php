@@ -1,197 +1,201 @@
-<?php
-
-use yii\widgets\ListView;
-
-?>
-
-
-
-<!--<section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img-single-teacher-1">
-
-    <div class="nicdark_filter greydark">
-
-        <div class="nicdark_container nicdark_clearfix">
-
-            <div class="grid grid_12">
-                <div class="nicdark_space100"></div>
-                <div class="nicdark_space100"></div>
-                <h1 class="white subtitle">JULIETTE LIGHT</h1>
-                <div class="nicdark_space10"></div>
-                <h3 class="subtitle white">KNOW JULIE OUR ART TEACHER</h3>
-                <div class="nicdark_space20"></div>
-                <div class="nicdark_divider left big"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                <div class="nicdark_space40"></div>
-                <div class="nicdark_space50"></div>
+<!--BANNER START-->
+<div class="page-heading">
+    <div class="container">
+        <h2>Our Blog</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+    </div>
+</div>
+<!--BANNER END-->
+<!--CONTANT START-->
+<div class="contant">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="blog">
+                    <!--BLOG START-->
+                    <div class="blog-contant">
+                        <h2><a href="#">Summer Holidays Education</a></h2>
+                        <div class="blog-tags">
+                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
+                            <a href="#">webdesign</a>, <a href="#">Course</a>
+                        </div>
+                        <div class="thumb">
+                            <a href="#"><img src="../images/blog-img.jpg" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                amet.</p>
+                            <blockquote>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                aliquyam erat.
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                amet.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                accusam et justo duo dolores et ea rebum.</p>
+                        </div>
+                        <div class="blog-comments">
+                            <a href="#"><i class="fa fa-user"></i>David</a>
+                            <a href="#"><i class="fa fa-calendar"></i>06 Dec, 2011</a>
+                            <a class="pull-right" href="#"><i class="fa fa-comment"></i>35 Comments</a>
+                        </div>
+                    </div>
+                    <!--BLOG END-->
+                    <!--ADMIN START-->
+                    <div class="admin">
+                        <div class="thumb">
+                            <a href="#"><img src="../images/admin.jpg" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <div class="social-icons">
+                                <a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                                <a href="#" data-toggle="tooltip" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+                                <a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#" data-toggle="tooltip" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                            <h2><a href="#">Administrator</a></h2>
+                            <p class="profession">Photographer</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu nulla metus. Interdum
+                                et malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper.
+                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                himenaeos. </p>
+                        </div>
+                    </div>
+                    <!--ADMIN END-->
+                    <!--COMMENTS START-->
+                    <div class="comments">
+                        <h2>Latest Comments</h2>
+                        <ul>
+                            <!--COMMENTS ITEM START-->
+                            <li>
+                                <div class="thumb">
+                                    <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
+                                </div>
+                                <div class="text">
+                                    <h4><a href="#">John Doe</a></h4>
+                                    <p class="date">March 29, 2014 - 18:57PM</p>
+                                    <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur pulvinar sodales
+                                        mi eget pulvinar. Nullam vulputate lectus varius elit egestas sed semper arcu
+                                        lobortis. </p>
+                                    <a href="#" class="btn-style">Reply</a>
+                                </div>
+                                <!--CHILD COMMENT START-->
+                                <ul>
+                                    <!--COMMENTS ITEM START-->
+                                    <li>
+                                        <div class="thumb">
+                                            <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
+                                        </div>
+                                        <div class="text">
+                                            <h4><a href="#">John Doe</a></h4>
+                                            <p class="date">March 29, 2014 - 18:57PM</p>
+                                            <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur pulvinar
+                                                sodales mi eget pulvinar. Nullam vulputate lectus varius elit egestas
+                                                sed semper arcu lobortis. </p>
+                                            <a href="#" class="btn-style">Reply</a>
+                                        </div>
+                                    </li>
+                                    <!--COMMENTS ITEM END-->
+                                    <!--COMMENTS ITEM START-->
+                                    <li>
+                                        <div class="thumb">
+                                            <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
+                                        </div>
+                                        <div class="text">
+                                            <h4><a href="#">John Doe</a></h4>
+                                            <p class="date">March 29, 2014 - 18:57PM</p>
+                                            <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur pulvinar
+                                                sodales mi eget pulvinar. Nullam vulputate lectus varius elit egestas
+                                                sed semper arcu lobortis. </p>
+                                            <a href="#" class="btn-style">Reply</a>
+                                        </div>
+                                        <ul>
+                                            <!--COMMENTS ITEM START-->
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="#">John Doe</a></h4>
+                                                    <p class="date">March 29, 2014 - 18:57PM</p>
+                                                    <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur
+                                                        pulvinar sodales mi eget pulvinar. Nullam vulputate lectus
+                                                        varius elit egestas sed semper arcu lobortis. </p>
+                                                    <a href="#" class="btn-style">Reply</a>
+                                                </div>
+                                            </li>
+                                            <!--COMMENTS ITEM END-->
+                                            <!--COMMENTS ITEM START-->
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="#">John Doe</a></h4>
+                                                    <p class="date">March 29, 2014 - 18:57PM</p>
+                                                    <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur
+                                                        pulvinar sodales mi eget pulvinar. Nullam vulputate lectus
+                                                        varius elit egestas sed semper arcu lobortis. </p>
+                                                    <a href="#" class="btn-style">Reply</a>
+                                                </div>
+                                            </li>
+                                            <!--COMMENTS ITEM END-->
+                                        </ul>
+                                    </li>
+                                    <!--COMMENTS ITEM END-->
+                                </ul>
+                                <!--CHILD COMMENT END-->
+                            </li>
+                            <!--COMMENTS ITEM END-->
+                        </ul>
+                    </div>
+                    <!--COMMENTS END-->
+                    <div class="leave-reply">
+                        <h2>Leave Us a Reply</h2>
+                        <form>
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    <input type="text" class="input-block-level" placeholder="Name">
+                                </div>
+                                <div class="span4">
+                                    <input type="text" class="input-block-level" placeholder="E-mail">
+                                </div>
+                                <div class="span4">
+                                    <input type="text" class="input-block-level" placeholder="Website">
+                                </div>
+                                <div class="text-area">
+                                    <textarea class="input-block-level" placeholder="Comments"></textarea>
+                                    <button class="btn-style">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
 
         </div>
-
-    </div>
-
-</section>-->
-
-<div class="nicdark_space50"></div>
-
-<section class="nicdark_section">
-
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-        <div class="nicdark_space70"></div>
-
-        <div class="grid grid_12">
-            <div class="nicdark_textevidence nicdark_bg_orange nicdark_radius nicdark_shadow">
-                <div class="nicdark_size_big">
-                    <p class="white"><i class="icon-calendar-1 nicdark_marginright10"></i><?= $model['created_at'] ?>
-                        <span
-                            class="nicdark_margin010">·</span> <i class="icon-user-1 nicdark_marginright10"></i>
-                        <?= Yii::$app->user->identity['username'] ?>
-                        <span class="nicdark_margin010">·</span> <i class="icon-chat nicdark_marginright10"></i>3
-                        COMMENTS</p>
-                </div>
-                <i class="icon-info-outline nicdark_iconbg right medium white"></i>
-            </div>
-            <div class="nicdark_space20"></div>
-
-
-            <div class="nicdark_space20"></div>
-
-            <h1 class="subtitle greydark"><?= $model['title'] ?></h1>
-
-            <div class="nicdark_space20"></div>
-            <div class="nicdark_divider left small"><span class="nicdark_bg_yellow nicdark_radius"></span></div>
-            <div class="nicdark_space20"></div>
-
-            <div class="article-text">
-                <?= $model['text'] ?>
-            </div>
-            <div class="nicdark_space50"></div>
-
-            <!--author-->
-            <div class="nicdark_archive1 nicdark_bg_yellow nicdark_radius nicdark_shadow">
-                <div class="nicdark_margin20 nicdark_relative">
-
-                    <img alt="" class="nicdark_displaynone_ipadpotr nicdark_radius_circle nicdark_absolute"
-                         style="width:100px;" src="../img/team/img1.jpg">
-
-                    <div class="nicdark_activity nicdark_marginleft120 nicdark_disable_marginleft_ipadpotr">
-                        <h4 class="white">JOHN MCALISTER</h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
-                        </div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum
-                            sit amet maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales.</p>
-                    </div>
-
-                </div>
-            </div>
-            <!--author-->
-
-            <div class="nicdark_space50"></div>
-
-            <h3 class="subtitle greydark">3 COMMENTS</h3>
-            <div class="nicdark_space20"></div>
-            <div class="nicdark_divider left small"><span class="nicdark_bg_orange nicdark_radius"></span></div>
-            <div class="nicdark_space20"></div>
-
-            <ul class="nicdark_list border">
-
-                <li class="nicdark_border_grey">
-                    <!--comment-->
-                    <div class="nicdark_archive1 nicdark_relative">
-                        <div class="nicdark_margin100 nicdark_relative">
-                            <img alt="" class="nicdark_displaynone_ipadpotr nicdark_radius_circle nicdark_absolute"
-                                 style="width:50px;" src="../img/team/img2.jpg">
-                            <div class="nicdark_activity nicdark_marginleft70 nicdark_disable_marginleft_ipadpotr">
-                                <div class="nicdark_space20"></div>
-                                <h4 class="subtitle greydark">ADMIN SAYS: May 12, 2014 AT 1:19</h4>
-                                <div class="nicdark_space20"></div>
-                            </div>
-                        </div>
-                        <p>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet
-                            maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Lorem commodo
-                            lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet,
-                            rhoncus non turpis. Aenean convallis ac lorem.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="#" class="nicdark_btn nicdark_bg_orange small nicdark_shadow nicdark_radius white"><i
-                                class="icon-reply-outline"></i>&nbsp;&nbsp;&nbsp;REPLY</a>
-                        <div class="nicdark_space20"></div>
-                    </div>
-                    <!--comment-->
-                </li>
-
-                <li class="nicdark_border_grey">
-                    <!--comment-->
-                    <div class="nicdark_archive1 nicdark_relative">
-                        <div class="nicdark_margin100 nicdark_relative">
-                            <img alt="" class="nicdark_displaynone_ipadpotr nicdark_radius_circle nicdark_absolute"
-                                 style="width:50px;" src="../img/team/img3.jpg">
-                            <div class="nicdark_activity nicdark_marginleft70 nicdark_disable_marginleft_ipadpotr">
-                                <div class="nicdark_space20"></div>
-                                <h4 class="subtitle greydark">ADMIN SAYS: May 12, 2014 AT 1:19</h4>
-                                <div class="nicdark_space20"></div>
-                            </div>
-                        </div>
-                        <p>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet
-                            maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Lorem commodo
-                            lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet,
-                            rhoncus non turpis. Aenean convallis ac lorem.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="#" class="nicdark_btn nicdark_bg_orange small nicdark_shadow nicdark_radius white"><i
-                                class="icon-reply-outline"></i>&nbsp;&nbsp;&nbsp;REPLY</a>
-                        <div class="nicdark_space20"></div>
-                    </div>
-                    <!--comment-->
-                </li>
-
-
-                <li class="nicdark_border_grey">
-                    <!--comment-->
-                    <div class="nicdark_archive1 nicdark_relative">
-                        <div class="nicdark_margin100 nicdark_relative">
-                            <img alt="" class="nicdark_displaynone_ipadpotr nicdark_radius_circle nicdark_absolute"
-                                 style="width:50px;" src="../img/team/img4.jpg">
-                            <div class="nicdark_activity nicdark_marginleft70 nicdark_disable_marginleft_ipadpotr">
-                                <div class="nicdark_space20"></div>
-                                <h4 class="subtitle greydark">ADMIN SAYS: May 12, 2014 AT 1:19</h4>
-                                <div class="nicdark_space20"></div>
-                            </div>
-                        </div>
-                        <p>Lorem commodo lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet
-                            maximus sit amet, rhoncus non turpis. Aenean convallis ac lorem et sodales. Lorem commodo
-                            lectus at sollicitudin elementum. Sed dolor turpis, condimentum sit amet maximus sit amet,
-                            rhoncus non turpis. Aenean convallis ac lorem.</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="#" class="nicdark_btn nicdark_bg_orange small nicdark_shadow nicdark_radius white"><i
-                                class="icon-reply-outline"></i>&nbsp;&nbsp;&nbsp;REPLY</a>
-                        <div class="nicdark_space5"></div>
-                    </div>
-                    <!--comment-->
-                </li>
-
-            </ul>
-
-
-            <div class="nicdark_space50"></div>
-
-            <h3 class="subtitle greydark">Оставить комментарий</h3>
-            <div class="nicdark_space20"></div>
-            <div class="nicdark_divider left small"><span class="nicdark_bg_red nicdark_radius"></span></div>
-            <div class="nicdark_space20"></div>
-
-            <textarea class="nicdark_bg_grey nicdark_radius nicdark_shadow grey small subtitle" placeholder="COMMENTS"
-                      rows="9"></textarea>
-            <div class="nicdark_space20"></div>
-            <input class="nicdark_btn nicdark_bg_red medium nicdark_shadow nicdark_radius white left" type="submit"
-                   value="POST COMMENT">
-
-
+        <div class="the-best">
+            <p>The Best Websites for Free Online Courses, Certificates, Degrees, and Educational Resources</p>
+            <h2>take $10 0ff for new users</h2>
         </div>
-
-        <div class="nicdark_space50"></div>
-
     </div>
-    <!--end nicdark_container-->
 
-</section>
+</div>

@@ -7,8 +7,8 @@ use app\models\ArticleSearch;
 use Yii;
 use yii\web\NotFoundHttpException;
 
-class ArticleController extends \yii\web\Controller
-{
+class ArticleController extends \yii\web\Controller {
+
     public function actionIndex() {
 
         $searchModel = new ArticleSearch();
