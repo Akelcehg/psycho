@@ -36,10 +36,10 @@ use yii\helpers\Html;
                                                 </ul>-->
                                             </li>
                                             <li><a href="<?= Url::base() ?>/interesting">Интересное</a></li>
-                                            <li><a href="<?= Url::base() ?>/article">!!Статьи</a></li>
+                                            <li><a href="<?= Url::base() ?>/article">Статьи</a></li>
                                             <li><a href="<?= Url::base() ?>/psychologists">!!Видео</a></li>
                                             <li><a href="<?= Url::base() ?>/trainings">Тренинги</a></li>
-                                            <li><a href="<?= Url::base() ?>/educational_institution">Учебные
+                                            <li><a href="<?= Url::base() ?>/educational-institution">Учебные
                                                     заведения</a></li>
                                             <li><a href="<?= Url::base() ?>/psychologists">Психологи</a></li>
                                         </ul>

@@ -23,7 +23,7 @@ class EducationalInstitutionController extends \yii\web\Controller {
         ]);
     }
 
-    public function actionDescription($id) {
+    public function actionView($id) {
 
         $educationInstitute = EducationalInstitution::findOne(['id' => $id]);
 

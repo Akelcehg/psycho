@@ -1,12 +1,3 @@
-<!--BANNER START-->
-<div class="page-heading">
-    <div class="container">
-        <h2>Our Blog</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-    </div>
-</div>
-<!--BANNER END-->
-<!--CONTANT START-->
 <div class="contant">
     <div class="container">
         <div class="row">
