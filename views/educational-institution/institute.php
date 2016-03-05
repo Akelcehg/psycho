@@ -50,7 +50,7 @@
     <div class="container">
         <!--SECTION HEADER END-->
         <div class="row">
-            <div class="span3">
+            <div class="span4">
                 <div class="adminstrative">
                     <h2><i class="fa fa-heart-o"></i> How to apply</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -58,7 +58,7 @@
                         dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="span3">
+            <div class="span4">
                 <div class="adminstrative">
                     <h2><i class="fa fa-graduation-cap"></i> Our Impact</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -66,17 +66,9 @@
                         dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="span3">
+            <div class="span4">
                 <div class="adminstrative">
                     <h2><i class="fa fa-pencil"></i> Creativity</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum.</p>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="adminstrative">
-                    <h2><i class="fa fa-life-ring"></i> Recreation</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                         ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
                         dolores et ea rebum.</p>
