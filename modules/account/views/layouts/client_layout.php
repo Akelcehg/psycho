@@ -6,8 +6,10 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -35,10 +37,24 @@ AppAsset::register($this);
                     <!--PROFILE IMAGE START-->
                     <div class="profile-box profile-view">
                         <div class="thumb">
-                            <a href="#"><img src="../images/profile-img.jpg" alt=""></a>
+
+                            <a href="#"><img src="<?= Url::base() . '/' . $this->context->module->logo ?>" alt=""></a>
+
                         </div>
                         <div class="text">
-                            <p>Welcome</p>
+                            <?php
+                            $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
+                                'action' => Url::base() . '/account/profile/update-photo'
+                            ]);
+                            ?>
+
+                            <?= $form->field(new \app\models\Image(), 'image_file')->fileInput()->label('Выберите фото') ?>
+
+                            <div style="color: white; display: table; margin: 0 auto;">
+                                <?= Html::submitButton('Сохранить фото', ['class' => 'btn-style']) ?>
+                            </div>
+
+                            <?php ActiveForm::end(); ?>
                             <a href="#" class="btn-style">Marrie James</a>
                         </div>
                     </div>
@@ -47,7 +63,8 @@ AppAsset::register($this);
                     <div class="profile-box edit-profile">
                         <h2>Account Setting</h2>
                         <ul>
-                            <li><a href="#">Edit Profile</a></li>
+                            <li><a href="<?= Url::base() ?>/account/article">Мои статьи</a></li>
+                            <li><a href="<?= Url::base() ?>/account/profile">Мой профиль</a></li>
                             <li><a href="#">Edit Password</a></li>
                             <li><a href="#">View Quiz Scores</a></li>
                             <li><a href="#">Attended Courses</a></li>

@@ -11,13 +11,50 @@ $this->title = 'Articles';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="nicdark_space100"></div>
-<div class="nicdark_space50"></div>
+<div class="span8">
+    <div class="profile-box editing">
 
-<section class="nicdark_section">
-    <div class="nicdark_container nicdark_clearfix">
+        <table>
+            <thead>
+            <tr>
+                <td>Student</td>
+                <td>Part</td>
+                <td>Score</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="#">How To Be A Great Photographer</a></td>
+                <td>1</td>
+                <td>5/25</td>
+            </tr>
+            <tr>
+                <td>Instructor: Rebecca Smith</td>
+                <td>2</td>
+                <td>2.5/25</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>3</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>4</td>
+                <td>Pending</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>&nbsp;</td>
+                <td>7.5/50</td>
+            </tr>
+            </tfoot>
+        </table>
 
         <h1><?= Html::encode($this->title) ?></h1>
+
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
         <p>
@@ -26,21 +63,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
-            'filterModel' => $searchModel,
-            'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
+            //'filterModel' => $searchModel,
 
-                'id',
-                'psychologist_id',
+            'columns' => [
+                //['class' => 'yii\grid\SerialColumn'],
+                //'id',
+                ///'psychologist_id',
                 'is_owner',
                 'source',
-                'text:ntext',
+                //'text:ntext',
                 // 'updated_at',
                 // 'created_at',
 
                 ['class' => 'yii\grid\ActionColumn'],
             ],
         ]); ?>
-
     </div>
-</section>
+</div>

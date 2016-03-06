@@ -7,10 +7,12 @@ use yii\helpers\Url;
 use yii\web\UploadedFile;
 
 class Image extends Model {
+
     /**
      * @var UploadedFile
      */
     public $image_file;
+    public $base_image_path = "images/";
 
     /*    public function rules() {
             return [
@@ -27,9 +29,9 @@ class Image extends Model {
     public function upload() {
 
         $psychologistId = \Yii::$app->user->id;
-        $directory = 'img/profile_photos/' . $psychologistId . '/';
+        $directory = $this->base_image_path.'profile_photos/' . $psychologistId . '/';
 
-        if (!file_exists('img/profile_photos')) mkdir('img/profile_photos');
+        if (!file_exists($this->base_image_path.'profile_photos')) mkdir('img/profile_photos');
 
         if ($this->validate()) {
             FileHelper::removeDirectory($directory);
@@ -113,11 +115,11 @@ class Image extends Model {
     public function getProfilePhoto() {
 
         $psychologistId = \Yii::$app->user->id;
-        $directory = 'img/profile_photos/' . $psychologistId . '/';
+        $directory = $this->base_image_path . 'profile_photos/' . $psychologistId . '/';
 
         $logo = glob($directory . "logo.*");
         if ($logo) return $logo[0];
-        else return null;
+        else return $this->base_image_path . 'profile_photos/blank.jpg';
     }
 
     public static function getUserProfilePhoto($psychologistId) {

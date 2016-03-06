@@ -41,12 +41,13 @@ class ProfileController extends Controller
             }
         } else {
 
+            //$this->logo = $imagesModel->getProfilePhoto();
             return $this->render('index', [
                 'profileModel' => $profile,
                 'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
                 'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId),
                 'imagesModel' => $imagesModel,
-                'logo' => $imagesModel->getProfilePhoto()
+                //'logo' => $imagesModel->getProfilePhoto()
             ]);
         }
     }

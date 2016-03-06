@@ -4480,7 +4480,8 @@ EDIT PROFILE PAGE START
     border-radius: 100%;
     height: 140px;
     width: 140px;
-    border: solid 5px #9e9e9e;
+    /*border: solid 5px #9e9e9e;*/
+    /*border: solid 1px #c7012e;*/
     overflow: hidden;
     margin: 0px auto;
 }

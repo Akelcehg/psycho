@@ -1,7 +1,7 @@
 <div class="span8">
     <!--EDIT PROFILE START-->
     <div class="profile-box editing">
-        <h2>Edit Profile</h2>
+        <h2>Ваш профиль</h2>
         <ul>
             <li>
                 <label>First Name</label>
