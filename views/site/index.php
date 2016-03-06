@@ -16,11 +16,13 @@
             <div class="span4">
                 <div class="services">
                     <div class="header">
-                        <i class="fa fa-tablet"></i>
-                        <i class="fa fa-user inner-icon"></i>
+                        <a href="psychologists">
+                            <i class="fa fa-tablet"></i>
+                            <i class="fa fa-user inner-icon"></i>
+                        </a>
                     </div>
                     <div class="text">
-                        <h3><a href="#">Expert teachers</a></h3>
+                        <h3><a href="psychologists">Психологи</a></h3>
                         <p>UI improvements were the one aspect of WordPress's future that everyone I spoke to seemed to
                             agree on: </p>
                     </div>
@@ -31,11 +33,13 @@
             <div class="span4">
                 <div class="services">
                     <div class="header">
-                        <i class="fa fa-tablet"></i>
-                        <i class="fa fa-list-alt inner-icon"></i>
+                        <a href="article">
+                            <i class="fa fa-tablet"></i>
+                            <i class="fa fa-list-alt inner-icon"></i>
+                        </a>
                     </div>
                     <div class="text">
-                        <h3><a href="#">Trusted certifications</a></h3>
+                        <h3><a href="article">Статьи</a></h3>
                         <p>UI improvements were the one aspect of WordPress's future that everyone I spoke to seemed to
                             agree on: </p>
                     </div>
@@ -46,11 +50,13 @@
             <div class="span4">
                 <div class="services">
                     <div class="header">
-                        <i class="fa fa-tablet"></i>
-                        <i class="fa fa-cogs inner-icon"></i>
+                        <a href="interesting">
+                            <i class="fa fa-tablet"></i>
+                            <i class="fa fa-cogs inner-icon"></i>
+                        </a>
                     </div>
                     <div class="text">
-                        <h3><a href="#">Start Learning</a></h3>
+                        <h3><a href="interesting">Тесты</a></h3>
                         <p>UI improvements were the one aspect of WordPress's future that everyone I spoke to seemed to
                             agree on: </p>
                     </div>
@@ -314,8 +320,9 @@
                     <a href="#">
                         <i class="fa fa-facebook"></i>
                         <div class="text">
-                            <h4>Follow us on Facebook</h4>
-                            <p>Faucibus toroot menuts</p>
+                            <p></p>
+                            <h4>Мы в Facebook</h4>
+                            <!--<p>Faucibus toroot menuts</p>-->
                         </div>
                     </a>
                 </div>
@@ -325,8 +332,9 @@
                     <a href="#">
                         <i class="fa fa-google"></i>
                         <div class="text">
-                            <h4>Follow us on Google Plus</h4>
-                            <p>Faucibus toroot menuts</p>
+                            <p></p>
+                            <h4>Мы в Google Plus</h4>
+                            <!--<p>Faucibus toroot menuts</p>-->
                         </div>
                     </a>
                 </div>
@@ -334,10 +342,11 @@
             <div class="span4">
                 <div class="follow">
                     <a href="#">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-vk"></i>
                         <div class="text">
-                            <h4>Follow us on Linkedin</h4>
-                            <p>Faucibus toroot menuts</p>
+                            <p></p>
+                            <h4>Мы в Vkontakte</h4>
+                            <!--<p>Faucibus toroot menuts</p>-->
                         </div>
                     </a>
                 </div>

@@ -4533,7 +4533,8 @@ EDIT PROFILE PAGE START
 
 .edit-profile ul li a {
     font-size: 14px;
-    color: #bebdbd;
+    /*color: #bebdbd;*/
+    color: #5a5a5a;
     text-decoration: none;
     padding: 25px 25px 25px 55px;
     display: block;
@@ -4610,7 +4611,8 @@ EDIT PROFILE PAGE START
 
 .editing input[type="text"], .editing input[type="password"], .editing select, .editing textarea {
     min-height: 40px;
-    border-color: #eaeaea;
+    /*border-color: #eaeaea;*/
+    border-color: #cbcbcb;
     box-shadow: none;
     color: #bebdbd;
     font-family: 'Open Sans', sans-serif;
@@ -4637,7 +4639,8 @@ EDIT PROFILE PAGE START
 
 .editing table {
     width: 100%;
-    border: solid 1px #f3f3f3;
+    /*border: solid 1px #f3f3f3;*/
+    border: solid 1px #cbcbcb;
 
 }
 
@@ -4648,7 +4651,8 @@ EDIT PROFILE PAGE START
 
 .editing table tr td {
     text-align: center;
-    border: solid 1px #f3f3f3;
+    /*border: solid 1px #f3f3f3;*/
+    border: solid 1px #cbcbcb;
     padding: 15px 20px;
     width: 20%;
 }

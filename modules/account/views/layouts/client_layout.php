@@ -1,0 +1,79 @@
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use app\assets\AppAsset;
+
+AppAsset::register($this);
+?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+</head>
+<body>
+<?php $this->beginBody() ?>
+<div class="wrapper">
+
+    <?php echo $this->render('//partials/header'); ?>
+
+    <div class="contant">
+        <div class="container">
+            <div style="margin-top: 15px;"></div>
+            <div class="row">
+                <div class="span4">
+                    <!--PROFILE IMAGE START-->
+                    <div class="profile-box profile-view">
+                        <div class="thumb">
+                            <a href="#"><img src="../images/profile-img.jpg" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p>Welcome</p>
+                            <a href="#" class="btn-style">Marrie James</a>
+                        </div>
+                    </div>
+                    <!--PROFILE IMAGE END-->
+                    <!--EDIT PROFILE START-->
+                    <div class="profile-box edit-profile">
+                        <h2>Account Setting</h2>
+                        <ul>
+                            <li><a href="#">Edit Profile</a></li>
+                            <li><a href="#">Edit Password</a></li>
+                            <li><a href="#">View Quiz Scores</a></li>
+                            <li><a href="#">Attended Courses</a></li>
+                            <li><a href="#">Booked Courses</a></li>
+                            <li><a href="#">Confirmed Courses</a></li>
+                        </ul>
+                        <div class="logout">
+                            <a href="#">Log Out</a>
+                        </div>
+                    </div>
+                    <!--EDIT PROFILE END-->
+                </div>
+
+                <?= $content ?>
+
+            </div>
+        </div>
+    </div>
+
+    <?php echo $this->render('//partials/footer'); ?>
+
+</div>
+
+
+<?php $this->endBody() ?>
+
+</body>
+</html>
+<?php $this->endPage() ?>

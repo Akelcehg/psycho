@@ -77,7 +77,7 @@ use yii\helpers\Html;
                                     <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="account">
-                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="account/profile">Profile</a></li>
                                     <li><a href="#">Account Setting</a></li>
                                     <li><a href="#">Privacy Setting</a></li>
                                     <li>
