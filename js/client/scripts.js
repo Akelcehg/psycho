@@ -19,6 +19,9 @@ $(document).ready(function () {
     
     function updateCoords(c)
     {
+        $('#disp_x').val($('#testImage').width());
+        $('#disp_y').val($('#testImage').height());
+
         $('#x').val(c.x);
         $('#y').val(c.y);
         $('#w').val(c.w);

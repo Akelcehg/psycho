@@ -7,7 +7,8 @@ use yii\helpers\Url;
 use yii\web\UploadedFile;
 use Yii;
 
-class Image extends Model {
+class Image extends Model
+{
 
     /**
      * @var UploadedFile
@@ -21,18 +22,20 @@ class Image extends Model {
             ];
         }*/
 
-    public function rules() {
+    public function rules()
+    {
         return [
             [['image_file'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
         ];
     }
 
-    public function upload() {
+    public function upload()
+    {
 
         $psychologistId = \Yii::$app->user->id;
-        $directory = $this->base_image_path.'profile_photos/' . $psychologistId . '/';
+        $directory = $this->base_image_path . 'profile_photos/' . $psychologistId . '/';
 
-        if (!file_exists($this->base_image_path.'profile_photos')) mkdir('img/profile_photos');
+        if (!file_exists($this->base_image_path . 'profile_photos')) mkdir('img/profile_photos');
 
         if ($this->validate()) {
             FileHelper::removeDirectory($directory);
@@ -57,19 +60,6 @@ class Image extends Model {
                 default:
                     exit('Unsupported type: ' . $_FILES['image']['type']);
             }
-
-
-            $targ_w = $targ_h = 250;
-            $jpeg_quality = 90;
-            $dst_r = imagecreatetruecolor( $targ_w, $targ_h );
-            imagecopyresampled($dst_r,$image,0,0,Yii::$app->request->post('x'),Yii::$app->request->post('y'),
-                $targ_w,$targ_h,Yii::$app->request->post('w'),Yii::$app->request->post('h'));
-            ob_start();
-            imagejpeg($dst_r,null, $jpeg_quality);
-            $data = ob_get_clean();
-            file_put_contents($directory . 'test' . '.' . $this->image_file->extension, $data);
-
-
 
             $max_width = 100;
             $max_height = 250;
@@ -119,6 +109,27 @@ class Image extends Model {
                 imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension), $new_width, $new_height,
                 $directory . 'logo_medium' . '.png');
 
+            $targ_w = $targ_h = 300;
+            $jpeg_quality = 90;
+
+            $dst_r = imagecreatetruecolor($targ_w, $targ_h);
+            /*  imagecopyresampled($dst_r,
+                  imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)
+                  , 0, 0, Yii::$app->request->post('x'), Yii::$app->request->post('y'),
+                  imagesx(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
+                  imagesy(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
+
+                  Yii::$app->request->post('w'),
+                  Yii::$app->request->post('h')
+              );*/
+            imagecopyresampled($dst_r,
+                imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)
+                , 0, 0, Yii::$app->request->post('x'), Yii::$app->request->post('y'),
+                $targ_w, $targ_h, Yii::$app->request->post('w'), Yii::$app->request->post('h'));
+            ob_start();
+            imagejpeg($dst_r, null, $jpeg_quality);
+            $data = ob_get_clean();
+            file_put_contents($directory . 'test' . '.' . $this->image_file->extension, $data);
 
             return true;
         } else {
@@ -126,7 +137,8 @@ class Image extends Model {
         }
     }
 
-    public function getProfilePhoto() {
+    public function getProfilePhoto()
+    {
 
         $psychologistId = \Yii::$app->user->id;
         $directory = $this->base_image_path . 'profile_photos/' . $psychologistId . '/';
@@ -136,7 +148,8 @@ class Image extends Model {
         else return $this->base_image_path . 'profile_photos/blank.jpg';
     }
 
-    public static function getUserProfilePhoto($psychologistId) {
+    public static function getUserProfilePhoto($psychologistId)
+    {
 
         $directory = 'img/profile_photos/' . $psychologistId . '/';
 
@@ -145,7 +158,8 @@ class Image extends Model {
         else return Url::base() . '/img/team/img_blank_small.jpg';
     }
 
-    public static function getUserMediumProfilePhoto($psychologistId) {
+    public static function getUserMediumProfilePhoto($psychologistId)
+    {
 
         $directory = 'img/profile_photos/' . $psychologistId . '/';
 
@@ -154,7 +168,8 @@ class Image extends Model {
         else return Url::base() . '/img/team/img_blank.jpg';
     }
 
-    public static function getUserSmallProfilePhoto($psychologistId) {
+    public static function getUserSmallProfilePhoto($psychologistId)
+    {
 
         $directory = 'img/profile_photos/' . $psychologistId . '/';
 
@@ -163,7 +178,8 @@ class Image extends Model {
         else return Url::base() . '/img/team/img_blank_small.jpg';
     }
 
-    public function getSmallProfilePhoto() {
+    public function getSmallProfilePhoto()
+    {
 
         $psychologistId = \Yii::$app->user->id;
         $directory = 'img/profile_photos/' . $psychologistId . '/';
@@ -173,7 +189,8 @@ class Image extends Model {
         else return 'img/team/img_blank_small.jpg';
     }
 
-    public function saveImageWithTransparentBg($width, $height, $img, $new_width, $new_height, $path) {
+    public function saveImageWithTransparentBg($width, $height, $img, $new_width, $new_height, $path)
+    {
         $image = imagecreatetruecolor($width, $height);
         imagealphablending($image, false);
         $col = imagecolorallocatealpha($image, 255, 255, 255, 127);
@@ -194,7 +211,8 @@ class Image extends Model {
 
     }
 
-    public function pasteImageOnTransparentBg($background, $image, $originalWidth, $originalHeight) {
+    public function pasteImageOnTransparentBg($background, $image, $originalWidth, $originalHeight)
+    {
         //imagecopymerge($background, $image, 400 - $originalWidth, 0, 0, 0, $originalWidth, $originalHeight, 100);
         imagecopymerge($background, $image, 0, 0, 0, 0, $originalWidth, $originalHeight, 100);
         imagealphablending($background, true);

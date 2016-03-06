@@ -85,6 +85,7 @@ class ProfileController extends Controller
 
     public function actionUpdatePhoto() {
         $imagesModel = new Image();
+
         //var_dump($imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file'));
         $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
 

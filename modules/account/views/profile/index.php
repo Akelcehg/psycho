@@ -13,7 +13,7 @@ use yii\helpers\Html;
 
         <!--<img alt="Test image" id="testImage"/>-->
         <!--<img id="blah" src="#" alt="your image" />-->
-        <img alt="Test image" id="testImage" style="max-width:600px; max-height:500px;" />
+        <img alt="Test image" id="testImage" style="max-width:400px; max-height:400px;" />
         <div id="previewWrap"></div>
         <!--<div id="previewWrap"></div>-->
 
