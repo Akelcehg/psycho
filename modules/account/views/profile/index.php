@@ -23,6 +23,8 @@ use yii\helpers\Html;
         ]);
         ?>
 
+        <input type="hidden" id="disp_x" name="disp_x" />
+        <input type="hidden" id="disp_y" name="disp_y" />
         <input type="hidden" id="x" name="x" />
         <input type="hidden" id="y" name="y" />
         <input type="hidden" id="w" name="w" />

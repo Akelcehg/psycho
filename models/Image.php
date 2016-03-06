@@ -58,6 +58,7 @@ class Image extends Model {
                     exit('Unsupported type: ' . $_FILES['image']['type']);
             }
 
+
             $targ_w = $targ_h = 250;
             $jpeg_quality = 90;
             $dst_r = imagecreatetruecolor( $targ_w, $targ_h );
@@ -67,8 +68,6 @@ class Image extends Model {
             imagejpeg($dst_r,null, $jpeg_quality);
             $data = ob_get_clean();
             file_put_contents($directory . 'test' . '.' . $this->image_file->extension, $data);
-
-
 
 
 
