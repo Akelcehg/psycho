@@ -113,19 +113,19 @@ class Image extends Model
             $jpeg_quality = 90;
 
             $dst_r = imagecreatetruecolor($targ_w, $targ_h);
-            /*  imagecopyresampled($dst_r,
-                  imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)
-                  , 0, 0, Yii::$app->request->post('x'), Yii::$app->request->post('y'),
-                  imagesx(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
-                  imagesy(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
-
-                  Yii::$app->request->post('w'),
-                  Yii::$app->request->post('h')
-              );*/
-            imagecopyresampled($dst_r,
+          /*  imagecopyresampled($dst_r,
                 imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)
                 , 0, 0, Yii::$app->request->post('x'), Yii::$app->request->post('y'),
-                $targ_w, $targ_h, Yii::$app->request->post('w'), Yii::$app->request->post('h'));
+                imagesx(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
+                imagesy(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
+
+                Yii::$app->request->post('w'),
+                Yii::$app->request->post('h')
+            );*/
+            imagecopyresampled($dst_r,
+                imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)
+                ,0,0,Yii::$app->request->post('x'),Yii::$app->request->post('y'),
+                $targ_w,$targ_h,Yii::$app->request->post('w'),Yii::$app->request->post('h'));
             ob_start();
             imagejpeg($dst_r, null, $jpeg_quality);
             $data = ob_get_clean();
@@ -143,7 +143,7 @@ class Image extends Model
         $psychologistId = \Yii::$app->user->id;
         $directory = $this->base_image_path . 'profile_photos/' . $psychologistId . '/';
 
-        $logo = glob($directory . "logo.*");
+        $logo = glob($directory . "test.*");
         if ($logo) return $logo[0];
         else return $this->base_image_path . 'profile_photos/blank.jpg';
     }
