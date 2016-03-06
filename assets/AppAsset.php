@@ -28,7 +28,8 @@ class AppAsset extends AssetBundle
         'css/client/font-awesome.min.css',
         'css/client/parallax.css',
         'css/client/custom_styles.css',
-        'css/client/ekko-lightbox.css'
+
+        'css/client/cropper.css'
 
         /*'css/client/nicdark_responsive.css',
         'css/client/revslider/settings.css',
@@ -47,7 +48,8 @@ class AppAsset extends AssetBundle
         'js/client/functions.js',
         'js/client/card_blur.js',
         'js/client/scripts.js',
-        'js/client/ekko-lightbox.js'
+
+        'js/client/cropper.js'
 
 
         //'js/client/main/jquery.min.js',

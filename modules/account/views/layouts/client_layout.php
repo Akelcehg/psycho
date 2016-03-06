@@ -6,7 +6,6 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use yii\helpers\Url;
@@ -42,19 +41,7 @@ AppAsset::register($this);
 
                         </div>
                         <div class="text">
-                            <?php
-                            $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
-                                'action' => Url::base() . '/account/profile/update-photo'
-                            ]);
-                            ?>
-
-                            <?= $form->field(new \app\models\Image(), 'image_file')->fileInput()->label('Выберите фото') ?>
-
-                            <div style="color: white; display: table; margin: 0 auto;">
-                                <?= Html::submitButton('Сохранить фото', ['class' => 'btn-style']) ?>
-                            </div>
-
-                            <?php ActiveForm::end(); ?>
+                            <p>das</p>
                             <a href="#" class="btn-style">Marrie James</a>
                         </div>
                     </div>

@@ -1,7 +1,41 @@
+<?php
+
+use yii\widgets\ActiveForm;
+use yii\helpers\Url;
+use yii\helpers\Html;
+
+?>
+
 <div class="span8">
     <!--EDIT PROFILE START-->
     <div class="profile-box editing">
         <h2>Ваш профиль</h2>
+
+        <!--<img alt="Test image" id="testImage"/>-->
+        <!--<img id="blah" src="#" alt="your image" />-->
+        <img alt="Test image" id="testImage" style="max-width:600px; max-height:500px;" />
+        <div id="previewWrap"></div>
+        <!--<div id="previewWrap"></div>-->
+
+        <?php
+        $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
+            'action' => Url::base() . '/account/profile/update-photo',
+        ]);
+        ?>
+
+        <input type="hidden" id="x" name="x" />
+        <input type="hidden" id="y" name="y" />
+        <input type="hidden" id="w" name="w" />
+        <input type="hidden" id="h" name="h" />
+
+        <?= $form->field(new \app\models\Image(), 'image_file')->fileInput(['id'=>'imgInp'])->label('Выберите фото') ?>
+
+        <div style="color: white; display: table; ">
+            <?= Html::submitButton('Сохранить фото', ['class' => 'btn-style']) ?>
+        </div>
+
+        <?php ActiveForm::end(); ?>
+
         <ul>
             <li>
                 <label>First Name</label>

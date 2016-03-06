@@ -5,6 +5,7 @@ use yii\base\Model;
 use yii\helpers\FileHelper;
 use yii\helpers\Url;
 use yii\web\UploadedFile;
+use Yii;
 
 class Image extends Model {
 
@@ -56,6 +57,20 @@ class Image extends Model {
                 default:
                     exit('Unsupported type: ' . $_FILES['image']['type']);
             }
+
+            $targ_w = $targ_h = 250;
+            $jpeg_quality = 90;
+            $dst_r = imagecreatetruecolor( $targ_w, $targ_h );
+            imagecopyresampled($dst_r,$image,0,0,Yii::$app->request->post('x'),Yii::$app->request->post('y'),
+                $targ_w,$targ_h,Yii::$app->request->post('w'),Yii::$app->request->post('h'));
+            ob_start();
+            imagejpeg($dst_r,null, $jpeg_quality);
+            $data = ob_get_clean();
+            file_put_contents($directory . 'test' . '.' . $this->image_file->extension, $data);
+
+
+
+
 
             $max_width = 100;
             $max_height = 250;

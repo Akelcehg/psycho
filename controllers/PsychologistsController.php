@@ -14,7 +14,6 @@ class PsychologistsController extends \yii\web\Controller {
     public function actionIndex() {
 
         $searchModel = new ProfileSearch();
-
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $psychologistsTop = new PsychologistTop();
 
