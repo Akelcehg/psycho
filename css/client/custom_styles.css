@@ -101,3 +101,7 @@
         margin-bottom: 1em;
     }
 }
+
+.nav-collapse.in.collapse ul li a{
+    color: #252525;
+}
