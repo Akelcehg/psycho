@@ -68,12 +68,8 @@ use yii\helpers\Html;
 
                                     <li>
 
-                                        <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown"
-                                           data-target="#"
-                                           href="/page.html">
-                                            Мой профиль
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="account">
+                                        <a id="account" href="#">Мой профиль</a>
+                                        <ul>
                                             <li><a href="account/profile">Profile</a></li>
                                             <li><a href="#">Account Setting</a></li>
                                             <li><a href="#">Privacy Setting</a></li>
