@@ -8,7 +8,7 @@ use app\components\PsychoSearchWidget;
     <div class="container">
 
         <div class="sec-header">
-            <h2>Our Teachers</h2>
+            <h2>Our Teachers Добавить сбоку самых активных</h2>
             <p>Discover courses by topic</p>
         </div>
 

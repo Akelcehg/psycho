@@ -52,7 +52,7 @@
                         <!--EVENT VANUE END-->
                         <!--EVENT FOOTER START-->
                         <div class="event-footer">
-                            <a href="#" class="btn-style">Register</a>
+                            <a href="#" class="btn-style">Записаться</a>
                         </div>
                         <!--EVENT FOOTER END-->
                     </div>

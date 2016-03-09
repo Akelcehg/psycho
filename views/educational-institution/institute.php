@@ -21,7 +21,7 @@
             </div>
             <div class="span6">
                 <div class="text">
-                    <h2>Creating Responsive Web Design</h2>
+                    <h2>Creating Responsive Web Design ( Добавить внизу тренинги этой школы штуки 4 как на главной )</h2>
                     <h5>Learn how to optimize your webpages for different screen sizes and platforms.</h5>
                     <div class="reviews">
                         <a href="#">109 Reviews</a>

@@ -54,7 +54,7 @@ class SiteController extends Controller {
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
-        $eventsList = new Events();
+        $eventsList = new Events();        
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => $eventsList->getEvents(4)
@@ -65,7 +65,7 @@ class SiteController extends Controller {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
-                $profile = new Profile();
+                $profile = new Profile();                
                 if ($profile->initProfile($user->id)) {
                     if (Yii::$app->getUser()->login($user)) {
                         return $this->goHome();
@@ -97,7 +97,7 @@ class SiteController extends Controller {
     }
 
     public function actionLogout() {
-        Yii::$app->user->logout();
+        Yii::$app->user->logout();        
         return $this->goHome();
     }
 

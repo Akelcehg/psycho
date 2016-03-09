@@ -195,7 +195,7 @@
 
 <div class="page-heading">
     <div class="container">
-        <h2>Search Result</h2>
+        <h2>Search Result Добавить Видео внизу и сделать кнопку для перехода на его статьи</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
     </div>
 </div>
