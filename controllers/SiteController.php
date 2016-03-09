@@ -15,9 +15,11 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Profile;
 
-class SiteController extends Controller {
+class SiteController extends Controller
+{
 
-    public function behaviors() {
+    public function behaviors()
+    {
         return [
             'access' => [
                 'class' => AccessControl::className(),
@@ -39,7 +41,8 @@ class SiteController extends Controller {
         ];
     }
 
-    public function actions() {
+    public function actions()
+    {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -51,28 +54,28 @@ class SiteController extends Controller {
         ];
     }
 
-    public function actionIndex() {
+    public function actionIndex()
+    {
 
         $topPsychologists = new PsychologistTop();
-        $eventsList = new Events();        
+        $eventsList = new Events();
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => $eventsList->getEvents(4)
         ]);
     }
 
-    public function actionSignup() {
+    public function actionSignup()
+    {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
-                $profile = new Profile();                
+                $profile = new Profile();
                 if ($profile->initProfile($user->id)) {
                     if (Yii::$app->getUser()->login($user)) {
                         return $this->goHome();
                     }
-                } else
-
-                    var_dump($profile);
+                }
             }
         }
 
@@ -81,7 +84,8 @@ class SiteController extends Controller {
         ]);
     }
 
-    public function actionLogin() {
+    public function actionLogin()
+    {
 
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -96,12 +100,14 @@ class SiteController extends Controller {
 
     }
 
-    public function actionLogout() {
-        Yii::$app->user->logout();        
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
         return $this->goHome();
     }
 
-    public function actionContact() {
+    public function actionContact()
+    {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
@@ -113,7 +119,8 @@ class SiteController extends Controller {
         ]);
     }
 
-    public function actionAbout() {
+    public function actionAbout()
+    {
         return $this->render('about');
     }
 

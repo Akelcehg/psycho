@@ -11,7 +11,7 @@ use yii\helpers\Html;
         <div class="container">
 
             <div class="logo">
-                <a href="index.html"><img src="<?=Url::base()?>/images/logo3.png" alt=""></a>
+                <a href="index.html"><img src="<?= Url::base() ?>/images/logo3.png" alt=""></a>
             </div>
 
             <div class="navigation">
@@ -40,11 +40,10 @@ use yii\helpers\Html;
 
                                         <a href="#">Мой профиль</a>
                                         <ul>
-                                            <li><a href="account/profile">Profile</a></li>
-                                            <li><a href="#">Account Setting</a></li>
-                                            <li><a href="#">Privacy Setting</a></li>
+                                            <li><a href="account/profile">Профиль</a></li>
+
                                             <li>
-                                                <?= Html::a('Выйти', ['site/logout'], [
+                                                <?= Html::a('Выйти', ['/site/logout'], [
                                                     'data' => [
                                                         'method' => 'post',
                                                     ],
