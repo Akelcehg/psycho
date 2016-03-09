@@ -260,7 +260,6 @@ use app\components\PsychoSearchWidget;
 <?= PsychoSearchWidget::widget() ?>
 
 
-
 <div class="contant">
     <div class="container">
         <!--DEEN PROFILES START-->
@@ -274,7 +273,9 @@ use app\components\PsychoSearchWidget;
                     <div class="text">
                         <h2 style="text-align: center;">Jenny Sheen</h2>
                         <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
+                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
+                            fuisset, in quo inani eligendi.</p>
                         <div class="share-course">
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -297,7 +298,9 @@ use app\components\PsychoSearchWidget;
                     <div class="text">
                         <h2 style="text-align: center;">Jenny Sheen</h2>
                         <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
+                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
+                            fuisset, in quo inani eligendi.</p>
                         <div class="share-course">
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -320,7 +323,9 @@ use app\components\PsychoSearchWidget;
                     <div class="text">
                         <h2 style="text-align: center;">Jenny Sheen</h2>
                         <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
+                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
+                            fuisset, in quo inani eligendi.</p>
                         <div class="share-course">
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -343,7 +348,9 @@ use app\components\PsychoSearchWidget;
                     <div class="text">
                         <h2 style="text-align: center;">Jenny Sheen</h2>
                         <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
+                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
+                            fuisset, in quo inani eligendi.</p>
                         <div class="share-course">
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>

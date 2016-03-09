@@ -5,112 +5,98 @@ use yii\helpers\Html;
 
 ?>
 
-<header class="header-6">
+<header class="header-2">
     <!--NAVIGATION START-->
     <div class="navigation-bar">
         <div class="container">
-            <div class="row">
-                <div class="span2">
-                </div>
-                <div class="span10">
-                    <div class="navigation">
-                        <div class="navbar">
-                            <div class="navbar-inner">
-                                <div class="container">
-                                    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"
-                                            type="button">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <div class="nav-collapse collapse">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo3.png" alt=""></a>
+            </div>
+
+
+            <!--<div class="cart">
+                <ul>
+                    <li>
+                        <div class="search-bar"><i class="fa fa-search"></i></div>
+                        <div class="search-box">
+                            <input type="text" class="input-block-level">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#"
+                           href="/page.html">
+                            <i class="fa fa-briefcase"></i><span>€0</span>
+                        </a>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <p>0 items in shopping bag</p>
+                            <p class="color">Unfortunately, your shopping bag is emtpy.</p>
+                            <a href="#" class="return">Return to the Shop</a>
+                        </div>
+                    </li>
+                    <li><i class="fa fa-star"></i><span>3</span></li>
+                </ul>
+            </div>-->
+            <div class="navigation">
+                <div class="navbar">
+                    <div class="container">
+                        <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar collapsed"
+                                type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+                            <ul>
+                                <li><a href="<?= Url::base() ?>">Главная</a></li>
+                                <li><a href="<?= Url::base() ?>/interesting">Интересное</a></li>
+                                <li><a href="<?= Url::base() ?>/article">Статьи</a></li>
+                                <li><a href="<?= Url::base() ?>/video">Видео</a></li>
+                                <li><a href="<?= Url::base() ?>/discussion">Форум</a></li>
+                                <li><a href="<?= Url::base() ?>/trainings">Тренинги</a></li>
+                                <li><a href="<?= Url::base() ?>/educational-institution">Школы</a></li>
+                                <li><a href="<?= Url::base() ?>/psychologists">Психологи</a></li>
+
+                                <?php if (Yii::$app->user->isGuest) { ?>
+                                    <li>
+                                        <a href="#">Кабинет</a>
                                         <ul>
-                                            <li><a href="<?= Url::base() ?>">Главная</a>
-                                                <!--<ul>
-                                                    <li><a href="index.html">Home Page Default</a></li>
-                                                    <li><a href="index-1.html">Home Page 1</a></li>
-                                                    <li><a href="index-2.html">Home Page 2</a></li>
-                                                    <li><a href="index-3.html">Home Page 3</a></li>
-                                                    <li><a href="index-4.html">Home Page 4</a></li>
-                                                    <li><a href="index-sidemenu.html">Home Page 5</a></li>
-                                                </ul>-->
-                                            </li>
-                                            <li><a href="<?= Url::base() ?>/interesting">Интересное</a></li>
-                                            <li><a href="<?= Url::base() ?>/article">Статьи</a></li>
-                                            <li><a href="<?= Url::base() ?>/video">Видео</a></li>
-                                            <li><a href="<?= Url::base() ?>/discussion">Форум</a></li>
-                                            <li><a href="<?= Url::base() ?>/trainings">Тренинги</a></li>
-                                            <li><a href="<?= Url::base() ?>/educational-institution">Учебные
-                                                    заведения</a></li>
-                                            <li><a href="<?= Url::base() ?>/psychologists">Психологи</a></li>
+                                            <li><a href="<?= Url::to('signup') ?>">Регистрация</a></li>
+                                            <li><a href="<?= Url::to('login') ?>">Войти</a></li>
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
+                                    </li>
+                                <?php } else { ?>
+
+                                    <li>
+
+                                        <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown"
+                                           data-target="#"
+                                           href="/page.html">
+                                            Мой профиль
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="account">
+                                            <li><a href="account/profile">Profile</a></li>
+                                            <li><a href="#">Account Setting</a></li>
+                                            <li><a href="#">Privacy Setting</a></li>
+                                            <li>
+                                                <?= Html::a('Выйти', ['site/logout'], [
+                                                    'data' => [
+                                                        'method' => 'post',
+                                                    ],
+                                                ]) ?>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+                                <?php } ?>
+
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--NAVIGATION END-->
-    <!--TOP STRIP START-->
-    <div class="top-strip">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html"><img src="<?= Url::base() ?>/images/logo3.png" alt=""></a>
-            </div>
-            <!--ACCOUNT SECTION START-->
-            <div class="account">
-                <ul>
-                    <?php if (Yii::$app->user->isGuest) { ?>
-                        <li><a href="<?= Url::to('signup') ?>">Регистрация</a></li>
-                        <li><a href="<?= Url::to('login') ?>">Войти</a></li>
-                    <?php } else { ?>
 
-                        <li>
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown"
-                                   data-target="#"
-                                   href="/page.html">
-                                    My Account
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="account">
-                                    <li><a href="account/profile">Profile</a></li>
-                                    <li><a href="#">Account Setting</a></li>
-                                    <li><a href="#">Privacy Setting</a></li>
-                                    <li>
-                                        <?= Html::a('Выйти', ['site/logout'], [
-                                            'data' => [
-                                                'method' => 'post',
-                                            ],
-                                        ]) ?>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    <?php } ?>
-                    <!--<li>
-                        <div class="dropdown">
-                            <a class="dropdown-toggle" id="account" role="button" data-toggle="dropdown" data-target="#"
-                               href="/page.html">
-                                My Account
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="account">
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#">Account Setting</a></li>
-                                <li><a href="#">Privacy Setting</a></li>
-                            </ul>
-                        </div>
-                    </li>-->
-                </ul>
-            </div>
-            <!--ACCOUNT SECTION START-->
-        </div>
-    </div>
-    <!--TOP STRIP END-->
 
 </header>
