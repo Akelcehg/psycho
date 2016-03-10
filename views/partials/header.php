@@ -11,7 +11,7 @@ use yii\helpers\Html;
         <div class="container">
 
             <div class="logo">
-                <a href="index.html"><img src="<?= Url::base() ?>/images/logo3.png" alt=""></a>
+                <a href="index.html"><img src="<?= Url::base() ?>/images/propsy1.png" alt=""></a>
             </div>
 
             <div class="navigation">

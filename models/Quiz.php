@@ -57,7 +57,7 @@ class Quiz extends \yii\db\ActiveRecord {
         $query->where('quiz_questions.quiz_id=' . $id);
 
         return ($this->_group_by($query->all(), 'qid'));
-        
+
     }
 
     function _group_by($array, $key) {
