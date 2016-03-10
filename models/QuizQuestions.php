@@ -49,16 +49,17 @@ class QuizQuestions extends \yii\db\ActiveRecord {
     public function saveQuizQuestions($questions, $quiz_id) {
 
         $questionAnswers = new QuestionsAnswers();
+
         for ($i = 0; $i < count($questions); $i++) {
+            $quizQuestion = new QuizQuestions();
+            $quizQuestion->name = $questions[$i]['name'];
+            $quizQuestion->quiz_id = $quiz_id;
 
-            $this->name = $questions[$i]['name'];
-            $this->quiz_id = $quiz_id;
-
-            if (!$this->save()) {
+            if (!$quizQuestion->save()) {
                 return false;
 
             } else {
-                if (!$questionAnswers->saveQuestionAnswers($this->id, $questions[$i]['answers'])) {
+                if (!$questionAnswers->saveQuestionAnswers($quizQuestion->id, $questions[$i]['answers'])) {
                     return false;
                 }
             }

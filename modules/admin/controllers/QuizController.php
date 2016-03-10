@@ -3,6 +3,7 @@
 namespace app\modules\admin\controllers;
 
 use app\models\QuizQuestions;
+use app\models\QuizResults;
 use Yii;
 use app\models\Quiz;
 use app\models\QuizSearch;
@@ -58,20 +59,19 @@ class QuizController extends Controller {
     public function actionCreate() {
         $model = new Quiz();
         $quizQuestion = new QuizQuestions();
+        $quizResults = new QuizResults();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             //if ($model->load(Yii::$app->request->post())) {
 
-            var_dump(Yii::$app->request->post());
-            var_dump(Yii::$app->request->post('question'));
-            var_dump(Yii::$app->request->post('question')[0]['name']);
-            var_dump(Yii::$app->request->post('question')[0]);
+            //var_dump(Yii::$app->request->post('question'));
+            if ($quizQuestion->saveQuizQuestions(Yii::$app->request->post('question'), $model['id'])) {
+                if ($quizResults->saveQuizResults($model['id'], Yii::$app->request->post('results'))) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
+            //return $this->redirect(['view', 'id' => $model->id]);
 
-            var_dump($quizQuestion->saveQuizQuestions(Yii::$app->request->post('question'), $model['id']));
-            /*$quizQuestion->quiz_id = $model->id;
-            $quizQuestion->name = Yii::$app->request->post('question')[0]['name'];*/
-
-            //    return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,

@@ -9,7 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $name
- * @property integer $description
+ * @property string $description
  * @property string $updated_at
  * @property string $created_at
  */
@@ -30,7 +30,7 @@ class Quiz extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'description'], 'required'],
-            [['description'], 'integer'],
+            [['description'], 'string'],
             [['updated_at', 'created_at'], 'safe'],
             [['name'], 'string', 'max' => 255]
         ];

@@ -15,21 +15,18 @@ use Yii;
  * @property string $updated_at
  * @property string $created_at
  */
-class QuizResults extends \yii\db\ActiveRecord
-{
+class QuizResults extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'quiz_results';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['quiz_id', 'value_from', 'value_to', 'text'], 'required'],
             [['quiz_id', 'value_from', 'value_to'], 'integer'],
@@ -41,8 +38,7 @@ class QuizResults extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'quiz_id' => 'Quiz ID',
@@ -52,5 +48,29 @@ class QuizResults extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
         ];
+    }
+
+    public function saveQuizResults($quizId, $results) {
+
+        /*$query = 'INSERT INTO questions_answers (question_id,text,value) VALUES ';
+
+        for ($i = 0; $i < count($answers); $i++) {
+            $query .= '(' . $questionId . ',"' . $answers[$i]['text'] . '","' . $answers[$i]['value'] . '")';
+            if ($i + 1 == count($answers)) $query .= ';';
+            else $query .= ',';
+        }
+
+        return Yii::$app->db->createCommand($query)->execute();*/
+
+        $query = 'INSERT INTO quiz_results (quiz_id,value_from,value_to,text) VALUES ';
+
+        for ($i = 0; $i < count($results); $i++) {
+            $query .= '(' . $quizId . ',"' . $results[$i]['from'] . '"
+            ,"' . $results[$i]['to'] . '",
+            "' . $results[$i]['text'] . '")';
+            if ($i + 1 == count($results)) $query .= ';';
+            else $query .= ',';
+        }
+        return Yii::$app->db->createCommand($query)->execute();
     }
 }
