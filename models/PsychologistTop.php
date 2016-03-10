@@ -60,6 +60,5 @@ class PsychologistTop extends \yii\db\ActiveRecord {
         return $psychologistsTopDataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-        //return $psychologistsTopDataProvider;
     }
 }

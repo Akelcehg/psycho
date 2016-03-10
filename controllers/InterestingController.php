@@ -18,8 +18,11 @@ class InterestingController extends \yii\web\Controller {
         ]);
     }
 
-    public function actionQuiz() {
-        return $this->render('single_quiz');
+    public function actionQuiz($id) {
+        $quiz = new Quiz();
+        return $this->render('single_quiz', [
+            'quizQuestion' => $quiz->getQuiz($id)
+        ]);
     }
 
 }

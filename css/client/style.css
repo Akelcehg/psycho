@@ -5419,7 +5419,7 @@ EDIT PROFILE PAGE START
     font-size: 16px;
 }
 
-.questions input[type=radio].css-checkbox {
+.questions input[type=checkbox].css-checkbox {
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
@@ -5430,7 +5430,7 @@ EDIT PROFILE PAGE START
     border: 0;
 }
 
-.questions input[type=radio].css-checkbox + label.css-label {
+.questions input[type=checkbox].css-checkbox + label.css-label {
     padding: 0px 0px 0px 30px;
     height: 18px;
     background-repeat: no-repeat;
@@ -5444,7 +5444,7 @@ EDIT PROFILE PAGE START
     font-weight: normal;
 }
 
-.questions input[type=radio].css-checkbox:checked + label.css-label {
+.questions input[type=checkbox].css-checkbox:checked + label.css-label {
     background-position: 0 -19px;
 }
 
