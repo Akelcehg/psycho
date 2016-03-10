@@ -63,7 +63,7 @@ class QuizController extends Controller {
             var_dump(Yii::$app->request->post());
             //var_dump(Yii::$app->request->post('question'));
             //var_dump(Yii::$app->request->post('question')[0]);
-            
+
             //    return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

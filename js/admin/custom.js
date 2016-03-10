@@ -57,10 +57,10 @@ $(document).ready(function () {
 
         for (var i = 0; i < resultsNumberInput.val(); i++) {
             testResultsValuesDiv.append("<div class='form-group required'>" +
-                "<label>Введи от балов<input type='text' class='form-control' required></label>" +
-                "<label>Введи до балов<input type='text' class='form-control' required></label>" +
+                "<label>Введи от балов<input type='text' class='form-control' name='results[" + i + "][from]' required></label>" +
+                "<label>Введи до балов<input type='text' class='form-control' name='results[" + i + "][to]' required></label>" +
                 "<label style='width: 100%;'>Введи результат" +
-                "<textarea class='form-control' />" +
+                "<textarea class='form-control' name='results[" + i + "][text]' />" +
                 "</label>" +
                 "</div>");
         }
