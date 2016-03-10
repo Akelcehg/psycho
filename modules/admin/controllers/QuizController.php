@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\QuizQuestions;
 use Yii;
 use app\models\Quiz;
 use app\models\QuizSearch;
@@ -56,13 +57,19 @@ class QuizController extends Controller {
      */
     public function actionCreate() {
         $model = new Quiz();
+        $quizQuestion = new QuizQuestions();
 
-        //if ($model->load(Yii::$app->request->post()) && $model->save()) {
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            //if ($model->load(Yii::$app->request->post())) {
 
             var_dump(Yii::$app->request->post());
             var_dump(Yii::$app->request->post('question'));
+            var_dump(Yii::$app->request->post('question')[0]['name']);
             var_dump(Yii::$app->request->post('question')[0]);
+
+            var_dump($quizQuestion->saveQuizQuestions(Yii::$app->request->post('question'), $model['id']));
+            /*$quizQuestion->quiz_id = $model->id;
+            $quizQuestion->name = Yii::$app->request->post('question')[0]['name'];*/
 
             //    return $this->redirect(['view', 'id' => $model->id]);
         } else {
