@@ -160,9 +160,6 @@ use yii\helpers\Url;
                 </ul>
             </li>
             <li>
-                <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-            </li>
-            <li>
                 <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
             </li>
         </ul>
