@@ -12,10 +12,8 @@ use yii\filters\VerbFilter;
 /**
  * QuizController implements the CRUD actions for Quiz model.
  */
-class QuizController extends Controller
-{
-    public function behaviors()
-    {
+class QuizController extends Controller {
+    public function behaviors() {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -30,8 +28,7 @@ class QuizController extends Controller
      * Lists all Quiz models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new QuizSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -46,8 +43,7 @@ class QuizController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -58,12 +54,17 @@ class QuizController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new Quiz();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        //if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+            var_dump(Yii::$app->request->post());
+            //var_dump(Yii::$app->request->post('question'));
+            //var_dump(Yii::$app->request->post('question')[0]);
+            
+            //    return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -77,8 +78,8 @@ class QuizController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
-    {
+    public
+    function actionUpdate($id) {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -96,8 +97,8 @@ class QuizController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
-    {
+    public
+    function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -110,8 +111,8 @@ class QuizController extends Controller
      * @return Quiz the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected
+    function findModel($id) {
         if (($model = Quiz::findOne($id)) !== null) {
             return $model;
         } else {
