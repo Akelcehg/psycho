@@ -10,7 +10,11 @@ use yii\widgets\ActiveForm;
 
 <div class="quiz-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        //'htmlOptions' => [
+        'class' => 'quizForm'
+        //]
+    ]); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
@@ -26,6 +30,15 @@ use yii\widgets\ActiveForm;
 
     <div id="questionsDiv">
 
+    </div>
+
+    <hr>
+    <label>
+        Введи кол-во результатов теста
+        <input type="text" class="form-control" id="resultsNumberInput" maxlength="3">
+    </label>
+    <input class="btn btn-info" type="button" id="createQuizResultsButton" value="Создать результаты тестирования">
+    <div id="testResultsValuesDiv">
 
     </div>
 

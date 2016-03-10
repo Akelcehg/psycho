@@ -8,6 +8,9 @@ $(document).ready(function () {
     var questionsDiv = $('#questionsDiv');
     var questionAnswersDiv = $('.questionAnswersDiv');
     var createQuizAnswersButton = $('.createQuizAnswersButton');
+    var createQuizResultsButton = $('#createQuizResultsButton');
+    var resultsNumberInput = $('#resultsNumberInput');
+    var testResultsValuesDiv = $('#testResultsValuesDiv');
 
     quizGenerateButton.click(function () {
 
@@ -28,7 +31,6 @@ $(document).ready(function () {
 
     $('.quiz-form').on('click', '.createQuizAnswersButton', function () {
 
-        //alert($(this).prev('.answersNumberInput').val());
         if (!$(this).prev('.answersNumberInput').val()) {
             return alert("Введи кол-во ответов для вопроса");
         }
@@ -39,10 +41,40 @@ $(document).ready(function () {
                 "</label>" +
                 "</div><div class='form-group required'>" +
                 "<label>Введи кол-во балов за ответ на вопрос " + (i + 1) +
-                "<input type='text' class='form-control'>" +
+                "<input type='text' class='form-control' required>" +
                 "</label>" +
                 "</div>");
         }
+    });
+
+    createQuizResultsButton.click(function () {
+
+        if (!resultsNumberInput.val()) {
+            return alert("Введи кол-во результатов теста");
+        }
+
+        for (var i = 0; i < resultsNumberInput.val(); i++) {
+            testResultsValuesDiv.append("<div class='form-group required'>" +
+                "<label>Введи от балов<input type='text' class='form-control' required></label>" +
+                "<label>Введи до балов<input type='text' class='form-control' required></label>" +
+                "<label style='width: 100%;'>Введи результат" +
+                "<textarea class='form-control' />" +
+                "</label>" +
+                "</div>");
+        }
+    });
+
+    $('.quiz-form form').submit(function (event) {
+        var empty = $(this).parent().find("input").filter(function () {
+            return this.value === "";
+        });
+        if (empty.length) {
+            alert("One empty");
+        } else {
+            console.log("All filled");
+        }
+
+        event.preventDefault();
     });
 
 });
