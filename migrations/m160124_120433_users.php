@@ -3,8 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m160124_120433_users extends Migration
-{
+class m160124_120433_users extends Migration {
     public function up() {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
@@ -14,7 +13,6 @@ class m160124_120433_users extends Migration
 
         $this->createTable('{{%user}}', [
             'id' => Schema::TYPE_PK,
-            'username' => Schema::TYPE_STRING . ' NOT NULL',
             'auth_key' => Schema::TYPE_STRING . '(32) NOT NULL',
             'password_hash' => Schema::TYPE_STRING . ' NOT NULL',
             'password_reset_token' => Schema::TYPE_STRING,

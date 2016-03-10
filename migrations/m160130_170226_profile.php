@@ -18,6 +18,7 @@ class m160130_170226_profile extends Migration {
             'experience' => Schema::TYPE_TEXT,
             'price' => Schema::TYPE_INTEGER,
             'has_diplom' => Schema::TYPE_BOOLEAN,
+            'is_active' => Schema::TYPE_BOOLEAN,
             'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
             'created_at' => 'timestamp'
         ]);

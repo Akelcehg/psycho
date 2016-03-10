@@ -121,6 +121,9 @@ use yii\helpers\Url;
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
             <li>
+                <a href="<?= Url::base() . '/admin/quiz'; ?>"></i>Тесты</a>
+            </li>
+            <li>
                 <a href="<?= Url::base() . '/admin/directions'; ?>"></i>Directions</a>
             </li>
             <li>
