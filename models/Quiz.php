@@ -67,4 +67,9 @@ class Quiz extends \yii\db\ActiveRecord {
         }
         return $return;
     }
+
+    public function getQuizResult($answersSum) {
+        return QuizResults::find()->where("'" . $answersSum . "' BETWEEN value_from AND value_to AND quiz_id=" . $this->id)->one()['text'];
+    }
+
 }

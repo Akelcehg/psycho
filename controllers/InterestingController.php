@@ -20,6 +20,14 @@ class InterestingController extends \yii\web\Controller {
 
     public function actionQuiz($id) {
         $quiz = new Quiz();
+        $quiz->id = $id;
+        if (Yii::$app->request->post()) {
+            return $this->render('single_quiz', [
+                'quizQuestion' => $quiz->getQuiz($id),
+                'result' => $quiz->getQuizResult(array_sum(Yii::$app->request->post('answers')))
+            ]);
+        }
+
         return $this->render('single_quiz', [
             'quizQuestion' => $quiz->getQuiz($id)
         ]);
