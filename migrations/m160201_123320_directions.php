@@ -15,8 +15,7 @@ class m160201_123320_directions extends Migration
     }
 
     public function down() {
-        echo "m160201_123320_directions cannot be reverted.\n";
+        $this->dropTable('directions');
 
-        return false;
     }
 }

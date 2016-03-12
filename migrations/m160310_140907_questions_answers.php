@@ -19,9 +19,8 @@ class m160310_140907_questions_answers extends Migration {
     }
 
     public function down() {
-        echo "m160310_140907_questions_answers cannot be reverted.\n";
+        $this->dropTable('questions_answers');
 
-        return false;
     }
 
 }

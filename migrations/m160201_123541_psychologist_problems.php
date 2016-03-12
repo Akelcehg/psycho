@@ -16,9 +16,8 @@ class m160201_123541_psychologist_problems extends Migration
     }
 
     public function down() {
-        echo "m160201_123541_psychologist_problems cannot be reverted.\n";
+        $this->dropTable('psychologist_problems');
 
-        return false;
     }
 
 }

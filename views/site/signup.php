@@ -54,6 +54,13 @@ use yii\helpers\Html;
                                     <?= $form->field($model, 'last_name')->textInput(['class' => "input-block-level"]) ?>
                                 </div>
                             </div>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <!--<label>Last Name</label>
+                                    <input type="text" placeholder="Last Name" class="input-block-level">-->
+                                    <?= $form->field($model, 'second_name')->textInput(['class' => "input-block-level"]) ?>
+                                </div>
+                            </div>
                             <!--<label>Email Address</label>
                             <input type="text" placeholder="Enter your E-mail ID" class="input-block-level">-->
                             <?= $form->field($model, 'email')->textInput(['class' => "input-block-level"]) ?>

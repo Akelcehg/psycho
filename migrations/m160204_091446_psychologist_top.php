@@ -15,8 +15,7 @@ class m160204_091446_psychologist_top extends Migration
     }
 
     public function down() {
-        echo "m160204_091446_psychologist_top cannot be reverted.\n";
+        $this->dropTable('psychologist_top');
 
-        return false;
     }
 }

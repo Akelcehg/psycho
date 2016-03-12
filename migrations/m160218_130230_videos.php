@@ -19,9 +19,8 @@ class m160218_130230_videos extends Migration
     }
 
     public function down() {
-        echo "m160218_130230_videos cannot be reverted.\n";
+        $this->dropTable('videos');
 
-        return false;
     }
 
 }

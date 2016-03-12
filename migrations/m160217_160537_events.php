@@ -29,9 +29,8 @@ class m160217_160537_events extends Migration
     }
 
     public function down() {
-        echo "m160217_160537_events cannot be reverted.\n";
+        $this->dropTable('events');
 
-        return false;
     }
 
 }

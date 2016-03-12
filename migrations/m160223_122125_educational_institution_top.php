@@ -14,8 +14,7 @@ class m160223_122125_educational_institution_top extends Migration {
     }
 
     public function down() {
-        echo "m160223_122125_educational_institution_top cannot be reverted.\n";
+        $this->dropTable('educational_institution_top');
 
-        return false;
     }
 }

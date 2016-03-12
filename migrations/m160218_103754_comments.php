@@ -3,8 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m160218_103754_comments extends Migration
-{
+class m160218_103754_comments extends Migration {
     public function up() {
         $this->createTable('comments', [
             'id' => Schema::TYPE_PK,
@@ -18,9 +17,8 @@ class m160218_103754_comments extends Migration
     }
 
     public function down() {
-        echo "m160218_103754_comments cannot be reverted.\n";
+        $this->dropTable('comments');
 
-        return false;
     }
 
 }

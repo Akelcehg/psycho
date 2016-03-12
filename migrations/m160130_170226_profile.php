@@ -25,9 +25,8 @@ class m160130_170226_profile extends Migration {
     }
 
     public function down() {
-        echo "m160130_170226_profile cannot be reverted.\n";
+        $this->dropTable('profile');
 
-        return false;
     }
 
 }

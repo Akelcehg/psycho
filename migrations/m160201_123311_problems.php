@@ -15,9 +15,8 @@ class m160201_123311_problems extends Migration
     }
 
     public function down() {
-        echo "m160201_123311_problems cannot be reverted.\n";
+        $this->dropTable('problems');
 
-        return false;
     }
 
 }

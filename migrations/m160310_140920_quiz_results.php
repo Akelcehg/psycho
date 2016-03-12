@@ -20,9 +20,7 @@ class m160310_140920_quiz_results extends Migration {
     }
 
     public function down() {
-        echo "m160310_140920_quiz_results cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('quiz_results');
     }
 
 }

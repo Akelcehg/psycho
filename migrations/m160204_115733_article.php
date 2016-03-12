@@ -19,8 +19,7 @@ class m160204_115733_article extends Migration
     }
 
     public function down() {
-        echo "m160204_115733_article cannot be reverted.\n";
+        $this->dropTable('article');
 
-        return false;
     }
 }

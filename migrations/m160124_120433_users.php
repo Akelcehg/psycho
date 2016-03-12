@@ -19,6 +19,7 @@ class m160124_120433_users extends Migration {
             'email' => Schema::TYPE_STRING . ' NOT NULL',
             'phone' => Schema::TYPE_STRING . ' NOT NULL',
             'role' => Schema::TYPE_INTEGER . '(3) NOT NULL',
+            'is_baned' => Schema::TYPE_INTEGER . '(3) NOT NULL',
             'status' => Schema::TYPE_SMALLINT . ' NOT NULL DEFAULT 10',
             'created_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',

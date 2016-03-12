@@ -15,9 +15,8 @@ class m160310_101814_quiz extends Migration {
     }
 
     public function down() {
-        echo "m160310_101814_quiz cannot be reverted.\n";
+        $this->dropTable('quiz');
 
-        return false;
     }
 
 }

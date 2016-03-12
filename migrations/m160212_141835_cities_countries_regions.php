@@ -12,8 +12,7 @@ class m160212_141835_cities_countries_regions extends Migration
 
 
     public function down() {
-        echo "m160212_141835_cities_countries_regions cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('city');
+        $this->dropTable('region');
     }
 }
