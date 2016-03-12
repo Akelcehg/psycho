@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+    $('#profile_education_input').elastic();
+    $('#profile_experience_input').elastic();
+
     function readURL(input) {
 
         if (input.files && input.files[0]) {
@@ -16,9 +20,8 @@ $(document).ready(function () {
             /*$('#testImage').Jcrop();*/
         }
     }
-    
-    function updateCoords(c)
-    {
+
+    function updateCoords(c) {
         $('#disp_x').val($('#testImage').width());
         $('#disp_y').val($('#testImage').height());
 
@@ -29,8 +32,7 @@ $(document).ready(function () {
     };
 
 
-    function checkCoords()
-    {
+    function checkCoords() {
         if (parseInt($('#w').val())) return true;
         alert('Please select a crop region then press submit.');
         return false;
@@ -40,17 +42,17 @@ $(document).ready(function () {
     $("#imgInp").change(function () {
         readURL(this);
     });
-/*
-    Event.observe(window, 'load', function () {
-        new Cropper.Img(
-            'testImage',
-            {
-                minWidth: 220,
-                minHeight: 120,
-                onEndCrop: onEndCrop
-            }
-        );
-    });*/
-/*    $(function(){ $('#imgInp').Jcrop(); });*/
+    /*
+     Event.observe(window, 'load', function () {
+     new Cropper.Img(
+     'testImage',
+     {
+     minWidth: 220,
+     minHeight: 120,
+     onEndCrop: onEndCrop
+     }
+     );
+     });*/
+    /*    $(function(){ $('#imgInp').Jcrop(); });*/
 
 });

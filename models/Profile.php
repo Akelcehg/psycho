@@ -66,10 +66,12 @@ class Profile extends \yii\db\ActiveRecord {
         ];
     }
 
-    public function initProfile($userId) {
+    public function initProfile($model,$userId) {
+        $this->firstname = $model->first_name;
+        $this->lastname = $model->last_name;
+        $this->secondname = $model->second_name;
         $this->user_id = $userId;
         $this->has_diplom = 0;
-        $this->updated_at = time();
         return $this->save();
     }
 

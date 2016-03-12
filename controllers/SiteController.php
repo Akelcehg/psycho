@@ -66,10 +66,7 @@ class SiteController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 $profile = new Profile();
-                $profile->firstname = $model->first_name;
-                $profile->lastname = $model->last_name;
-                $profile->secondname = $model->second_name;
-                if ($profile->initProfile($user->id)) {
+                if ($profile->initProfile($model,$user->id)) {
                     if (Yii::$app->getUser()->login($user)) {
                         return $this->goHome();
                     }

@@ -41,8 +41,7 @@ AppAsset::register($this);
 
                         </div>
                         <div class="text">
-                            <p>das</p>
-                            <a href="#" class="btn-style">Marrie James</a>
+                            <p><?=$this->context->module->first_name." ".$this->context->module->last_name?></p>
                         </div>
                     </div>
                     <!--PROFILE IMAGE END-->

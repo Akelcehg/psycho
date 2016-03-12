@@ -49,7 +49,8 @@ class AppAsset extends AssetBundle
         'js/client/card_blur.js',
         'js/client/scripts.js',
 
-        'js/client/cropper.js'
+        'js/client/cropper.js',
+        'js/client/elastic.js'
 
 
         //'js/client/main/jquery.min.js',
