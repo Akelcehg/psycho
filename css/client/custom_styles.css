@@ -50,10 +50,23 @@
     margin-left: -40%; /* width/2) */
 }
 
-.h_iframe        {position:relative;}
-.h_iframe .ratio {display:block;width:100%;height:auto;}
-.h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+.h_iframe {
+    position: relative;
+}
 
+.h_iframe .ratio {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.h_iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .forum.table > tbody > tr > td {
     vertical-align: middle;
@@ -68,11 +81,11 @@
     width: 6em;
 }
 
-.forum small, .forum p{
+.forum small, .forum p {
     color: #32383b;
 }
 
-.forum .media.well{
+.forum .media.well {
     background-color: white;
 }
 
@@ -102,6 +115,53 @@
     }
 }
 
-.nav-collapse.in.collapse ul li a{
+.nav-collapse.in.collapse ul li a {
     color: #252525;
+}
+
+/***********TABLE STYLE****/
+.editing table {
+    width: 100%;
+    /*border: solid 1px #f3f3f3;*/
+    border: solid 1px #cbcbcb;
+
+}
+
+.editing table thead {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.editing table tr th {
+    text-align: center;
+    /*border: solid 1px #f3f3f3;*/
+    border: solid 1px #cbcbcb;
+    padding: 15px 20px;
+    width: 20%;
+}
+
+.editing table tr th:first-child {
+    text-align: left;
+    width: 60%
+}
+
+.editing table thead tr th {
+    color: #fff;
+    font-size: 16px;
+    border: none;
+}
+
+.editing table tfoot tr td {
+    border: none;
+    font-size: 16px;
+}
+
+.editing table tbody tr:hover {
+    background-color: #f3f3f3;
+}
+
+/***********TABLE STYLE END****/
+
+.profile-box.editing.form input, .profile-box.editing.form textarea {
+    width: 100%;
 }

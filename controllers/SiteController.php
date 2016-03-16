@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Events;
+use app\models\Image;
 use app\models\PsychologistTop;
 use app\models\SignupForm;
 use Yii;
@@ -14,6 +15,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Profile;
+use yii\web\UploadedFile;
 
 class SiteController extends Controller {
 
@@ -34,6 +36,7 @@ class SiteController extends Controller {
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'logout' => ['post'],
+                    'upload' => ['post'],
                 ],
             ],
         ];
@@ -51,6 +54,19 @@ class SiteController extends Controller {
         ];
     }
 
+
+    protected function verbs()
+    {
+        return [
+
+            'upload' => ['POST'],
+
+        ];
+    }
+    public function beforeAction($action) {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
@@ -66,7 +82,7 @@ class SiteController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 $profile = new Profile();
-                if ($profile->initProfile($model,$user->id)) {
+                if ($profile->initProfile($model, $user->id)) {
                     if (Yii::$app->getUser()->login($user)) {
                         return $this->goHome();
                     }
@@ -113,6 +129,27 @@ class SiteController extends Controller {
 
     public function actionAbout() {
         return $this->render('about');
+    }
+
+    public function actionUpload() {
+        $imagesModel = new Image();
+        //var_dump(Yii::$app->request->post());
+
+        ///if(isset($_POST['upload'])) {
+            /*$imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
+            $imagesModel->image_file->saveAs('test.jpg');*/
+            /*return '{
+    "uploaded": 1,
+    "fileName": "blank.jpg",
+    "url": "/psycho/images/profile_photos/blank.jpg"
+}';*/
+        return var_dump(Yii::$app->request->post());
+            //UploadedFile::getInstance($image,'image_file');
+
+
+//upload
+
+        //http://localhost/psycho/images/profile_photos/blank.jpg
     }
 
 }

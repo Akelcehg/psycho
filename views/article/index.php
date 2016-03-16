@@ -1,4 +1,4 @@
-<div style="margin-bottom: 25px;"></div>
+<div style="margin-top: 25px;"></div>
 
 <div class="contant">
     <div class="container">
@@ -9,13 +9,18 @@
                     <div class="blog-contant">
                         <h2><a href="#">Summer Holidays Education</a></h2>
                         <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> /  Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>, <a href="#">webdesign</a>, <a href="#">Course</a>
+                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
+                            <a href="#">webdesign</a>, <a href="#">Course</a>
                         </div>
                         <div class="thumb">
                             <a href="#"><img src="images/blog-img.jpg" alt=""></a>
                         </div>
                         <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                            <p>t is a long established fact that a reader will be distracted by the readable content of
+                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                                here', making it look like readable English. Many desktop publishing packages and web
+                                page editors now use Lorem Ipsum as their default model text.</p>
                             <a href="#" class="btn-style">Read More</a>
                         </div>
                         <div class="blog-comments">
@@ -29,13 +34,18 @@
                     <div class="blog-contant">
                         <h2><a href="#">Summer Holidays Education</a></h2>
                         <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> /  Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>, <a href="#">webdesign</a>, <a href="#">Course</a>
+                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
+                            <a href="#">webdesign</a>, <a href="#">Course</a>
                         </div>
                         <div class="thumb">
                             <a href="#"><img src="images/blog-img2.jpg" alt=""></a>
                         </div>
                         <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                            <p>t is a long established fact that a reader will be distracted by the readable content of
+                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                                here', making it look like readable English. Many desktop publishing packages and web
+                                page editors now use Lorem Ipsum as their default model text.</p>
                             <a href="#" class="btn-style">Read More</a>
                         </div>
                         <div class="blog-comments">
@@ -49,13 +59,18 @@
                     <div class="blog-contant">
                         <h2><a href="#">Summer Holidays Education</a></h2>
                         <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> /  Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>, <a href="#">webdesign</a>, <a href="#">Course</a>
+                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
+                            <a href="#">webdesign</a>, <a href="#">Course</a>
                         </div>
                         <div class="thumb-video">
                             <iframe src="https://player.vimeo.com/video/18721984"></iframe>
                         </div>
                         <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                            <p>t is a long established fact that a reader will be distracted by the readable content of
+                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                                here', making it look like readable English. Many desktop publishing packages and web
+                                page editors now use Lorem Ipsum as their default model text.</p>
                             <a href="#" class="btn-style">Read More</a>
                         </div>
                         <div class="blog-comments">
@@ -69,13 +84,19 @@
                     <div class="blog-contant">
                         <h2><a href="#">Summer Holidays Education</a></h2>
                         <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> /  Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>, <a href="#">webdesign</a>, <a href="#">Course</a>
+                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
+                            <a href="#">webdesign</a>, <a href="#">Course</a>
                         </div>
                         <div class="thumb-audio">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149871945&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            <iframe
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149871945&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
                         </div>
                         <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                            <p>t is a long established fact that a reader will be distracted by the readable content of
+                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                                here', making it look like readable English. Many desktop publishing packages and web
+                                page editors now use Lorem Ipsum as their default model text.</p>
                             <a href="#" class="btn-style">Read More</a>
                         </div>
                         <div class="blog-comments">
@@ -103,19 +124,19 @@
                 <div class="sidebar">
                     <!--SEARCH WIDGET START-->
                     <div class="widget widget-search-course">
-                        <h2><i class="fa fa-search"></i> Search Course</h2>
+                        <h2><i class="fa fa-search"></i>Искать статью</h2>
 
-                        <div class="styled-select">
+                        <!--<div class="styled-select">
                             <select class="input-block-level">
                                 <option>Here is the first option</option>
                                 <option>The second option</option>
                             </select>
-                        </div>
+                        </div>-->
                         <p><input type="text" class="input-block-level" placeholder="Search by Keyword"></p>
                         <button class="btn-style">Search</button>
                     </div>
                     <div class="widget widget-tags">
-                        <h2>Papular Tags</h2>
+                        <h2>Категории статей</h2>
                         <ul>
                             <li><a href="#">resource</a></li>
                             <li><a href="#">design</a></li>
@@ -134,7 +155,7 @@
                     <!--SEARCH WIDGET END-->
                     <!--PAPULAR POST WIDGET START-->
                     <div class="widget widget-papular-post">
-                        <h2>Popular Posts</h2>
+                        <h2>Популярные статьи</h2>
                         <ul>
                             <!--LIST ITEM START-->
                             <li>
@@ -143,7 +164,7 @@
                                     <a href="#"><img src="images/papular-post.jpg" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <p class="date">19 May 2012  <span>Admin</span></p>
+                                    <p class="date">19 May 2012 <span>Admin</span></p>
                                     <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
                                 </div>
                             </li>
@@ -155,7 +176,7 @@
                                     <a href="#"><img src="images/papular-post2.jpg" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <p class="date">19 May 2012  <span>Admin</span></p>
+                                    <p class="date">19 May 2012 <span>Admin</span></p>
                                     <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
                                 </div>
                             </li>
@@ -167,7 +188,7 @@
                                     <a href="#"><img src="images/papular-post3.jpg" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <p class="date">19 May 2012  <span>Admin</span></p>
+                                    <p class="date">19 May 2012 <span>Admin</span></p>
                                     <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
                                 </div>
                             </li>
@@ -179,7 +200,7 @@
                                     <a href="#"><img src="images/papular-post4.jpg" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <p class="date">19 May 2012  <span>Admin</span></p>
+                                    <p class="date">19 May 2012 <span>Admin</span></p>
                                     <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
                                 </div>
                             </li>

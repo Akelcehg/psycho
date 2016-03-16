@@ -76,7 +76,9 @@ AppAsset::register($this);
 
 
 <?php $this->endBody() ?>
-
+<script>
+    initSample();
+</script>
 </body>
 </html>
 <?php $this->endPage() ?>

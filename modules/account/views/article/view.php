@@ -32,9 +32,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'psychologist_id',
             'is_owner',
             'source',
-            'text:ntext',
-            'updated_at',
-            'created_at',
+            [
+                //'class' => DataColumn::className(), // Не обязательно
+                'attribute' => 'text',
+                'format' => 'html',
+                'label' => 'Name',
+            ],
+            //'text',
+            /*'updated_at',
+            'created_at',*/
         ],
     ]) ?>
 

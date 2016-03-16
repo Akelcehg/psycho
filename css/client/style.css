@@ -2913,12 +2913,15 @@ SEARCH WIDGET START
 ===========================================
 */
 .widget-search-course {
-    background-color: #0f1521;
+    /*background-color: #0f1521;*/
+    background-color: white;
+    border: solid 1px #dedede;
     padding: 20px;
 }
 
 .widget.widget-search-course h2 {
-    color: #fff;
+    /*color: #fff;*/
+    color: #32383b;
 }
 
 .widget.widget-search-course h2 i {
@@ -2946,14 +2949,15 @@ SEARCH WIDGET START
 }
 
 .widget-search-course select, .widget-search-course input[type="text"] {
-    background-color: #0d3b67;
-    border-bottom: solid 1px #20557b;
+    /*background-color: #0d3b67;*/
+    background-color: #f2f2f2;
+    /*border-bottom: solid 1px #20557b;*/
     border-left: none;
     border-top: none;
     border-right: none;
     min-height: 40px;
     margin: 0px 0px 20px 0px;
-    color: #97b9d9;
+    /*color: #97b9d9;*/
     float: left;
 }
 

@@ -50,7 +50,7 @@ class AppAsset extends AssetBundle
         'js/client/scripts.js',
 
         'js/client/cropper.js',
-        'js/client/elastic.js'
+        'js/client/elastic.js',
 
 
         //'js/client/main/jquery.min.js',
@@ -73,9 +73,17 @@ class AppAsset extends AssetBundle
         //'https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
 
         /*'js/client/init.js',*/
-        /*'js/client/ckeditor.js',*/
-        /*'js/client/sample.js',
-        'js/client/flex.js',
+
+
+
+        'js/client/ckeditor/ckeditor.js',
+        'js/client/ckeditor/config.js',
+        'js/client/ckeditor/samples/js/sample.js',
+
+
+
+//        'js/client/ckeditor/samples/js/sample.js',
+        /*'js/client/flex.js',
         'js/client/scripts.js',*/
     ];
     public $depends = [
