@@ -49,13 +49,11 @@ AppAsset::register($this);
                     <div class="profile-box edit-profile">
                         <h2>Account Setting</h2>
                         <ul>
-                            <li><a href="<?= Url::base() ?>/account/article">Мои статьи</a></li>
                             <li><a href="<?= Url::base() ?>/account/profile">Мой профиль</a></li>
-                            <li><a href="#">Edit Password</a></li>
-                            <li><a href="#">View Quiz Scores</a></li>
-                            <li><a href="#">Attended Courses</a></li>
-                            <li><a href="#">Booked Courses</a></li>
-                            <li><a href="#">Confirmed Courses</a></li>
+                            <li><a href="<?= Url::base() ?>/account/article">Мои статьи</a></li>
+                            <li><a href="<?= Url::base() ?>/account/educational-institution">Мои школы</a></li>
+                            <li><a href="<?= Url::base() ?>/account/videos">Мои видео</a></li>
+                            <li><a href="<?= Url::base() ?>/account/event">Мои тренинги</a></li>
                         </ul>
                         <div class="logout">
                             <a href="#">Log Out</a>

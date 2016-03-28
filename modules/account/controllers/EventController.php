@@ -62,8 +62,11 @@ class EventController extends Controller
     {
         $model = new Events();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->created_at = date('Y-m-d');
+            $model->date = date('Y-m-d');
+            $model->updated_at = date('Y-m-d');
+            if ($model->save()) $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,

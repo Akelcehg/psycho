@@ -70,7 +70,7 @@ class SiteController extends Controller {
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
-        $eventsList = new Events();
+        $eventsList = new Events();        
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => $eventsList->getEvents(4)
@@ -79,7 +79,7 @@ class SiteController extends Controller {
 
     public function actionSignup() {
         $model = new SignupForm();
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post())) {                        
             if ($user = $model->signup()) {
                 $profile = new Profile();
                 if ($profile->initProfile($model, $user->id)) {

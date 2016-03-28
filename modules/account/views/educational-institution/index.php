@@ -1,5 +1,6 @@
 <?php
 
+use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\ListView;
 
@@ -35,99 +36,53 @@ use yii\helpers\Url;
 
 ?>
 
-<div class="nicdark_space100"></div>
-<div class="nicdark_space20"></div>
+<div class="span8">
+    <div class="profile-box editing">
 
-<section class="nicdark_section">
-    <div class="nicdark_container nicdark_clearfix">
+        <?= GridView::widget([
+            'dataProvider' => $dataProvider,
 
-        <div class="grid grid_4">
+            'tableOptions' => [
+                'class' => 'table'
+            ],
 
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
-                <div class="nicdark_margin10 nicdark_relative">
+            'summary' => '',
+            'columns' => [
 
-                    <a href="/psycho/account/educational-institution/create"
-                       class="nicdark_displaynone_ipadpotr nicdark_btn_icon nicdark_bg_red medium nicdark_radius_circle white nicdark_absolute"><i
-                            class="icon-plus"></i></a>
+                [
+                    'header' => 'Название школы',
+                    'attribute' => 'name',
+                ],
 
-                    <div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_ipadpotr">
-                        <h4>Добавить учебное заведение</h4>
-                        <p>Lorem ipsum dolor sit amet, consec adipiscing elit.</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="nicdark_section">
-    <div class="nicdark_container nicdark_clearfix">
-        <div class="grid grid_12">
-
-            <?= ListView::widget([
-                'dataProvider' => $dataProvider,
-                'itemOptions' => ['class' => 'item'],
-                'summary' => '',
-                'itemView' => function ($model, $key, $index, $widget) {
-                    return '<div class="nicdark_archive1 nicdark_bg_orange nicdark_radius nicdark_shadow">
-
-                <div class="nicdark_textevidence nicdark_width_percentage20 nicdark_width100_responsive">
-                    <img alt="" class="nicdark_radius_left nicdark_opacity" src="' . Url::base() . '/img/team/img1.jpg">
-                </div>
-
-            <div class="col-md-8">
-                <div class="nicdark_textevidence nicdark_width_percentage70 nicdark_width100_responsive">
-                    <div class="nicdark_margin20">
-
-                        <h4 class="white"><a class="white" href="single-teacher.html">' . $model['name'] . '</a></h4>
-                        <div class="nicdark_space20"></div>
-                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span>
-                        </div>
-                        <div class="nicdark_space20"></div>
-                        <p class="white">' . $model['description'] . '</p>
-                        <div class="nicdark_space20"></div>
-                        <a href="single-teacher.html" class="white nicdark_btn"><i class="icon-graduation-cap-1"></i>
-                            ' . $model['phone'] . '
-                        </a>
-
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-1">
-                <div class="nicdark_textevidence">
-                    <div class="nicdark_space20"></div>
-                    <div class="nicdark_space5"></div>
-
-
-                    <a title="Редактировать" class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"
-                     href="/psycho/account/educational-institution/update?id=' . $model["id"] . '">
-                            <i class="icon-edit"></i>
-                    </a>
-                    <div class="nicdark_space20"></div>
-
-                    <a class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"
-                    title="Удалить" href="/psycho/account/educational-institution/delete?id=' . $model["id"] . '"
-                    data-confirm="Вы уверены что хотите удалить это учебное заведение ?" data-method="post">
-                    <i class="icon-trash-2"></i></a>
-
-                    <div class="nicdark_space20"></div>
-
-                    <a title="Подробнее" class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"
-                     href="/psycho/account/educational-institution/view?id=' . $model["id"] . '">
-                            <i class="icon-eye"></i>
-                    </a>
-                    <div class="nicdark_space20"></div>
-                </div>
-                </div>
-
-            </div>';
-                },
-            ]) ?>
-
-        </div>
-
+                [
+                    'class' => 'yii\grid\ActionColumn',
+                    'template' => '{view} {update} {delete} {link}',
+                    'buttons' => [
+                        'view' => function ($url, $model) {
+                            return Html::a(
+                                '<span class="fa fa-eye"></span>',
+                                $url);
+                        },
+                        'update' => function ($url, $model) {
+                            return Html::a(
+                                '<span class="fa fa-pencil-square-o"></span>',
+                                $url);
+                        },
+                        'delete' => function ($url, $model) {
+                            return Html::a(
+                                '<span class="fa fa-trash-o"></span>',
+                                $url);
+                        },
+                        /*'link' => function ($url,$model,$key) {
+                            return Html::a('Действие', $url);
+                        },*/
+                    ],
+                ],
+            ],
+        ]); ?>
+        <p>
+            <?= Html::a('Добавить школу', ['create'], ['class' => 'btn-style']) ?>
+        </p>
 
     </div>
-</section>
+</div>

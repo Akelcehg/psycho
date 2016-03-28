@@ -62,8 +62,11 @@ class EducationalInstitutionController extends Controller
     {
         $model = new EducationalInstitution();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        //if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->created_at = date('Y-m-d');
+            $model->updated_at = date('Y-m-d');
+            if ($model->save()) return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,

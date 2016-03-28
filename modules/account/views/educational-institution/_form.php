@@ -53,10 +53,10 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'qualification_levels')->textarea(['rows' => 6]) ?>
 
-        <div class="nicdark_space20"></div>
+
         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-        <div id="map"></div>
-        <div class="nicdark_space20"></div>
+        <div id="map" style="width: 100%; height: 400px;"></div>
+
 
         <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
 
@@ -107,6 +107,7 @@ use yii\widgets\ActiveForm;
 
 <script>
     function initAutocomplete() {
+
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: -33.8688, lng: 151.2195},
             zoom: 13,

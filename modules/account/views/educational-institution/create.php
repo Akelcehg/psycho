@@ -11,11 +11,8 @@ $this->params['breadcrumbs'][] = ['label' => 'Educational Institutions', 'url' =
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="nicdark_space100"></div>
-<div class="nicdark_space50"></div>
-
-<section class="nicdark_section">
-    <div class="nicdark_container nicdark_clearfix">
+<div class="span8">
+    <div class="profile-box editing form">
 
         <h1><?= Html::encode($this->title) ?></h1>
 
@@ -24,4 +21,4 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
 
     </div>
-</section>
+</div>

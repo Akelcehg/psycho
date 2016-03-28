@@ -11,35 +11,58 @@ $this->title = 'Videos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="nicdark_space100"></div>
-<div class="nicdark_space50"></div>
-
-<section class="nicdark_section">
-    <div class="nicdark_container nicdark_clearfix">
+<div class="span8">
+    <div class="profile-box editing">
 
 
         <h1><?= Html::encode($this->title) ?></h1>
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-        <p>
-            <?= Html::a('Create Videos', ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
-
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
-            'filterModel' => $searchModel,
+
+            'tableOptions' => [
+                'class' => 'table'
+            ],
+
+            'summary' => '',
             'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
 
-                'id',
-                'link',
-                'user_id',
-                'updated_at',
-                'created_at',
+                [
+                    'header' => 'Название видео',
+                    'attribute' => 'link',
+                ],
 
-                ['class' => 'yii\grid\ActionColumn'],
+                [
+                    'class' => 'yii\grid\ActionColumn',
+                    'template' => '{view} {update} {delete} {link}',
+                    'buttons' => [
+                        'view' => function ($url, $model) {
+                            return Html::a(
+                                '<span class="fa fa-eye"></span>',
+                                $url);
+                        },
+                        'update' => function ($url, $model) {
+                            return Html::a(
+                                '<span class="fa fa-pencil-square-o"></span>',
+                                $url);
+                        },
+                        'delete' => function ($url, $model) {
+                            return Html::a(
+                                '<span class="fa fa-trash-o"></span>',
+                                $url);
+                        },
+                        /*'link' => function ($url,$model,$key) {
+                            return Html::a('Действие', $url);
+                        },*/
+                    ],
+                ],
             ],
         ]); ?>
+        <p>
+            <?= Html::a('Добавить видео', ['create'], ['class' => 'btn-style']) ?>
+        </p>
+
 
     </div>
-</section>
+</div>
