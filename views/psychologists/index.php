@@ -113,7 +113,7 @@ use app\components\PsychoSearchWidget;
 
         <div class="row">
             <div style="margin-bottom: 20px;">
-                <a href="#" class="btn-style btn-large" data-toggle="modal" data-target="#myModal">Найти психолога</a>
+                <a href="#" class="btn-style btn-large link-white" data-toggle="modal" data-target="#myModal">Найти психолога</a>
             </div>
         </div>
 

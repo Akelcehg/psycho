@@ -1,5 +1,6 @@
 <!-- Modal -->
-<div class="modal large fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+<div class="modal large fade" id="myModal" role="dialog" aria-labelledby="myModalLabel"
+     style="margin: 0 auto;  display: none; left: 10%;">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 

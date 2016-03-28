@@ -208,3 +208,8 @@
     font-size: 13px;
     font-weight: 300;
 }
+
+.link-white:focus{
+    color: white;
+
+}
