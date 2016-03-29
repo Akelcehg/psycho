@@ -21,9 +21,10 @@ class ArticleController extends \yii\web\Controller {
 
     }
 
-    public function actionView($id) {
+    public function actionView($title) {
+        $articleId = explode('-',$title);
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($articleId[1]),
         ]);
     }
 

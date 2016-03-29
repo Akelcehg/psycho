@@ -5,42 +5,16 @@
                 <div class="blog">
                     <!--BLOG START-->
                     <div class="blog-contant">
-                        <h2><a href="#">Summer Holidays Education</a></h2>
+                        <h2><a href="#"><?= $model['title'] ?></a></h2>
                         <div class="blog-tags">
                             Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
                             <a href="#">webdesign</a>, <a href="#">Course</a>
                         </div>
-                        <div class="thumb">
+                        <!--<div class="thumb">
                             <a href="#"><img src="../images/blog-img.jpg" alt=""></a>
-                        </div>
+                        </div>-->
                         <div class="text">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                amet.</p>
-                            <blockquote>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat.
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                amet.</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum.</p>
+                            <?= $model['text'] ?>
                         </div>
                         <div class="blog-comments">
                             <a href="#"><i class="fa fa-user"></i>David</a>

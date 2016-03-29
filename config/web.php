@@ -44,6 +44,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'article/<title:.*?>'=>'article/view',
                 '<alias:login|about|signup|upload>' =>'site/<alias>',
                 '<alias:upload>' => 'site/<alias>',
                 /*'<controller:\w+>/<id:\d+>' => '<controller>/view',

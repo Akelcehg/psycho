@@ -1,3 +1,9 @@
+<?php
+
+use yii\widgets\ListView;
+
+?>
+
 <div style="margin-top: 25px;"></div>
 
 <div class="contant">
@@ -5,107 +11,35 @@
         <div class="row">
             <div class="span8">
                 <div class="blog">
-                    <!--BLOG START-->
-                    <div class="blog-contant">
-                        <h2><a href="#">Summer Holidays Education</a></h2>
+
+
+                    <?= ListView::widget([
+                        'dataProvider' => $dataProvider,
+                        'summary' => '',
+                        'itemOptions' => ['class' => 'item'],
+                        'itemView' => function ($model, $key, $index, $widget) {
+                            return '<div class="blog-contant">
+                        <h2><a href="article/' . $model['title'] . '-' . $model['id'] . '">' . $model["title"] . '</a></h2>
                         <div class="blog-tags">
                             Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
                             <a href="#">webdesign</a>, <a href="#">Course</a>
                         </div>
-                        <div class="thumb">
+                        <!-- <div class="thumb">
                             <a href="#"><img src="images/blog-img.jpg" alt=""></a>
-                        </div>
+                        </div> -->
                         <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of
-                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                                here', making it look like readable English. Many desktop publishing packages and web
-                                page editors now use Lorem Ipsum as their default model text.</p>
-                            <a href="#" class="btn-style">Read More</a>
+                            ' . $model['text'] . '
+                            <a href="article/' . $model['title'] . '-' . $model['id'] . '" class="btn-style">Подробнее</a>
                         </div>
                         <div class="blog-comments">
                             <a href="#"><i class="fa fa-user"></i>David</a>
                             <a href="#"><i class="fa fa-calendar"></i>06 Dec, 2011</a>
                             <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
                         </div>
-                    </div>
-                    <!--BLOG END-->
-                    <!--BLOG START-->
-                    <div class="blog-contant">
-                        <h2><a href="#">Summer Holidays Education</a></h2>
-                        <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
-                            <a href="#">webdesign</a>, <a href="#">Course</a>
-                        </div>
-                        <div class="thumb">
-                            <a href="#"><img src="images/blog-img2.jpg" alt=""></a>
-                        </div>
-                        <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of
-                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                                here', making it look like readable English. Many desktop publishing packages and web
-                                page editors now use Lorem Ipsum as their default model text.</p>
-                            <a href="#" class="btn-style">Read More</a>
-                        </div>
-                        <div class="blog-comments">
-                            <a href="#"><i class="fa fa-user"></i>David</a>
-                            <a href="#"><i class="fa fa-calendar"></i>06 Dec, 2011</a>
-                            <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
-                        </div>
-                    </div>
-                    <!--BLOG END-->
-                    <!--BLOG START-->
-                    <div class="blog-contant">
-                        <h2><a href="#">Summer Holidays Education</a></h2>
-                        <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
-                            <a href="#">webdesign</a>, <a href="#">Course</a>
-                        </div>
-                        <div class="thumb-video">
-                            <iframe src="https://player.vimeo.com/video/18721984"></iframe>
-                        </div>
-                        <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of
-                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                                here', making it look like readable English. Many desktop publishing packages and web
-                                page editors now use Lorem Ipsum as their default model text.</p>
-                            <a href="#" class="btn-style">Read More</a>
-                        </div>
-                        <div class="blog-comments">
-                            <a href="#"><i class="fa fa-user"></i>David</a>
-                            <a href="#"><i class="fa fa-calendar"></i>06 Dec, 2011</a>
-                            <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
-                        </div>
-                    </div>
-                    <!--BLOG END-->
-                    <!--BLOG START-->
-                    <div class="blog-contant">
-                        <h2><a href="#">Summer Holidays Education</a></h2>
-                        <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
-                            <a href="#">webdesign</a>, <a href="#">Course</a>
-                        </div>
-                        <div class="thumb-audio">
-                            <iframe
-                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149871945&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                        </div>
-                        <div class="text">
-                            <p>t is a long established fact that a reader will be distracted by the readable content of
-                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                                here', making it look like readable English. Many desktop publishing packages and web
-                                page editors now use Lorem Ipsum as their default model text.</p>
-                            <a href="#" class="btn-style">Read More</a>
-                        </div>
-                        <div class="blog-comments">
-                            <a href="#"><i class="fa fa-user"></i>David</a>
-                            <a href="#"><i class="fa fa-calendar"></i>06 Dec, 2011</a>
-                            <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
-                        </div>
-                    </div>
-                    <!--BLOG END-->
+                    </div>';
+                        },
+                    ]) ?>
+
                 </div>
                 <div class="pagination">
                     <ul>
@@ -230,7 +164,7 @@
             <h2>take $10 0ff for new users</h2>
         </div>
     </div>
-    <!--FOLLOW US SECTION START-->
+
     <section class="follow-us">
         <div class="container">
             <div class="row">
@@ -270,6 +204,5 @@
             </div>
         </div>
     </section>
-    <!--FOLLOW US SECTION END-->
+
 </div>
-<!--CONTANT END-->
