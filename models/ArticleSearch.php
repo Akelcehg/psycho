@@ -10,13 +10,11 @@ use app\models\Article;
 /**
  * ArticleSearch represents the model behind the search form about `app\models\Article`.
  */
-class ArticleSearch extends Article
-{
+class ArticleSearch extends Article {
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id', 'psychologist_id', 'is_owner'], 'integer'],
             [['source', 'text', 'updated_at', 'created_at'], 'safe'],
@@ -26,8 +24,7 @@ class ArticleSearch extends Article
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,8 +36,7 @@ class ArticleSearch extends Article
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Article::find();
 
         $dataProvider = new ActiveDataProvider([
@@ -48,6 +44,11 @@ class ArticleSearch extends Article
             'pagination' => [
                 'pageSize' => 4,
             ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ]
+            ]
         ]);
 
         $this->load($params);
