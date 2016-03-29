@@ -1,3 +1,10 @@
+<?php
+
+use yii\widgets\ListView;
+use app\components\TranslitWidget;
+use yii\helpers\Url;
+
+?>
 <div style="margin-bottom: 25px;"></div>
 
 <div class="contant">
@@ -13,148 +20,51 @@
                     </div>-->
 
                     <div class="latest-news">
-                        <!--NEWS LIST ITEM START-->
-                        <div class="news-contant">
-                            <div class="thumb">
-                                <a href="/mify-o-psihologah-2.html">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <h2>Learn Creative Skills, Shape Your Future</h2>
 
-                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-                                <a href="#" class="btn-style">Смотреть видео</a>
-                            </div>
-                        </div>
+                        <?php $widget = ListView::begin([
+                            'dataProvider' => $dataProvider,
+                            'summary' => '',
+                            'itemOptions' => ['class' => 'item'],
+                            'itemView' => function ($model, $key, $index, $widget) {
+                                /*$a = new Article();
+                                $link = $a->translit(str_replace(' ', '_', $model['title'])) . '-' . $model['id'];
+                                $plainBody = strip_tags($model['text']);
+                                $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
+                                $firstImage = $a->catch_that_image($model['text']);*/
 
-                        <div class="news-contant">
-                            <div class="thumb">
-                                <a href="/mify-o-psihologah-2.html">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <h2>Learn Creative Skills, Shape Your Future</h2>
+                                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['title']))]) . '-' . $model['id'];
 
-                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-                                <a href="#" class="btn-style">Смотреть видео</a>
-                            </div>
-                        </div>
-                        <div class="news-contant">
-                            <div class="thumb">
-                                <a href="/mify-o-psihologah-2.html">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <h2>Learn Creative Skills, Shape Your Future</h2>
+                                $content = '<div class="news-contant">
+                                                <div class="thumb">
+                                                    <a href="/mify-o-psihologah-2.html">
+                                                        <img src="' . $model['img_link'] . '"
+                                                             alt="видео психология"/>
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2>' . $model['title'] . '</h2>
+                                                    <div style="margin-top:10%;"></div>
+                                                    <!-- <p>The point of using Lorem Ipsum is that it has a making it look like readable English.
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                                                        default model text.</p> -->
+                                                    <a href="' . Url::base() . '/video/view/' . $link . '" class="btn-style">Смотреть видео</a>
+                                                </div>
+                                            </div>';
+                                return $content;
+                            },
+                        ]) ?>
 
-                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-                                <a href="#" class="btn-style">Смотреть видео</a>
-                            </div>
-                        </div>
-                        <div class="news-contant">
-                            <div class="thumb">
-                                <a href="/mify-o-psihologah-2.html">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <h2>Learn Creative Skills, Shape Your Future</h2>
+                        <?php echo $widget->renderItems(); ?>
 
-                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-                                <a href="#" class="btn-style">Смотреть видео</a>
-                            </div>
-                        </div>
-                        <div class="news-contant">
-                            <div class="thumb">
-                                <a href="/mify-o-psihologah-2.html">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <h2>Learn Creative Skills, Shape Your Future</h2>
-
-                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-                                <a href="#" class="btn-style">Смотреть видео</a>
-                            </div>
-                        </div>
-                        <div class="news-contant">
-                            <div class="thumb">
-                                <a href="/mify-o-psihologah-2.html">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/mqdefault.jpg" alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <h2>Learn Creative Skills, Shape Your Future</h2>
-
-                                <p>The point of using Lorem Ipsum is that it has a making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-                                <a href="#" class="btn-style">Смотреть видео</a>
-                            </div>
-                        </div>
-                        <!--NEWS LIST ITEM END-->
                     </div>
 
-
-                <!--    <div style="margin-bottom: 15px;float: left;">
-                        <a href="http://www.youtube.com/watch?v=k6mFF3VmVAs" data-toggle="lightbox"
-                           data-gallery="youtubevideos" class="span3">
-                            <img src="//i1.ytimg.com/vi/yP11r5n5RNg/mqdefault.jpg" class="img-responsive">
-                        </a>
-                    </div>
-                    <div style="margin-bottom: 15px; float: left;">
-                        <a href="http://youtu.be/iQ4D273C7Ac" data-toggle="lightbox" data-gallery="youtubevideos"
-                           class="span3">
-                            <img src="//i1.ytimg.com/vi/iQ4D273C7Ac/mqdefault.jpg" class="img-responsive">
-                        </a>
-                    </div>
-                    <div style="margin-bottom: 15px; float: left;">
-                        <div style="position: absolute; color: black; padding: 5px;">
-                            <div class="span3">
-                                <p>dasd asd dasdas das daswegwer gwe dasd as dsa</p>
-                            </div>
-                        </div>
-                        <a href="//www.youtube.com/embed/b0jqPvpn3sY" data-toggle="lightbox"
-                           data-gallery="youtubevideos" class="span3">
-                            <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
-                        </a>
-                    </div>
-
-                    <div style="margin-bottom: 15px; float: left;">
-                        <a href="//www.youtube.com/embed/b0jqPvpn3sY" data-toggle="lightbox"
-                           data-gallery="youtubevideos" class="span3">
-                            <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
-                        </a>
-                    </div>
-                    <div style="margin-bottom: 15px; float: left;">
-                        <a href="//www.youtube.com/embed/b0jqPvpn3sY" data-toggle="lightbox"
-                           data-gallery="youtubevideos" class="span3">
-                            <img src="//i1.ytimg.com/vi/b0jqPvpn3sY/mqdefault.jpg" class="img-responsive">
-                        </a>
-                    </div>-->
                 </div>
-
-
-                <!--                    <div class="span2">
-                                        <div class="box lesson">
-                                            <iframe src="http://player.vimeo.com/video/89700179?badge=0"></iframe>
-
-                                        </div>
-                                    </div>-->
 
 
                 <div class="pagination">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
+                    <?= $widget->renderPager(); ?>
                 </div>
+
             </div>
             <div class="span4">
                 <!--SIDEBAR START-->

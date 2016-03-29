@@ -21,41 +21,37 @@ use yii\helpers\Url;
                         'itemOptions' => ['class' => 'item'],
                         'itemView' => function ($model, $key, $index, $widget) {
                             $a = new Article();
-                            $link = $a->translit(str_replace(' ','_',$model['title'])) . '-' . $model['id'];
+                            $link = $a->translit(str_replace(' ', '_', $model['title'])) . '-' . $model['id'];
                             $plainBody = strip_tags($model['text']);
                             $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
                             $firstImage = $a->catch_that_image($model['text']);
+
                             $content = '<div class="blog-contant">
-                        <h2><a href="'.Url::base().'/article/view/' . $link . '">' . $model["title"] . '</a></h2>
-                        <div class="blog-tags">
-                            Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
-                            <a href="#">webdesign</a>, <a href="#">Course</a>
-                        </div>';
+                            <h2><a href="' . Url::base() . '/article/view/' . $link . '">' . $model["title"] . '</a></h2>
+                            <div class="blog-tags">
+                                Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
+                                <a href="#">webdesign</a>, <a href="#">Course</a>
+                            </div>';
 
                             if ($firstImage)
-                                $content .= '
-                                <div class="thumb" >
-                            <!-- <a href = "#" ><img src = "images/blog-img.jpg" alt = "" ></a > -->
-                            <div class="span3" >
-                                <a href="'.Url::base().'/article/view/' . $link . '">
-                                    <img class="img-responsive" src = "' . $a->catch_that_image($model['text']) . '" />
-                                </a>
-                            </div >
-                        </div >';
+                                $content .= '<div class="thumb" >
+                                <!-- <a href = "#" ><img src = "images/blog-img.jpg" alt = "" ></a > -->
+                                <div class="span3" >
+                                    <a href="' . Url::base() . '/article/view/' . $link . '">
+                                        <img class="img-responsive" src = "' . $a->catch_that_image($model['text']) . '" />
+                                    </a>
+                                </div >
+                            </div >';
 
-                            $content .=
-                                '
-                        <div class="text">
-                            ' . $abrvBody . '
-
-                            <a href="'.Url::base().'/article/view/' . $link . '" class="btn-style">Подробнее</a>
-                        </div>
-                        <div class="blog-comments">
-                            <a href="#"><i class="fa fa-user"></i>' . Yii::$app->user->identity['email'] . '</a>
-                            <a href="#"><i class="fa fa-calendar"></i>' . $model['updated_at'] . '</a>
-                            <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
-                        </div>
-                    </div>';
+                            $content .= '<div class="text">' . $abrvBody . '
+                                <a href="' . Url::base() . '/article/view/' . $link . '" class="btn-style">Подробнее</a>
+                            </div>
+                            <div class="blog-comments">
+                                <a href="#"><i class="fa fa-user"></i>' . Yii::$app->user->identity['email'] . '</a>
+                                <a href="#"><i class="fa fa-calendar"></i>' . $model['updated_at'] . '</a>
+                                <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
+                            </div>
+                        </div>';
                             return $content;
                         },
                     ]) ?>

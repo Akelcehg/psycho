@@ -57,11 +57,16 @@ class VideosController extends Controller {
     public function actionCreate() {
         $model = new Videos();
 
+        //var_dump(strpos('https://www.youtube.com/watch?v=gDAY1Tfc-zY', 'youtube'));
+        //https://www.youtube.com/watch?v=gDAY1Tfc-zY
+        //http://img.youtube.com/vi/gDAY1Tfc-zY/mqdefault.jpg
+
         if ($model->load(Yii::$app->request->post())) {
 
             $model->created_at = date('Y-m-d');
             $model->updated_at = date('Y-m-d');
-            
+            $model->img_link = $model->getVideoImage($model->link);
+            $model->link = $model->getEmbedLink($model->link);
             if ($model->save())
                 return $this->redirect(['view', 'id' => $model->id]);
         } else {
