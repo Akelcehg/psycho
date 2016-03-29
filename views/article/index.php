@@ -2,6 +2,7 @@
 
 use app\models\Article;
 use yii\widgets\ListView;
+use yii\helpers\Url;
 
 ?>
 
@@ -14,7 +15,7 @@ use yii\widgets\ListView;
                 <div class="blog">
 
 
-                    <?= ListView::widget([
+                    <?php $widget = ListView::begin([
                         'dataProvider' => $dataProvider,
                         'summary' => '',
                         'itemOptions' => ['class' => 'item'],
@@ -24,7 +25,7 @@ use yii\widgets\ListView;
                             $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
                             $firstImage = $a->catch_that_image($model['text']);
                             $content = '<div class="blog-contant">
-                        <h2><a href="article/' . $model['title'] . '-' . $model['id'] . '">' . $model["title"] . '</a></h2>
+                        <h2><a href="'.Url::base().'/article/view/' . $model['title'] . '-' . $model['id'] . '">' . $model["title"] . '</a></h2>
                         <div class="blog-tags">
                             Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
                             <a href="#">webdesign</a>, <a href="#">Course</a>
@@ -35,7 +36,9 @@ use yii\widgets\ListView;
                                 <div class="thumb" >
                             <!-- <a href = "#" ><img src = "images/blog-img.jpg" alt = "" ></a > -->
                             <div class="span3" >
-                                <img class="img-responsive" src = "' . $a->catch_that_image($model['text']) . '" />
+                                <a href="'.Url::base().'/article/view/' . $model['title'] . '-' . $model['id'] . '">
+                                    <img class="img-responsive" src = "' . $a->catch_that_image($model['text']) . '" />
+                                </a>
                             </div >
                         </div >';
 
@@ -44,11 +47,11 @@ use yii\widgets\ListView;
                         <div class="text">
                             ' . $abrvBody . '
 
-                            <a href="article/' . $model['title'] . '-' . $model['id'] . '" class="btn-style">Подробнее</a>
+                            <a href="'.Url::base().'/article/view/' . $model['title'] . '-' . $model['id'] . '" class="btn-style">Подробнее</a>
                         </div>
                         <div class="blog-comments">
-                            <a href="#"><i class="fa fa-user"></i>David</a>
-                            <a href="#"><i class="fa fa-calendar"></i>06 Dec, 2011</a>
+                            <a href="#"><i class="fa fa-user"></i>' . Yii::$app->user->identity['email'] . '</a>
+                            <a href="#"><i class="fa fa-calendar"></i>' . $model['updated_at'] . '</a>
                             <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
                         </div>
                     </div>';
@@ -56,18 +59,13 @@ use yii\widgets\ListView;
                         },
                     ]) ?>
 
+                    <?php echo $widget->renderItems(); ?>
+
                 </div>
                 <div class="pagination">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
+                    <?= $widget->renderPager(); ?>
                 </div>
+
             </div>
             <div class="span4">
                 <!--SIDEBAR START-->
@@ -175,50 +173,7 @@ use yii\widgets\ListView;
                 <!--SIDEBAR END-->
             </div>
         </div>
-        <div class="the-best">
-            <p>The Best Websites for Free Online Courses, Certificates, Degrees, and Educational Resources</p>
-            <h2>take $10 0ff for new users</h2>
-        </div>
-    </div>
 
-    <section class="follow-us">
-        <div class="container">
-            <div class="row">
-                <div class="span4">
-                    <div class="follow">
-                        <a href="#">
-                            <i class="fa fa-facebook"></i>
-                            <div class="text">
-                                <h4>Follow us on Facebook</h4>
-                                <p>Faucibus toroot menuts</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="span4">
-                    <div class="follow">
-                        <a href="#">
-                            <i class="fa fa-google"></i>
-                            <div class="text">
-                                <h4>Follow us on Google Plus</h4>
-                                <p>Faucibus toroot menuts</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="span4">
-                    <div class="follow">
-                        <a href="#">
-                            <i class="fa fa-linkedin"></i>
-                            <div class="text">
-                                <h4>Follow us on Linkedin</h4>
-                                <p>Faucibus toroot menuts</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
 </div>

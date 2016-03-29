@@ -213,3 +213,18 @@
     color: white;
 
 }
+
+
+.pagination ul li.active a {
+    color: white;
+}
+
+.pagination ul li.next.disabled span{
+    background-color: white;
+    cursor: not-allowed;
+}
+
+.pagination ul li.prev.disabled span{
+    background-color: white;
+    cursor: not-allowed;
+}
