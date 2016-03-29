@@ -1,5 +1,6 @@
 <?php
 
+use app\models\Article;
 use yii\widgets\ListView;
 
 ?>
@@ -18,17 +19,31 @@ use yii\widgets\ListView;
                         'summary' => '',
                         'itemOptions' => ['class' => 'item'],
                         'itemView' => function ($model, $key, $index, $widget) {
-                            return '<div class="blog-contant">
+                            $a = new Article();
+                            $plainBody = strip_tags($model['text']);
+                            $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
+                            $firstImage = $a->catch_that_image($model['text']);
+                            $content = '<div class="blog-contant">
                         <h2><a href="article/' . $model['title'] . '-' . $model['id'] . '">' . $model["title"] . '</a></h2>
                         <div class="blog-tags">
                             Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
                             <a href="#">webdesign</a>, <a href="#">Course</a>
-                        </div>
-                        <!-- <div class="thumb">
-                            <a href="#"><img src="images/blog-img.jpg" alt=""></a>
-                        </div> -->
+                        </div>';
+
+                            if ($firstImage)
+                                $content .= '
+                                <div class="thumb" >
+                            <!-- <a href = "#" ><img src = "images/blog-img.jpg" alt = "" ></a > -->
+                            <div class="span3" >
+                                <img class="img-responsive" src = "' . $a->catch_that_image($model['text']) . '" />
+                            </div >
+                        </div >';
+
+                            $content .=
+                                '
                         <div class="text">
-                            ' . $model['text'] . '
+                            ' . $abrvBody . '
+
                             <a href="article/' . $model['title'] . '-' . $model['id'] . '" class="btn-style">Подробнее</a>
                         </div>
                         <div class="blog-comments">
@@ -37,6 +52,7 @@ use yii\widgets\ListView;
                             <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
                         </div>
                     </div>';
+                            return $content;
                         },
                     ]) ?>
 

@@ -60,11 +60,14 @@ class Article extends \yii\db\ActiveRecord {
         ob_start();
         ob_end_clean();
         $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $text, $matches);
-        $first_img = $matches[1][0];
+        //$first_img = $matches[1][0];
+        $first_img = $matches[1];
+        //var_dump($matches[1]);
 
         if (empty($first_img)) {
-            $first_img = "/path/to/default.png";
-        }
+            //var_dump($first_img);
+            $first_img = null;
+        } else $first_img = $matches[1][0];
         return $first_img;
     }
 
