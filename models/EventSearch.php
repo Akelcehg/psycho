@@ -10,8 +10,7 @@ use app\models\Events;
 /**
  * EventSearch represents the model behind the search form about `app\models\Events`.
  */
-class EventSearch extends Events
-{
+class EventSearch extends Events {
     /**
      * @inheritdoc
      */
@@ -43,8 +42,13 @@ class EventSearch extends Events
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
-                'pageSize' => 8,
+                'pageSize' => 4,
             ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ]
+            ]
         ]);
 
         $this->load($params);

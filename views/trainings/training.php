@@ -13,7 +13,7 @@
             <div class="row events">
                 <div class="span6">
                     <div class="thumb">
-                        <a href="#"><img src="../images/events1.jpg" alt=""></a>
+                        <a href="#"><img src="../../images/events1.jpg" alt=""></a>
                     </div>
                 </div>
                 <!--EVENT CONTANT START-->

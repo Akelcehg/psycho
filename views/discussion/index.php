@@ -7,7 +7,7 @@
                 <tr>
                     <th class="cell-stat"></th>
                     <th>
-                        <h3>Important</h3>
+                        <h3>Вопросы психологам (ссылка)</h3>
                     </th>
                     <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
                     <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
@@ -18,7 +18,7 @@
                 <tr>
                     <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
                     <td>
-                        <h4><a href="#">Frequently Asked Questions</a><br>
+                        <h4><a href="#">Вопрос 1</a><br>
                             <small>Some description</small>
                         </h4>
                     </td>
@@ -31,7 +31,7 @@
                 <tr>
                     <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
                     <td>
-                        <h4><a href="#">Frequently Asked Questions</a><br>
+                        <h4><a href="#">Вопрос 2</a><br>
                             <small>Some description</small>
                         </h4>
                     </td>
@@ -44,7 +44,7 @@
                 <tr>
                     <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
                     <td>
-                        <h4><a href="#">Important changes</a><br>
+                        <h4><a href="#">Вопрос 3</a><br>
                             <small>Category description</small>
                         </h4>
                     </td>
@@ -61,7 +61,7 @@
                 <tr>
                     <th class="cell-stat"></th>
                     <th>
-                        <h3>Suggestions</h3>
+                        <h3>Вопросы</h3>
                     </th>
                     <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
                     <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>

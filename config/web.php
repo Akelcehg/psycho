@@ -46,6 +46,7 @@ $config = [
             'rules' => [
                 'article/view/<title:.*?>' => 'article/view',
                 'video/view/<title:.*?>' => 'video/view',
+                'trainings/view/<title:.*?>' => 'trainings/view',
 
                 '<alias:login|about|signup|upload>' => 'site/<alias>',
                 '<alias:upload>' => 'site/<alias>',

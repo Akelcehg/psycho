@@ -26,6 +26,13 @@ use yii\helpers\Html;
                         <div class="nav-collapse collapse">
                             <ul>
                                 <li><a href="<?= Url::base() ?>">Главная</a></li>
+                                <li><a href="<?= Url::base() ?>/interesting">Интересное</a></li>
+                                <li><a href="<?= Url::base() ?>/article">Статьи</a></li>
+                                <li><a href="<?= Url::base() ?>/video">Видео</a></li>
+                                <li><a href="<?= Url::base() ?>/discussion">Форум</a></li>
+                                <li><a href="<?= Url::base() ?>/trainings">Тренинги</a></li>
+                                <li><a href="<?= Url::base() ?>/educational-institution">Школы</a></li>
+                                <li><a href="<?= Url::base() ?>/psychologists">Психологи</a></li>
                                 <?php if (Yii::$app->user->isGuest) { ?>
                                     <li>
                                         <a href="#">Кабинет</a>
@@ -53,13 +60,7 @@ use yii\helpers\Html;
 
                                     </li>
                                 <?php } ?>
-                                <li><a href="<?= Url::base() ?>/interesting">Интересное</a></li>
-                                <li><a href="<?= Url::base() ?>/article">Статьи</a></li>
-                                <li><a href="<?= Url::base() ?>/video">Видео</a></li>
-                                <li><a href="<?= Url::base() ?>/discussion">Форум</a></li>
-                                <li><a href="<?= Url::base() ?>/trainings">Тренинги</a></li>
-                                <li><a href="<?= Url::base() ?>/educational-institution">Школы</a></li>
-                                <li><a href="<?= Url::base() ?>/psychologists">Психологи</a></li>
+                                <li><a href="<?= Url::base() ?>/contact">Контакт</a></li>
 
                             </ul>
                         </div>

@@ -15,13 +15,13 @@ class TrainingsController extends \yii\web\Controller {
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'itemsOnPage' => $dataProvider->count
         ]);
     }
 
-    public function actionView($id) {
+    public function actionView($title) {
 
-        $training = Events::find(['id' => $id]);
+        $eventId = explode('-', $title);
+        $training = Events::find(['id' => $eventId]);
 
         return $this->render('training', [
             'training' => $training

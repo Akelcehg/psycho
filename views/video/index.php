@@ -26,11 +26,6 @@ use yii\helpers\Url;
                             'summary' => '',
                             'itemOptions' => ['class' => 'item'],
                             'itemView' => function ($model, $key, $index, $widget) {
-                                /*$a = new Article();
-                                $link = $a->translit(str_replace(' ', '_', $model['title'])) . '-' . $model['id'];
-                                $plainBody = strip_tags($model['text']);
-                                $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
-                                $firstImage = $a->catch_that_image($model['text']);*/
 
                                 $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['title']))]) . '-' . $model['id'];
 

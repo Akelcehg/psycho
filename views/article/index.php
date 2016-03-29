@@ -14,7 +14,6 @@ use yii\helpers\Url;
             <div class="span8">
                 <div class="blog">
 
-
                     <?php $widget = ListView::begin([
                         'dataProvider' => $dataProvider,
                         'summary' => '',

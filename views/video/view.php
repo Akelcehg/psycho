@@ -13,7 +13,9 @@
                 <div class="blog">
                     <!--BLOG START-->
                     <div class="blog-contant">
-                        <h2><a href="#"><?=$model['title']?></a></h2>
+                        
+                        <h2><a href="#"><?= $model['title'] ?></a></h2>
+
                         <div class="blog-tags">
                             Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
                             <a href="#">webdesign</a>, <a href="#">Course</a>
@@ -35,7 +37,7 @@
                         <div class="h_iframe">
                             <!-- a transparent image is preferable -->
                             <img class="ratio" src="../../images/-text.png"/>
-                            <iframe src="<?=$model['link']?>" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="<?= $model['link'] ?>" frameborder="0" allowfullscreen></iframe>
                         </div>
 
 
