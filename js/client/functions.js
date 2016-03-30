@@ -58,7 +58,7 @@ $(document).ready(function () {
         $('.accordion_cp').accordion({
             defaultOpen: 'section1',
             cookieName: 'nav',
-            speed: 'slow',
+            speed: 'fast',
             animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
                 elem.next().stop(true, true).slideFadeToggle(opts.speed);
             },

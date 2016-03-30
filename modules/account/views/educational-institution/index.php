@@ -30,12 +30,6 @@ $this->params['breadcrumbs'][] = $this->title;*/
 
 </div>-->
 
-<?php
-
-use yii\helpers\Url;
-
-?>
-
 <div class="span8">
     <div class="profile-box editing">
 

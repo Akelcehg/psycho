@@ -10,6 +10,7 @@ $this->title = 'Create Events';
 $this->params['breadcrumbs'][] = ['label' => 'Events', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="span8">
     <div class="profile-box editing">
 

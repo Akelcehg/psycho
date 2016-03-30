@@ -43,6 +43,12 @@ class AppAsset extends AssetBundle
         'js/client/jquery.bxslider.min.js',
         //'https://maps.googleapis.com/maps/api/js?v=3.exp',
         'js/client/owl.carousel.js',
+
+        'js/client/jquery.easy-pie-chart.js',
+        'js/client/jquery.cookie.js',
+        'js/client/jquery.accordion.js',
+
+
         'js/client/modernizr.js',
 //        'js/client/skrollr.min.js',
         'js/client/functions.js',
@@ -70,7 +76,9 @@ class AppAsset extends AssetBundle
         'js/client/plugins/countdown/jquery.countdown.js',*/
         //"https://maps.googleapis.com/maps/api/js?key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places",
 
-        'https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
+
+        //'https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
+
 
         /*'js/client/init.js',*/
 

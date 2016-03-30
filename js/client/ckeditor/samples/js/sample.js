@@ -5,49 +5,52 @@
 
 /* exported initSample */
 
-if ( CKEDITOR.env.ie && CKEDITOR.env.version < 9 )
-	CKEDITOR.tools.enableHtml5Elements( document );
+if (CKEDITOR.env.ie && CKEDITOR.env.version < 9)
+    CKEDITOR.tools.enableHtml5Elements(document);
 
 // The trick to keep the editor in the sample quite small
 // unless user specified own height.
 CKEDITOR.config.height = 150;
 CKEDITOR.config.width = 'auto';
 
-var initSample = ( function() {
-	var wysiwygareaAvailable = isWysiwygareaAvailable(),
-		isBBCodeBuiltIn = !!CKEDITOR.plugins.get( 'bbcode' );
+var initSample = (function () {
 
-	return function() {
-		var editorElement = CKEDITOR.document.getById( 'editor' );
+    var wysiwygareaAvailable = isWysiwygareaAvailable(),
+        isBBCodeBuiltIn = !!CKEDITOR.plugins.get('bbcode');
 
-		// :(((
-		if ( isBBCodeBuiltIn ) {
-			editorElement.setHtml(
-				'Hello world!\n\n' +
-				'I\'m an instance of [url=http://ckeditor.com]CKEditor[/url].'
-			);
-		}
+    return function () {
 
-		// Depending on the wysiwygare plugin availability initialize classic or inline editor.
-		if ( wysiwygareaAvailable ) {
-			CKEDITOR.replace( 'editor' );
-		} else {
-			editorElement.setAttribute( 'contenteditable', 'true' );
-			CKEDITOR.inline( 'editor' );
+        var editorElement = CKEDITOR.document.getById('editor');
+        if (editorElement) {
+            // :(((
+            if (isBBCodeBuiltIn) {
+                editorElement.setHtml(
+                    'Hello world!\n\n' +
+                    'I\'m an instance of [url=http://ckeditor.com]CKEditor[/url].'
+                );
+            }
 
-			// TODO we can consider displaying some info box that
-			// without wysiwygarea the classic editor may not work.
-		}
-	};
+            // Depending on the wysiwygare plugin availability initialize classic or inline editor.
+            if (wysiwygareaAvailable) {
+                CKEDITOR.replace('editor');
+            } else {
+                editorElement.setAttribute('contenteditable', 'true');
+                CKEDITOR.inline('editor');
 
-	function isWysiwygareaAvailable() {
-		// If in development mode, then the wysiwygarea must be available.
-		// Split REV into two strings so builder does not replace it :D.
-		if ( CKEDITOR.revision == ( '%RE' + 'V%' ) ) {
-			return true;
-		}
+                // TODO we can consider displaying some info box that
+                // without wysiwygarea the classic editor may not work.
+            }
+        }
+    };
 
-		return !!CKEDITOR.plugins.get( 'wysiwygarea' );
-	}
-} )();
+    function isWysiwygareaAvailable() {
+        // If in development mode, then the wysiwygarea must be available.
+        // Split REV into two strings so builder does not replace it :D.
+        if (CKEDITOR.revision == ( '%RE' + 'V%' )) {
+            return true;
+        }
+
+        return !!CKEDITOR.plugins.get('wysiwygarea');
+    }
+})();
 

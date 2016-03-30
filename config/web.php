@@ -48,7 +48,7 @@ $config = [
                 'video/view/<title:.*?>' => 'video/view',
                 'trainings/view/<title:.*?>' => 'trainings/view',
 
-                '<alias:login|about|signup|upload>' => 'site/<alias>',
+                '<alias:contact|login|about|signup|upload>' => 'site/<alias>',
                 '<alias:upload>' => 'site/<alias>',
                 /*'<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',

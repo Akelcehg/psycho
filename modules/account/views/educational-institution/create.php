@@ -10,7 +10,11 @@ $this->title = 'Create Educational Institution';
 $this->params['breadcrumbs'][] = ['label' => 'Educational Institutions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php
 
+$this->registerJsFile('https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete');
+
+?>
 <div class="span8">
     <div class="profile-box editing form">
 
