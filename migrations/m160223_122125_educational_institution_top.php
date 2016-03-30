@@ -8,7 +8,7 @@ class m160223_122125_educational_institution_top extends Migration {
         $this->createTable('educational_institution_top', [
             'id' => Schema::TYPE_PK,
             'educational_institution_id' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
+            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }

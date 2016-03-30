@@ -13,7 +13,7 @@ class m160204_115733_article extends Migration
             'source' => Schema::TYPE_STRING,
             'title' => Schema::TYPE_STRING . ' NOT NULL',
             'text' => Schema::TYPE_TEXT . ' NOT NULL',
-            'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
+            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }

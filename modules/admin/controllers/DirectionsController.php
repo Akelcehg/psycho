@@ -93,8 +93,7 @@ class DirectionsController extends Controller {
      */
     public function actionDelete($id) {
         $this->findModel($id)->delete();
-        //$psychologistsDirections = new PsychologistDirections();
-        //PsychologistDirections::deleteAll(['direction_id' => $id]);
+        PsychologistDirections::deleteAll(['direction_id' => $id]);
         return $this->redirect(['index']);
     }
 

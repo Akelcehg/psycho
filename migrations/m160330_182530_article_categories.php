@@ -1,24 +1,22 @@
 <?php
 
-use yii\db\Schema;
 use yii\db\Migration;
+use yii\db\Schema;
 
-class m160310_140838_quiz_questions extends Migration {
+class m160330_182530_article_categories extends Migration {
     public function up() {
-        $this->createTable('quiz_questions', [
+        $this->createTable('article_categories', [
             'id' => Schema::TYPE_PK,
-
-            'quiz_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'name' => Schema::TYPE_STRING . ' NOT NULL',
-
             'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }
 
     public function down() {
-        $this->dropTable('quiz_questions');
+        echo "m160330_182530_article_categories cannot be reverted.\n";
 
+        return false;
     }
 
 }

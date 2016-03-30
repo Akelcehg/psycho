@@ -19,7 +19,7 @@ class m160130_170226_profile extends Migration {
             'price' => Schema::TYPE_INTEGER,
             'has_diplom' => Schema::TYPE_BOOLEAN,
             'is_active' => Schema::TYPE_BOOLEAN,
-            'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
+            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }

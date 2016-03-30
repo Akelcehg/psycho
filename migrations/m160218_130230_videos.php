@@ -14,7 +14,7 @@ class m160218_130230_videos extends Migration
             'img_link' => Schema::TYPE_STRING . ' NOT NULL',
             'user_id' => Schema::TYPE_INTEGER . ' NOT NULL',
 
-            'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
+            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }

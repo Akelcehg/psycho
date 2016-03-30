@@ -11,7 +11,7 @@ class m160218_103754_comments extends Migration {
             'text' => Schema::TYPE_TEXT . ' NOT NULL',
             'user_id' => Schema::TYPE_INTEGER . ' NOT NULL',
 
-            'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
+            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }

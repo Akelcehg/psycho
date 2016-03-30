@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\PsychologistProblems;
 use Yii;
 use app\models\Problems;
 use app\models\ProblemsSearch;
@@ -93,7 +94,7 @@ class ProblemsController extends Controller
      */
     public function actionDelete($id) {
         $this->findModel($id)->delete();
-
+        PsychologistProblems::deleteAll(['problem_id' => $id]);
         return $this->redirect(['index']);
     }
 

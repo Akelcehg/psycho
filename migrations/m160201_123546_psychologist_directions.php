@@ -10,7 +10,7 @@ class m160201_123546_psychologist_directions extends Migration
             'id' => Schema::TYPE_PK,
             'psychologist_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'direction_id' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
+            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }

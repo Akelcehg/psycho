@@ -14,7 +14,7 @@ class m160310_140920_quiz_results extends Migration {
             'value_to' => Schema::TYPE_INTEGER . ' NOT NULL',
             'text' => Schema::TYPE_TEXT . ' NOT NULL',
 
-            'updated_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
+            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp'
         ]);
     }
