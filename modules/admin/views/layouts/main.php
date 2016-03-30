@@ -2,39 +2,51 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use yii\helpers\Html;
+
 use app\assets\AdminAppAsset;
+use yii\helpers\Html;
 
 AdminAppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" style="height: 100%;">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>">
 
-    <?php $this->head() ?>
-</head>
-<body style="height: 100%;">
-<div id="wrapper" style="height: 100%;">
-    <?php $this->beginBody() ?>
+    <head>
 
-    <?php echo $this->render('/partials/sidebar'); ?>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <?= Html::csrfMetaTags() ?>
 
-    <div id="page-wrapper" style="min-height: 100%; height:auto !important; /* cross-browser */">
+        <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
-        <div class="container-fluid">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <?php $this->head() ?>
+    </head>
+
+    <body>
+
+    <div id="wrapper">
+        <?php $this->beginBody() ?>
+        <!-- Navigation -->
+        <?php echo $this->render('/partials/navbar'); ?>
+
+        <div id="page-wrapper">
             <?= $content ?>
-
         </div>
+
+        <?php $this->endBody() ?>
     </div>
 
-    <?php $this->endBody() ?>
-</div>
-</body>
-</html>
+    </body>
+
+    </html>
 <?php $this->endPage() ?>

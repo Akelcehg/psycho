@@ -17,23 +17,28 @@ class AdminAppAsset extends AssetBundle {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/admin/sb-admin.css',
+        /*'css/admin/sb-admin.css',
         'css/admin/plugins/morris.css',
         'css/admin/font-awesome/css/font-awesome.min.css',
-        'css/admin/style.css',
+        'css/admin/style.css',*/
+        'css/admin/bower_components/bootstrap/dist/css/bootstrap.min.css',
+        'css/admin/bower_components/metisMenu/dist/metisMenu.min.css',
+
+        'css/admin/dist/css/sb-admin-2.css',
+
+        'css/admin/bower_components/font-awesome/css/font-awesome.min.css'
     ];
+
     public $js = [
-        'js/admin/jquery.js',
+        /*'js/admin/jquery.js',
         'js/admin/bootstrap.min.js',
-        /*'js/admin/plugins/morris/raphael.min.js',
-        'js/admin/plugins/morris/morris.min.js',
-        'js/admin/plugins/morris/morris-data.js',
-        'js/admin/plugins/flot/jquery.flot.js',
-        'js/admin/plugins/flot/jquery.flot.tooltip.min.js',
-        'js/admin/plugins/flot/jquery.flot.resize.js',
-        'js/admin/plugins/flot/jquery.flot.pie.js',
-        'js/admin/plugins/flot/flot-data.js',*/
-        'js/admin/custom.js',
+
+        'js/admin/custom.js',*/
+
+        //'js/admin/bower_components/jquery/dist/jquery.min.js',
+        'js/admin/bower_components/bootstrap/dist/js/bootstrap.min.js',
+        'js/admin/bower_components/metisMenu/dist/metisMenu.min.js',
+        'js/admin/dist/js/sb-admin-2.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

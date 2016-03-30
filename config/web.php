@@ -6,9 +6,6 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'aliases' => array(
-        'xupload' => 'application.modules.sforum.components.xupload', //used for the attachment uploads
-    ),
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',

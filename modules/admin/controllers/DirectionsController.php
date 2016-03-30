@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\PsychologistDirections;
 use Yii;
 use app\models\Directions;
 use app\models\DirectionsSearch;
@@ -92,7 +93,8 @@ class DirectionsController extends Controller {
      */
     public function actionDelete($id) {
         $this->findModel($id)->delete();
-
+        //$psychologistsDirections = new PsychologistDirections();
+        //PsychologistDirections::deleteAll(['direction_id' => $id]);
         return $this->redirect(['index']);
     }
 

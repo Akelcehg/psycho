@@ -3,11 +3,16 @@
         <li><img src="images/slider/1st.jpg" alt=""></li>
     </ul>
     <div class="newsletters">
-        <h1>Start 30-Day free trial today.</h1>
-        <h4>Search for online courses on Web development, Yoga, Guitar lessons, or anything else.</h4>
+        <!--<h1>Start 30-Day free trial today.</h1>-->
+        <!--
+        http://dev.mysql.com/doc/refman/5.7/en/fulltext-boolean.html
+        https://www.youtube.com/watch?v=d--v0NhjIfc
+        -->
+
+        <h1>Search for online courses on Web development, Yoga, Guitar lessons, or anything else.</h1>
         <div class="subscribe">
             <input type="text" class="input-block-level">
-            <button>Subscribe</button>
+            <button>Найти</button>
         </div>
     </div>
 </div>
