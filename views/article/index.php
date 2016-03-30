@@ -26,7 +26,7 @@ use yii\helpers\Url;
                             $firstImage = $a->catch_that_image($model['text']);
 
                             $content = '<div class="blog-contant">
-                            <h2><a href="' . Url::base() . '/article/view/' . $link . '">' . $model["title"] . '</a></h2>
+                            <h2><a href="' . Url::base() . '/article/' . $link . '">' . $model["title"] . '</a></h2>
                             <div class="blog-tags">
                                 Filed in: <a href="#">Online Courses</a> / Tags: <a href="#">Fashion</a>, <a href="#">Learning</a>,
                                 <a href="#">webdesign</a>, <a href="#">Course</a>

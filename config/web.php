@@ -44,7 +44,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'article/view/<title:.*?>' => 'article/view',
+                'article/<title:.*?>' => 'article/view',
                 'video/view/<title:.*?>' => 'video/view',
                 'trainings/view/<title:.*?>' => 'trainings/view',
 
