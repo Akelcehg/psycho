@@ -13,8 +13,8 @@ class m160310_140907_questions_answers extends Migration {
             'text' => Schema::TYPE_STRING . ' NOT NULL',
             'value' => Schema::TYPE_INTEGER . ' NOT NULL',
 
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ]);
     }
 

@@ -16,7 +16,7 @@ class RbacController extends Controller
 
         $user = $auth->createRole('user');
         $admin = $auth->createRole('admin');
-        $psychologist = $auth->createRole('psychologist');
+        //$psychologist = $auth->createRole('psychologist');
 
 
         /*// add "createPost" permission

@@ -21,8 +21,8 @@ class m160124_120433_users extends Migration {
             //'role' => Schema::TYPE_INTEGER . '(3) NOT NULL',
             'is_baned' => Schema::TYPE_INTEGER . ' NOT NULL DEFAULT 10',
             'status' => Schema::TYPE_SMALLINT . ' NOT NULL DEFAULT 10',
-            'created_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ], $tableOptions);
     }
 

@@ -9,8 +9,8 @@ class m160204_091446_psychologist_top extends Migration
         $this->createTable('psychologist_top', [
             'id' => Schema::TYPE_PK,
             'psychologist_id' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ]);
     }
 

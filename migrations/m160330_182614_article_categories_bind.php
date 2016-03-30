@@ -10,16 +10,14 @@ class m160330_182614_article_categories_bind extends Migration {
             'id' => Schema::TYPE_PK,
             'article_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'categories' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ]);
 
     }
 
     public function down() {
-        echo "m160330_182614_article_categories_bind cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('article_categories_bind');
     }
 
 }

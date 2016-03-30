@@ -9,8 +9,8 @@ class m160310_101814_quiz extends Migration {
             'id' => Schema::TYPE_PK,
             'name' => Schema::TYPE_STRING . ' NOT NULL',
             'description' => Schema::TYPE_TEXT . ' NOT NULL',
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ]);
     }
 

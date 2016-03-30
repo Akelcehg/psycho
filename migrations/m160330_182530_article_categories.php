@@ -8,15 +8,14 @@ class m160330_182530_article_categories extends Migration {
         $this->createTable('article_categories', [
             'id' => Schema::TYPE_PK,
             'name' => Schema::TYPE_STRING . ' NOT NULL',
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
+
         ]);
     }
 
     public function down() {
-        echo "m160330_182530_article_categories cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('article_categories');
     }
 
 }

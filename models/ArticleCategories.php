@@ -9,8 +9,8 @@ use Yii;
  *
  * @property integer $id
  * @property string $name
- * @property integer $updated_at
  * @property string $created_at
+ * @property string $updated_at
  */
 class ArticleCategories extends \yii\db\ActiveRecord
 {
@@ -28,9 +28,8 @@ class ArticleCategories extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'updated_at'], 'required'],
-            [['updated_at'], 'integer'],
-            [['created_at'], 'safe'],
+            [['name'], 'required'],
+            [['created_at', 'updated_at'], 'safe'],
             [['name'], 'string', 'max' => 255]
         ];
     }
@@ -43,8 +42,8 @@ class ArticleCategories extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'updated_at' => 'Updated At',
             'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
         ];
     }
 }

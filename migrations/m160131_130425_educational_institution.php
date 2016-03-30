@@ -36,8 +36,8 @@ class m160131_130425_educational_institution extends Migration
             //'photos' => Schema::TYPE_INTEGER,
             //'videos' => Schema::TYPE_INTEGER,
 
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ]);
     }
 

@@ -9,8 +9,8 @@ class m160218_103803_comments_articles extends Migration {
             'id' => Schema::TYPE_PK,
             'comment_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'article_id' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
+            'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
+            'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ]);
     }
 
