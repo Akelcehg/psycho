@@ -12,24 +12,22 @@ use Yii;
  * @property string $created_at
  * @property string $updated_at
  */
-class ArticleCategories extends \yii\db\ActiveRecord
-{
+class ArticleCategories extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'article_categories';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['name'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
+            [['name'], 'unique'],
             [['name'], 'string', 'max' => 255]
         ];
     }
@@ -37,8 +35,7 @@ class ArticleCategories extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'name' => 'Name',
