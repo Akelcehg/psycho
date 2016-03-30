@@ -17,7 +17,7 @@ class ArticleSearch extends Article {
     public function rules() {
         return [
             [['id', 'psychologist_id', 'is_owner'], 'integer'],
-            [['source', 'text', 'updated_at', 'created_at'], 'safe'],
+            [['source', 'title', 'text', 'updated_at', 'created_at'], 'safe'],
         ];
     }
 
@@ -43,7 +43,7 @@ class ArticleSearch extends Article {
             'query' => $query,
             'pagination' => [
                 'route' => '/article',
-                'pageSize' => 4,
+                'pageSize' => 8,
             ],
             'sort' => [
                 'defaultOrder' => [
@@ -64,6 +64,7 @@ class ArticleSearch extends Article {
             'id' => $this->id,
             'psychologist_id' => $this->psychologist_id,
             'is_owner' => $this->is_owner,
+            'title' => $this->title,
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
         ]);
