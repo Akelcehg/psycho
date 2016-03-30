@@ -14,12 +14,6 @@ class m160330_182614_article_categories_bind extends Migration {
             'created_at' => 'timestamp'
         ]);
 
-        $this->createTable('article_categories', [
-            'id' => Schema::TYPE_PK,
-            'name' => Schema::TYPE_STRING . ' NOT NULL',
-            'updated_at' => Schema::TYPE_INTEGER . ' NOT NULL',
-            'created_at' => 'timestamp'
-        ]);
     }
 
     public function down() {

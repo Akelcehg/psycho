@@ -268,7 +268,7 @@ use yii\helpers\Url;
                     <a href="#"><i class="fa fa-user fa-fw"></i> Статьи<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="<?= Url::base() ?>/admin/articles/categories">Список категорий статей</a>
+                            <a href="<?= Url::base() ?>/admin/article-categories">Список категорий статей</a>
                         </li>
                         <li>
                             <a href="<?= Url::base() ?>/admin/articles">Список статей</a>

@@ -2,44 +2,65 @@
 
 namespace app\modules\admin\controllers;
 
-use app\models\Article;
-use app\models\ArticleSearch;
 use Yii;
+use app\models\ArticleCategories;
+use app\models\ArticleCategoriesSearch;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
+use yii\filters\VerbFilter;
 
-class ArticlesController extends Controller {
-    public function actionIndex() {
-        $searchModel = new ArticleSearch();
+/**
+ * ArticleCategoriesController implements the CRUD actions for ArticleCategories model.
+ */
+class ArticleCategoriesController extends Controller
+{
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['post'],
+                ],
+            ],
+        ];
+    }
 
+    /**
+     * Lists all ArticleCategories models.
+     * @return mixed
+     */
+    public function actionIndex()
+    {
+        $searchModel = new ArticleCategoriesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('article_actions/index', [
+        return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Displays a single Article model.
+     * Displays a single ArticleCategories model.
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id) {
-        return $this->render('article_actions/view', [
+    public function actionView($id)
+    {
+        return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Article model.
+     * Creates a new ArticleCategories model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-/*    public function actionCreate() {
-        $model = new Article();
-
-        $model->psychologist_id = Yii::$app->user->id;
-        $model->is_owner = 1;
+    public function actionCreate()
+    {
+        $model = new ArticleCategories();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -48,47 +69,50 @@ class ArticlesController extends Controller {
                 'model' => $model,
             ]);
         }
-    }*/
+    }
 
     /**
-     * Updates an existing Article model.
+     * Updates an existing ArticleCategories model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id) {
+    public function actionUpdate($id)
+    {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['article_actions/update', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            return $this->render('article_actions/update', [
+            return $this->render('update', [
                 'model' => $model,
             ]);
         }
     }
 
     /**
-     * Deletes an existing Article model.
+     * Deletes an existing ArticleCategories model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id) {
+    public function actionDelete($id)
+    {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Article model based on its primary key value.
+     * Finds the ArticleCategories model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Article the loaded model
+     * @return ArticleCategories the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id) {
-        if (($model = Article::findOne($id)) !== null) {
+    protected function findModel($id)
+    {
+        if (($model = ArticleCategories::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
