@@ -82,11 +82,19 @@ use yii\helpers\Html;
             </li>
 
             <li>
-                <label>Genter</label>
-                <select class="input-block-level">
+                <label>Gender</label>
+                <?=$form->field($profileModel, 'gender')->dropDownList([
+                    '0' => 'Выберите пол',
+                    'мужской' => 'мужской',
+                    'женский'=>'женский'
+                ])->label(false);
+                ?>
+
+                <!--<select class="input-block-level">
+                    <option>Male</option>
                     <option>Male</option>
                     <option>Female</option>
-                </select>
+                </select>-->
             </li>
 
             <!--<li>

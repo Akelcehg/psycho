@@ -12,31 +12,35 @@ use Yii;
  * @property string $firstname
  * @property string $lastname
  * @property string $secondname
+ * @property string $gender
  * @property string $education
  * @property string $experience
  * @property integer $price
  * @property integer $has_diplom
- * @property string $updated_at
+ * @property integer $is_active
  * @property string $created_at
+ * @property string $updated_at
  */
-class Profile extends \yii\db\ActiveRecord {
-
+class Profile extends \yii\db\ActiveRecord
+{
     /**
      * @inheritdoc
      */
-    public static function tableName() {
+    public static function tableName()
+    {
         return 'profile';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules() {
+    public function rules()
+    {
         return [
-            [['user_id'], 'required'],
-            [['user_id', 'price', 'has_diplom'], 'integer'],
-            [['education', 'experience'], 'string'],
-            [['updated_at', 'created_at'], 'safe'],
+            [['user_id' ], 'required'],
+            [['user_id', 'price', 'has_diplom', 'is_active'], 'integer'],
+            [['gender', 'education', 'experience'], 'string'],
+            [['created_at', 'updated_at'], 'safe'],
             [['firstname', 'lastname', 'secondname'], 'string', 'max' => 255]
         ];
     }
@@ -44,19 +48,22 @@ class Profile extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    public function attributeLabels() {
+    public function attributeLabels()
+    {
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'firstname' => 'Имя',
-            'lastname' => 'Фамилия',
-            'secondname' => 'Отчество',
+            'firstname' => 'Firstname',
+            'lastname' => 'Lastname',
+            'secondname' => 'Secondname',
+            'gender' => 'Gender',
             'education' => 'Education',
             'experience' => 'Experience',
             'price' => 'Price',
             'has_diplom' => 'Has Diplom',
-            'updated_at' => 'Updated At',
+            'is_active' => 'Is Active',
             'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
         ];
     }
 

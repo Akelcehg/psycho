@@ -14,6 +14,7 @@ class m160130_170226_profile extends Migration {
             'firstname' => Schema::TYPE_STRING,
             'lastname' => Schema::TYPE_STRING,
             'secondname' => Schema::TYPE_STRING,
+            'gender' => 'enum("мужской","женский")',
             'education' => Schema::TYPE_TEXT,
             'experience' => Schema::TYPE_TEXT,
             'price' => Schema::TYPE_INTEGER,

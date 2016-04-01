@@ -16,9 +16,7 @@ class m160401_160533_books extends Migration {
     }
 
     public function down() {
-        echo "m160401_160533_books cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('books');
     }
 
 }
