@@ -18,17 +18,19 @@ use yii\grid\GridView;
 
                     <?= GridView::widget([
                         'dataProvider' => $dataProvider,
-
+                        'tableOptions' => [
+                            'class' => 'table table-striped table-bordered table-hover dataTable no-footer',
+                        ],
                         'filterModel' => $searchModel,
 
                         'summary' => '',
                         'columns' => [
-                        ['class' => 'yii\grid\SerialColumn'],
+                            ['class' => 'yii\grid\SerialColumn'],
 
-                        'email',
+                            'email',
 
-                        ['class' => 'yii\grid\ActionColumn'],
-                    ],
+                            ['class' => 'yii\grid\ActionColumn'],
+                        ],
                     ]); ?>
 
                 </div>

@@ -247,9 +247,6 @@ use yii\helpers\Url;
                         <li>
                             <a href="<?= Url::base() ?>/admin/users/">Список пользователей</a>
                         </li>
-                        <li>
-                            <a href="<?= Url::base() ?>/admin/users/diplomas">Подтверждение диплома</a>
-                        </li>
                     </ul>
                 </li>
                 <li>
@@ -260,6 +257,9 @@ use yii\helpers\Url;
                         </li>
                         <li>
                             <a href="<?= Url::base() ?>/admin/problems">Список проблем</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::base() ?>/admin/users/diplomas">Подтверждение диплома</a>
                         </li>
                     </ul>
                 </li>
