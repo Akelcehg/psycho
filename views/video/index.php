@@ -31,7 +31,7 @@ use yii\helpers\Url;
 
                                 $content = '<div class="news-contant">
                                                 <div class="thumb">
-                                                    <a href="/mify-o-psihologah-2.html">
+                                                    <a href="' . Url::base() . '/video/' . $link . '">
                                                         <img src="' . $model['img_link'] . '"
                                                              alt="видео психология"/>
                                                     </a>
@@ -42,7 +42,7 @@ use yii\helpers\Url;
                                                     <!-- <p>The point of using Lorem Ipsum is that it has a making it look like readable English.
                                                         Many desktop publishing packages and web page editors now use Lorem Ipsum as their
                                                         default model text.</p> -->
-                                                    <a href="' . Url::base() . '/video/view/' . $link . '" class="btn-style">Смотреть видео</a>
+                                                    <a href="' . Url::base() . '/video/' . $link . '" class="btn-style">Смотреть видео</a>
                                                 </div>
                                             </div>';
                                 return $content;

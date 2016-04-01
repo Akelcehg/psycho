@@ -36,7 +36,7 @@
 
                         <div class="h_iframe">
                             <!-- a transparent image is preferable -->
-                            <img class="ratio" src="../../images/-text.png"/>
+                            <img class="ratio" src="../images/-text.png"/>
                             <iframe src="<?= $model['link'] ?>" frameborder="0" allowfullscreen></iframe>
                         </div>
 

@@ -25,7 +25,9 @@ use yii\widgets\ListView;
                     $content = '<div class="row events">
                 <div class="span6">
                     <div class="thumb">
-                        <a href="#"><img src="images/events1.jpg" alt=""></a>
+                        <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '">
+                            <img src="images/events1.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <!--EVENT CONTANT START-->
@@ -59,7 +61,7 @@ use yii\widgets\ListView;
                         </div>
 
                         <div class="event-footer">
-                            <a href="' . \yii\helpers\Url::base() . '/trainings/view/' . $link . '" class="btn-style">Подробнее</a>
+                            <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '" class="btn-style">Подробнее</a>
                         </div>
 
                     </div>

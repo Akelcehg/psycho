@@ -7,6 +7,7 @@ use app\models\EducationalInstitutionSearch;
 use app\models\EducationalInstitutionTop;
 use Yii;
 use yii\data\Pagination;
+use yii\web\NotFoundHttpException;
 
 class EducationalInstitutionController extends \yii\web\Controller {
     public function actionIndex() {
@@ -23,14 +24,22 @@ class EducationalInstitutionController extends \yii\web\Controller {
         ]);
     }
 
-    public function actionView($id) {
+    public function actionView($title) {
 
-        $educationInstitute = EducationalInstitution::findOne(['id' => $id]);
+        $educationInstituteId = explode('-', $title);
 
         return $this->render('institute', [
-            'educationInstitute' => $educationInstitute
+            'educationInstitute' => $this->findModel($educationInstituteId[1]),
         ]);
 
+    }
+
+    protected function findModel($id) {
+        if (($model = EducationalInstitution::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
     }
 
 }

@@ -62,9 +62,7 @@ class VideosController extends Controller {
         //http://img.youtube.com/vi/gDAY1Tfc-zY/mqdefault.jpg
 
         if ($model->load(Yii::$app->request->post())) {
-
-            $model->created_at = date('Y-m-d');
-            $model->updated_at = date('Y-m-d');
+            $model->user_id = Yii::$app->user->id;
             $model->img_link = $model->getVideoImage($model->link);
             $model->link = $model->getEmbedLink($model->link);
             if ($model->save())

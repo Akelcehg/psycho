@@ -57,6 +57,7 @@ use yii\widgets\ActiveForm;
         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         <div id="map" style="width: 100%; height: 400px;"></div>
 
+        <?= $form->field($model, 'map_coordinates')->hiddenInput(['maxlength' => true])->label(false) ?>
 
         <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
 
@@ -64,15 +65,11 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
 
-        <?= $form->field($model, 'map_coordinates')->textInput(['maxlength' => true]) ?>
+
 
         <?= $form->field($model, 'training_program')->textarea(['rows' => 6]) ?>
 
         <?= $form->field($model, 'required_documents')->textarea(['rows' => 6]) ?>
-
-        <?= $form->field($model, 'updated_at')->textInput() ?>
-
-        <?= $form->field($model, 'created_at')->textInput() ?>
 
     </div>
     <!--<div class="grid grid_4">

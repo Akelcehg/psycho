@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Videos */
 /* @var $form yii\widgets\ActiveForm */
 ?>
-
+Добавить категории видео и описание
 <div class="videos-form">
 
     <?php $form = ActiveForm::begin(); ?>
@@ -15,12 +15,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'user_id')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
-
-    <?= $form->field($model, 'created_at')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -44,9 +44,11 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                //Убрать view из остальных
                 'article/<title:.*?>' => 'article/view',
-                'video/view/<title:.*?>' => 'video/view',
-                'trainings/view/<title:.*?>' => 'trainings/view',
+                'video/<title:.*?>' => 'video/view',
+                'trainings/<title:.*?>' => 'trainings/view',
+                'school/<title:.*?>' => 'educational-institution/view',
 
                 '<alias:contact|login|about|signup|upload>' => 'site/<alias>',
                 '<alias:upload>' => 'site/<alias>',
