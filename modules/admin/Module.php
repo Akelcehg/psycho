@@ -31,6 +31,7 @@ class Module extends \yii\base\Module
             ],
         ];
     }
+
     public function init() {
         $this->viewPath = Yii::$app->basePath . '/modules/admin/views/';
         parent::init();

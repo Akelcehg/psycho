@@ -36,7 +36,6 @@ class SiteController extends Controller {
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'logout' => ['post'],
-                    'upload' => ['post'],
                 ],
             ],
         ];
@@ -54,23 +53,10 @@ class SiteController extends Controller {
         ];
     }
 
-
-    protected function verbs()
-    {
-        return [
-
-            'upload' => ['POST'],
-
-        ];
-    }
-    public function beforeAction($action) {
-        $this->enableCsrfValidation = false;
-        return parent::beforeAction($action);
-    }
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
-        $eventsList = new Events();        
+        $eventsList = new Events();
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => $eventsList->getEvents(4)
@@ -79,7 +65,7 @@ class SiteController extends Controller {
 
     public function actionSignup() {
         $model = new SignupForm();
-        if ($model->load(Yii::$app->request->post())) {                        
+        if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 $profile = new Profile();
                 if ($profile->initProfile($model, $user->id)) {
@@ -131,25 +117,5 @@ class SiteController extends Controller {
         return $this->render('about');
     }
 
-    public function actionUpload() {
-        $imagesModel = new Image();
-        //var_dump(Yii::$app->request->post());
-
-        ///if(isset($_POST['upload'])) {
-            /*$imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
-            $imagesModel->image_file->saveAs('test.jpg');*/
-            /*return '{
-    "uploaded": 1,
-    "fileName": "blank.jpg",
-    "url": "/psycho/images/profile_photos/blank.jpg"
-}';*/
-        return var_dump(Yii::$app->request->post());
-            //UploadedFile::getInstance($image,'image_file');
-
-
-//upload
-
-        //http://localhost/psycho/images/profile_photos/blank.jpg
-    }
 
 }
