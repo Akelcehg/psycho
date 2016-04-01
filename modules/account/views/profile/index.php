@@ -142,14 +142,14 @@ use yii\helpers\Html;
         ]);
         ?>
 
-        <div style="display: table;">
+        <div class="profile-checkbox" style="display: table;">
             <ul>
                 <?php foreach ($psychologistDirections as $direction): ?>
                     <li style="display: table-cell; width:auto;">
 
-                        <input type="checkbox" name="directions[]" value="<?= $direction['id'] ?>"
+                        <input id="direction<?= $direction['id'] ?>" class="css-checkbox" type="checkbox" name="directions[]" value="<?= $direction['id'] ?>"
                             <?php if ($direction['active'] != NULL) echo "checked" ?>>
-                        <p style="display: inline;"><?= $direction['name'] ?></p>
+                        <label for="direction<?= $direction['id'] ?>" class="css-label"><?= $direction['name'] ?></label>
 
                     </li>
                 <?php endforeach; ?>
@@ -181,7 +181,6 @@ use yii\helpers\Html;
                     <input id="problem<?= $problem['id'] ?>" class="css-checkbox" type="checkbox" name="problems[]" value="<?= $problem['id'] ?>"
                         <?php if ($problem['active'] != NULL) echo "checked" ?> >
                     <label for="problem<?= $problem['id'] ?>" class="css-label"><?= $problem['name'] ?></label>
-                    <!--<p style="display: inline;"><?/*= $problem['name'] */?></p>-->
                 </li>
             <?php endforeach; ?>
 
