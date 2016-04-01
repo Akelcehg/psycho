@@ -1,21 +1,38 @@
 <?php
 namespace app\commands;
 
+use app\models\User;
 use Yii;
 use yii\console\Controller;
 
-class RbacController extends Controller
-{
-    public function actionInit()
-    {
+class RbacController extends Controller {
+    public function actionInit() {
         //roles
         //user admin psychologist school
 
         $auth = Yii::$app->authManager;
+        //$user = $auth->createRole('user');
 
+
+        $adminUser = new User();
+        $adminUser->email = 'akelcheg@gmail.com';
+        $adminUser->setPassword('123456');
+        $adminUser->generateAuthKey();
+        $adminUser->save();
+
+        $admin = $auth->createRole('admin');
+        $auth->add($admin);
 
         $user = $auth->createRole('user');
-        $admin = $auth->createRole('admin');
+        $auth->add($user);
+
+
+/*        $accessAdmin = $auth->createPermission('accessAdmin');
+        $accessAdmin->description = 'Access admin';
+        $auth->add($accessAdmin);
+        $auth->addChild($admin, $accessAdmin);*/
+
+
         //$psychologist = $auth->createRole('psychologist');
 
 
@@ -43,7 +60,9 @@ class RbacController extends Controller
 
         // Assign roles to users. 1 and 2 are IDs returned by IdentityInterface::getId()
         // usually implemented in your User model.
-        $auth->assign($author, 2);
-        $auth->assign($admin, 1);*/
+        $auth->assign($author, 2);*/
+
+
+        $auth->assign($admin, 1);
     }
 }

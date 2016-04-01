@@ -2,12 +2,14 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\User;
+use Yii;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 
-class DefaultController extends Controller
-{
-    public function actionIndex()
-    {
+class DefaultController extends Controller {
+
+    public function actionIndex() {
         return $this->render('index');
     }
 }
