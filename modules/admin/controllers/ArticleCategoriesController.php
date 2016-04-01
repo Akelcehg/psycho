@@ -63,7 +63,6 @@ class ArticleCategoriesController extends Controller
         $model = new ArticleCategories();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-
             $model->created_at = time();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {

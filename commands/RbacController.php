@@ -1,6 +1,8 @@
 <?php
 namespace app\commands;
 
+use app\models\Profile;
+use app\models\SignupForm;
 use app\models\User;
 use Yii;
 use yii\console\Controller;
@@ -15,7 +17,7 @@ class RbacController extends Controller {
 
 
         $adminUser = new User();
-        $adminUser->email = 'akelcheg@gmail.com';
+        $adminUser->email = 'admin@gmail.com';
         $adminUser->setPassword('123456');
         $adminUser->generateAuthKey();
         $adminUser->save();
@@ -23,14 +25,26 @@ class RbacController extends Controller {
         $admin = $auth->createRole('admin');
         $auth->add($admin);
 
+
+        $averageUser = new User();
+        $averageUser->email = 'user@gmail.com';
+        $averageUser->setPassword('123456');
+        $averageUser->generateAuthKey();
+        $averageUser->save();
+        $profile = new Profile();
+        $model = new SignupForm();
+        $model->first_name = "Юзер";
+        $model->last_name = "Юзерович";
+        $model->second_name = "Юзеров";
+        $profile->initProfile($model, $averageUser->id);
         $user = $auth->createRole('user');
         $auth->add($user);
 
 
-/*        $accessAdmin = $auth->createPermission('accessAdmin');
-        $accessAdmin->description = 'Access admin';
-        $auth->add($accessAdmin);
-        $auth->addChild($admin, $accessAdmin);*/
+        /*        $accessAdmin = $auth->createPermission('accessAdmin');
+                $accessAdmin->description = 'Access admin';
+                $auth->add($accessAdmin);
+                $auth->addChild($admin, $accessAdmin);*/
 
 
         //$psychologist = $auth->createRole('psychologist');
@@ -64,5 +78,6 @@ class RbacController extends Controller {
 
 
         $auth->assign($admin, 1);
+        $auth->assign($user, 2);
     }
 }

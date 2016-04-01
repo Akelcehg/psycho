@@ -18,14 +18,14 @@ class ProfileController extends Controller
 
     public function actionIndex() {
 
-        $profile = $this->findModel(Yii::$app->user->id);
+        $currentPsychologistId = Yii::$app->user->id;
+
+        $profile = $this->findModel($currentPsychologistId);
 
         $directions = new Directions();
         $problems = new Problems();
 
         $imagesModel = new Image();
-
-        $currentPsychologistId = Yii::$app->user->id;
 
         if ($profile->load(Yii::$app->request->post())) {
 
@@ -76,7 +76,7 @@ class ProfileController extends Controller
     }
 
     protected function findModel($id) {
-        if (($model = Profile::find(['user_id' => $id])->one()) !== null) {
+        if (($model = Profile::findOne(['user_id' => $id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -47,6 +47,7 @@ use yii\helpers\Html;
 
                                         <a href="#">Мой профиль</a>
                                         <ul>
+                                            <li><?=Yii::$app->user->identity['email']?></li>
                                             <li><a href="account/profile">Профиль</a></li>
 
                                             <li>

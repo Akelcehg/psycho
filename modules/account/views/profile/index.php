@@ -173,26 +173,26 @@ use yii\helpers\Html;
         ]);
         ?>
 
-        <div style="display: table;">
-            <ul>
-                <?php foreach ($psychologistProblems as $problem): ?>
-                    <li style="display: table-cell; width:auto;">
+        <div class="profile-checkbox" style="display: table;">
+        <ul>
+            <?php foreach ($psychologistProblems as $problem): ?>
+                <li style="display: table-cell; width:auto;">
 
-                        <input type="checkbox" name="problems[]" value="<?= $problem['id'] ?>"
-                            <?php if ($problem['active'] != NULL) echo "checked" ?>>
-                        <p style="display: inline;"><?= $problem['name'] ?></p>
-                    </li>
-                <?php endforeach; ?>
+                    <input id="problem<?= $problem['id'] ?>" class="css-checkbox" type="checkbox" name="problems[]" value="<?= $problem['id'] ?>"
+                        <?php if ($problem['active'] != NULL) echo "checked" ?> >
+                    <label for="problem<?= $problem['id'] ?>" class="css-label"><?= $problem['name'] ?></label>
+                    <!--<p style="display: inline;"><?/*= $problem['name'] */?></p>-->
+                </li>
+            <?php endforeach; ?>
 
-            </ul>
-        </div>
-        <div style="color: white; display: table; margin-top: 20px;">
-            <?= Html::submitButton('Сохранить проблемы', ['class' => 'btn-style']) ?>
-        </div>
-
-
-        <?php ActiveForm::end(); ?>
-
-
+        </ul>
     </div>
+    <div style="color: white; display: table; margin-top: 20px;">
+        <?= Html::submitButton('Сохранить проблемы', ['class' => 'btn-style']) ?>
+    </div>
+
+
+    <?php ActiveForm::end(); ?>
+
+
 </div>

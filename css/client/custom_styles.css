@@ -228,3 +228,38 @@
     background-color: white;
     cursor: not-allowed;
 }
+
+
+
+.profile-checkbox input[type=checkbox].css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.profile-checkbox input[type=checkbox].css-checkbox + label.css-label {
+    padding: 0px 0px 0px 30px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    display: block;
+    margin: 0px 0px 10px 0px;
+    color: #595959;
+    font-weight: normal;
+}
+
+.profile-checkbox input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -19px;
+}
+
+.profile-checkbox .css-label {
+    background-image: url(../../images/checkbox.png);
+}

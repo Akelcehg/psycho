@@ -29,7 +29,7 @@ class Module extends \yii\base\Module {
     }
 
     protected function findModel($id) {
-        if (($model = Profile::find(['user_id' => $id])->one()) !== null) {
+        if (($model = Profile::findOne(['user_id' => $id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

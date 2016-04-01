@@ -39,6 +39,7 @@ class AdminAppAsset extends AssetBundle {
         'js/admin/bower_components/bootstrap/dist/js/bootstrap.min.js',
         'js/admin/bower_components/metisMenu/dist/metisMenu.min.js',
         'js/admin/dist/js/sb-admin-2.js',
+        'js/admin/custom.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
