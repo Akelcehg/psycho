@@ -9,9 +9,9 @@
         https://www.youtube.com/watch?v=d--v0NhjIfc
         -->
 
-        <h1>Search for online courses on Web development, Yoga, Guitar lessons, or anything else.</h1>
+        <h4>Search for online courses on Web development, Yoga, Guitar lessons, or anything else.</h4>
         <div class="subscribe">
-            <input type="text" class="input-block-level">
+            <input type="text" class="input-block-level" placeholder="Введите что искать">
             <button>Найти</button>
         </div>
     </div>

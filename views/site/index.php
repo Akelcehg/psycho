@@ -4,7 +4,7 @@
     <div class="container">
         <!--SECTION HEADER START-->
         <div class="sec-header">
-            <h2>Our Services (может вступительное слово и 3 иконки это кнопки на тесты, статьи и психологи)</h2>
+            <h2>Our Services</h2>
             <p>Take a look at what we have are doing</p>
             <span></span>
             <span></span>

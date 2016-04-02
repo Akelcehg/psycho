@@ -14,10 +14,10 @@ use yii\helpers\Url;
             <div class="span8">
                 <div class="blog">
 
-                    <?php $widget = ListView::begin([
+                    <?php $widget = ListView::begin(array(
                         'dataProvider' => $dataProvider,
                         'summary' => '',
-                        'itemOptions' => ['class' => 'item'],
+                        'itemOptions' => array('class' => 'item'),
                         'itemView' => function ($model, $key, $index, $widget) {
                             $a = new Article();
                             $link = $a->translit(str_replace(' ', '_', $model['title'])) . '-' . $model['id'];
@@ -34,7 +34,7 @@ use yii\helpers\Url;
 
                             if ($firstImage)
                                 $content .= '<div class="thumb" >
-                                <!-- <a href = "#" ><img src = "images/blog-img.jpg" alt = "" ></a > -->
+
                                 <div class="span3" >
                                     <a href="' . Url::base() . '/article/view/' . $link . '">
                                         <img class="img-responsive" src = "' . $a->catch_that_image($model['text']) . '" />
@@ -47,13 +47,13 @@ use yii\helpers\Url;
                             </div>
                             <div class="blog-comments">
                                 <a href="#"><i class="fa fa-user"></i>' . Yii::$app->user->identity['email'] . '</a>
-                                <a href="#"><i class="fa fa-calendar"></i>' . $model['updated_at'] . '</a>
+                                <a href="#"><i class="fa fa-calendar"></i>' . Yii::t('app', '{0,date}', strtotime($model['created_at'])) . '</a>
                                 <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
                             </div>
                         </div>';
                             return $content;
                         },
-                    ]) ?>
+                    )) ?>
 
                     <?php echo $widget->renderItems(); ?>
 

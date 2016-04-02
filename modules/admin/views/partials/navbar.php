@@ -286,6 +286,14 @@ use yii\helpers\Url;
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i> Форум<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="<?= Url::base() ?>/admin/discussion-categories">Разделы</a>
+                        </li>
+                    </ul>
+                </li>
 
                 <li>
                     <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>

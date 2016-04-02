@@ -6,6 +6,8 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru-RU',
+    'sourceLanguage' => 'ru-RU',
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
@@ -15,6 +17,9 @@ $config = [
         ],
     ],
     'components' => [
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+        ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
         ],
