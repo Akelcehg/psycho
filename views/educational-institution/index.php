@@ -24,6 +24,7 @@ use yii\widgets\ListView;
                 'itemView' => function ($model, $key, $index, $widget) {
 
                     $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['name']))]) . '-' . $model['id'];
+
                     $content = ' <div class="news-contant">
                                     <div class="thumb">
                                         <a href="' . Url::base() . '/school/' . $link . '">

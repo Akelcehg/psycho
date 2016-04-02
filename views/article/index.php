@@ -67,6 +67,7 @@ use yii\helpers\Url;
                 <!--SIDEBAR START-->
                 <div class="sidebar">
                     <!--SEARCH WIDGET START-->
+
                     <div class="widget widget-search-course">
                         <h2><i class="fa fa-search"></i>Искать статью</h2>
 
@@ -79,7 +80,26 @@ use yii\helpers\Url;
                         <p><input type="text" class="input-block-level" placeholder="Search by Keyword"></p>
                         <button class="btn-style">Search</button>
                     </div>
-                    <div class="widget widget-tags">
+                    <div class="widget widget-course-categories">
+                        <h2>Course Categorty</h2>
+                        <ul>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Office Productivity</a></li>
+                            <li><a href="#">IT &amp; Software</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Personal Development</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Health &amp; Fitness</a></li>
+                            <li><a href="#">Teacher Training</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Math &amp; Science</a></li>
+                            <li><a href="#">Social Science</a></li>
+                        </ul>
+                    </div>
+        <!--            <div class="widget widget-tags">
                         <h2>Категории статей</h2>
                         <ul>
                             <li><a href="#">resource</a></li>
@@ -95,7 +115,7 @@ use yii\helpers\Url;
                             <li><a href="#">Photoshop</a></li>
                             <li><a href="#">Template</a></li>
                         </ul>
-                    </div>
+                    </div>-->
                     <!--SEARCH WIDGET END-->
                     <!--PAPULAR POST WIDGET START-->
                     <div class="widget widget-papular-post">
@@ -152,19 +172,6 @@ use yii\helpers\Url;
                         </ul>
                     </div>
 
-                    <!--TAGS WIDGET END-->
-                    <!--NEWS LETTERS WIDGET START-->
-                    <div class="widget widget-newsletter">
-                        <div class="inner">
-                            <h2>Join Newsletters</h2>
-                            <div class="input-cover">
-                                <i class="fa fa-envelope-o"></i>
-                                <input type="text" class="input-block-level" placeholder="Enter Your E-Mail ID">
-                            </div>
-                            <button class="btn-style">Subscribe</button>
-                        </div>
-                    </div>
-                    <!--NEWS LETTERS WIDGET END-->
                 </div>
                 <!--SIDEBAR END-->
             </div>

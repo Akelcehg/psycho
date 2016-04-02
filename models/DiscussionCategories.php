@@ -53,8 +53,21 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
         where discussion_categories.id = ' . $category['id'] . ' ORDER BY discussion_posts.id DESC LIMIT 2 )';
         }
         if (!empty($q)) {
-            return Yii::$app->db->createCommand(implode(' UNION ALL ', $q))->queryAll();
+
+            return DiscussionCategories::_group_by(Yii::$app->db->createCommand(implode(' UNION ALL ', $q))->queryAll(),'name');
+
         }
         return [];
+    }
+
+    public static function _group_by($array, $key) {
+        $return = array();
+        foreach($array as $val) {
+
+            if($val['id'])
+            $return[$val[$key]][] = $val;
+        }
+
+        return $return;
     }
 }

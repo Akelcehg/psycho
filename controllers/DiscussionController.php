@@ -9,16 +9,18 @@ class DiscussionController extends \yii\web\Controller {
     public function actionIndex() {
 
         //var_dump(DiscussionCategories::getCategoriesWithPosts());
+        //DiscussionCategories::getCategoriesWithPosts();
+        //var_dump(DiscussionCategories::getCategoriesWithPosts());
         //var_dump(ArrayHelper::map(DiscussionCategories::getCategoriesWithPosts(),'id','text','name'));
-
         //\Yii::$app->end();
+
         return $this->render('index', [
-            'DiscussionCategories' => ArrayHelper::map(DiscussionCategories::getCategoriesWithPosts(), 'id', 'text', 'name')
+            //'DiscussionCategories' => ArrayHelper::map(DiscussionCategories::getCategoriesWithPosts(), 'id', 'text', 'name')
+            'DiscussionCategories' => DiscussionCategories::getCategoriesWithPosts(),
         ]);
     }
 
     public function actionPost() {
         return $this->render('post');
     }
-
 }

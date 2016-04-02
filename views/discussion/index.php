@@ -1,3 +1,10 @@
+<?php
+
+use app\components\TranslitWidget;
+use yii\helpers\Url;
+
+?>
+
 <section style="padding: 0;">
     <div class="container" id="forum">
 
@@ -5,13 +12,18 @@
 
             <?php foreach($DiscussionCategories as $categoryName=>$categoryPosts):?>
 
+                <?php
+
+                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($categoryName))]) . '-' . $categoryPosts[0]['id'];
+
+                ?>
                 <table class="table forum table-striped">
 
                     <thead>
                     <tr>
                         <th class="cell-stat"></th>
                         <th>
-                            <h3><?=$categoryName?></h3>
+                            <h3><a href="<?= Url::base() . '/category/' . $link ?>" class="discussion-link"><?=$categoryName?></a> <i class="fa fa-pencil"></i></h3>
                         </th>
                         <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
                         <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
@@ -20,10 +32,13 @@
                     </thead>
                     <tbody>
                     <?php foreach($categoryPosts as $postId=>$post):?>
+                        <?php
+                        $postLink = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['text']))]) . '-' . $post['id'];
+                        ?>
                         <tr>
-                            <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                            <td class="text-center"><i class="fa fa-envelope fa-2x text-primary"></i></td>
                             <td>
-                                <h4><a href="<?=$postId?>"><?=$post?></a><br>
+                                <h4><a href="<?= Url::base() . '/post/' . $postLink ?>"><?=$post['text']?></a><br>
                                     <small>Some description</small>
                                 </h4>
                             </td>

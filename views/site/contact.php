@@ -11,144 +11,84 @@
     <div class="container">
         <div class="row">
             <div class="span12">
-                <div class="faq-2">
-                    <h3>Phasellus mauris mi, euismod volutpat sagittis accumsan, suscipit sed leo quis nibh rutrum,
-                        fringilla</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ante a urna tincidunt
-                        lobortis. Duis laoreet condimentum est a sagittis. Donec nulla ante, facilisis ut est id,
-                        dapibus consequat sem. Nam imperdiet erat in sagittis suscipit. Phasellus et pulvinar lacus.
-                        Nunc ut porttitor lacus. In hac habitasse platea dictumst. Suspendisse vestibulum commodo orci.
-                        Donec malesuada orci vel mi rutrum lobortis.</p>
-                    <!--ACORDIAN DATE START-->
-                    <div class="accordion_cp" id="section1">
-                        <p>we provide courses at affordable prices</p><span><img src="images/faq-pen.png" alt=""></span>
+                <div class="faq">
+                    <h2>why choose us</h2>
+
+                    <div class="accordion_cp accordion-close" id="section1">
+                        <p>we provide courses at affordable prices</p><span><i class="fa fa-minus"></i></span>
                     </div>
-                    <div class="contain_cp_accor">
+                    <div class="contain_cp_accor" style="display: none;">
                         <div class="content_cp_accor">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                amet.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <!--ACORDIAN DATE END-->
-                    <!--ACORDIAN DATE START-->
-                    <div class="accordion_cp" id="section2">
-                        <p>WE PROVIDE A VARIETY OF COURSES cHECK OUT THE COUSES NOW</p><span><img
-                                src="images/faq-pen.png" alt=""></span>
+
+
+                    <div class="accordion_cp accordion-close" id="section2">
+                        <p>WE PROVIDE A VARIETY OF COURSES cHECK OUT THE COUSES NOW</p><span><i class="fa fa-minus"></i></span>
                     </div>
-                    <div class="contain_cp_accor">
+                    <div class="contain_cp_accor" style="display: none;">
                         <div class="content_cp_accor">
-                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat
-                                elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul
-                                appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo
-                                inani eligendi.</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                amet.</p>
+                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <!--ACORDIAN DATE END-->
-                    <!--ACORDIAN DATE START-->
-                    <div class="accordion_cp" id="section3">
-                        <p>We have world class teaching facilities</p><span><img src="images/faq-pen.png" alt=""></span>
+
+
+                    <div class="accordion_cp accordion-close" id="section3">
+                        <p>We have world class teaching facilities</p><span><i class="fa fa-minus"></i></span>
                     </div>
-                    <div class="contain_cp_accor">
+                    <div class="contain_cp_accor" style="display: none;">
                         <div class="content_cp_accor">
-                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat
-                                elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul
-                                appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo
-                                inani eligendi.</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata At
-                                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                                takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <!--ACORDIAN DATE END-->
-                    <!--ACORDIAN DATE START-->
-                    <div class="accordion_cp" id="section4">
-                        <p>Learning Management</p><span><img src="images/faq-pen.png" alt=""></span>
+
+
+                    <div class="accordion_cp accordion-close" id="section4">
+                        <p>Learning Management</p><span><i class="fa fa-minus"></i></span>
                     </div>
-                    <div class="contain_cp_accor">
+                    <div class="contain_cp_accor" style="display: none;">
                         <div class="content_cp_accor">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                amet.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <!--ACORDIAN DATE END-->
-                    <!--ACORDIAN DATE START-->
-                    <div class="accordion_cp" id="section5">
-                        <p>Learn Cooking Basics Online</p><span><img src="images/faq-pen.png" alt=""></span>
+
+
+                    <div class="accordion_cp accordion-close" id="section5">
+                        <p>Learn Cooking Basics Online</p><span><i class="fa fa-minus"></i></span>
                     </div>
-                    <div class="contain_cp_accor">
+                    <div class="contain_cp_accor" style="display: none;">
                         <div class="content_cp_accor">
-                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat
-                                elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul
-                                appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo
-                                inani eligendi.</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                amet.</p>
+                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <!--ACORDIAN DATE END-->
-                    <!--ACORDIAN DATE START-->
-                    <div class="accordion_cp" id="section6">
-                        <p>What you have to know about MBA</p><span><img src="images/faq-pen.png" alt=""></span>
+
+
+                    <div class="accordion_cp accordion-close" id="section6">
+                        <p>What you have to know about MBA</p><span><i class="fa fa-minus"></i></span>
                     </div>
-                    <div class="contain_cp_accor">
+                    <div class="contain_cp_accor" style="display: none;">
                         <div class="content_cp_accor">
-                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat
-                                elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul
-                                appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo
-                                inani eligendi.</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                amet.</p>
+                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo inani eligendi.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <!--ACORDIAN DATE END-->
-                    <!--ACORDIAN DATE START-->
-                    <div class="accordion_cp" id="section7">
-                        <p>WE PROVIDE A VARIETY OF COURSES cHECK OUT THE COUSES NOW</p><span><img
-                                src="images/faq-pen.png" alt=""></span>
+
+
+                    <div class="accordion_cp accordion-close" id="section7">
+                        <p>WE PROVIDE A VARIETY OF COURSES cHECK OUT THE COUSES NOW</p><span><i class="fa fa-minus"></i></span>
                     </div>
-                    <div class="contain_cp_accor">
+                    <div class="contain_cp_accor" style="display: none;">
                         <div class="content_cp_accor">
-                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat
-                                elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul
-                                appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo
-                                inani eligendi.</p>
+                            <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset, in quo inani eligendi.</p>
                         </div>
                     </div>
-                    <!--ACORDIAN DATE END-->
+
                 </div>
+
             </div>
 
         </div>
@@ -156,7 +96,8 @@
 
 </div>
 
-<div class="contant">
+
+<div class="contant" style="margin-top: 2%;">
     <div class="container">
         <div class="contact-us">
 
@@ -225,11 +166,6 @@
             <!--EVENT END-->
         </div>
 
-        <div class="clearfix"></div>
-        <div class="the-best">
-            <p>The Best Websites for Free Online Courses, Certificates, Degrees, and Educational Resources</p>
-            <h2>take $10 0ff for new users</h2>
-        </div>
     </div>
     <!--FOLLOW US SECTION START-->
     <section class="follow-us">
