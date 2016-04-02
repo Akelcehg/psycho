@@ -19,7 +19,6 @@ use yii\helpers\Url;
 
                 ?>
                 <table class="table forum table-striped">
-
                     <thead>
                     <tr>
                         <th class="cell-stat"></th>
