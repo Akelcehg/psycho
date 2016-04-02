@@ -2,7 +2,46 @@
     <div class="container" id="forum">
 
         <div class="table-responsive">
-        <table class="table forum table-striped">
+
+            <?php foreach($DiscussionCategories as $categoryName=>$categoryPosts):?>
+
+                <table class="table forum table-striped">
+
+                    <thead>
+                    <tr>
+                        <th class="cell-stat"></th>
+                        <th>
+                            <h3><?=$categoryName?></h3>
+                        </th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($categoryPosts as $postId=>$post):?>
+                        <tr>
+                            <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                            <td>
+                                <h4><a href="<?=$postId?>"><?=$post?></a><br>
+                                    <small>Some description</small>
+                                </h4>
+                            </td>
+                            <td class="text-center hidden-xs hidden-sm"><a href="#">9 542</a></td>
+                            <td class="text-center hidden-xs hidden-sm"><a href="#">89 897</a></td>
+                            <td class="hidden-xs hidden-sm">by <a href="#">John Doe</a><br>
+                                <small><i class="fa fa-clock-o"></i> 3 months ago</small>
+                            </td>
+                        </tr>
+
+                    <?php endforeach;?>
+                    </tbody>
+                </table>
+
+            <?php endforeach; ?>
+
+        <!--<table class="table forum table-striped">
+
                 <thead>
                 <tr>
                     <th class="cell-stat"></th>
@@ -55,8 +94,8 @@
                     </td>
                 </tr>
                 </tbody>
-            </table>
-            <table class="table forum table-striped">
+            </table>-->
+            <!--<table class="table forum table-striped">
                 <thead>
                 <tr>
                     <th class="cell-stat"></th>
@@ -115,7 +154,7 @@
                     <td colspan="4" class="center">No topics have been added yet.</td>
                 </tr>
                 </tbody>
-            </table>
+            </table>-->
             </div>
 
     </div>

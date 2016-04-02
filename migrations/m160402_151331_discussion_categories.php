@@ -8,7 +8,7 @@ class m160402_151331_discussion_categories extends Migration {
 
         $this->createTable('discussion_categories', array(
             'id' => Schema::TYPE_PK,
-            'text' => Schema::TYPE_STRING . ' NOT NULL',
+            'name' => Schema::TYPE_STRING . ' NOT NULL',
             'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
             'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ));

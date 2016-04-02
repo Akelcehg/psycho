@@ -19,7 +19,7 @@ class DiscussionCategoriesSearch extends DiscussionCategories
     {
         return [
             [['id'], 'integer'],
-            [['text', 'created_at', 'updated_at'], 'safe'],
+            [['name', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -61,7 +61,7 @@ class DiscussionCategoriesSearch extends DiscussionCategories
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'text', $this->text]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

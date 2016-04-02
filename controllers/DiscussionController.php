@@ -2,10 +2,19 @@
 
 namespace app\controllers;
 
-class DiscussionController extends \yii\web\Controller
-{
+use app\models\DiscussionCategories;
+use yii\helpers\ArrayHelper;
+
+class DiscussionController extends \yii\web\Controller {
     public function actionIndex() {
-        return $this->render('index');
+
+        //var_dump(DiscussionCategories::getCategoriesWithPosts());
+        //var_dump(ArrayHelper::map(DiscussionCategories::getCategoriesWithPosts(),'id','text','name'));
+
+        //\Yii::$app->end();
+        return $this->render('index', [
+            'DiscussionCategories' => ArrayHelper::map(DiscussionCategories::getCategoriesWithPosts(), 'id', 'text', 'name')
+        ]);
     }
 
     public function actionPost() {
