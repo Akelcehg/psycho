@@ -63,8 +63,7 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
     public static function _group_by($array, $key) {
         $return = array();
         foreach($array as $val) {
-
-            if($val['id'])
+            /*if($val['id'])*/
             $return[$val[$key]][] = $val;
         }
 
