@@ -13,15 +13,19 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class AppAsset extends AssetBundle
-{
+class AppAsset extends AssetBundle {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
         'css/client/style.css',
         'css/client/color3.css',
         'css/client/transitions.css',
-        'css/client/bootstrap.css',
+
+
+        /////////'css/client/bootstrap.css',
+        'css/client/new_bootstrap.min.css',
+
+
         'css/client/bootstrap-responsive.css',
         'css/client/jquery.bxslider.css',
         'css/client/owl.carousel.css',
@@ -39,9 +43,12 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/client/jquery-1.11.0.min.js',
-        'js/client/bootstrap.min.js',
+
+        ////////////////////////////'js/client/bootstrap.min.js',
+        'js/client/new_bootstrap.min.js',
+
         'js/client/jquery.bxslider.min.js',
-        //'https://maps.googleapis.com/maps/api/js?v=3.exp',
+
         'js/client/owl.carousel.js',
 
         'js/client/jquery.easy-pie-chart.js',
@@ -83,11 +90,9 @@ class AppAsset extends AssetBundle
         /*'js/client/init.js',*/
 
 
-
         'js/client/ckeditor/ckeditor.js',
         'js/client/ckeditor/config.js',
         'js/client/ckeditor/samples/js/sample.js',
-
 
 
 //        'js/client/ckeditor/samples/js/sample.js',
@@ -96,6 +101,6 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        //'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
 }

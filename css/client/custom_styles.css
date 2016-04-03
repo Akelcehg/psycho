@@ -107,6 +107,7 @@
     width: 8em;
 }
 
+
 @media (max-width: 760px) {
     .forum.media-list li .user-info {
         float: none;
@@ -115,9 +116,16 @@
     }
 }
 
+
+
 .nav-collapse.in.collapse ul li a {
     color: #252525;
 }
+
+.navigation ul {
+    background-color: transparent;
+}
+
 
 /***********TABLE STYLE****/
 .editing table {

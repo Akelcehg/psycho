@@ -3,19 +3,11 @@
 namespace app\controllers;
 
 use app\models\DiscussionCategories;
-use yii\helpers\ArrayHelper;
+use yii\web\NotFoundHttpException;
 
 class DiscussionController extends \yii\web\Controller {
     public function actionIndex() {
-
-        //var_dump(DiscussionCategories::getCategoriesWithPosts());
-        //DiscussionCategories::getCategoriesWithPosts();
-        //var_dump(DiscussionCategories::getCategoriesWithPosts());
-        //var_dump(ArrayHelper::map(DiscussionCategories::getCategoriesWithPosts(),'id','text','name'));
-        //\Yii::$app->end();
-
         return $this->render('index', [
-            //'DiscussionCategories' => ArrayHelper::map(DiscussionCategories::getCategoriesWithPosts(), 'id', 'text', 'name')
             'DiscussionCategories' => DiscussionCategories::getCategoriesWithPosts(),
         ]);
     }
@@ -23,4 +15,20 @@ class DiscussionController extends \yii\web\Controller {
     public function actionPost() {
         return $this->render('post');
     }
+
+    public function actionTopic($title) {
+        $topicId = explode('-', $title)[1];
+        return $this->render('single-topic', [
+            "topicPosts" => DiscussionCategories::getSingleCategoryWithPosts($this->findModel($topicId)['id'])
+        ]);
+    }
+
+    protected function findModel($id) {
+        if (($model = DiscussionCategories::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
 }

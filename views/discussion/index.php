@@ -24,7 +24,7 @@ use yii\helpers\Url;
                         <th class="cell-stat"></th>
                         <th>
                             <?php if ($categoryPosts[0]['id']) { ?>
-                                <h3><a href="<?= Url::base() . '/category/' . $link ?>"
+                                <h3><a href="<?= Url::base() . '/topic/' . $link ?>"
                                        class="discussion-link"><?= $categoryName ?></a>
                                     <i class="fa fa-pencil"></i>
                                 </h3>
@@ -32,9 +32,9 @@ use yii\helpers\Url;
                                 <h3><?= $categoryName ?> <i class="fa fa-pencil"></i></h3>
                             <?php } ?>
                         </th>
-                        <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
-                        <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
-                        <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+                        <!--<th class="cell-stat text-center hidden-xs hidden-sm"></th>-->
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Комментариев</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Последний добавил</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -54,7 +54,7 @@ use yii\helpers\Url;
                                         <small>Some description</small>
                                     </h4>
                                 </td>
-                                <td class="text-center hidden-xs hidden-sm"><a href="#">9 542</a></td>
+                                <!--<td class="text-center hidden-xs hidden-sm"><a href="#">9 542</a></td>-->
                                 <td class="text-center hidden-xs hidden-sm"><a href="#">89 897</a></td>
                                 <td class="hidden-xs hidden-sm">by <a href="#">John Doe</a><br>
                                     <small><i class="fa fa-clock-o"></i> 3 months ago</small>
@@ -66,7 +66,7 @@ use yii\helpers\Url;
                             <td>
                                 <a href="#" class="btn-style" style="color: white;">Добавить сообщение</a>
                             </td>
-                            <td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>
+                            <!--<td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>-->
                             <td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>
                             <td class="hidden-xs hidden-sm"></td>
                         </tr>
@@ -77,7 +77,7 @@ use yii\helpers\Url;
                             <td>
                                 <a href="#" class="btn-style" style="color: white;">Добавить сообщение</a>
                             </td>
-                            <td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>
+                            <!--<td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>-->
                             <td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>
                             <td class="hidden-xs hidden-sm"></td>
                         </tr>

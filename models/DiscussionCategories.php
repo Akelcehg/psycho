@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\data\ActiveDataProvider;
 use yii\db\oci\QueryBuilder;
 use yii\db\Query;
 
@@ -60,13 +61,23 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
         return [];
     }
 
+    public static function getSingleCategoryWithPosts($categoryId){
+        $query = DiscussionCategories::find();
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+        $query->andFilterWhere([
+            'id' => $categoryId,
+        ]);
+        $query->join('left join','discussion-posts','discussion-posts.discussion_category_id=discussion_categories.id');
+        return $dataProvider;
+    }
+
     public static function _group_by($array, $key) {
         $return = array();
         foreach($array as $val) {
-            /*if($val['id'])*/
             $return[$val[$key]][] = $val;
         }
-
         return $return;
     }
 }

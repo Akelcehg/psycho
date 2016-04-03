@@ -55,6 +55,8 @@ $config = [
                 'trainings/<title:.*?>' => 'trainings/view',
                 'school/<title:.*?>' => 'educational-institution/view',
 
+                'topic/<title:.*?>' => 'discussion/topic',
+
                 '<alias:contact|login|about|signup|upload>' => 'site/<alias>',
                 '<alias:upload>' => 'site/<alias>',
                 /*'<controller:\w+>/<id:\d+>' => '<controller>/view',
