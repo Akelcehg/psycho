@@ -2,9 +2,7 @@
     <div class="container" id="forum">
 
         <div class="table-responsive">
-
-
-            <table class="table forum table-striped">
+            <table class="table table-striped">
 
                 <thead>
                 <tr>
@@ -62,4 +60,6 @@
 
         </div>
     </div>
+
+
 </section>
