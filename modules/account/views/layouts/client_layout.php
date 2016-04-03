@@ -36,9 +36,7 @@ AppAsset::register($this);
                     <!--PROFILE IMAGE START-->
                     <div class="profile-box profile-view">
                         <div class="thumb">
-
-                            <a href="#"><img src="<?= Url::base() . '/' . $this->context->module->logo ?>" alt=""></a>
-
+                            <a href="#"><img class="thumb" src="<?= Url::base() . '/' . $this->context->module->logo ?>" alt=""></a>
                         </div>
                         <div class="text">
                             <p><?=$this->context->module->first_name." ".$this->context->module->last_name?></p>
