@@ -1,116 +1,103 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\widgets\ListView;
+
+?>
+
+
 <div class="container">
-    <h1 class="page-header"><i class="fa fa-pencil"></i> Interesting topic</h1>
-    <!--<p class="lead">Hello! This is the awesome slogan fof your topic.</p>
-    <p class="alert alert-danger">This topic is <strong>2 years</strong> old. It can be missleading. Add warnings just like any other alerts with Bootstrap!</p>-->
+    <h1 class="page-header"><i class="fa fa-pencil"></i> <?= $postModel['title'] ?></h1>
+
     <ul class="media-list forum">
         <!-- Forum Post -->
-        <li class="media well">
+        <li class="media well" style="border: 1px solid rgba(199, 1, 46, 0.5);">
             <div class="pull-left user-info" href="#">
                 <img class="avatar img-circle img-thumbnail" src="http://snipplicious.com/images/guest.png"
                      width="64" alt="Generic placeholder image">
                 <strong><a href="user.html">John Doe</a></strong>
                 <small>Member</small>
-                <br>
-                <!--<small class="btn-group btn-group-xs">
-                    <a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>
-                    <a class="btn btn-default"><i class="fa fa-thumbs-o-down"></i></a>
-                    <strong class="btn btn-success">+451</strong>
-                </small>-->
             </div>
             <div class="media-body">
-                <!-- Post Info Buttons -->
-                <!--<div class="forum-post-panel btn-group btn-group-xs">
-                    <a href="#" class="btn btn-default"><i class="fa fa-clock-o"></i> Posted 3 weeks ago</a>
-                    <a href="#" class="btn btn-danger"><i class="fa fa-warning"></i> Report post</a>
-                </div>-->
-                <!-- Post Info Buttons END -->
-                <!-- Post Text -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                    Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Fusce nec tellus
-                    sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in
-                    libero. </p>
-                <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at
-                    dolor. <b>Mauris massa</b>. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc
-                    egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac
-                    turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
-                <p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. <i>Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</i>. Quisque volutpat condimentum velit. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. <b>Morbi
-                        lectus risus, iaculis vel, suscipit quis, luctus non, massa</b>. Sed lacinia, urna non tincidunt
-                    mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla.
-                    Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam.
-                    <b>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis
-                        turpis</b>. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. </p>
-                <!-- Post Text EMD -->
+
+                <div class="forum-post-panel btn-group btn-group-xs">
+                    <a href="#" class="btn btn-default"><i class="fa fa-clock-o"></i> <?= $postModel['created_at'] ?>
+                    </a>
+                    <a href="#" class="btn btn-danger"><i class="fa fa-warning"></i> Пожаловаться</a>
+                </div>
+
+                <p><?= $postModel['text'] ?></p>
             </div>
         </li>
-        <!-- Forum Post END -->
-        <!-- Forum Post -->
-        <li class="media well">
-            <div class="pull-left user-info" href="#">
-                <img class="avatar img-circle img-thumbnail" src="http://snipplicious.com/images/guest.png"
-                     width="64" alt="Generic placeholder image">
-                <strong><a href="user.html">John Doe</a></strong>
-                <small>Member</small>
-                <br>
-                <!--<small class="btn-group btn-group-xs">
-                    <a class="btn btn-default"><i class="fa fa-thumbs-o-up"></i></a>
-                    <a class="btn btn-default"><i class="fa fa-thumbs-o-down"></i></a>
-                    <strong class="btn btn-danger">-98</strong>
-                </small>-->
-            </div>
-            <div class="media-body">
-                <!-- Post Info Buttons -->
-                <!--<div class="forum-post-panel btn-group btn-group-xs">
-                    <a href="#" class="btn btn-default"><i class="fa fa-clock-o"></i> Posted 3 weeks ago</a>
-                    <a href="#" class="btn btn-danger"><i class="fa fa-warning"></i> Report post</a>
-                </div>-->
-                <!-- Post Info Buttons END -->
-                <!-- Post Text -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                    Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Fusce nec tellus
-                    sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in
-                    libero. </p>
-                <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at
-                    dolor. <b>Mauris massa</b>. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc
-                    egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac
-                    turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
-                <p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. <i>Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</i>. Quisque volutpat condimentum velit. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. <b>Morbi
-                        lectus risus, iaculis vel, suscipit quis, luctus non, massa</b>. Sed lacinia, urna non tincidunt
-                    mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla.
-                    Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam.
-                    <b>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis
-                        turpis</b>. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. </p>
-                <!-- Post Text EMD -->
-            </div>
-        </li>
-        <!-- Forum Post END -->
     </ul>
 
+
+    <ul class="media-list forum">
+
+        <?php $widget = ListView::begin([
+            'dataProvider' => $topics,
+            'summary' => '',
+            'itemOptions' => ['class' => 'item'],
+            'itemView' => function ($model, $key, $index, $widget) {
+
+                $content = '<li class="media well">
+                                <div class="pull-left user-info" href="#">
+                                    <img class="avatar img-circle img-thumbnail" src="http://snipplicious.com/images/guest.png"
+                                         width="64" alt="Generic placeholder image">
+                                    <strong><a href="user.html">John Doe</a></strong>
+                                    <small>Member</small>
+                                    <br>
+                                    <small class="btn-group btn-group-xs">
+                                        <a class="btn btn-default"><i class="fa fa-envelope"></i></a>
+                                        <strong class="btn btn-success">98</strong>
+                                    </small>
+                                </div>
+                                <div class="media-body">
+
+                                    <div class="forum-post-panel btn-group btn-group-xs">
+                                        <a href="#" class="btn btn-default"><i class="fa fa-clock-o"></i> ' . $model['created_at'] . '</a>
+                                        <a href="#" class="btn btn-danger"><i class="fa fa-warning"></i> Пожаловаться</a>
+                                    </div>
+
+                                    <p>' . $model['text'] . '</p>
+
+                                </div>
+                            </li>';
+                return $content;
+            },
+        ]) ?>
+
+        <?php echo $widget->renderItems(); ?>
+
+    </ul>
+
+
+    <div class="pagination">
+        <?= $widget->renderPager(); ?>
+    </div>
+
+
     <div class="leave-reply">
-        <h2>Leave Us a Reply</h2>
-        <form>
-            <div class="row-fluid">
-                <div class="span4">
-                    <input type="text" class="input-block-level" placeholder="Name">
-                </div>
-                <div class="span4">
-                    <input type="text" class="input-block-level" placeholder="E-mail">
-                </div>
-                <div class="span4">
-                    <input type="text" class="input-block-level" placeholder="Website">
-                </div>
-                <div class="text-area">
-                    <textarea class="input-block-level" placeholder="Comments"></textarea>
-                    <button class="btn-style">Submit</button>
-                </div>
+        <h2>Оставить комментарий</h2>
+
+        <div class="row-fluid">
+
+            <!--<div class="text-area">
+                <textarea class="input-block-level" placeholder="Comments"></textarea>
+                <button class="btn-style">Submit</button>
+            </div>-->
+
+            <?php $form = ActiveForm::begin(); ?>
+
+            <?= $form->field($model, 'text')->textarea(['maxlength' => true, 'class' => 'input-block-level']) ?>
+
+            <div class="form-group">
+                <?= Html::submitButton('Создать', ['class' => 'btn-style']) ?>
             </div>
-        </form>
+
+            <?php ActiveForm::end(); ?>
+        </div>
+
     </div>
 </div>

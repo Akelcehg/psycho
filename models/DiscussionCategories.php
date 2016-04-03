@@ -51,18 +51,18 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
         foreach (DiscussionCategories::find()->all() as $category) {
             $q[] = '(SELECT *,discussion_categories.id as dcId FROM discussion_categories
         LEFT OUTER JOIN discussion_posts on discussion_posts.discussion_category_id = discussion_categories.id
-        where discussion_categories.id = ' . $category['id'] . ' ORDER BY discussion_posts.id DESC LIMIT 2 )';
+        where discussion_categories.id = ' . $category['id'] . ' ORDER BY discussion_posts.id DESC LIMIT 3 )';
         }
         if (!empty($q)) {
 
-            return DiscussionCategories::_group_by(Yii::$app->db->createCommand(implode(' UNION ALL ', $q))->queryAll(),'name');
+            return DiscussionCategories::_group_by(Yii::$app->db->createCommand(implode(' UNION ALL ', $q))->queryAll(), 'name');
 
         }
         return [];
     }
 
-    public static function getSingleCategoryWithPosts($categoryId){
-        //$query = DiscussionCategories::find();
+    public static function getSingleCategoryWithPosts($categoryId) {
+
         $query = new Query();
         $query->select('discussion_posts.*,discussion_categories.*,discussion_posts.id as dpId');
         $query->from('discussion_categories');
@@ -78,15 +78,17 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
             //'discussion_posts.discussion_category_id' => $categoryId,
             'discussion_categories.id' => $categoryId,
         ]);
-        $query->join('left join','discussion_posts','discussion_posts.discussion_category_id=discussion_categories.id');
+        $query->join('left join', 'discussion_posts', 'discussion_posts.discussion_category_id=discussion_categories.id');
         $query->orderBy('discussion_posts.id DESC');
         return $dataProvider;
     }
 
     public static function _group_by($array, $key) {
         $return = array();
-        foreach($array as $val) {
-            $return[$val[$key]][] = $val;
+        foreach ($array as $categoryId => $val) {
+            if ($val['id'])
+                $return[$val[$key]][] = $val;
+            else $return[$val[$key]][] = $categoryId;
         }
         return $return;
     }

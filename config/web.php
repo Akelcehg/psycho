@@ -56,6 +56,7 @@ $config = [
                 'school/<title:.*?>' => 'educational-institution/view',
 
                 'topic/<title:.*?>' => 'discussion/topic',
+                'post/<title:.*?>' => 'discussion/post',
 
                 '<alias:contact|login|about|signup|upload>' => 'site/<alias>',
                 '<alias:upload>' => 'site/<alias>',

@@ -41,14 +41,14 @@ use yii\helpers\Url;
                 'itemOptions' => ['class' => 'item'],
                 'itemView' => function ($model, $key, $index, $widget) {
 
-                    $postLink = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['text']))]) . '-' . $model['dpId'];
+                    $postLink = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['title']))]) . '-' . $model['dpId'];
 
                     $content = ' <tr>
                                     <td class="text-center"><i class="fa fa-envelope fa-2x text-primary"></i></td>
                                     <td style="text-align: left;">
 
                                         <p>
-                                            <a href="'.Url::base() ."/post/" . $postLink.'">'.$model['text'].'</a><br>
+                                            <a href="'.Url::base() ."/post/" . $postLink.'">'.$model['title'].'</a><br>
                                             <small>Some description'.$model['dpId'].'</small>
                                         </p>
 

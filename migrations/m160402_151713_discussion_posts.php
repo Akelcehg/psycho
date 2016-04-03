@@ -11,6 +11,8 @@ class m160402_151713_discussion_posts extends Migration {
             'discussion_category_id' => Schema::TYPE_INTEGER . ' NOT NULL',
 
             'user_id' => Schema::TYPE_INTEGER . ' NOT NULL',
+
+            'title' => Schema::TYPE_STRING . ' NOT NULL',
             'text' => Schema::TYPE_TEXT . ' NOT NULL',
 
             'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',

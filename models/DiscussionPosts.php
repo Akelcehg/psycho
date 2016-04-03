@@ -11,6 +11,7 @@ use Yii;
  * @property integer $discussion_category_id
  * @property integer $user_id
  * @property string $text
+ * @property string $title
  * @property string $created_at
  * @property string $updated_at
  */
@@ -30,9 +31,9 @@ class DiscussionPosts extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['discussion_category_id', 'user_id', 'text'], 'required'],
+            [['discussion_category_id', 'user_id', 'text','title'], 'required'],
             [['discussion_category_id', 'user_id'], 'integer'],
-            [['text'], 'string'],
+            [['text','title'], 'string'],
             [['created_at', 'updated_at'], 'safe']
         ];
     }
@@ -47,6 +48,7 @@ class DiscussionPosts extends \yii\db\ActiveRecord
             'discussion_category_id' => 'Discussion Category ID',
             'user_id' => 'User ID',
             'text' => 'Text',
+            'title' => 'Title',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

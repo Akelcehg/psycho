@@ -46,14 +46,14 @@ use yii\helpers\Url;
                     foreach ($categoryPosts as $postId => $post):
                         ?>
                         <?php
-                        $postLink = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['text']))]) . '-' . $post['id'];
+                        $postLink = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['title']))]) . '-' . $post['id'];
                         ?>
                         <tr>
                             <td class="text-center"><i class="fa fa-envelope fa-2x text-primary"></i></td>
                             <td style="text-align: left;">
 
                                 <p>
-                                    <a href="<?= Url::base() . '/post/' . $postLink ?>"><?= $post['text'] ?></a><br>
+                                    <a href="<?= Url::base() . '/post/' . $postLink ?>"><?= $post['title'] ?></a><br>
                                     <small>Some description</small>
                                 </p>
 
@@ -68,7 +68,9 @@ use yii\helpers\Url;
                     <tr>
                         <td class="text-center"><i class="fa fa-plus fa-2x text-primary"></i></td>
                         <td style="text-align: left;">
-                            <a href="#" class="btn-style" style="color: white;">Добавить сообщение</a>
+                            <a href="<?= Url::base() . '/discussion/new-topic?category=' . $categoryPosts[0]['discussion_category_id'] ?>"
+                               class="btn-style"
+                               style="color: white;">Задать вопрос психологам</a>
                         </td>
                         <!--<td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>-->
                         <td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>
@@ -79,7 +81,9 @@ use yii\helpers\Url;
                     <tr>
                         <td class="text-center"><i class="fa fa-plus fa-2x text-primary"></i></td>
                         <td style="text-align: left;">
-                            <a href="#" class="btn-style" style="color: white;">Добавить сообщение</a>
+                            <a href="<?= Url::base() . '/discussion/new-topic?category=' . $categoryPosts[0] ?>"
+                               class="btn-style"
+                               style="color: white;">Задать вопрос психологам</a>
                         </td>
                         <!--<td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>-->
                         <td class="text-center hidden-xs hidden-sm"><a href="#"></a></td>
