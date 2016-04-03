@@ -1,7 +1,7 @@
 <div class="course-detail">
     <div class="container">
         <div class="row">
-            <div class="span6">
+            <div class="col-md-6">
                 <ul class="bxslider2">
                     <li><img src="../images/course-detail1.png" alt=""></li>
                     <li><img src="../images/course-detail2.png" alt=""></li>
@@ -19,7 +19,7 @@
                     <a data-slide-index="5" href=""><img src="../images/course-detail2.png" alt=""></a>
                 </div>
             </div>
-            <div class="span6">
+            <div class="col-md-6">
                 <div class="text">
                     <h2>Creating Responsive Web Design ( Добавить внизу тренинги этой школы штуки 4 как на главной )</h2>
                     <h5>Learn how to optimize your webpages for different screen sizes and platforms.</h5>
@@ -50,7 +50,7 @@
     <div class="container">
         <!--SECTION HEADER END-->
         <div class="row">
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="adminstrative">
                     <h2><i class="fa fa-heart-o"></i> How to apply</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -58,7 +58,7 @@
                         dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="adminstrative">
                     <h2><i class="fa fa-graduation-cap"></i> Our Impact</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -66,7 +66,7 @@
                         dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="adminstrative">
                     <h2><i class="fa fa-pencil"></i> Creativity</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt

@@ -11,13 +11,13 @@
         <div class="event-page">
             <!--EVENT START-->
             <div class="row events">
-                <div class="span6">
+                <div class="col-md-6">
                     <div class="thumb">
                         <a href="#"><img src="../../images/events1.jpg" alt=""></a>
                     </div>
                 </div>
                 <!--EVENT CONTANT START-->
-                <div class="span6">
+                <div class="col-md-6">
                     <div class="text">
                         <!--EVENT HEADER START-->
                         <div class="event-header">
@@ -119,18 +119,18 @@
             </div>
             <!--ADMIN END-->
             <div class="row">
-                <div class="span8">
+                <div class="col-md-8">
                     <div class="leave-reply">
                         <h2>Leave Us a Reply</h2>
                         <form>
                             <div class="row-fluid">
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" placeholder="Name" class="input-block-level">
                                 </div>
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" placeholder="E-mail" class="input-block-level">
                                 </div>
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" placeholder="Website" class="input-block-level">
                                 </div>
                                 <div class="text-area">
@@ -141,7 +141,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="campaign">
                         <h4>Campaign Launched on 25 January, 2014 at LONDON, UK</h4>
                         <p>share THIS CAMPAIGN</p>

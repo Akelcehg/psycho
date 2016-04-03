@@ -1,5 +1,5 @@
-<!-- Modal -->
-<div class="modal large fade" id="myModal" role="dialog" aria-labelledby="myModalLabel"
+<!--
+<div class="modal" id="myModal" role="dialog" aria-labelledby="myModalLabel"
      style="margin: 0 auto;  display: none; left: 10%;">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -128,10 +128,28 @@
                 </form>
 
             </div>
-            <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div> -->
+
         </div>
+    </div>
+</div>
+-->
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
     </div>
 </div>

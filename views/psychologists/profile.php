@@ -9,7 +9,7 @@
     <div class="container">
         <div class="teacher-profile">
             <div class="row">
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="profile">
                         <div class="profile-back">
                             <img src="../../images/profile-bg.jpg" alt="">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="span8">
+                <div class="col-md-8">
                     <div class="bio">
                         <h2>My Biography</h2>
                         <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit
@@ -85,7 +85,7 @@
                             nisi neque, aliquet vel</p>
 
                         <div class="row">
-                            <div class="span3"><h2>Пробелмы</h2>
+                            <div class="col-md-3"><h2>Пробелмы</h2>
 
                                 <ul style="list-style: none;">
                                     <li style="display: inline;">
@@ -115,7 +115,7 @@
 
                                 </ul>
                             </div>
-                            <div class="span3"><h2>Направления</h2>
+                            <div class="col-md-3"><h2>Направления</h2>
 
                                 <ul style="list-style: none;">
                                     <li>
@@ -154,7 +154,7 @@
     <section class="follow-us">
         <div class="container">
             <div class="row">
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="follow">
                         <a href="#">
                             <i class="fa fa-facebook"></i>
@@ -165,7 +165,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="follow">
                         <a href="#">
                             <i class="fa fa-google"></i>
@@ -176,7 +176,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="follow">
                         <a href="#">
                             <i class="fa fa-linkedin"></i>
@@ -204,7 +204,7 @@
 <div class="contant">
     <div class="container">
         <div class="row">
-            <div class="span3 sidebar">
+            <div class="col-md-3 sidebar">
                 <!--TUTOR PROFILE START-->
                 <div class="widget course-tutor">
                     <div class="thumb">
@@ -224,7 +224,7 @@
                 <!--ADDRESS WIDGET START-->
 
             </div>
-            <div class="span9">
+            <div class="col-md-9">
                 <!--COURSE DETAIL START-->
                 <div class="tutor-detail-section">
 
@@ -273,7 +273,7 @@
                             nisi neque, aliquet vel</p>
 
                         <div class="row">
-                            <div class="span3"><h2>Пробелмы</h2>
+                            <div class="col-md-3"><h2>Пробелмы</h2>
 
                                 <ul style="list-style: none;">
                                     <li style="display: inline;">
@@ -303,7 +303,7 @@
 
                                 </ul>
                             </div>
-                            <div class="span3"><h2>Направления</h2>
+                            <div class="col-md-3"><h2>Направления</h2>
 
                                 <ul style="list-style: none;">
                                     <li>

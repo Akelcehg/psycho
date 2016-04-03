@@ -10,7 +10,7 @@ use yii\helpers\Url;
 <div class="contant">
     <div class="container">
         <div class="row">
-            <div class="span8">
+            <div class="col-md-8">
 
 
                 <div class="row">
@@ -61,7 +61,7 @@ use yii\helpers\Url;
                 </div>
 
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <!--SIDEBAR START-->
                 <div class="sidebar">
                     <!--SEARCH WIDGET START-->

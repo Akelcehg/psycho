@@ -23,7 +23,7 @@ use yii\widgets\ListView;
                     $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['name']))]) . '-' . $model['id'];
 
                     $content = '<div class="row events">
-                <div class="span6">
+                <div class="col-md-6">
                     <div class="thumb">
                         <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '">
                             <img src="images/events1.jpg" alt="">
@@ -31,7 +31,7 @@ use yii\widgets\ListView;
                     </div>
                 </div>
                 <!--EVENT CONTANT START-->
-                <div class="span6">
+                <div class="col-md-6">
                     <div class="text">
 
                         <div class="event-header">

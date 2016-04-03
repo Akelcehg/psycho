@@ -12,7 +12,7 @@ use yii\helpers\Url;
 <div class="contant">
     <div class="container">
         <div class="row">
-            <div class="span8">
+            <div class="col-md-8">
                 <div class="blog">
 
                     <?php $widget = ListView::begin(array(
@@ -36,7 +36,7 @@ use yii\helpers\Url;
                             if ($firstImage)
                                 $content .= '<div class="thumb" >
 
-                                <div class="span3" >
+                                <div class="col-md-3" >
                                     <a href="' . Url::base() . '/article/view/' . $link . '">
                                         <img class="img-responsive" src = "' . $a->catch_that_image($model['text']) . '" />
                                     </a>
@@ -64,7 +64,7 @@ use yii\helpers\Url;
                 </div>
 
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <!--SIDEBAR START-->
                 <div class="sidebar">
                     <!--SEARCH WIDGET START-->

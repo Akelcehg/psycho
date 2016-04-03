@@ -13,7 +13,7 @@ use app\components\PsychoSearchWidget;
         </div>
 
         <div class="row">
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="card">
                     <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
                     <div class="avatar">
@@ -32,7 +32,7 @@ use app\components\PsychoSearchWidget;
                     </div>
                 </div>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="card">
                     <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
                     <div class="avatar">
@@ -51,7 +51,7 @@ use app\components\PsychoSearchWidget;
                     </div>
                 </div>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="card">
                     <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
                     <div class="avatar">
@@ -70,7 +70,7 @@ use app\components\PsychoSearchWidget;
                     </div>
                 </div>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="card">
                     <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
                     <div class="avatar">
@@ -264,7 +264,7 @@ use app\components\PsychoSearchWidget;
     <div class="container">
         <!--DEEN PROFILES START-->
         <div class="row">
-            <div class="span3">
+            <div class="col-md-3">
                 <!--DEEN PROFILE START-->
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">
@@ -289,7 +289,7 @@ use app\components\PsychoSearchWidget;
                 </div>
                 <!--DEEN PROFILE END-->
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <!--DEEN PROFILE START-->
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">
@@ -314,7 +314,7 @@ use app\components\PsychoSearchWidget;
                 </div>
                 <!--DEEN PROFILE END-->
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <!--DEEN PROFILE START-->
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">
@@ -339,7 +339,7 @@ use app\components\PsychoSearchWidget;
                 </div>
                 <!--DEEN PROFILE END-->
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <!--DEEN PROFILE START-->
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">

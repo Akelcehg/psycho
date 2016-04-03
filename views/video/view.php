@@ -9,11 +9,11 @@
 <div class="contant">
     <div class="container">
         <div class="row">
-            <div class="span8">
+            <div class="col-md-8">
                 <div class="blog">
                     <!--BLOG START-->
                     <div class="blog-contant">
-                        
+
                         <h2><a href="#"><?= $model['title'] ?></a></h2>
 
                         <div class="blog-tags">
@@ -114,25 +114,27 @@
                         <h2>Leave Us a Reply</h2>
                         <form>
                             <div class="row-fluid">
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" class="input-block-level" placeholder="Name">
                                 </div>
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" class="input-block-level" placeholder="E-mail">
                                 </div>
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" class="input-block-level" placeholder="Website">
                                 </div>
-                                <div class="text-area">
-                                    <textarea class="input-block-level" placeholder="Comments"></textarea>
-                                    <button class="btn-style">Submit</button>
+                                <div class="col-md-12">
+                                    <div class="text-area">
+                                        <textarea class="input-block-level" placeholder="Comments"></textarea>
+                                        <button class="btn-style">Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <!--SIDEBAR START-->
                 <div class="sidebar">
 

@@ -28,11 +28,11 @@ AppAsset::register($this);
 
     <?php echo $this->render('//partials/header'); ?>
 
-    <div class="contant">
+    <div class="contant" style="background-color: #eeeeee;">
         <div class="container">
             <div style="margin-top: 15px;"></div>
             <div class="row">
-                <div class="span4">
+                <div class="col-md-4">
                     <!--PROFILE IMAGE START-->
                     <div class="profile-box profile-view">
                         <div class="thumb">
