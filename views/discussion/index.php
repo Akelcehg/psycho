@@ -15,7 +15,7 @@ use yii\helpers\Url;
             <?php
 
             if ($categoryPosts[0]['id'])
-                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($categoryName))]) . '-' . $categoryPosts[0]['id'];
+                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($categoryName))]) . '-' . $categoryPosts[0]['discussion_category_id'];
 
             ?>
             <table class="table forum table-striped" style="table-layout: fixed;
@@ -34,7 +34,7 @@ use yii\helpers\Url;
                         <?php } ?>
                     </th>
                     <!--<th class="cell-stat text-center hidden-xs hidden-sm"></th>-->
-                    <th class="cell-stat text-center hidden-xs hidden-sm">Комментариев</th>
+                    <th class="cell-stat-2x text-center hidden-xs hidden-sm">Комментариев</th>
                     <th class="cell-stat-2x hidden-xs hidden-sm">Последний добавил</th>
                 </tr>
                 </thead>

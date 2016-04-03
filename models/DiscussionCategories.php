@@ -62,14 +62,24 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
     }
 
     public static function getSingleCategoryWithPosts($categoryId){
-        $query = DiscussionCategories::find();
+        //$query = DiscussionCategories::find();
+        $query = new Query();
+        $query->select('discussion_posts.*,discussion_categories.*,discussion_posts.id as dpId');
+        $query->from('discussion_categories');
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                //'route' => '/article',
+                'pageSize' => 8,
+            ],
+
         ]);
         $query->andFilterWhere([
-            'id' => $categoryId,
+            //'discussion_posts.discussion_category_id' => $categoryId,
+            'discussion_categories.id' => $categoryId,
         ]);
-        $query->join('left join','discussion-posts','discussion-posts.discussion_category_id=discussion_categories.id');
+        $query->join('left join','discussion_posts','discussion_posts.discussion_category_id=discussion_categories.id');
+        $query->orderBy('discussion_posts.id DESC');
         return $dataProvider;
     }
 

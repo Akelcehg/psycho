@@ -271,3 +271,9 @@
 .profile-checkbox .css-label {
     background-image: url(../../images/checkbox.png);
 }
+/*
+
+ul.nav.navbar-nav li a:focus {
+    background-color: transparent;
+    color: white;
+}*/

@@ -18,8 +18,10 @@ class DiscussionController extends \yii\web\Controller {
 
     public function actionTopic($title) {
         $topicId = explode('-', $title)[1];
+        $categoryModel = $this->findModel($topicId);
         return $this->render('single-topic', [
-            "topicPosts" => DiscussionCategories::getSingleCategoryWithPosts($this->findModel($topicId)['id'])
+            "categoryModel" => $categoryModel,
+            "topicPosts" => DiscussionCategories::getSingleCategoryWithPosts($categoryModel['id'])
         ]);
     }
 
