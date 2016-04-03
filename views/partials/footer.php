@@ -9,7 +9,7 @@ use yii\helpers\Url;
         <div class="container">
             <div class="row">
                 <!--OUR ARTICLE WIDGET START-->
-                <div class="span3">
+                <div class="col-md-3">
                     <div class="widget widget-categories">
                         <h2>Course Categories</h2>
                         <ul>
@@ -25,13 +25,13 @@ use yii\helpers\Url;
                 </div>
                 <!--OUR ARTICLE WIDGET END-->
                 <!--TOP RATED WIDGET START-->
-                <div class="span6">
+                <div class="col-md-6">
 
 
                 </div>
                 <!--TOP RATED WIDGET END-->
                 <!--RECENT REVIES WIDGET START-->
-                <div class="span3">
+                <div class="col-md-3">
                     <div class="widget widget-newsletter">
                         <h2>Newsletters</h2>
                         <div class="newsletter-contant">

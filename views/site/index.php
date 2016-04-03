@@ -13,7 +13,7 @@
         <!--SECTION HEADER END-->
         <div class="row">
             <!--SERVICE ITEM START-->
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="services">
                     <div class="header">
                         <a href="psychologists">
@@ -30,7 +30,7 @@
             </div>
             <!--SERVICE ITEM END-->
             <!--SERVICE ITEM START-->
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="services">
                     <div class="header">
                         <a href="article">
@@ -47,7 +47,7 @@
             </div>
             <!--SERVICE ITEM END-->
             <!--SERVICE ITEM START-->
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="services">
                     <div class="header">
                         <a href="interesting">
@@ -129,7 +129,7 @@
         <!--SECTION HEADER END-->
 
         <div class="row">
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="course">
                     <div class="thumb">
                         <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
@@ -153,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="course">
                     <div class="thumb">
                         <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
@@ -177,7 +177,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="course">
                     <div class="thumb">
                         <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
@@ -201,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="course">
                     <div class="thumb">
                         <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
@@ -245,7 +245,7 @@
         </div>
         <!--SECTION HEADER END-->
         <div class="row">
-            <div class="span6">
+            <div class="col-md-6">
                 <div class="post">
                     <div class="thumb"><img src="images/posts/post.png" alt=""></div>
                     <!--POST HEADER START-->
@@ -275,7 +275,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span6">
+            <div class="col-md-6">
                 <div class="post">
                     <div class="thumb">
                         <img src="images/posts/post.png" alt="">
@@ -315,7 +315,7 @@
 <section class="follow-us">
     <div class="container">
         <div class="row">
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="follow">
                     <a href="#">
                         <i class="fa fa-facebook"></i>
@@ -327,7 +327,7 @@
                     </a>
                 </div>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="follow">
                     <a href="#">
                         <i class="fa fa-google"></i>
@@ -339,7 +339,7 @@
                     </a>
                 </div>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="follow">
                     <a href="#">
                         <i class="fa fa-vk"></i>
