@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
 
-        <?= GridView::widget([
+        <?php $widget=GridView::begin([
             'dataProvider' => $dataProvider,
 
             'tableOptions' => [
@@ -101,6 +101,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ],
         ]); ?>
+
+        <?php echo $widget->renderItems(); ?>
+
+
+        <div class="pagination default">
+            <?= $widget->renderPager(); ?>
+        </div>
         <p>
             <?= Html::a('Создать статью', ['create'], ['class' => 'btn-style']) ?>
         </p>

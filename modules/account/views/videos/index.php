@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <h1><?= Html::encode($this->title) ?></h1>
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-        <?= GridView::widget([
+        <?php $widget = GridView::begin([
             'dataProvider' => $dataProvider,
 
             'tableOptions' => [
@@ -59,6 +59,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ],
         ]); ?>
+
+        <?php echo $widget->renderItems(); ?>
+
+
+        <div class="pagination default">
+            <?= $widget->renderPager(); ?>
+        </div>
+
         <p>
             <?= Html::a('Добавить видео', ['create'], ['class' => 'btn-style']) ?>
         </p>

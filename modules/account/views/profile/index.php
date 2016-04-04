@@ -112,7 +112,7 @@ use yii\helpers\Html;
     </div>
 
     <div class="profile-box editing">
-        <h2>Edit Password</h2>
+        <h2>Цена и образование</h2>
 
         <?=
         $form->field($profileModel, 'price')->textInput()

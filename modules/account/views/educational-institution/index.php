@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;*/
 <div class="col-md-8">
     <div class="profile-box editing">
 
-        <?= GridView::widget([
+        <?php $widget = GridView::begin([
             'dataProvider' => $dataProvider,
 
             'tableOptions' => [
@@ -74,6 +74,14 @@ $this->params['breadcrumbs'][] = $this->title;*/
                 ],
             ],
         ]); ?>
+
+        <?php echo $widget->renderItems(); ?>
+
+
+        <div class="pagination default">
+            <?= $widget->renderPager(); ?>
+        </div>
+
         <p>
             <?= Html::a('Добавить школу', ['create'], ['class' => 'btn-style']) ?>
         </p>
