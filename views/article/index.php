@@ -82,7 +82,7 @@ use yii\helpers\Url;
                         <button class="btn-style">Search</button>
                     </div>
                     <div class="widget widget-course-categories">
-                        <h2>Course Categorty</h2>
+                        <h2>Выбрать статью по категории</h2>
                         <ul>
                             <li><a href="#">Development</a></li>
                             <li><a href="#">Business</a></li>

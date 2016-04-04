@@ -110,145 +110,262 @@ use app\components\PsychoSearchWidget;
 <section class="gray-bg">
 
     <div class="container">
+        <!--
+                <div class="row">
+                    <div style="margin-bottom: 20px;">
+                        <a href="#" class="btn-style btn-large link-white" data-toggle="modal" data-target="#myModal">Найти психолога</a>
+                    </div>
+                </div>-->
+        <!--
+                <div class="contant">
 
+                </div>
+        -->
         <div class="row">
-            <div style="margin-bottom: 20px;">
-                <a href="#" class="btn-style btn-large link-white" data-toggle="modal" data-target="#myModal">Найти психолога</a>
+            <div class="col-md-12">
+                <div class="form-box">
+                    <form>
+                        <div class="form-body">
+                            <fieldset>
+                                <!--<h4>Выберите что вам интересно</h4>-->
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <label>First Name</label>
+                                        <input type="text" placeholder="Enter your First Name" class="input-block-level">
+                                    </div>
+                                    <div class="span6">
+                                        <label>Last Name</label>
+                                        <input type="text" placeholder="Enter your Last Name" class="input-block-level">
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <label>Enter Email</label>
+                                        <input type="text" placeholder="Enter your E-mail ID" class="input-block-level">
+                                    </div>
+                                    <div class="span6">
+                                        <label>Enter Phone number</label>
+                                        <input type="text" placeholder="Enter your Phone Number" class="input-block-level">
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <label>Select Your City</label>
+                                        <select class="input-block-level"></select>
+                                    </div>
+                                    <div class="span6">
+                                        <label>Gender</label>
+                                        <select class="input-block-level">
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <label>Education Level</label>
+                                        <input type="text" placeholder="Enter your Education Level" class="input-block-level">
+                                    </div>
+                                    <div class="span6">
+                                        <label>Age</label>
+                                        <input type="text" placeholder="Enter your age" class="input-block-level">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="row-fluid" style="margin-top: 2%;">
+                                <button type="submit" class="btn-style pull-right">Найти психолога</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
-        <div class="contant">
 
+        <div class="col-md-8">
+            <h2>Результат поиска</h2>
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
+            <div class="admin">
+                <div class="thumb">
+                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
+                </div>
+                <div class="text">
+                    <div class="social-icons">
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                class="fa fa-facebook"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                class="fa fa-dribbble"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                class="fa fa-google-plus"></i></a>
+                    </div>
+                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
+                    <p style="text-align: left; " class="profession">Photographer</p>
+                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
+                        nulla metus. Interdum et
+                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>
         </div>
+        <div class="col-md-4">
+            <div class="sidebar">
+
+                <div class="widget">
+                    <div class="box">
+                        <h2>Самые активные психологи</h2>
+                        <ul class="event-galley next-course">
+
+                            <li>
+                                <div class="thumb">
+                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
+                                </div>
+                                <div class="text">
+                                    <h4><a href="#">Computer</a></h4>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                                </div>
+                            </li>
 
 
-        <div class="contact-us">
-            <div class="admin">
-                <div class="thumb">
-                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                </div>
-                <div class="text">
-                    <div class="social-icons">
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                class="fa fa-facebook"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                class="fa fa-linkedin"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                class="fa fa-dribbble"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                class="fa fa-twitter"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                class="fa fa-google-plus"></i></a>
-                    </div>
-                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                    <p style="text-align: left; " class="profession">Photographer</p>
-                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                        nulla metus. Interdum et
-                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                </div>
-            </div>
-            <div class="admin">
-                <div class="thumb">
-                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                </div>
-                <div class="text">
-                    <div class="social-icons">
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                class="fa fa-facebook"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                class="fa fa-linkedin"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                class="fa fa-dribbble"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                class="fa fa-twitter"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                class="fa fa-google-plus"></i></a>
-                    </div>
-                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                    <p style="text-align: left; " class="profession">Photographer</p>
-                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                        nulla metus. Interdum et
-                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                </div>
-            </div>
-            <div class="admin">
-                <div class="thumb">
-                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                </div>
-                <div class="text">
-                    <div class="social-icons">
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                class="fa fa-facebook"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                class="fa fa-linkedin"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                class="fa fa-dribbble"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                class="fa fa-twitter"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                class="fa fa-google-plus"></i></a>
-                    </div>
-                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                    <p style="text-align: left; " class="profession">Photographer</p>
-                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                        nulla metus. Interdum et
-                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                </div>
-            </div>
-            <div class="admin">
-                <div class="thumb">
-                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                </div>
-                <div class="text">
-                    <div class="social-icons">
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                class="fa fa-facebook"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                class="fa fa-linkedin"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                class="fa fa-dribbble"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                class="fa fa-twitter"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                class="fa fa-google-plus"></i></a>
-                    </div>
-                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                    <p style="text-align: left; " class="profession">Photographer</p>
-                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                        nulla metus. Interdum et
-                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                </div>
-            </div>
-            <div class="admin">
-                <div class="thumb">
-                    <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                </div>
-                <div class="text">
-                    <div class="social-icons">
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                class="fa fa-facebook"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                class="fa fa-linkedin"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                class="fa fa-dribbble"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                class="fa fa-twitter"></i></a>
-                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                class="fa fa-google-plus"></i></a>
-                    </div>
-                    <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                    <p style="text-align: left; " class="profession">Photographer</p>
-                    <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                        nulla metus. Interdum et
-                        malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                </div>
-            </div>
+                            <li>
+                                <div class="thumb">
+                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
+                                </div>
+                                <div class="text">
+                                    <h4><a href="#">Computer</a></h4>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                                </div>
+                            </li>
 
+
+                            <li>
+                                <div class="thumb">
+                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
+                                </div>
+                                <div class="text">
+                                    <h4><a href="#">Computer</a></h4>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="thumb">
+                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
+                                </div>
+                                <div class="text">
+                                    <h4><a href="#">Computer</a></h4>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
 
@@ -259,13 +376,13 @@ use app\components\PsychoSearchWidget;
 
 <?= PsychoSearchWidget::widget() ?>
 
-
+<!--
 <div class="contant">
     <div class="container">
-        <!--DEEN PROFILES START-->
+
         <div class="row">
             <div class="col-md-3">
-                <!--DEEN PROFILE START-->
+
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">
                         <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
@@ -287,10 +404,10 @@ use app\components\PsychoSearchWidget;
                         </div>
                     </div>
                 </div>
-                <!--DEEN PROFILE END-->
+
             </div>
             <div class="col-md-3">
-                <!--DEEN PROFILE START-->
+
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">
                         <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
@@ -312,10 +429,10 @@ use app\components\PsychoSearchWidget;
                         </div>
                     </div>
                 </div>
-                <!--DEEN PROFILE END-->
+
             </div>
             <div class="col-md-3">
-                <!--DEEN PROFILE START-->
+
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">
                         <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
@@ -337,10 +454,9 @@ use app\components\PsychoSearchWidget;
                         </div>
                     </div>
                 </div>
-                <!--DEEN PROFILE END-->
+
             </div>
             <div class="col-md-3">
-                <!--DEEN PROFILE START-->
                 <div class="deen-profile">
                     <div class="thumb" style="float: none; margin: 0;">
                         <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
@@ -362,12 +478,12 @@ use app\components\PsychoSearchWidget;
                         </div>
                     </div>
                 </div>
-                <!--DEEN PROFILE END-->
+
             </div>
 
         </div>
-        <!--DEEN PROFILES END-->
+
 
     </div>
 
-</div>
+</div>-->

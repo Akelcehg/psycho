@@ -22,10 +22,13 @@ class ArticleController extends \yii\web\Controller {
     }
 
     public function actionView($title) {
-        $articleId = explode('-',$title);
-        return $this->render('view', [
-            'model' => $this->findModel($articleId[1]),
-        ]);
+
+        $articleId = explode('-', $title);
+        if ($articleId[1]) {
+            return $this->render('view', [
+                'model' => $this->findModel($articleId[1]),
+            ]);
+        }
     }
 
     protected function findModel($id) {

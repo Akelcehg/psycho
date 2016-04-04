@@ -147,10 +147,10 @@
                                     <input type="text" class="input-block-level" placeholder="Website">
                                 </div>
                                 <div class="col-md-12">
-                                <div class="text-area">
-                                    <textarea class="input-block-level" placeholder="Comments"></textarea>
-                                    <button class="btn-style">Submit</button>
-                                </div>
+                                    <div class="text-area">
+                                        <textarea class="input-block-level" placeholder="Comments"></textarea>
+                                        <button class="btn-style">Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>

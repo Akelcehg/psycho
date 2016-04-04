@@ -48,7 +48,7 @@ use yii\helpers\Html;
                                     <a href="#">Мой профиль</a>
                                     <ul>
                                         <li><?= Yii::$app->user->identity['email'] ?></li>
-                                        <li><a href="account/profile">Профиль</a></li>
+                                        <li><a href="<?= Url::base() ?>/account/profile">Профиль</a></li>
 
                                         <li>
                                             <?= Html::a('Выйти', ['/site/logout'], [
