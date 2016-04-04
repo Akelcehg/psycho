@@ -5,7 +5,7 @@ namespace app\controllers;
 use app\models\Events;
 use app\models\EventSearch;
 use Yii;
-use yii\base\Event;
+use yii\web\NotFoundHttpException;
 
 class TrainingsController extends \yii\web\Controller {
     public function actionIndex() {
@@ -20,13 +20,21 @@ class TrainingsController extends \yii\web\Controller {
 
     public function actionView($title) {
 
-        $eventId = explode('-', $title);
-        $training = Events::find(['id' => $eventId]);
+        $eventId = explode('-', $title)[1];
+        //$training = Events::find(['id' => $eventId[1]])->one();
 
         return $this->render('training', [
-            'training' => $training
+            'training' => $this->findModel($eventId)
         ]);
 
+    }
+
+    protected function findModel($id) {
+        if (($model = Events::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
     }
 
 }

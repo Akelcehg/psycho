@@ -13,7 +13,7 @@
             <div class="row events">
                 <div class="col-md-6">
                     <div class="thumb">
-                        <a href="#"><img src="../../images/events1.jpg" alt=""></a>
+                        <a href="#"><img src="../images/events1.jpg" alt=""></a>
                     </div>
                 </div>
                 <!--EVENT CONTANT START-->
@@ -21,31 +21,23 @@
                     <div class="text">
                         <!--EVENT HEADER START-->
                         <div class="event-header">
-                            <span>Mon July 2</span>
-                            <h2>Learn Creative Skills, Shape Your Future</h2>
+                            <span><?= $training['date'] ?></span>
+                            <h2><?= $training['name'] ?></h2>
                             <div class="data-tags">
                                 <a href="#">Technology</a>
                             </div>
                         </div>
-                        <!--EVENT HEADER END-->
-                        <!--EVENT BODY START-->
-                        <div class="event-body">
-                            <p>The point of using Lorem Ipsum is that it has a making it look like English. Many desktop
-                                publishing packages and web page editors now use Lorem Ipsum as their default model
-                                text.</p>
-                        </div>
-                        <!--EVENT BODY END-->
-                        <!--EVENT VANUE START-->
+
                         <div class="event-vanue">
                             <table>
                                 <tr>
                                     <td><p class="color">Date:</p></td>
-                                    <td><a href="#"><i class="fa fa-calendar-o"></i>06 Dec, 20140 - 14 Dec, 2014</a> <a
-                                            href="#"><i class="fa fa-clock-o"></i>7:30 am - 9:00 pm</a></td>
+                                    <td><a href="#"><i class="fa fa-calendar-o"></i><?= $training['date'] ?></a> <a
+                                            href="#"><i class="fa fa-clock-o"></i><?= $training['duration'] ?></a></td>
                                 </tr>
                                 <tr>
                                     <td><p class="color">Venue:</p></td>
-                                    <td><a href="#">103, C Block, West Street, New York, BMC, US</a></td>
+                                    <td><a href="#"><?= $training['address'] ?></a></td>
                                 </tr>
                             </table>
                         </div>
@@ -61,30 +53,21 @@
             </div>
             <!--EVENT DETAIL TEXT START-->
             <div class="text-detail">
-                <p>This Course will help you learn some interesting information about the WooTeam and the WooThemes
-                    ecosystem.Ut imperdiet ipsum vel est congue, a vestibulum orci faucibus. Mauris dictum orci ornare
-                    arcu placerat, eu porta quam sollicitudin. Fusce in dapibus turpis. Curabitur imperdiet fermentum
-                    tellus.</p>
-                <h2>The Event Program</h2>
-                <ul>
-                    <li><a href="#">Quisque ut mattis dolor, a gravida turpis.</a></li>
-                    <li><a href="#">At vero eos et accusamus et iusto odio dignissimos</a></li>
-                    <li><a href="#">Ducimus qui blanditiis praesentium voluptatum</a></li>
-                    <li><a href="#">Deleniti atque corrupti quosed dolores</a></li>
-                    <li><a href="#">Quas molestias excepturi sint occaecati</a></li>
-                </ul>
-                <p>Nunc suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
-                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.Nunc
-                    suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
-                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.</p>
-                <p>Nunc suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
-                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.Nunc
-                    suscipit magna vitae nisi blandit, lacinia pellentesque elit euismod. Quisque ut mattis dolor, a
-                    gravida turpis.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                    voluptatum deleniti atque corrupti quosed dolores et quas molestias excepturi sint occaecati.</p>
+                <p><?= $training['about'] ?></p>
+
+                <h2>Программма дня</h2>
+
+                <pre
+                    style="font-size: 18px; background-color: transparent; border: 0;"><?= $training['schedule'] ?></pre>
+                <!--                <ul>
+                                    <li><a href="#">Quisque ut mattis dolor, a gravida turpis.</a></li>
+                                    <li><a href="#">At vero eos et accusamus et iusto odio dignissimos</a></li>
+                                    <li><a href="#">Ducimus qui blanditiis praesentium voluptatum</a></li>
+                                    <li><a href="#">Deleniti atque corrupti quosed dolores</a></li>
+                                    <li><a href="#">Quas molestias excepturi sint occaecati</a></li>
+                                </ul>-->
+
+
             </div>
             <!--EVENT DETAIL TEXT END-->
             <!--EVENT LOCATION MAP START-->
@@ -124,18 +107,11 @@
                         <h2>Leave Us a Reply</h2>
                         <form>
                             <div class="row-fluid">
-                                <div class="col-md-4">
-                                    <input type="text" placeholder="Name" class="input-block-level">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" placeholder="E-mail" class="input-block-level">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" placeholder="Website" class="input-block-level">
-                                </div>
-                                <div class="text-area">
-                                    <textarea placeholder="Comments" class="input-block-level"></textarea>
-                                    <button class="btn-style">Submit</button>
+                                <div class="col-md-12">
+                                    <div class="text-area">
+                                        <textarea placeholder="Comments" class="input-block-level"></textarea>
+                                        <button class="btn-style">Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -158,3 +134,25 @@
         </div>
 
     </div>
+</div>
+<script>
+
+    function initMap() {
+        var myLatLng = {lat: 46.384241150566865, lng: 30.721131563186646};
+
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+            zoom: 15,
+            center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&signed_in=true&callback=initMap"></script>

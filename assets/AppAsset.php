@@ -88,8 +88,6 @@ class AppAsset extends AssetBundle {
 
 
         //'https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete',
-
-
         /*'js/client/init.js',*/
 
 

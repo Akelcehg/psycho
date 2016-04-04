@@ -35,7 +35,7 @@ use yii\widgets\ListView;
                     <div class="text">
 
                         <div class="event-header">
-                            <span>' . $model['created_at'] . '</span>
+                            <span>' . $model['date'] . '</span>
                             <h2>' . $model['name'] . '</h2>
                             <!-- <div class="data-tags">
                                 <a href="#">Technology</a>
