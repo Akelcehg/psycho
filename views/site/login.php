@@ -37,6 +37,10 @@ use yii\helpers\Html;
                     <div class="form-body">
                         <fieldset>
                             <legend>Login Below:</legend>
+                            <legend>user@gmail.com</legend>
+                            <legend>123456</legend>
+                            <legend>admin@gmail.com</legend>
+                            <legend>123456</legend>
 
                             <!--<label>Email Address</label>-->
 
@@ -60,7 +64,7 @@ use yii\helpers\Html;
                             <!--<button type="submit" class="btn-style">Submit</button>-->
                         </fieldset>
                     </div>
-                    <div class="footer">
+                 <!--   <div class="footer">
                         <ul>
                             <li><a href="#">Forgot My Password</a></li>
                             <li><a href="#">Re-send Confirmation Email</a></li>
@@ -68,7 +72,7 @@ use yii\helpers\Html;
                             <li><a href="#">Terms of Use</a></li>
                         </ul>
                         <button class="btn-style">Register</button>
-                    </div>
+                    </div>-->
 
                     <?php ActiveForm::end(); ?>
                 </div>
