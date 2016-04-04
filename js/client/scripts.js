@@ -55,4 +55,19 @@ $(document).ready(function () {
      });*/
     /*    $(function(){ $('#imgInp').Jcrop(); });*/
 
+    var $fp = $("#eventDateInput"),
+        now = moment().subtract("seconds", 1);
+    $fp.filthypillow({
+        minDateTime: function () {
+            return now;
+        }
+    });
+    $fp.on("focus", function () {
+        $fp.filthypillow("show");
+    });
+    $fp.on("fp:save", function (e, dateObj) {
+        $fp.val(dateObj.format("MMM DD YYYY hh:mm A"));
+        $fp.filthypillow("hide");
+    });
+
 });

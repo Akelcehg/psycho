@@ -10,18 +10,18 @@ use yii\grid\GridView;
 $this->title = 'Events';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="span8">
+<div class="col-md-8">
     <div class="profile-box editing">
         <h1><?= Html::encode($this->title) ?></h1>
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
 
 
-        <?= GridView::widget([
+        <?php $widget = GridView::begin([
             'dataProvider' => $dataProvider,
 
             'tableOptions' => [
-                'class' => 'table'
+                'class' => 'table editing_table'
             ],
 
             'summary' => '',
@@ -58,10 +58,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ],
         ]); ?>
+
+        <?php echo $widget->renderItems(); ?>
+
+
+        <div class="pagination default">
+            <?= $widget->renderPager(); ?>
+        </div>
+
         <p>
             <?= Html::a('Добавить тренинг', ['create'], ['class' => 'btn-style']) ?>
         </p>
 
-
     </div>
+
 </div>

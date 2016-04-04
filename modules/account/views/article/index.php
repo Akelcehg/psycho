@@ -11,7 +11,7 @@ $this->title = 'Ваши статьи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="span8">
+<div class="col-md-8">
     <div class="profile-box editing">
 
         <!--<table>
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'dataProvider' => $dataProvider,
 
             'tableOptions' => [
-                'class' => 'table'
+                'class' => 'table editing_table'
             ],
             //'filterModel' => $searchModel,
 

@@ -128,19 +128,19 @@
 
 
 /***********TABLE STYLE****/
-.editing table {
+.editing_table {
     width: 100%;
     /*border: solid 1px #f3f3f3;*/
     border: solid 1px #cbcbcb;
 
 }
 
-.editing table thead {
+.editing_table thead {
     border-radius: 5px;
     overflow: hidden;
 }
 
-.editing table tr th {
+.editing_table tr th {
     text-align: center;
     /*border: solid 1px #f3f3f3;*/
     border: solid 1px #cbcbcb;
@@ -148,23 +148,23 @@
     width: 20%;
 }
 
-.editing table tr th:first-child {
+.editing_table tr th:first-child {
     text-align: left;
     width: 60%
 }
 
-.editing table thead tr th {
+.editing_table thead tr th {
     color: #fff;
     font-size: 16px;
     border: none;
 }
 
-.editing table tfoot tr td {
+.editing_table tfoot tr td {
     border: none;
     font-size: 16px;
 }
 
-.editing table tbody tr:hover {
+.editing_table tbody tr:hover {
     background-color: #f3f3f3;
 }
 
@@ -277,3 +277,9 @@ ul.nav.navbar-nav li a:focus {
     background-color: transparent;
     color: white;
 }*/
+
+
+.pagination.default ul li{
+    width: auto;
+    margin: 0;
+}

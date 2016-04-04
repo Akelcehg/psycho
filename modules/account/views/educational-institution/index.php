@@ -30,14 +30,14 @@ $this->params['breadcrumbs'][] = $this->title;*/
 
 </div>-->
 
-<div class="span8">
+<div class="col-md-8">
     <div class="profile-box editing">
 
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
 
             'tableOptions' => [
-                'class' => 'table'
+                'class' => 'table editing_table'
             ],
 
             'summary' => '',

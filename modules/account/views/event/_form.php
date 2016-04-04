@@ -1,18 +1,24 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use \app\models\EventType;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Events */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="events-form">
+<div class="evsents-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'type')->textInput() ?>
+    <?= $form->field($model, 'type')->dropDownList(
+        ArrayHelper::map(EventType::find()->all(), 'id', 'name')
+        , [
+        'prompt' => 'Укажите тип тренинга'
+    ]); ?>
 
     <?= $form->field($model, 'direction')->textInput(['maxlength' => true]) ?>
 
@@ -20,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'about')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'date')->textInput() ?>
+    <?= $form->field($model, 'date')->textInput(['id' => 'eventDateInput']) ?>
 
     <?= $form->field($model, 'duration')->textInput(['maxlength' => true]) ?>
 

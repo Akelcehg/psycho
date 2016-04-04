@@ -4642,19 +4642,19 @@ EDIT PROFILE PAGE START
     text-transform: uppercase;
 }
 
-.editing table {
+.editing_table {
     width: 100%;
     /*border: solid 1px #f3f3f3;*/
     border: solid 1px #cbcbcb;
 
 }
 
-.editing table thead {
+.editing_table thead {
     border-radius: 5px;
     overflow: hidden;
 }
 
-.editing table tr td {
+.editing_table tr td {
     text-align: center;
     /*border: solid 1px #f3f3f3;*/
     border: solid 1px #cbcbcb;
@@ -4662,23 +4662,23 @@ EDIT PROFILE PAGE START
     width: 20%;
 }
 
-.editing table tr td:first-child {
+.editing_table tr td:first-child {
     text-align: left;
     width: 60%
 }
 
-.editing table thead tr td {
+.editing_table thead tr td {
     color: #fff;
     font-size: 16px;
     border: none;
 }
 
-.editing table tfoot tr td {
+.editing_table tfoot tr td {
     border: none;
     font-size: 16px;
 }
 
-.editing table tbody tr:hover {
+.editing_table tbody tr:hover {
     background-color: #f3f3f3;
 }
 

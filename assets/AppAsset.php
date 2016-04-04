@@ -33,7 +33,8 @@ class AppAsset extends AssetBundle {
         'css/client/parallax.css',
         'css/client/custom_styles.css',
 
-        'css/client/cropper.css'
+        'css/client/cropper.css',
+        'css/client/jquery.filthypillow.css'
 
         /*'css/client/nicdark_responsive.css',
         'css/client/revslider/settings.css',
@@ -64,6 +65,8 @@ class AppAsset extends AssetBundle {
 
         'js/client/cropper.js',
         'js/client/elastic.js',
+        'js/client/moment.js',
+        'js/client/jquery.filthypillow.min.js',
 
 
         //'js/client/main/jquery.min.js',
