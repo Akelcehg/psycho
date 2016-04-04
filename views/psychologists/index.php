@@ -122,9 +122,11 @@ use app\components\PsychoSearchWidget;
                 </div>
         -->
         <div class="row">
+
             <div class="col-md-12">
+                <h2>Выбери кто тебе нужен</h2>
                 <div class="form-box">
-                    <form>
+                    <form style="text-align: left;">
                         <div class="form-body">
                             <fieldset>
                                 <!--<h4>Выберите что вам интересно</h4>-->
@@ -374,7 +376,7 @@ use app\components\PsychoSearchWidget;
 </section>
 
 
-<?= PsychoSearchWidget::widget() ?>
+<?/*= PsychoSearchWidget::widget() */?>
 
 <!--
 <div class="contant">
