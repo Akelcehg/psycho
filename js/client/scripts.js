@@ -60,13 +60,18 @@ $(document).ready(function () {
     $fp.filthypillow({
         minDateTime: function () {
             return now;
+        },
+        calendar: {
+            saveOnDateSelect: true
         }
     });
+
     $fp.on("focus", function () {
         $fp.filthypillow("show");
     });
+    //2016-04-04
     $fp.on("fp:save", function (e, dateObj) {
-        $fp.val(dateObj.format("MMM DD YYYY hh:mm A"));
+        $fp.val(dateObj.format("YYYY-DD-MM"));
         $fp.filthypillow("hide");
     });
 

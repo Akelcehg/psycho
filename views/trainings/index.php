@@ -21,7 +21,7 @@ use yii\widgets\ListView;
                 'itemView' => function ($model, $key, $index, $widget) {
 
                     $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['name']))]) . '-' . $model['id'];
-
+                    $abrvBody = strlen($model['about']) > 200 ? substr($model['about'], 0, 200).'...' : $model['about'];
                     $content = '<div class="row events">
                 <div class="col-md-6">
                     <div class="thumb">
@@ -37,13 +37,13 @@ use yii\widgets\ListView;
                         <div class="event-header">
                             <span>' . $model['created_at'] . '</span>
                             <h2>' . $model['name'] . '</h2>
-                            <div class="data-tags">
+                            <!-- <div class="data-tags">
                                 <a href="#">Technology</a>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="event-body">
-                            <p>' . $model['about'] . '</p>
+                            <p>' . $abrvBody . '</p>
                         </div>
 
                         <div class="event-vanue">
