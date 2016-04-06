@@ -63,7 +63,7 @@ class Problems extends \yii\db\ActiveRecord
 
         $query->select('problems.*')
             ->from('problems')
-            ->join('join', 'psychologist_problems',
+            ->join('left outer join', 'psychologist_problems',
                 'problems.id = psychologist_problems.problem_id and
                 psychologist_problems.psychologist_id= ' . $psychologistId
             )->orderBy('problems.id');

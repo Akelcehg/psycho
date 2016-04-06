@@ -83,10 +83,10 @@ use yii\helpers\Html;
 
             <li>
                 <label>Gender</label>
-                <?=$form->field($profileModel, 'gender')->dropDownList([
+                <?= $form->field($profileModel, 'gender')->dropDownList([
                     '0' => 'Выберите пол',
                     'мужской' => 'мужской',
-                    'женский'=>'женский'
+                    'женский' => 'женский'
                 ])->label(false);
                 ?>
 
@@ -155,9 +155,11 @@ use yii\helpers\Html;
                 <?php foreach ($psychologistDirections as $direction): ?>
                     <li style="display: table-cell; width:auto;">
 
-                        <input id="direction<?= $direction['id'] ?>" class="css-checkbox" type="checkbox" name="directions[]" value="<?= $direction['id'] ?>"
+                        <input id="direction<?= $direction['id'] ?>" class="css-checkbox" type="checkbox"
+                               name="directions[]" value="<?= $direction['id'] ?>"
                             <?php if ($direction['active'] != NULL) echo "checked" ?>>
-                        <label for="direction<?= $direction['id'] ?>" class="css-label"><?= $direction['name'] ?></label>
+                        <label for="direction<?= $direction['id'] ?>"
+                               class="css-label"><?= $direction['name'] ?></label>
 
                     </li>
                 <?php endforeach; ?>
@@ -182,24 +184,25 @@ use yii\helpers\Html;
         ?>
 
         <div class="profile-checkbox" style="display: table;">
-        <ul>
-            <?php foreach ($psychologistProblems as $problem): ?>
-                <li style="display: table-cell; width:auto;">
+            <ul>
+                <?php foreach ($psychologistProblems as $problem): ?>
+                    <li style="display: table-cell; width:auto;">
 
-                    <input id="problem<?= $problem['id'] ?>" class="css-checkbox" type="checkbox" name="problems[]" value="<?= $problem['id'] ?>"
-                        <?php if ($problem['active'] != NULL) echo "checked" ?> >
-                    <label for="problem<?= $problem['id'] ?>" class="css-label"><?= $problem['name'] ?></label>
-                </li>
-            <?php endforeach; ?>
+                        <input id="problem<?= $problem['id'] ?>" class="css-checkbox" type="checkbox" name="problems[]"
+                               value="<?= $problem['id'] ?>"
+                            <?php if ($problem['active'] != NULL) echo "checked" ?> >
+                        <label for="problem<?= $problem['id'] ?>" class="css-label"><?= $problem['name'] ?></label>
+                    </li>
+                <?php endforeach; ?>
 
-        </ul>
+            </ul>
+        </div>
+        <div style="color: white; display: table; margin-top: 20px;">
+            <?= Html::submitButton('Сохранить проблемы', ['class' => 'btn-style']) ?>
+        </div>
+
+
+        <?php ActiveForm::end(); ?>
+
+
     </div>
-    <div style="color: white; display: table; margin-top: 20px;">
-        <?= Html::submitButton('Сохранить проблемы', ['class' => 'btn-style']) ?>
-    </div>
-
-
-    <?php ActiveForm::end(); ?>
-
-
-</div>

@@ -32,7 +32,7 @@ AppAsset::register($this);
         <div class="container">
             <div style="margin-top: 15px;"></div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <!--PROFILE IMAGE START-->
                     <div class="profile-box profile-view">
                         <div class="thumb">

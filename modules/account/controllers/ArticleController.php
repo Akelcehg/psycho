@@ -2,6 +2,7 @@
 
 namespace app\modules\account\controllers;
 
+use app\models\ArticleCategories;
 use Yii;
 use app\models\Article;
 use app\models\ArticleSearch;
@@ -12,8 +13,7 @@ use yii\filters\VerbFilter;
 /**
  * ArticleController implements the CRUD actions for Article model.
  */
-class ArticleController extends Controller
-{
+class ArticleController extends Controller {
     public function behaviors() {
         return [
             'verbs' => [
@@ -61,11 +61,22 @@ class ArticleController extends Controller
         $model->psychologist_id = Yii::$app->user->id;
         $model->is_owner = 1;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) /*&& $model->save()*/) {
+            $articleCategories = Yii::$app->request->post('categories');
+            $categories = new ArticleCategories();
+            if ($model->save()) {
+                if ($categories->saveArticleCategories($model->id, $articleCategories)) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
+
+            /*if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }*/
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'articleCategories' => ArticleCategories::find()->all()
             ]);
         }
     }
@@ -79,11 +90,18 @@ class ArticleController extends Controller
     public function actionUpdate($id) {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $articleCategories = Yii::$app->request->post('categories');
+            $categories = new ArticleCategories();
+            if ($model->save()) {
+                if ($categories->saveArticleCategories($model->id, $articleCategories)) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'articleCategories' => ArticleCategories::getArticleCategories($id)
             ]);
         }
     }

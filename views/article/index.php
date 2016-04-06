@@ -84,20 +84,10 @@ use yii\helpers\Url;
                     <div class="widget widget-course-categories">
                         <h2>Выбрать статью по категории</h2>
                         <ul>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Marketing</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Office Productivity</a></li>
-                            <li><a href="#">IT &amp; Software</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Personal Development</a></li>
-                            <li><a href="#">Photography</a></li>
-                            <li><a href="#">Health &amp; Fitness</a></li>
-                            <li><a href="#">Teacher Training</a></li>
-                            <li><a href="#">Music</a></li>
-                            <li><a href="#">Math &amp; Science</a></li>
-                            <li><a href="#">Social Science</a></li>
+
+                            <?php foreach($articleCategories as $category):?>
+                                <li><a href="#"><?=$category['name']?></a></li>
+                            <?php endforeach;?>
                         </ul>
                     </div>
         <!--            <div class="widget widget-tags">

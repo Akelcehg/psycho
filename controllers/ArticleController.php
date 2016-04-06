@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Article;
+use app\models\ArticleCategories;
 use app\models\ArticleSearch;
 use Yii;
 use yii\web\NotFoundHttpException;
@@ -17,6 +18,7 @@ class ArticleController extends \yii\web\Controller {
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'articleCategories' => ArticleCategories::find()->all()
         ]);
 
     }
