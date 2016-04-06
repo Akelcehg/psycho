@@ -93,18 +93,18 @@ use yii\helpers\Url;
                                 $plainBody = strip_tags($post['text']);
                                 $abrvBody = strlen($plainBody) > 50 ? substr($plainBody, 0, 50) : $plainBody;
                                 ?>
-                                <li>
+                                <li style="border-bottom: solid 2px #C7012E;">
                                     <a href="<?= Url::base() . '/article/' . $link ?>">
                                         <h4><?= $post['title'] ?></h4>
                                     </a>
-                                    <div class="thumb">
-                                        <a href="<?= Url::base() . '/article/' . $link ?>">
+                                    <!--<div class="thumb">
+                                        <a href="<?/*= Url::base() . '/article/' . $link */?>">
                                             <img src="images/papular-post.jpg" alt="">
                                         </a>
-                                    </div>
+                                    </div>-->
                                     <div class="text">
-                                        <p class="date"><?= $post['created_at'] ?></p>
-                                        <p><?= $abrvBody ?></p>
+                                        <p><i class="fa fa-calendar"></i> <?= $post['created_at'] ?></p>
+                                        <p style="margin-top: 10px;"><?= $abrvBody ?></p>
                                     </div>
                                 </li>
                             <?php endforeach; ?>
