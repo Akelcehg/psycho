@@ -79,7 +79,7 @@ use yii\helpers\Url;
                         <ul>
 
                             <?php foreach ($articleCategories as $category): ?>
-                                <li><a href="?article=<?=$category['id']?>"><?= $category['name'] ?></a></li>
+                                <li><a href="?article=<?= $category['id'] ?>"><?= $category['name'] ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
@@ -87,59 +87,32 @@ use yii\helpers\Url;
                     <div class="widget widget-papular-post">
                         <h2>Популярные статьи</h2>
                         <ul>
-                            <!--LIST ITEM START-->
-                            <li>
-                                <h4>Donec neque ipsum, sodales nec trist</h4>
-                                <div class="thumb">
-                                    <a href="#"><img src="images/papular-post.jpg" alt=""></a>
-                                </div>
-                                <div class="text">
-                                    <p class="date">19 May 2012 <span>Admin</span></p>
-                                    <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                                </div>
-                            </li>
-                            <!--LIST ITEM END-->
-                            <!--LIST ITEM START-->
-                            <li>
-                                <h4>Donec neque ipsum, sodales nec trist</h4>
-                                <div class="thumb">
-                                    <a href="#"><img src="images/papular-post2.jpg" alt=""></a>
-                                </div>
-                                <div class="text">
-                                    <p class="date">19 May 2012 <span>Admin</span></p>
-                                    <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                                </div>
-                            </li>
-                            <!--LIST ITEM END-->
-                            <!--LIST ITEM START-->
-                            <li>
-                                <h4>Donec neque ipsum, sodales nec trist</h4>
-                                <div class="thumb">
-                                    <a href="#"><img src="images/papular-post3.jpg" alt=""></a>
-                                </div>
-                                <div class="text">
-                                    <p class="date">19 May 2012 <span>Admin</span></p>
-                                    <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                                </div>
-                            </li>
-                            <!--LIST ITEM END-->
-                            <!--LIST ITEM START-->
-                            <li>
-                                <h4>Donec neque ipsum, sodales nec trist</h4>
-                                <div class="thumb">
-                                    <a href="#"><img src="images/papular-post4.jpg" alt=""></a>
-                                </div>
-                                <div class="text">
-                                    <p class="date">19 May 2012 <span>Admin</span></p>
-                                    <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                                </div>
-                            </li>
-                            <!--LIST ITEM END-->
+                            <?php foreach ($popularPosts as $post): ?>
+                                <?php
+                                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['title']))]) . '-' . $post['id'];
+                                $plainBody = strip_tags($post['text']);
+                                $abrvBody = strlen($plainBody) > 50 ? substr($plainBody, 0, 50) : $plainBody;
+                                ?>
+                                <li>
+                                    <a href="<?= Url::base() . '/article/' . $link ?>">
+                                        <h4><?= $post['title'] ?></h4>
+                                    </a>
+                                    <div class="thumb">
+                                        <a href="<?= Url::base() . '/article/' . $link ?>">
+                                            <img src="images/papular-post.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="date"><?= $post['created_at'] ?></p>
+                                        <p><?= $abrvBody ?></p>
+                                    </div>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
 
                 </div>
-                <!--SIDEBAR END-->
+
             </div>
         </div>
 

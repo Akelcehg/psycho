@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Query;
 
 /**
  * This is the model class for table "article".
@@ -71,5 +72,12 @@ class Article extends \yii\db\ActiveRecord {
         return $first_img;
     }
 
-
+    public static function getPopularPosts() {
+        $query = new Query();
+        $query->select('article.*,(SELECT  COUNT(*) FROM article_comments WHERE   article.id = article_comments.article_id) as commentsCount');
+        $query->from('article');
+        $query->orderBy('commentsCount DESC');
+        $query->limit('4');
+        return $query->all();
+    }
 }

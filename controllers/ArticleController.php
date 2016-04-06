@@ -16,10 +16,12 @@ class ArticleController extends \yii\web\Controller {
         $searchModel = new ArticleSearch();
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'articleCategories' => ArticleCategories::find()->all()
+            'articleCategories' => ArticleCategories::find()->all(),
+            'popularPosts' => Article::getPopularPosts()
         ]);
 
     }
