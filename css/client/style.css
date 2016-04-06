@@ -2857,7 +2857,7 @@ blockquote {
 }
 
 .leave-reply textarea {
-    height: 300px;
+    height: 150px;
     resize: none;
 }
 

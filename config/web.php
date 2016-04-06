@@ -51,6 +51,7 @@ $config = [
             'rules' => [
 
                 'article/<title>' => 'article/view',
+
                 'video/<title>' => 'video/view',
                 'trainings/<title>' => 'trainings/view',
                 'school/<title>' => 'educational-institution/view',

@@ -10,6 +10,7 @@ use yii\helpers\Url;
 use yii\web\NotFoundHttpException;
 
 class DiscussionController extends \yii\web\Controller {
+
     public function actionIndex() {
         return $this->render('index', [
             'DiscussionCategories' => DiscussionCategories::getCategoriesWithPosts(),
@@ -58,11 +59,7 @@ class DiscussionController extends \yii\web\Controller {
             $model->discussion_category_id = $categoryModel['id'];
 
             if ($model->save())
-                /*return $this->render('new_topic', [
-                    'model' => $model,
-                    'categoryModel' => $categoryModel
-                ]);*/
-            return $this->redirect(Url::base().'/discussion');
+                return $this->redirect(Url::base() . '/discussion');
         } else {
             return $this->render('new_topic', [
                 'model' => $model,

@@ -1,3 +1,11 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\widgets\ListView;
+
+?>
+
 <div class="contant">
     <div class="container">
         <div class="row">
@@ -48,121 +56,61 @@
                     <!--COMMENTS START-->
                     <div class="comments">
                         <h2>Latest Comments</h2>
+
                         <ul>
-                            <!--COMMENTS ITEM START-->
-                            <li>
-                                <div class="thumb">
-                                    <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
-                                </div>
-                                <div class="text">
-                                    <h4><a href="#">John Doe</a></h4>
-                                    <p class="date">March 29, 2014 - 18:57PM</p>
-                                    <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur pulvinar sodales
-                                        mi eget pulvinar. Nullam vulputate lectus varius elit egestas sed semper arcu
-                                        lobortis. </p>
-                                    <a href="#" class="btn-style">Reply</a>
-                                </div>
-                                <!--CHILD COMMENT START-->
-                                <ul>
-                                    <!--COMMENTS ITEM START-->
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
-                                        </div>
-                                        <div class="text">
-                                            <h4><a href="#">John Doe</a></h4>
-                                            <p class="date">March 29, 2014 - 18:57PM</p>
-                                            <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur pulvinar
-                                                sodales mi eget pulvinar. Nullam vulputate lectus varius elit egestas
-                                                sed semper arcu lobortis. </p>
-                                            <a href="#" class="btn-style">Reply</a>
-                                        </div>
-                                    </li>
-                                    <!--COMMENTS ITEM END-->
-                                    <!--COMMENTS ITEM START-->
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
-                                        </div>
-                                        <div class="text">
-                                            <h4><a href="#">John Doe</a></h4>
-                                            <p class="date">March 29, 2014 - 18:57PM</p>
-                                            <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur pulvinar
-                                                sodales mi eget pulvinar. Nullam vulputate lectus varius elit egestas
-                                                sed semper arcu lobortis. </p>
-                                            <a href="#" class="btn-style">Reply</a>
-                                        </div>
-                                        <ul>
-                                            <!--COMMENTS ITEM START-->
-                                            <li>
-                                                <div class="thumb">
-                                                    <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h4><a href="#">John Doe</a></h4>
-                                                    <p class="date">March 29, 2014 - 18:57PM</p>
-                                                    <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur
-                                                        pulvinar sodales mi eget pulvinar. Nullam vulputate lectus
-                                                        varius elit egestas sed semper arcu lobortis. </p>
-                                                    <a href="#" class="btn-style">Reply</a>
-                                                </div>
-                                            </li>
-                                            <!--COMMENTS ITEM END-->
-                                            <!--COMMENTS ITEM START-->
-                                            <li>
-                                                <div class="thumb">
-                                                    <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h4><a href="#">John Doe</a></h4>
-                                                    <p class="date">March 29, 2014 - 18:57PM</p>
-                                                    <p>Volutpat viverra bibendum non, lacinia lacinia tortor. Curabitur
-                                                        pulvinar sodales mi eget pulvinar. Nullam vulputate lectus
-                                                        varius elit egestas sed semper arcu lobortis. </p>
-                                                    <a href="#" class="btn-style">Reply</a>
-                                                </div>
-                                            </li>
-                                            <!--COMMENTS ITEM END-->
-                                        </ul>
-                                    </li>
-                                    <!--COMMENTS ITEM END-->
-                                </ul>
-                                <!--CHILD COMMENT END-->
-                            </li>
-                            <!--COMMENTS ITEM END-->
+
+
+                            <?php $widget = ListView::begin([
+                                'dataProvider' => $articleCommentsList,
+                                'summary' => '',
+                                'itemOptions' => ['class' => 'item'],
+                                'itemView' => function ($model, $key, $index, $widget) {
+
+                                    $content = '<li><div class="thumb">
+                                                <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
+                                            </div>
+                                            <div class="text">
+                                                <h4><a href="#">John Doe</a></h4>
+                                                <p class="date">' . $model['created_at'] . '</p>
+                                                <p>' . $model['text'] . '</p>
+                                            </div>
+
+                                        </li>';
+                                    return $content;
+                                },
+                            ]) ?>
+
+                            <?php echo $widget->renderItems(); ?>
+
                         </ul>
+                        <div class="pagination default">
+                            <?= $widget->renderPager(); ?>
+                        </div>
                     </div>
-                    <!--COMMENTS END-->
+
                     <div class="leave-reply">
-                        <h2>Leave Us a Reply</h2>
-                        <form>
-                            <div class="row-fluid">
-                                <div class="col-md-4">
-                                    <input type="text" class="input-block-level" placeholder="Name">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="input-block-level" placeholder="E-mail">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="input-block-level" placeholder="Website">
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="text-area">
-                                        <textarea class="input-block-level" placeholder="Comments"></textarea>
-                                        <button class="btn-style">Submit</button>
-                                    </div>
-                                </div>
+                        <div class="col-md-12">
+                            <h2>Оставьте комментарий под статьёй</h2>
+
+
+                            <?php $form = ActiveForm::begin(); ?>
+
+                            <?= $form->field($articleComments, 'article_id')->input('hidden')->label(false) ?>
+                            <?= $form->field($articleComments, 'text')->textarea(['maxlength' => true, 'class' => 'input-block-level']) ?>
+
+                            <div class="form-group">
+                                <?= Html::submitButton('Создать', ['class' => 'btn-style']) ?>
                             </div>
-                        </form>
+
+                            <?php ActiveForm::end(); ?>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="the-best">
-            <p>The Best Websites for Free Online Courses, Certificates, Degrees, and Educational Resources</p>
-            <h2>take $10 0ff for new users</h2>
-        </div>
+
+        <div class="gap"></div>
     </div>
 
 </div>
