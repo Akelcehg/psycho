@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="col-md-9">
     <div class="profile-box editing form">
 
-        <?= $this->render('_form', [
+        <?= $this->render('_create_form', [
             'model' => $model,
             'articleCategories' => $articleCategories
         ]) ?>

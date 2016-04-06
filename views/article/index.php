@@ -65,19 +65,12 @@ use yii\helpers\Url;
 
             </div>
             <div class="col-md-4">
-                <!--SIDEBAR START-->
+
                 <div class="sidebar">
-                    <!--SEARCH WIDGET START-->
 
                     <div class="widget widget-search-course">
                         <h2><i class="fa fa-search"></i>Искать статью</h2>
 
-                        <!--<div class="styled-select">
-                            <select class="input-block-level">
-                                <option>Here is the first option</option>
-                                <option>The second option</option>
-                            </select>
-                        </div>-->
                         <p><input type="text" class="input-block-level" placeholder="Search by Keyword"></p>
                         <button class="btn-style">Search</button>
                     </div>
@@ -85,30 +78,12 @@ use yii\helpers\Url;
                         <h2>Выбрать статью по категории</h2>
                         <ul>
 
-                            <?php foreach($articleCategories as $category):?>
-                                <li><a href="#"><?=$category['name']?></a></li>
-                            <?php endforeach;?>
+                            <?php foreach ($articleCategories as $category): ?>
+                                <li><a href="?article=<?=$category['id']?>"><?= $category['name'] ?></a></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
-        <!--            <div class="widget widget-tags">
-                        <h2>Категории статей</h2>
-                        <ul>
-                            <li><a href="#">resource</a></li>
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">art</a></li>
-                            <li><a href="#">icon</a></li>
-                            <li><a href="#">Photoshop</a></li>
-                            <li><a href="#">Template</a></li>
-                            <li><a href="#">resource</a></li>
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">art</a></li>
-                            <li><a href="#">icon</a></li>
-                            <li><a href="#">Photoshop</a></li>
-                            <li><a href="#">Template</a></li>
-                        </ul>
-                    </div>-->
-                    <!--SEARCH WIDGET END-->
-                    <!--PAPULAR POST WIDGET START-->
+
                     <div class="widget widget-papular-post">
                         <h2>Популярные статьи</h2>
                         <ul>

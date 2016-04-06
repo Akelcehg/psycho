@@ -72,6 +72,11 @@ class ArticleSearch extends Article {
         $query->andFilterWhere(['like', 'source', $this->source])
             ->andFilterWhere(['like', 'text', $this->text]);
 
+        if (isset($params['article'])) {
+            $query->join("join", "article_categories_bind", "article_categories_bind.article_id=article.id");
+            $query->where("article_categories_bind.categories = " . $params['article']);
+        }
+
         return $dataProvider;
     }
 }
