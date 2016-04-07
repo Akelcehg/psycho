@@ -47,8 +47,8 @@ class Article extends \yii\db\ActiveRecord {
             'psychologist_id' => 'Psychologist ID',
             'is_owner' => 'Is Owner',
             'source' => 'Source',
-            'text' => 'Text',
-            'title' => 'Title',
+            'text' => 'Текст статьи',
+            'title' => 'Заголовок статьи',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
         ];

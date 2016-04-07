@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 ?>
-<div class="span8">
+<div class="col-md-9">
     <div class="profile-box editing">
 
         <h1><?= Html::encode($this->title) ?></h1>

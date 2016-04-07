@@ -41,9 +41,9 @@ class Videos extends \yii\db\ActiveRecord {
     public function attributeLabels() {
         return [
             'id' => 'ID',
-            'link' => 'Link',
+            'link' => 'Ссылка на видео',
             'img_link' => 'Img Link',
-            'title' => 'Title',
+            'title' => 'Заголовок видео',
             'user_id' => 'User ID',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
@@ -52,7 +52,6 @@ class Videos extends \yii\db\ActiveRecord {
 
     public function getEmbedLink($link) {
         if (strpos($link, 'youtube') !== false) {
-            //https://www.youtube.com/watch?v=Y9ebAMzt-oA
             return str_replace('watch?v=', 'embed/', $link) . '?autoplay=0';
         }
     }

@@ -10,7 +10,7 @@ $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Events', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="col-md-8">
+<div class="col-md-9">
     <div class="profile-box editing">
         <h1><?= Html::encode($this->title) ?></h1>
 

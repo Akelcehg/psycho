@@ -287,3 +287,31 @@ ul.nav.navbar-nav li a:focus {
     width: auto;
     margin: 0;
 }
+
+/***********************************************WIDGETS****************************************************************/
+.search{
+    border: solid 1px #dedede;
+    padding: 20px;
+}
+
+.widget.search h2 i {
+    font-size: 16px;
+    background-color: #FFF;
+    height: 26px;
+    width: 26px;
+    border-radius: 100%;
+    color: #000;
+    float: left;
+    text-align: center;
+    padding: 4px 0px;
+    margin: 0px 5px 0px 0px;
+}
+
+
+.widget.search input[type="text"]:focus{
+    border-color: rgba(199, 1, 46, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(199, 1, 46, 0.6);
+    outline: 0 none;
+}
+
+/***********************************************WIDGETS END************************************************************/

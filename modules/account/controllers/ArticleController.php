@@ -58,16 +58,20 @@ class ArticleController extends Controller {
     public function actionCreate() {
         $model = new Article();
 
-        $model->psychologist_id = Yii::$app->user->id;
-        $model->is_owner = 1;
-
         if ($model->load(Yii::$app->request->post()) /*&& $model->save()*/) {
-            $articleCategories = Yii::$app->request->post('categories');
             $categories = new ArticleCategories();
+            $model->psychologist_id = Yii::$app->user->id;
+            $model->is_owner = 1;
             if ($model->save()) {
+                $articleCategories = Yii::$app->request->post('categories');
                 if ($categories->saveArticleCategories($model->id, $articleCategories)) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                    'articleCategories' => ArticleCategories::find()->all()
+                ]);
             }
 
             /*if ($model->save()) {

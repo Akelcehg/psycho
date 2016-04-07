@@ -37,7 +37,8 @@ class ArticleController extends \yii\web\Controller {
             return $this->render('view', [
                 'model' => $this->findModel($articleId[1]),
                 'articleComments' => $articleModel,
-                'articleCommentsList' => ArticleComments::getArticleComments($articleId[1])
+                'articleCommentsList' => ArticleComments::getArticleComments($articleId[1]),
+                'popularPosts' => Article::getPopularPosts()
             ]);
         }
 
@@ -46,7 +47,8 @@ class ArticleController extends \yii\web\Controller {
             return $this->render('view', [
                 'model' => $this->findModel($articleId[1]),
                 'articleComments' => $articleModel,
-                'articleCommentsList' => ArticleComments::getArticleComments($articleId[1])
+                'articleCommentsList' => ArticleComments::getArticleComments($articleId[1]),
+                'popularPosts' => Article::getPopularPosts()
             ]);
         }
     }

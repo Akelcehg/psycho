@@ -6,7 +6,7 @@ use yii\helpers\Html;
 
 ?>
 
-<div class="col-md-8">
+<div class="col-md-9">
     <!--EDIT PROFILE START-->
     <div class="profile-box editing">
 

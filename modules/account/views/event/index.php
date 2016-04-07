@@ -10,7 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Events';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="col-md-8">
+<div class="col-md-9">
     <div class="profile-box editing">
         <h1><?= Html::encode($this->title) ?></h1>
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

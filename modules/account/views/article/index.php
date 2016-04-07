@@ -11,7 +11,7 @@ $this->title = 'Ваши статьи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="col-md-8">
+<div class="col-md-9">
     <div class="profile-box editing">
 
         <!--<table>

@@ -1,6 +1,8 @@
 <?php
 
+use app\components\TranslitWidget;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\widgets\ListView;
 
@@ -30,8 +32,7 @@ use yii\widgets\ListView;
                             <a class="pull-right" href="#"><i class="fa fa-comment"></i>35 Comments</a>
                         </div>
                     </div>
-                    <!--BLOG END-->
-                    <!--ADMIN START-->
+
                     <div class="admin">
                         <div class="thumb">
                             <a href="#"><img src="../images/admin.jpg" alt=""></a>
@@ -52,21 +53,21 @@ use yii\widgets\ListView;
                                 himenaeos. </p>
                         </div>
                     </div>
-                    <!--ADMIN END-->
-                    <!--COMMENTS START-->
-                    <div class="comments">
-                        <h2>Latest Comments</h2>
 
-                        <ul>
+                    <div class="col-md-8">
+                        <div class="comments">
+                            <h2>Latest Comments</h2>
+
+                            <ul>
 
 
-                            <?php $widget = ListView::begin([
-                                'dataProvider' => $articleCommentsList,
-                                'summary' => '',
-                                'itemOptions' => ['class' => 'item'],
-                                'itemView' => function ($model, $key, $index, $widget) {
+                                <?php $widget = ListView::begin([
+                                    'dataProvider' => $articleCommentsList,
+                                    'summary' => '',
+                                    'itemOptions' => ['class' => 'item'],
+                                    'itemView' => function ($model, $key, $index, $widget) {
 
-                                    $content = '<li><div class="thumb">
+                                        $content = '<li><div class="thumb">
                                                 <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
                                             </div>
                                             <div class="text">
@@ -76,15 +77,46 @@ use yii\widgets\ListView;
                                             </div>
 
                                         </li>';
-                                    return $content;
-                                },
-                            ]) ?>
+                                        return $content;
+                                    },
+                                ]) ?>
 
-                            <?php echo $widget->renderItems(); ?>
+                                <?php echo $widget->renderItems(); ?>
 
-                        </ul>
-                        <div class="pagination default">
-                            <?= $widget->renderPager(); ?>
+                            </ul>
+                            <div class="pagination default">
+                                <?= $widget->renderPager(); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="widget widget-papular-post">
+                            <h2>Популярные статьи</h2>
+                            <ul>
+                                <?php foreach ($popularPosts as $post): ?>
+                                    <?php
+                                    $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['title']))]) . '-' . $post['id'];
+                                    $plainBody = strip_tags($post['text']);
+                                    $abrvBody = strlen($plainBody) > 50 ? substr($plainBody, 0, 50) . '...' : $plainBody;
+                                    ?>
+                                    <li style="border-bottom: solid 2px #C7012E;">
+                                        <a href="<?= Url::base() . '/article/' . $link ?>">
+                                            <h4><?= $post['title'] ?></h4>
+                                        </a>
+                                        <!--<div class="thumb">
+                                        <a href="<? /*= Url::base() . '/article/' . $link */ ?>">
+                                            <img src="images/papular-post.jpg" alt="">
+                                        </a>
+                                    </div>-->
+                                        <div class="text">
+                                            <p>
+                                                <i class="fa fa-calendar"></i> <?= Yii::t('app', '{0,date}', strtotime($post['created_at'])) ?>
+                                            </p>
+                                            <p style="margin-top: 10px;"><?= $abrvBody ?></p>
+                                        </div>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
                     </div>
 

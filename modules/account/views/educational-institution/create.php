@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 $this->registerJsFile('https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete');
 
 ?>
-<div class="col-md-8">
+<div class="col-md-9">
     <div class="profile-box editing form">
 
         <h1><?= Html::encode($this->title) ?></h1>

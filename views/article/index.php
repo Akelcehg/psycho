@@ -44,12 +44,12 @@ use yii\helpers\Url;
                             </div >';
 
                             $content .= '<div class="text">' . $abrvBody . '
-                                <a href="' . Url::base() . '/article/view/' . $link . '" class="btn-style">Подробнее</a>
+                                <a href="' . Url::base() . '/article/' . $link . '" class="btn-style">Читать</a>
                             </div>
                             <div class="blog-comments">
                                 <a href="#"><i class="fa fa-user"></i>' . Yii::$app->user->identity['email'] . '</a>
                                 <a href="#"><i class="fa fa-calendar"></i>' . Yii::t('app', '{0,date}', strtotime($model['created_at'])) . '</a>
-                                <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a>
+                                <!-- <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a> -->
                             </div>
                         </div>';
                             return $content;
@@ -68,11 +68,11 @@ use yii\helpers\Url;
 
                 <div class="sidebar">
 
-                    <div class="widget widget-search-course">
+                    <div class="widget search">
                         <h2><i class="fa fa-search"></i>Искать статью</h2>
 
-                        <p><input type="text" class="input-block-level" placeholder="Search by Keyword"></p>
-                        <button class="btn-style">Search</button>
+                        <p><input type="text" class="form-control" placeholder="Введите слова для поиска"></p>
+                        <button class="btn-style">Искать</button>
                     </div>
                     <div class="widget widget-course-categories">
                         <h2>Выбрать статью по категории</h2>
@@ -91,7 +91,7 @@ use yii\helpers\Url;
                                 <?php
                                 $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['title']))]) . '-' . $post['id'];
                                 $plainBody = strip_tags($post['text']);
-                                $abrvBody = strlen($plainBody) > 50 ? substr($plainBody, 0, 50) : $plainBody;
+                                $abrvBody = strlen($plainBody) > 50 ? substr($plainBody, 0, 50).'...' : $plainBody;
                                 ?>
                                 <li style="border-bottom: solid 2px #C7012E;">
                                     <a href="<?= Url::base() . '/article/' . $link ?>">
@@ -103,7 +103,7 @@ use yii\helpers\Url;
                                         </a>
                                     </div>-->
                                     <div class="text">
-                                        <p><i class="fa fa-calendar"></i> <?= $post['created_at'] ?></p>
+                                        <p><i class="fa fa-calendar"></i> <?= Yii::t('app', '{0,date}', strtotime($post['created_at'])) ?></p>
                                         <p style="margin-top: 10px;"><?= $abrvBody ?></p>
                                     </div>
                                 </li>

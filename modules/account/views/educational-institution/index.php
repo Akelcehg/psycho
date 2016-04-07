@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;*/
 
 </div>-->
 
-<div class="col-md-8">
+<div class="col-md-9">
     <div class="profile-box editing">
 
         <?php $widget = GridView::begin([
