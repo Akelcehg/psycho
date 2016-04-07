@@ -22,6 +22,7 @@ $this->registerJsFile('https://maps.googleapis.com/maps/api/js?language=ru&key=A
 
         <?= $this->render('_form', [
             'model' => $model,
+            'imagesModel' => $imagesModel
         ]) ?>
 
     </div>

@@ -13,16 +13,11 @@ use yii\widgets\ActiveForm;
 
 <div class="educational-institution-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+
+    <?= $form->field($imagesModel, 'image_file')->fileInput()->label('Выберите фото') ?>
 
     <div class="grid grid_6">
-
-        <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
-            <h4 class="white nicdark_margin20">INFORMATION</h4>
-            <i class="icon-globe-1 nicdark_iconbg right medium yellow"></i>
-        </div>
-
-        <div class="nicdark_space20"></div>
 
         <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 

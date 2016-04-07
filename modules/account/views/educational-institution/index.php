@@ -65,7 +65,8 @@ $this->params['breadcrumbs'][] = $this->title;*/
                         'delete' => function ($url, $model) {
                             return Html::a(
                                 '<span class="fa fa-trash-o"></span>',
-                                $url);
+                                $url, ['data-confirm' => "Are you sure you want to delete this item?",
+                                'data-method' => 'POST']);
                         },
                         /*'link' => function ($url,$model,$key) {
                             return Html::a('Действие', $url);

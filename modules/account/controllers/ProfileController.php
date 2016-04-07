@@ -75,6 +75,13 @@ class ProfileController extends Controller
         else throw new NotFoundHttpException('The requested page does not exist.');
     }
 
+    public function actionUpdatePhoto() {
+        $imagesModel = new Image();
+        $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
+        if ($imagesModel->upload()) return $this->redirect('index');
+        else throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
     protected function findModel($id) {
         if (($model = Profile::findOne(['user_id' => $id])) !== null) {
             return $model;
@@ -82,15 +89,4 @@ class ProfileController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-
-    public function actionUpdatePhoto() {
-        $imagesModel = new Image();
-
-        //var_dump($imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file'));
-        $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
-
-        if ($imagesModel->upload()) return $this->redirect('index');
-        else throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
 }

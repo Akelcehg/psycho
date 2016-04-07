@@ -25,8 +25,7 @@ use Yii;
  * @property string $updated_at
  * @property string $created_at
  */
-class EducationalInstitution extends \yii\db\ActiveRecord
-{
+class EducationalInstitution extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
@@ -70,5 +69,9 @@ class EducationalInstitution extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
         ];
+    }
+
+    public static function getSchoolImage($schoolId) {
+
     }
 }

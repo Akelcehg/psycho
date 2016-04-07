@@ -10,13 +10,11 @@ use app\models\EducationalInstitution;
 /**
  * EducationalInstitutionSearch represents the model behind the search form about `app\models\EducationalInstitution`.
  */
-class EducationalInstitutionSearch extends EducationalInstitution
-{
+class EducationalInstitutionSearch extends EducationalInstitution {
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id', 'city_id', 'year'], 'integer'],
             [['name', 'description', 'status', 'accreditation', 'document_end', 'qualification_levels', 'address', 'phone', 'site', 'map_coordinates', 'training_program', 'required_documents', 'updated_at', 'created_at'], 'safe'],
@@ -26,8 +24,7 @@ class EducationalInstitutionSearch extends EducationalInstitution
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,8 +36,7 @@ class EducationalInstitutionSearch extends EducationalInstitution
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = EducationalInstitution::find();
 
         $dataProvider = new ActiveDataProvider([
@@ -48,6 +44,11 @@ class EducationalInstitutionSearch extends EducationalInstitution
             'pagination' => [
                 'pageSize' => 6,
             ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ]
+            ]
         ]);
 
         $this->load($params);

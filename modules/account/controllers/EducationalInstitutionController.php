@@ -2,20 +2,20 @@
 
 namespace app\modules\account\controllers;
 
+use app\models\Image;
 use Yii;
 use app\models\EducationalInstitution;
 use app\models\EducationalInstitutionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * EducationalInstitutionController implements the CRUD actions for EducationalInstitution model.
  */
-class EducationalInstitutionController extends Controller
-{
-    public function behaviors()
-    {
+class EducationalInstitutionController extends Controller {
+    public function behaviors() {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -30,8 +30,7 @@ class EducationalInstitutionController extends Controller
      * Lists all EducationalInstitution models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new EducationalInstitutionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -46,8 +45,7 @@ class EducationalInstitutionController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -58,15 +56,25 @@ class EducationalInstitutionController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new EducationalInstitution();
+        $imagesModel = new Image();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+                $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
+                if ($imagesModel->image_file) $imagesModel->saveSchoolImage($model->id, 400, 200);
                 return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                    'imagesModel' => $imagesModel
+                ]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'imagesModel' => $imagesModel
             ]);
         }
     }
@@ -77,8 +85,7 @@ class EducationalInstitutionController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -96,8 +103,7 @@ class EducationalInstitutionController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -110,8 +116,7 @@ class EducationalInstitutionController extends Controller
      * @return EducationalInstitution the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = EducationalInstitution::findOne($id)) !== null) {
             return $model;
         } else {
