@@ -77,10 +77,6 @@ class Events extends \yii\db\ActiveRecord {
         if ($amount) {
             $query->limit($amount);
         }
-        //var_dump($query->all());
         return $query->all();
-        /*return $dataProvider = new ActiveDataProvider([
-            'query' => $query
-        ]);*/
     }
 }

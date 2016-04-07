@@ -1,4 +1,8 @@
-<?php echo $this->render('//partials/slider'); ?>
+<?php use app\components\TranslitWidget;
+use app\models\Image;
+use yii\helpers\Url;
+
+echo $this->render('//partials/slider'); ?>
 
 <section>
     <div class="container">
@@ -129,102 +133,40 @@
         <!--SECTION HEADER END-->
 
         <div class="row">
-            <div class="col-md-3">
-                <div class="course">
-                    <div class="thumb">
-                        <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
-                        <div class="price"><span>$</span>63</div>
-                    </div>
-                    <div class="text">
-                        <div class="header">
-                            <h4>Music</h4>
-                            <div class="rating">
-                                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+
+            <?php foreach ($eventsList as $event): ?>
+                <?php
+
+                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($event['name']))]) . '-' . $event['id'];
+                $abrvBody = strlen($event['about']) > 50 ? substr($event['about'], 0, 50) . '...' : $event['about'];
+
+                ?>
+                <div class="col-md-3">
+                    <div class="course">
+                        <div class="thumb">
+                            <a href="<?= Url::base() . '/trainings/' . $link ?>"><img
+                                    src="<?= Image::getEventPhoto($event['id']) ?>" alt=""></a>
+                            <div class="price"><span>$</span><?= $event['price'] ?></div>
+                        </div>
+                        <div class="text">
+                            <div class="header">
+                                <h4><?= $event['name'] ?></h4>
+                                <!--<div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>-->
                             </div>
-                        </div>
-                        <div class="course-name">
-                            <p>How to play the guitar</p>
-                            <span>$800</span>
-                        </div>
-                        <div class="course-detail-btn">
-                            <a href="#">Subscribe</a>
-                            <a href="#">Detail</a>
+                            <div class="course-name">
+                                <p><?= $abrvBody ?></p>
+                            </div>
+                            <div class="course-detail-btn">
+                                <a href="#">Subscribe</a>
+                                <a href="<?= Url::base() . '/trainings/' . $link ?>">Подробнее</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="course">
-                    <div class="thumb">
-                        <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
-                        <div class="price"><span>$</span>63</div>
-                    </div>
-                    <div class="text">
-                        <div class="header">
-                            <h4>Music</h4>
-                            <div class="rating">
-                                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                            </div>
-                        </div>
-                        <div class="course-name">
-                            <p>How to play the guitar</p>
-                            <span>$800</span>
-                        </div>
-                        <div class="course-detail-btn">
-                            <a href="#">Subscribe</a>
-                            <a href="#">Detail</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="course">
-                    <div class="thumb">
-                        <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
-                        <div class="price"><span>$</span>63</div>
-                    </div>
-                    <div class="text">
-                        <div class="header">
-                            <h4>Music</h4>
-                            <div class="rating">
-                                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                            </div>
-                        </div>
-                        <div class="course-name">
-                            <p>How to play the guitar</p>
-                            <span>$800</span>
-                        </div>
-                        <div class="course-detail-btn">
-                            <a href="#">Subscribe</a>
-                            <a href="#">Detail</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="course">
-                    <div class="thumb">
-                        <a href="#"><img src="images/trainings/training1.jpg" alt=""></a>
-                        <div class="price"><span>$</span>63</div>
-                    </div>
-                    <div class="text">
-                        <div class="header">
-                            <h4>Music</h4>
-                            <div class="rating">
-                                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                            </div>
-                        </div>
-                        <div class="course-name">
-                            <p>How to play the guitar</p>
-                            <span>$800</span>
-                        </div>
-                        <div class="course-detail-btn">
-                            <a href="#">Subscribe</a>
-                            <a href="#">Detail</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
+
         </div>
 
 
@@ -237,76 +179,54 @@
     <div class="container post-contant">
         <!--SECTION HEADER START-->
         <div class="sec-header">
-            <h2>Popular Posts</h2>
-            <p>Latest From Blog</p>
+            <h2>Новые статьи</h2>
+            <p>Тут показывать новые статьи</p>
             <span></span>
             <span></span>
             <span></span>
         </div>
         <!--SECTION HEADER END-->
         <div class="row">
-            <div class="col-md-6">
-                <div class="post">
-                    <div class="thumb"><img src="images/posts/post.png" alt=""></div>
-                    <!--POST HEADER START-->
-                    <div class="header">
-                        <!--POST DATE START-->
-                        <div class="post-date">
-                            <p>May<span>11</span>2014</p>
+
+            <?php foreach ($articlesList as $article): ?>
+                <?php
+
+                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($article['title']))]) . '-' . $article['id'];
+                $plainBody = strip_tags($article['text']);
+                $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
+
+
+                ?>
+                <div class="col-md-6">
+                    <div class="post">
+                        <div class="thumb"><img src="images/posts/post.png" alt=""></div>
+
+                        <div class="header">
+
+                            <div class="post-date">
+                                <p><?= $article['created_at'] ?></p>
+                            </div>
+
+                            <!-- <div class="icons">
+                                 <ul>
+                                     <li><a href="#"><i class="fa fa-heart-o"></i></a><span class="notification">25</span>
+                                     </li>
+                                     <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                     <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
+                                 </ul>
+                             </div>-->
                         </div>
-                        <!--POST DATE START-->
-                        <div class="icons">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a><span class="notification">25</span>
-                                </li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
-                            </ul>
+                        <!--POST HEADER END-->
+                        <div class="text">
+                            <h2><?= $article['title'] ?></h2>
+                            <!--<h5>Writer David / Poetry course</h5>-->
+                            <p><?= $abrvBody ?></p>
+                            <a href="<?=Url::base() . '/article/' . $link?>" class="more">Читать статью</a>
                         </div>
-                    </div>
-                    <!--POST HEADER END-->
-                    <div class="text">
-                        <h2>A Post With Everything In It</h2>
-                        <h5>Writer David / Poetry course</h5>
-                        <p>Vel ut quas utroque placerat, kasd utinam epicuri at est, hendrerit argumentum dissentias ei
-                            nec. Vel ut quas utroque placerat, kasd utinam epicuri at est, hendrerit argumentum
-                            dissentias ei nec. </p>
-                        <a href="#" class="more">Read More</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="post">
-                    <div class="thumb">
-                        <img src="images/posts/post.png" alt="">
-                    </div>
-                    <!--POST HEADER START-->
-                    <div class="header">
-                        <!--POST DATE START-->
-                        <div class="post-date">
-                            <p>May<span>11</span>2014</p>
-                        </div>
-                        <!--POST DATE START-->
-                        <div class="icons">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a><span class="notification">25</span>
-                                </li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--POST HEADER END-->
-                    <div class="text">
-                        <h2>A Post With Everything In It</h2>
-                        <h5>Writer David / Poetry course</h5>
-                        <p>Vel ut quas utroque placerat, kasd utinam epicuri at est, hendrerit argumentum dissentias ei
-                            nec. Vel ut quas utroque placerat, kasd utinam epicuri at est, hendrerit argumentum
-                            dissentias ei nec. </p>
-                        <a href="#" class="more">Read More</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
+
         </div>
     </div>
 </section>

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Article;
 use app\models\Events;
 use app\models\Image;
 use app\models\PsychologistTop;
@@ -56,10 +57,10 @@ class SiteController extends Controller {
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
-        $eventsList = new Events();
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
-            'eventsList' => $eventsList->getEvents(4)
+            'eventsList' => Events::find()->limit('4')->orderBy('id DESC')->all(),
+            'articlesList' => Article::find()->limit('2')->orderBy('id DESC')->all(),
         ]);
     }
 
