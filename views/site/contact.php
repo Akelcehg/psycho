@@ -10,7 +10,7 @@
 <div class="contant">
     <div class="container">
         <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
                 <div class="faq">
                     <h2>why choose us</h2>
 
@@ -128,18 +128,18 @@
             </div>
             <!--ADMIN END-->
             <div class="row">
-                <div class="span8">
+                <div class="col-md-8">
                     <div class="leave-reply">
                         <h2>Leave Us a Reply</h2>
                         <form>
                             <div class="row-fluid">
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" placeholder="Name" class="input-block-level">
                                 </div>
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" placeholder="E-mail" class="input-block-level">
                                 </div>
-                                <div class="span4">
+                                <div class="col-md-4">
                                     <input type="text" placeholder="Website" class="input-block-level">
                                 </div>
                                 <div class="text-area">
@@ -150,7 +150,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="campaign">
                         <h4>Campaign Launched on 25 January, 2014 at LONDON, UK</h4>
                         <p>share THIS CAMPAIGN</p>
@@ -167,11 +167,11 @@
         </div>
 
     </div>
-    <!--FOLLOW US SECTION START-->
+    <div class="gap"></div>
     <section class="follow-us">
         <div class="container">
             <div class="row">
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="follow">
                         <a href="#">
                             <i class="fa fa-facebook"></i>
@@ -182,7 +182,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="follow">
                         <a href="#">
                             <i class="fa fa-google"></i>
@@ -193,7 +193,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                     <div class="follow">
                         <a href="#">
                             <i class="fa fa-linkedin"></i>
