@@ -144,13 +144,22 @@ class Image extends Model {
         else return $this->base_image_path . 'profile_photos/blank.jpg';
     }
 
-    public static function getSchoolPhoto($schoolId){
-        $directory = 'images/school_photos/' . $schoolId. '/';
+    public static function getSchoolPhoto($schoolId) {
+        $directory = 'images/school_photos/' . $schoolId . '/';
 
         $logo = glob($directory . "main.*");
 
         if ($logo) return Url::base() . '/' . $logo[0];
         else return Url::base() . '/images/school-default.jpg';
+    }
+
+    public static function getEventPhoto($eventId) {
+        $directory = 'images/event_photos/' . $eventId . '/';
+
+        $logo = glob($directory . "main.*");
+
+        if ($logo) return Url::base() . '/' . $logo[0];
+        else return Url::base() . '/images/event-gallery1.png';
     }
 
 
@@ -213,10 +222,19 @@ class Image extends Model {
     }
 
     public function pasteImageOnTransparentBg($background, $image, $originalWidth, $originalHeight) {
-        //imagecopymerge($background, $image, 400 - $originalWidth, 0, 0, 0, $originalWidth, $originalHeight, 100);
         imagecopymerge($background, $image, 0, 0, 0, 0, $originalWidth, $originalHeight, 100);
         imagealphablending($background, true);
     }
+
+    public function saveEventImage($eventId, $width, $height) {
+        $directory = $this->base_image_path . 'event_photos/' . $eventId . '/';
+        $name = 'main';
+        if (!file_exists($this->base_image_path . 'event_photos')) mkdir('images/event_photos');
+        if (!file_exists($directory)) mkdir($directory);
+        $image = $this->createImage($directory, $name);
+        return $this->saveResized($image, $width, $height, $directory, $name);
+    }
+
 
     public function saveSchoolImage($schoolId, $width, $height) {
         $directory = $this->base_image_path . 'school_photos/' . $schoolId . '/';

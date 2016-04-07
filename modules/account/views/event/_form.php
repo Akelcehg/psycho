@@ -12,7 +12,9 @@ use \app\models\EventType;
 
 <div class="evsents-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+
+    <?= $form->field($imagesModel, 'image_file')->fileInput()->label('Выберите фото') ?>
 
     <?= $form->field($model, 'type')->dropDownList(
         ArrayHelper::map(EventType::find()->all(), 'id', 'name')

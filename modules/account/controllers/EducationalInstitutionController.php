@@ -87,12 +87,22 @@ class EducationalInstitutionController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $imagesModel = new Image();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+                $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
+                if ($imagesModel->image_file) $imagesModel->saveSchoolImage($model->id, 400, 200);
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                    'imagesModel' => $imagesModel
+                ]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'imagesModel' => $imagesModel
             ]);
         }
     }

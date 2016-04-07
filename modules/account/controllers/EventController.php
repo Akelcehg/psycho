@@ -2,20 +2,20 @@
 
 namespace app\modules\account\controllers;
 
+use app\models\Image;
 use Yii;
 use app\models\Events;
 use app\models\EventSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * EventController implements the CRUD actions for Events model.
  */
-class EventController extends Controller
-{
-    public function behaviors()
-    {
+class EventController extends Controller {
+    public function behaviors() {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -30,8 +30,7 @@ class EventController extends Controller
      * Lists all Events models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new EventSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -46,8 +45,7 @@ class EventController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -58,15 +56,24 @@ class EventController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new Events();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $this->redirect(['view', 'id' => $model->id]);
+        $imagesModel = new Image();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+                $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
+                if ($imagesModel->image_file) $imagesModel->saveEventImage($model->id, 550, 330);
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                    'imagesModel' => $imagesModel
+                ]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'imagesModel' => $imagesModel
             ]);
         }
     }
@@ -77,15 +84,24 @@ class EventController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $imagesModel = new Image();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+                $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
+                if ($imagesModel->image_file) $imagesModel->saveEventImage($model->id, 550, 330);
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                    'imagesModel' => $imagesModel
+                ]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'imagesModel' => $imagesModel
             ]);
         }
     }
@@ -96,8 +112,7 @@ class EventController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -110,8 +125,7 @@ class EventController extends Controller
      * @return Events the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = Events::findOne($id)) !== null) {
             return $model;
         } else {

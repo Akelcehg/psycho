@@ -1,5 +1,6 @@
 <?php
 use app\components\TranslitWidget;
+use app\models\Image;
 use yii\widgets\ListView;
 
 ?>
@@ -21,12 +22,12 @@ use yii\widgets\ListView;
                 'itemView' => function ($model, $key, $index, $widget) {
 
                     $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['name']))]) . '-' . $model['id'];
-                    $abrvBody = strlen($model['about']) > 200 ? substr($model['about'], 0, 200).'...' : $model['about'];
+                    $abrvBody = strlen($model['about']) > 200 ? substr($model['about'], 0, 200) . '...' : $model['about'];
                     $content = '<div class="row events">
                 <div class="col-md-6">
                     <div class="thumb">
                         <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '">
-                            <img src="images/events1.jpg" alt="">
+                            <img src="' . Image::getEventPhoto($model['id']) . '" alt="">
                         </a>
                     </div>
                 </div>
