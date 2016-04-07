@@ -1,3 +1,9 @@
+<?php
+
+use app\models\Image;
+
+?>
+
 <div class="page-heading">
     <div class="container">
         <h2>Event Detail</h2>
@@ -13,7 +19,7 @@
             <div class="row events">
                 <div class="col-md-6">
                     <div class="thumb">
-                        <a href="#"><img src="../images/events1.jpg" alt=""></a>
+                        <a href="#"><img src="<?= Image::getEventPhoto($training['id']) ?>" alt=""></a>
                     </div>
                 </div>
                 <!--EVENT CONTANT START-->
@@ -130,8 +136,9 @@
                     </div>
                 </div>
             </div>
-            <!--EVENT END-->
+            <div class="gap"></div>
         </div>
+
 
     </div>
 </div>
