@@ -4,29 +4,34 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\QuizSearch */
+/* @var $searchModel app\models\VideosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Quizzes';
+$this->title = Yii::t('app', 'Videos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="quiz-index">
+<div class="videos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Quiz', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create Videos'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        //'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'name',
-            'description',
+/*            'id',*/
+            'title',
+            'link',
+            'img_link',
+            'user_id',
+            // 'created_at',
+            // 'updated_at',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

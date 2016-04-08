@@ -2,20 +2,20 @@
 
 namespace app\modules\admin\controllers;
 
-use app\models\QuizQuestions;
-use app\models\QuizResults;
 use Yii;
-use app\models\Quiz;
-use app\models\QuizSearch;
+use app\models\EventType;
+use app\models\EventTypeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * QuizController implements the CRUD actions for Quiz model.
+ * EventTypeController implements the CRUD actions for EventType model.
  */
-class QuizController extends Controller {
-    public function behaviors() {
+class EventTypeController extends Controller
+{
+    public function behaviors()
+    {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -27,11 +27,12 @@ class QuizController extends Controller {
     }
 
     /**
-     * Lists all Quiz models.
+     * Lists all EventType models.
      * @return mixed
      */
-    public function actionIndex() {
-        $searchModel = new QuizSearch();
+    public function actionIndex()
+    {
+        $searchModel = new EventTypeSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -41,37 +42,28 @@ class QuizController extends Controller {
     }
 
     /**
-     * Displays a single Quiz model.
+     * Displays a single EventType model.
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id) {
+    public function actionView($id)
+    {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Quiz model.
+     * Creates a new EventType model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate() {
-        $model = new Quiz();
-        $quizQuestion = new QuizQuestions();
-        $quizResults = new QuizResults();
+    public function actionCreate()
+    {
+        $model = new EventType();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //if ($model->load(Yii::$app->request->post())) {
-
-            //var_dump(Yii::$app->request->post('question'));
-            if ($quizQuestion->saveQuizQuestions(Yii::$app->request->post('question'), $model['id'])) {
-                if ($quizResults->saveQuizResults($model['id'], Yii::$app->request->post('results'))) {
-                    return $this->redirect(['view', 'id' => $model->id]);
-                }
-            }
-            //return $this->redirect(['view', 'id' => $model->id]);
-
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -80,13 +72,13 @@ class QuizController extends Controller {
     }
 
     /**
-     * Updates an existing Quiz model.
+     * Updates an existing EventType model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      */
-    public
-    function actionUpdate($id) {
+    public function actionUpdate($id)
+    {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -99,29 +91,28 @@ class QuizController extends Controller {
     }
 
     /**
-     * Deletes an existing Quiz model.
+     * Deletes an existing EventType model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      */
-    public
-    function actionDelete($id) {
+    public function actionDelete($id)
+    {
         $this->findModel($id)->delete();
-        QuizResults::deleteAll(['quiz_id'=>$id]);
-        QuizQuestions::deleteAll(['quiz_id'=>$id]);
+
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Quiz model based on its primary key value.
+     * Finds the EventType model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Quiz the loaded model
+     * @return EventType the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected
-    function findModel($id) {
-        if (($model = Quiz::findOne($id)) !== null) {
+    protected function findModel($id)
+    {
+        if (($model = EventType::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

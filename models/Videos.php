@@ -28,10 +28,10 @@ class Videos extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['link', 'img_link', 'title', 'user_id'], 'required'],
+            [['link', 'description', 'img_link', 'title', 'user_id'], 'required'],
             [['user_id'], 'integer'],
             [['updated_at', 'created_at'], 'safe'],
-            [['link', 'img_link'], 'string', 'max' => 255]
+            [['link', 'img_link', 'description'], 'string', 'max' => 255]
         ];
     }
 
@@ -44,6 +44,7 @@ class Videos extends \yii\db\ActiveRecord {
             'link' => 'Ссылка на видео',
             'img_link' => 'Img Link',
             'title' => 'Заголовок видео',
+            'description' => 'Описание видео',
             'user_id' => 'User ID',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',

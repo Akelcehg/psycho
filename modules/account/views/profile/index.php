@@ -1,5 +1,7 @@
 <?php
 
+use app\models\City;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 use yii\helpers\Html;
@@ -89,18 +91,15 @@ use yii\helpers\Html;
                     'женский' => 'женский'
                 ])->label(false);
                 ?>
-
-                <!--<select class="input-block-level">
-                    <option>Male</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                </select>-->
             </li>
 
-            <!--<li>
-                <label>Email</label>
-                <input type="text" class="input-block-level" placeholder="Enter your E-mail ID">
-            </li>-->
+            <li>
+                <?= $form->field($profileModel, 'city_id')->dropDownList(
+                    ArrayHelper::map(City::find()->where([
+                        'region_id' => '10373'
+                    ])->orderBy('name')->all(), 'city_id', 'name'),
+                    ['prompt' => 'Выберите город']) ?>
+            </li>
 
             <!--<li class="fw">
                 <button class="btn-style">Update</button>

@@ -303,6 +303,18 @@ use yii\helpers\Url;
                     </ul>
                 </li>
                 <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i> Видео<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="<?= Url::base() ?>/admin/videos">Список видео</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+                <li>
                     <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 <li>

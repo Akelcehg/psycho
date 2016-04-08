@@ -14,35 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="col-md-9">
     <div class="profile-box editing">
 
-        <!--<table>
-            <thead>
-            <tr>
-                <td>Student</td>
-                <td>Part</td>
-                <td>Score</td>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><a href="#">How To Be A Great Photographer</a></td>
-                <td>1</td>
-                <td>5/25</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>4</td>
-                <td>Pending</td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr>
-                <td>Total</td>
-                <td>&nbsp;</td>
-                <td>7.5/50</td>
-            </tr>
-            </tfoot>
-        </table>-->
-
         <h1><?= Html::encode($this->title) ?></h1>
 
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

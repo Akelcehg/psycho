@@ -17,7 +17,7 @@ class ProfileSearch extends Profile {
     public function rules() {
         return [
             [['id', 'user_id', 'price', 'has_diplom'], 'integer'],
-            [['firstname', 'lastname', 'secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
+            [['firstname', 'lastname', 'gender','secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
         ];
     }
 
@@ -64,7 +64,8 @@ class ProfileSearch extends Profile {
             ->andFilterWhere(['like', 'lastname', $this->lastname])
             ->andFilterWhere(['like', 'secondname', $this->secondname])
             ->andFilterWhere(['like', 'education', $this->education])
-            ->andFilterWhere(['like', 'experience', $this->experience]);
+            ->andFilterWhere(['like', 'experience', $this->experience])
+            ->andFilterWhere(['like', 'gender', $this->gender]);
 
         return $dataProvider;
     }

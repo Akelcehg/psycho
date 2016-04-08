@@ -9,14 +9,11 @@ use app\models\PsychologistTop;
 use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
-use yii\helpers\Html;
-use yii\helpers\Json;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Profile;
-use yii\web\UploadedFile;
 
 class SiteController extends Controller {
 

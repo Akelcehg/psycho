@@ -17,6 +17,7 @@ class m160130_170226_profile extends Migration {
             'gender' => 'enum("мужской","женский")',
             'education' => Schema::TYPE_TEXT,
             'experience' => Schema::TYPE_TEXT,
+            'city_id' => Schema::TYPE_INTEGER,
             'price' => Schema::TYPE_INTEGER,
             'has_diplom' => Schema::TYPE_BOOLEAN,
             'is_active' => Schema::TYPE_BOOLEAN,

@@ -2,20 +2,20 @@
 
 namespace app\modules\admin\controllers;
 
-use app\models\QuizQuestions;
-use app\models\QuizResults;
 use Yii;
-use app\models\Quiz;
-use app\models\QuizSearch;
+use app\models\Videos;
+use app\models\VideosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * QuizController implements the CRUD actions for Quiz model.
+ * VideosController implements the CRUD actions for Videos model.
  */
-class QuizController extends Controller {
-    public function behaviors() {
+class VideosController extends Controller
+{
+    public function behaviors()
+    {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -27,11 +27,12 @@ class QuizController extends Controller {
     }
 
     /**
-     * Lists all Quiz models.
+     * Lists all Videos models.
      * @return mixed
      */
-    public function actionIndex() {
-        $searchModel = new QuizSearch();
+    public function actionIndex()
+    {
+        $searchModel = new VideosSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -41,37 +42,28 @@ class QuizController extends Controller {
     }
 
     /**
-     * Displays a single Quiz model.
+     * Displays a single Videos model.
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id) {
+    public function actionView($id)
+    {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Quiz model.
+     * Creates a new Videos model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate() {
-        $model = new Quiz();
-        $quizQuestion = new QuizQuestions();
-        $quizResults = new QuizResults();
+    public function actionCreate()
+    {
+        $model = new Videos();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //if ($model->load(Yii::$app->request->post())) {
-
-            //var_dump(Yii::$app->request->post('question'));
-            if ($quizQuestion->saveQuizQuestions(Yii::$app->request->post('question'), $model['id'])) {
-                if ($quizResults->saveQuizResults($model['id'], Yii::$app->request->post('results'))) {
-                    return $this->redirect(['view', 'id' => $model->id]);
-                }
-            }
-            //return $this->redirect(['view', 'id' => $model->id]);
-
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -80,13 +72,13 @@ class QuizController extends Controller {
     }
 
     /**
-     * Updates an existing Quiz model.
+     * Updates an existing Videos model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      */
-    public
-    function actionUpdate($id) {
+    public function actionUpdate($id)
+    {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -99,29 +91,28 @@ class QuizController extends Controller {
     }
 
     /**
-     * Deletes an existing Quiz model.
+     * Deletes an existing Videos model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      */
-    public
-    function actionDelete($id) {
+    public function actionDelete($id)
+    {
         $this->findModel($id)->delete();
-        QuizResults::deleteAll(['quiz_id'=>$id]);
-        QuizQuestions::deleteAll(['quiz_id'=>$id]);
+
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Quiz model based on its primary key value.
+     * Finds the Videos model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Quiz the loaded model
+     * @return Videos the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected
-    function findModel($id) {
-        if (($model = Quiz::findOne($id)) !== null) {
+    protected function findModel($id)
+    {
+        if (($model = Videos::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

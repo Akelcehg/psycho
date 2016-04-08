@@ -31,8 +31,6 @@ use yii\widgets\ActiveForm;
             <i class="icon-globe-1 nicdark_iconbg right medium yellow"></i>
         </div>
 
-        <div class="nicdark_space20"></div>
-
         <?= $form->field($model, 'city_id')->dropDownList(
             ArrayHelper::map(City::find()->where([
                 'region_id' => '10373'
@@ -67,25 +65,6 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'required_documents')->textarea(['rows' => 6]) ?>
 
     </div>
-    <!--<div class="grid grid_4">
-
-        <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
-            <h4 class="white nicdark_margin20">INFORMATION</h4>
-            <i class="icon-globe-1 nicdark_iconbg right medium yellow"></i>
-        </div>
-        <div class="nicdark_space20"></div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-
-
-    </div>-->
 
 
     <div class="form-group">

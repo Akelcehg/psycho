@@ -72,7 +72,7 @@ class Image extends Model {
                 $new_width, $new_height, $old_width, $old_height);
 
             ob_start();
-            imagejpeg($new, NULL, 90);
+            imagejpeg($new, NULL, 100);
             $data = ob_get_clean();
 
             /*     imagedestroy($image);
@@ -94,7 +94,7 @@ class Image extends Model {
                 $new_width, $new_height, $old_width, $old_height);
 
             ob_start();
-            imagejpeg($new, NULL, 90);
+            imagejpeg($new, NULL, 100);
             $data = ob_get_clean();
 
             imagedestroy($image);
@@ -107,18 +107,9 @@ class Image extends Model {
                 $directory . 'logo_medium' . '.png');
 
             $targ_w = $targ_h = 300;
-            $jpeg_quality = 90;
+            $jpeg_quality = 100;
 
             $dst_r = imagecreatetruecolor($targ_w, $targ_h);
-            /*  imagecopyresampled($dst_r,
-                  imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)
-                  , 0, 0, Yii::$app->request->post('x'), Yii::$app->request->post('y'),
-                  imagesx(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
-                  imagesy(imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)),
-
-                  Yii::$app->request->post('w'),
-                  Yii::$app->request->post('h')
-              );*/
             imagecopyresampled($dst_r,
                 imagecreatefromjpeg($directory . 'logo_medium' . '.' . $this->image_file->extension)
                 , 0, 0, Yii::$app->request->post('x'), Yii::$app->request->post('y'),
@@ -150,7 +141,7 @@ class Image extends Model {
         $logo = glob($directory . "main.*");
 
         if ($logo) return Url::base() . '/' . $logo[0];
-        else return Url::base() . '/images/school-default.jpg';
+        else return Url::base() . '/images/default/school-default.jpg';
     }
 
     public static function getEventPhoto($eventId) {
@@ -159,15 +150,15 @@ class Image extends Model {
         $logo = glob($directory . "main.*");
 
         if ($logo) return Url::base() . '/' . $logo[0];
-        else return Url::base() . '/images/event-gallery1.png';
+        else return Url::base() . '/images/default/event-default.png';
     }
 
 
     public static function getUserProfilePhoto($psychologistId) {
 
-        $directory = 'img/profile_photos/' . $psychologistId . '/';
+        $directory = 'images/profile_photos/' . $psychologistId . '/';
 
-        $logo = glob($directory . "logo.*");
+        $logo = glob($directory . "test.*");
         if ($logo) return Url::base() . '/' . $logo[0];
         else return Url::base() . '/img/team/img_blank_small.jpg';
     }

@@ -38,10 +38,7 @@ use yii\helpers\Url;
                                                 </div>
                                                 <div class="text">
                                                     <h2>' . $model['title'] . '</h2>
-                                                    <div style="margin-top:10%;"></div>
-                                                    <!-- <p>The point of using Lorem Ipsum is that it has a making it look like readable English.
-                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                        default model text.</p> -->
+                                                    <p>' . $model['description'] . '</p>
                                                     <a href="' . Url::base() . '/video/' . $link . '" class="btn-style">Смотреть видео</a>
                                                 </div>
                                             </div>';

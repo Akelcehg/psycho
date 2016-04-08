@@ -16,6 +16,7 @@ use Yii;
  * @property string $education
  * @property string $experience
  * @property integer $price
+ * @property integer $city_id
  * @property integer $has_diplom
  * @property integer $is_active
  * @property string $created_at
@@ -38,7 +39,7 @@ class Profile extends \yii\db\ActiveRecord
     {
         return [
             [['user_id' ], 'required'],
-            [['user_id', 'price', 'has_diplom', 'is_active'], 'integer'],
+            [['user_id', 'price', 'has_diplom','city_id', 'is_active'], 'integer'],
             [['gender', 'education', 'experience'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['firstname', 'lastname', 'secondname'], 'string', 'max' => 255]
@@ -60,6 +61,7 @@ class Profile extends \yii\db\ActiveRecord
             'education' => 'Education',
             'experience' => 'Experience',
             'price' => 'Price',
+            'city_id' => 'Город',
             'has_diplom' => 'Has Diplom',
             'is_active' => 'Is Active',
             'created_at' => 'Created At',
