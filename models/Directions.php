@@ -13,8 +13,7 @@ use yii\db\Query;
  * @property string $updated_at
  * @property string $created_at
  */
-class Directions extends \yii\db\ActiveRecord
-{
+class Directions extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
@@ -73,5 +72,9 @@ class Directions extends \yii\db\ActiveRecord
             )->orderBy('directions.id');
 
         return $query->all();
+    }
+
+    public static function getAllDirections() {
+        return Directions::find()->all();
     }
 }

@@ -76,4 +76,20 @@ $(document).ready(function () {
     });
 
 
+    function Populate(id) {
+        var values = $('input[type="checkbox"][id^="'+id+'"]:checked').map(function () {
+            return this.value;
+        }).get().join(',');
+        $('#hidden_' + id).val(values);
+    }
+
+    $('input[type="checkbox"][id^="direction"]').on('change', function () {
+        Populate("direction")
+    }).change();
+
+    $('input[type="checkbox"][id^="problem"]').on('change', function () {
+        Populate("problem")
+    }).change();
+
+
 });

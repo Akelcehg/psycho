@@ -4,11 +4,12 @@ use app\models\City;
 use yii\helpers\ArrayHelper;
 use \yii\helpers\Html;
 use yii\widgets\ListView;
+use \yii\helpers\Url;
 use app\models\Image;
 
 ?>
 
-<section>
+<section class="gray-bg">
     <div class="container">
 
         <div class="sec-header">
@@ -146,7 +147,7 @@ use app\models\Image;
                                     </div>
                                     <div class="col-md-3">
                                         <label>В каком городе ищите</label>
-                                        <?= Html::dropDownList('ProfileSearch[city]', null,
+                                        <?= Html::dropDownList('ProfileSearch[city_id]', null,
                                             ArrayHelper::map(
                                                 City::find()->where([
                                                     'region_id' => '10373'
@@ -169,16 +170,51 @@ use app\models\Image;
 
                                      </div>-->
                                 </div>
-                                <!--  <div class="row-fluid">
-                                      <div class="col-md-6">
-                                          <label>Education Level</label>
-                                          <input type="text" placeholder="Enter your Education Level" class="input-block-level">
-                                      </div>
-                                      <div class="col-md-6">
-                                          <label>Age</label>
-                                          <input type="text" placeholder="Enter your age" class="input-block-level">
-                                      </div>
-                                  </div>-->
+                                <div class="row-fluid">
+
+                                    <div class="col-md-12">
+                                        <label>Выберите с какими проблемами хотите что бы работал</label>
+                                        <input id="hidden_problem" type="hidden" name="problems">
+                                        <div class="profile-checkbox">
+                                            <ul>
+                                                <?php foreach ($psychologistProblems as $problem): ?>
+                                                    <li style="display: table-cell;">
+
+                                                        <input id="problem<?= $problem['id'] ?>" class="css-checkbox"
+                                                               type="checkbox"
+                                                               value="<?= $problem['id'] ?>">
+                                                        <label for="problem<?= $problem['id'] ?>"
+                                                               class="css-label"><?= $problem['name'] ?></label>
+                                                    </li>
+                                                <?php endforeach; ?>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+
+                                    <div class="col-md-12">
+                                        <label>Выберите с какими проблемами хотите что бы работал</label>
+                                        <input id="hidden_direction" type="hidden" name="directions">
+                                        <div class="profile-checkbox">
+                                            <ul>
+                                                <?php foreach ($psychologistDirections as $direction): ?>
+                                                    <li style="display: table-cell;">
+
+                                                        <input id="direction<?= $direction['id'] ?>"
+                                                               class="css-checkbox"
+                                                               type="checkbox"
+                                                               value="<?= $direction['id'] ?>">
+                                                        <label for="direction<?= $direction['id'] ?>"
+                                                               class="css-label"><?= $direction['name'] ?></label>
+                                                    </li>
+                                                <?php endforeach; ?>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </fieldset>
                             <div class="row-fluid" style="margin-top: 2%;">
                                 <button type="submit" class="btn-style pull-right">Найти психолога</button>
@@ -201,9 +237,13 @@ use app\models\Image;
                 'itemView' => function ($model, $key, $index, $widget) {
 
                     return '<div class="admin">
+
                                     <div class="thumb">
-                                        <a href="#"><img class="thumb" alt="" src="' . Image::getUserProfilePhoto($model['user_id']) . '" style="max-width: 120px;"></a>
+                                        <a href="' . Url::base() . '/psychologists/profile?id=' . $model['user_id'] . '">
+                                            <img class="thumb" alt="" src="' . Image::getUserProfilePhoto($model['user_id']) . '" style="max-width: 120px;"/>
+                                        </a>
                                     </div>
+
                                     <div class="text">
                                         <div class="social-icons">
                                             <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
@@ -217,7 +257,9 @@ use app\models\Image;
                                             <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
                                                     class="fa fa-google-plus"></i></a>
                                         </div>
-                                        <h2 style="text-align: left; "><a href="#">' . $model['firstname'] . " " . $model['lastname'] . ' </a></h2>
+                                        <h2 style="text-align: left; ">
+                                        <a href="' . Url::base() . '/psychologists/profile?id=' . $model['user_id'] . '">' . $model['firstname'] . " " . $model['lastname'] . ' </a>
+                                        </h2>
                                         <p style="text-align: left; " class="profession">' . $model['education'] . '</p>
                                         <p style="text-align: left; ">' . $model['experience'] . '</p>
                                     </div>
@@ -226,132 +268,6 @@ use app\models\Image;
             )) ?>
 
             <?php echo $widget->renderItems(); ?>
-
-            <!--            <div class="admin">
-                            <div class="thumb">
-                                <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                            </div>
-                            <div class="text">
-                                <div class="social-icons">
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                            class="fa fa-facebook"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                            class="fa fa-linkedin"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                            class="fa fa-dribbble"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                            class="fa fa-twitter"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                            class="fa fa-google-plus"></i></a>
-                                </div>
-                                <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                                <p style="text-align: left; " class="profession">Photographer</p>
-                                <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                                    nulla metus. Interdum et
-                                    malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                            </div>
-                        </div>
-                        <div class="admin">
-                            <div class="thumb">
-                                <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                            </div>
-                            <div class="text">
-                                <div class="social-icons">
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                            class="fa fa-facebook"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                            class="fa fa-linkedin"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                            class="fa fa-dribbble"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                            class="fa fa-twitter"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                            class="fa fa-google-plus"></i></a>
-                                </div>
-                                <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                                <p style="text-align: left; " class="profession">Photographer</p>
-                                <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                                    nulla metus. Interdum et
-                                    malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                            </div>
-                        </div>
-                        <div class="admin">
-                            <div class="thumb">
-                                <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                            </div>
-                            <div class="text">
-                                <div class="social-icons">
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                            class="fa fa-facebook"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                            class="fa fa-linkedin"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                            class="fa fa-dribbble"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                            class="fa fa-twitter"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                            class="fa fa-google-plus"></i></a>
-                                </div>
-                                <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                                <p style="text-align: left; " class="profession">Photographer</p>
-                                <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                                    nulla metus. Interdum et
-                                    malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                            </div>
-                        </div>
-                        <div class="admin">
-                            <div class="thumb">
-                                <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                            </div>
-                            <div class="text">
-                                <div class="social-icons">
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                            class="fa fa-facebook"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                            class="fa fa-linkedin"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                            class="fa fa-dribbble"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                            class="fa fa-twitter"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                            class="fa fa-google-plus"></i></a>
-                                </div>
-                                <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                                <p style="text-align: left; " class="profession">Photographer</p>
-                                <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                                    nulla metus. Interdum et
-                                    malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                            </div>
-                        </div>
-                        <div class="admin">
-                            <div class="thumb">
-                                <a href="#"><img class="img-circle" alt="" src="images/admin.jpg" style="max-width: 120px;"></a>
-                            </div>
-                            <div class="text">
-                                <div class="social-icons">
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                            class="fa fa-facebook"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                            class="fa fa-linkedin"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                            class="fa fa-dribbble"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                            class="fa fa-twitter"></i></a>
-                                    <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                            class="fa fa-google-plus"></i></a>
-                                </div>
-                                <h2 style="text-align: left; "><a href="#">Administrator</a></h2>
-                                <p style="text-align: left; " class="profession">Photographer</p>
-                                <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu
-                                    nulla metus. Interdum et
-                                    malesuada fames ac ante ipsum primis in faucibus. Phasellus tristique aliquet semper. Class
-                                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                            </div>
-                        </div>-->
 
         </div>
         <div class="col-md-4">
@@ -416,118 +332,3 @@ use app\models\Image;
     </div>
 
 </section>
-
-
-<? /*= PsychoSearchWidget::widget() */ ?>
-
-<!--
-<div class="contant">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-3">
-
-                <div class="deen-profile">
-                    <div class="thumb" style="float: none; margin: 0;">
-                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
-                    </div>
-                    <div class="text">
-                        <h2 style="text-align: center;">Jenny Sheen</h2>
-                        <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
-                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
-                            fuisset, in quo inani eligendi.</p>
-                        <div class="share-course">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3">
-
-                <div class="deen-profile">
-                    <div class="thumb" style="float: none; margin: 0;">
-                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
-                    </div>
-                    <div class="text">
-                        <h2 style="text-align: center;">Jenny Sheen</h2>
-                        <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
-                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
-                            fuisset, in quo inani eligendi.</p>
-                        <div class="share-course">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3">
-
-                <div class="deen-profile">
-                    <div class="thumb" style="float: none; margin: 0;">
-                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
-                    </div>
-                    <div class="text">
-                        <h2 style="text-align: center;">Jenny Sheen</h2>
-                        <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
-                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
-                            fuisset, in quo inani eligendi.</p>
-                        <div class="share-course">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3">
-                <div class="deen-profile">
-                    <div class="thumb" style="float: none; margin: 0;">
-                        <a href="#"><img src="images/deen.png" alt="" style="margin: 0 auto; display: block;"></a>
-                    </div>
-                    <div class="text">
-                        <h2 style="text-align: center;">Jenny Sheen</h2>
-                        <small>Designation: Deen</small>
-                        <p>Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr
-                            platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, vulputate eos, an sed
-                            fuisset, in quo inani eligendi.</p>
-                        <div class="share-course">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</div>-->

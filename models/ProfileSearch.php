@@ -16,7 +16,7 @@ class ProfileSearch extends Profile {
      */
     public function rules() {
         return [
-            [['id', 'user_id', 'price', 'has_diplom'], 'integer'],
+            [['id', 'user_id','city_id', 'price', 'has_diplom'], 'integer'],
             [['firstname', 'lastname', 'gender','secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
         ];
     }
@@ -56,6 +56,7 @@ class ProfileSearch extends Profile {
             'user_id' => $this->user_id,
             'price' => $this->price,
             'has_diplom' => $this->has_diplom,
+            'city_id' => $this->city_id,
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
         ]);

@@ -261,6 +261,9 @@ use yii\helpers\Url;
                         <li>
                             <a href="<?= Url::base() ?>/admin/users/diplomas">Подтверждение диплома</a>
                         </li>
+                        <li>
+                            <a href="<?= Url::base() ?>/admin/psychologists/top">Топ психологов</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -310,8 +313,6 @@ use yii\helpers\Url;
                         </li>
                     </ul>
                 </li>
-
-
 
 
                 <li>

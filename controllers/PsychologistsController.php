@@ -7,6 +7,7 @@ use app\models\Image;
 use app\models\Problems;
 use app\models\Profile;
 use app\models\ProfileSearch;
+use app\models\PsychologistProblems;
 use app\models\PsychologistTop;
 use Yii;
 
@@ -20,6 +21,8 @@ class PsychologistsController extends \yii\web\Controller {
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'psychologistsTopDataProvider' => $psychologistsTop->getTopPsychologists(),
+            'psychologistProblems' => Problems::getAllProblems(),
+            'psychologistDirections' => Directions::getAllDirections(),
             'allProblems' => Problems::find()->all()
         ]);
     }

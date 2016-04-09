@@ -13,8 +13,7 @@ use yii\db\Query;
  * @property string $updated_at
  * @property string $created_at
  */
-class Problems extends \yii\db\ActiveRecord
-{
+class Problems extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
@@ -69,5 +68,10 @@ class Problems extends \yii\db\ActiveRecord
             )->orderBy('problems.id');
 
         return $query->all();
+    }
+
+
+    public static function getAllProblems() {
+        return Problems::find()->all();
     }
 }

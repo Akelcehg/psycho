@@ -75,5 +75,4 @@ class PsychologistProblems extends \yii\db\ActiveRecord
     private function deletePsychologistProblems($psychologistId) {
         return PsychologistProblems::deleteAll('psychologist_id = ' . $psychologistId);
     }
-
 }
