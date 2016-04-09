@@ -11,13 +11,17 @@ use app\models\Profile;
  * ProfileSearch represents the model behind the search form about `app\models\Profile`.
  */
 class ProfileSearch extends Profile {
+
+    public $directions;
+    public $problems;
+
     /**
      * @inheritdoc
      */
     public function rules() {
         return [
             [['id', 'user_id', 'city_id', 'price', 'has_diplom'], 'integer'],
-            [['firstname', 'lastname', 'gender', 'secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
+            [['firstname', 'directions', 'problems', 'lastname', 'gender', 'secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
         ];
     }
 
@@ -47,18 +51,18 @@ class ProfileSearch extends Profile {
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
+            //$query->where('0=1');
             return $dataProvider;
         }
 
-        if (isset($params['directions']) && !empty($params['directions'])) {
+        if ($this['directions'] != '') {
             $query->join("inner join", "psychologist_directions", "psychologist_directions.psychologist_id=profile.user_id");
-            $query->andOnCondition("psychologist_directions.direction_id in ('" . $params['directions'] . "')");
+            $query->andOnCondition("psychologist_directions.direction_id in ('" . $this['directions'] . "')");
         }
 
-        if (isset($params['problems']) && !empty($params['problems'])) {
+        if ($this['problems'] != '') {
             $query->join("inner join", "psychologist_problems", "psychologist_problems.psychologist_id=profile.user_id");
-            $query->andOnCondition("psychologist_problems.problem_id in ('" . $params['problems'] . "')");
+            $query->andOnCondition("psychologist_problems.problem_id in ('" . $this['problems'] . "')");
         }
 
         $query->andFilterWhere([
@@ -76,7 +80,7 @@ class ProfileSearch extends Profile {
             ->andFilterWhere(['like', 'secondname', $this->secondname])
             ->andFilterWhere(['like', 'education', $this->education])
             ->andFilterWhere(['like', 'experience', $this->experience])
-            ->andFilterWhere(['like', 'gender', $this->gender]);
+            ->andFilterWhere(['=', 'gender', $this->gender]);
 
         return $dataProvider;
     }

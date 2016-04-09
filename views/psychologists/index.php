@@ -3,6 +3,7 @@
 use app\models\City;
 use yii\helpers\ArrayHelper;
 use \yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use yii\widgets\ListView;
 use \yii\helpers\Url;
 use app\models\Image;
@@ -131,96 +132,119 @@ use app\models\Image;
             <div class="col-md-12">
                 <h2>Выбери кто тебе нужен</h2>
                 <div class="form-box">
-                    <form style="text-align: left;">
-                        <div class="form-body">
-                            <fieldset>
-                                <!--<h4>Выберите что вам интересно</h4>-->
-                                <div class="row-fluid">
+                    <!--<form style="text-align: left;">-->
+                    <?php $form = ActiveForm::begin([
+                        'action' => ['index'],
+                        'method' => 'get',
+                        'id' => 'psycho-search-form'
+                    ]); ?>
+                    <div class="form-body">
+                        <fieldset>
+                            <!--<h4>Выберите что вам интересно</h4>-->
+                            <div class="row-fluid">
 
-                                    <div class="col-md-2">
-                                        <label>Пол</label>
-                                        <select class="input-block-level" name="ProfileSearch[gender]">
-                                            <option value="">Выберите пол</option>
-                                            <option value="мужской">Мужской</option>
-                                            <option value="женский">Женский</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label>В каком городе ищите</label>
-                                        <?= Html::dropDownList('ProfileSearch[city_id]', null,
-                                            ArrayHelper::map(
-                                                City::find()->where([
-                                                    'region_id' => '10373'
-                                                ])->orderBy('name')->all(), 'city_id', 'name'),
-                                            ['prompt' => 'Выберите город']
+                                <div class="col-md-2">
+                                    <label>Выберите пол</label>
 
-                                        ) ?>
-                                    </div>
-                                    <!-- <div class="col-md-3">
-                                         <label>Education Level</label>
-                                         <input type="text" placeholder="Enter your Education Level"
-                                                class="input-block-level">
+                                    <?= $form->field($searchModel, 'gender')->dropDownList([
+                                        "" => 'Выберите пол',
+                                        "мужской" => 'Мужской',
+                                        "женский" => 'Женский'
+                                    ])->label(false) ?>
 
-                                     </div>
-                                     <div class="col-md-3">
-
-                                         <label>Education Level</label>
-                                         <input type="text" placeholder="Enter your Education Level"
-                                                class="input-block-level">
-
-                                     </div>-->
+                                    <!--- <select class="input-block-level" name="ProfileSearch[gender]">
+                                        <option value="">Выберите пол</option>
+                                        <option value="мужской">Мужской</option>
+                                        <option value="женский">Женский</option>
+                                    </select> -->
                                 </div>
-                                <div class="row-fluid">
+                                <div class="col-md-3">
+                                    <label>В каком городе ищите</label>
+                                    <?= $form->field($searchModel, 'city_id')->dropDownList(
+                                        ArrayHelper::map(
+                                            City::find()->where([
+                                                'region_id' => '10373'
+                                            ])->orderBy('name')->all(), 'city_id', 'name'),
+                                        ['prompt' => 'Выберите город']
 
-                                    <div class="col-md-12">
-                                        <label>Выберите с какими проблемами хотите что бы работал</label>
-                                        <input id="hidden_problem" type="hidden" name="problems">
-                                        <div class="profile-checkbox">
-                                            <ul>
-                                                <?php foreach ($psychologistProblems as $problem): ?>
-                                                    <li style="display: table-cell;">
-
-                                                        <input id="problem<?= $problem['id'] ?>" class="css-checkbox"
-                                                               type="checkbox"
-                                                               value="<?= $problem['id'] ?>">
-                                                        <label for="problem<?= $problem['id'] ?>"
-                                                               class="css-label"><?= $problem['name'] ?></label>
-                                                    </li>
-                                                <?php endforeach; ?>
-
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    )->label(false) ?>
                                 </div>
-                                <div class="row-fluid">
+                                <!-- <div class="col-md-3">
+                                     <label>Education Level</label>
+                                     <input type="text" placeholder="Enter your Education Level"
+                                            class="input-block-level">
 
-                                    <div class="col-md-12">
-                                        <label>Выберите с какими проблемами хотите что бы работал</label>
-                                        <input id="hidden_direction" type="hidden" name="directions">
-                                        <div class="profile-checkbox">
-                                            <ul>
-                                                <?php foreach ($psychologistDirections as $direction): ?>
-                                                    <li style="display: table-cell;">
+                                 </div>
+                                 <div class="col-md-3">
 
-                                                        <input id="direction<?= $direction['id'] ?>"
-                                                               class="css-checkbox"
-                                                               type="checkbox"
-                                                               value="<?= $direction['id'] ?>">
-                                                        <label for="direction<?= $direction['id'] ?>"
-                                                               class="css-label"><?= $direction['name'] ?></label>
-                                                    </li>
-                                                <?php endforeach; ?>
+                                     <label>Education Level</label>
+                                     <input type="text" placeholder="Enter your Education Level"
+                                            class="input-block-level">
 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <div class="row-fluid" style="margin-top: 2%;">
-                                <button type="submit" class="btn-style pull-right">Найти психолога</button>
+                                 </div>-->
                             </div>
+                            <div class="row-fluid">
+
+                                <div class="col-md-12">
+                                    <label>Выберите с какими проблемами хотите что бы работал</label>
+
+                                    <?= $form->field($searchModel, 'problems')->hiddenInput([
+                                        'id' => "hidden_problem"
+                                    ])->label(false) ?>
+
+                                    <div class="profile-checkbox">
+                                        <ul>
+                                            <?php foreach ($psychologistProblems as $problem): ?>
+                                                <li style="display: table-cell;">
+
+                                                    <input id="problem<?= $problem['id'] ?>" class="css-checkbox"
+                                                           type="checkbox"
+                                                           value="<?= $problem['id'] ?>">
+                                                    <label for="problem<?= $problem['id'] ?>"
+                                                           class="css-label"><?= $problem['name'] ?></label>
+                                                </li>
+                                            <?php endforeach; ?>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+
+                                <div class="col-md-12">
+                                    <label>Выберите с какими проблемами хотите что бы работал</label>
+
+                                    <?= $form->field($searchModel, 'directions')->hiddenInput([
+                                        'id' => "hidden_direction"
+                                    ])->label(false) ?>
+                                    <div class="profile-checkbox">
+                                        <ul>
+                                            <?php foreach ($psychologistDirections as $direction): ?>
+                                                <li style="display: table-cell;">
+
+                                                    <input id="direction<?= $direction['id'] ?>"
+                                                           class="css-checkbox"
+                                                           type="checkbox"
+                                                           value="<?= $direction['id'] ?>">
+                                                    <label for="direction<?= $direction['id'] ?>"
+                                                           class="css-label"><?= $direction['name'] ?></label>
+                                                </li>
+                                            <?php endforeach; ?>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!--                <div class="row-fluid" style="margin-top: 2%;">
+                                            <button type="submit" class="btn-style pull-right">Найти психолога</button>
+                                        </div>-->
+                        <div class="form-group">
+                            <?= Html::submitButton('Искать', ['class' => 'btn-style pull-right']) ?>
                         </div>
-                    </form>
+                    </div>
+                    <?php ActiveForm::end(); ?>
                 </div>
             </div>
         </div>

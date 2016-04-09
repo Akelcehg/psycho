@@ -75,13 +75,19 @@ $(document).ready(function () {
         $fp.filthypillow("hide");
     });
 
-
     function Populate(id) {
-        var values = $('input[type="checkbox"][id^="'+id+'"]:checked').map(function () {
+        var values = $('input[type="checkbox"][id^="' + id + '"]:checked').map(function () {
             return this.value;
         }).get().join(',');
         $('#hidden_' + id).val(values);
     }
+
+    $('#psycho-search-form').find(':checkbox[id^="problem"]').each(function () {
+        $(this).prop("checked", ($.inArray($(this).attr('id').replace('problem', ''), $('#hidden_problem').val()) != -1));
+    });
+    $('#psycho-search-form').find(':checkbox[id^="direction"]').each(function () {
+        $(this).prop("checked", ($.inArray($(this).attr('id').replace('direction', ''), $('#hidden_direction').val()) != -1));
+    });
 
     $('input[type="checkbox"][id^="direction"]').on('change', function () {
         Populate("direction")
