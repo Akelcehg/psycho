@@ -16,8 +16,8 @@ class ProfileSearch extends Profile {
      */
     public function rules() {
         return [
-            [['id', 'user_id','city_id', 'price', 'has_diplom'], 'integer'],
-            [['firstname', 'lastname', 'gender','secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
+            [['id', 'user_id', 'city_id', 'price', 'has_diplom'], 'integer'],
+            [['firstname', 'lastname', 'gender', 'secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
         ];
     }
 
@@ -49,6 +49,16 @@ class ProfileSearch extends Profile {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
             return $dataProvider;
+        }
+
+        if (isset($params['directions']) && !empty($params['directions'])) {
+            $query->join("inner join", "psychologist_directions", "psychologist_directions.psychologist_id=profile.user_id");
+            $query->andOnCondition("psychologist_directions.direction_id in ('" . $params['directions'] . "')");
+        }
+
+        if (isset($params['problems']) && !empty($params['problems'])) {
+            $query->join("inner join", "psychologist_problems", "psychologist_problems.psychologist_id=profile.user_id");
+            $query->andOnCondition("psychologist_problems.problem_id in ('" . $params['problems'] . "')");
         }
 
         $query->andFilterWhere([
