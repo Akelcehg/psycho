@@ -18,7 +18,7 @@ use \app\models\Image;
     <div class="container">
 
         <div class="latest-news">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <?php $widget = ListView::begin([
                     'dataProvider' => $dataProvider,
                     'summary' => '',
@@ -64,80 +64,6 @@ use \app\models\Image;
                     <?= $widget->renderPager(); ?>
                 </div>
             </div>
-
-            <div class="col-md-3">
-
-                <div class="sidebar">
-
-                    <div class="widget widget-papular-post">
-                        <h2>Популярные школы или чёто ещё ???? ?</h2>
-                        <ul>
-                            <li style="border-bottom: solid 2px #C7012E;">
-                                <a href="/psycho/article/asdasdvcxzvxcv-9">
-                                    <h4>asdasdvcxzvxcv</h4>
-                                </a>
-                                <!--<div class="thumb">
-                                        <a href="<? /*= Url::base() . '/article/' . $link */ ?>">
-                                            <img src="images/papular-post.jpg" alt="">
-                                        </a>
-                                    </div>-->
-                                <div class="text">
-                                    <p><i class="fa fa-calendar"></i> 6 апр. 2016 г.</p>
-                                    <p style="margin-top: 10px;">xcvasxsdsas asd assd asd asa ads as as adasdasdas
-                                        ...</p>
-                                </div>
-                            </li>
-                            <li style="border-bottom: solid 2px #C7012E;">
-                                <a href="/psycho/article/Testovaya_statyya-1">
-                                    <h4>Тестовая статья</h4>
-                                </a>
-                                <!--<div class="thumb">
-                                        <a href="<? /*= Url::base() . '/article/' . $link */ ?>">
-                                            <img src="images/papular-post.jpg" alt="">
-                                        </a>
-                                    </div>-->
-                                <div class="text">
-                                    <p><i class="fa fa-calendar"></i> 1 апр. 2016 г.</p>
-                                    <p style="margin-top: 10px;">das
-                                    </p>
-                                </div>
-                            </li>
-                            <li style="border-bottom: solid 2px #C7012E;">
-                                <a href="/psycho/article/test2-3">
-                                    <h4>test2</h4>
-                                </a>
-                                <!--<div class="thumb">
-                                        <a href="<? /*= Url::base() . '/article/' . $link */ ?>">
-                                            <img src="images/papular-post.jpg" alt="">
-                                        </a>
-                                    </div>-->
-                                <div class="text">
-                                    <p><i class="fa fa-calendar"></i> 6 апр. 2016 г.</p>
-                                    <p style="margin-top: 10px;">xxxx
-                                    </p>
-                                </div>
-                            </li>
-                            <li style="border-bottom: solid 2px #C7012E;">
-                                <a href="/psycho/article/xcadasdasdas-4">
-                                    <h4>xcadasdasdas</h4>
-                                </a>
-                                <!--<div class="thumb">
-                                        <a href="<? /*= Url::base() . '/article/' . $link */ ?>">
-                                            <img src="images/papular-post.jpg" alt="">
-                                        </a>
-                                    </div>-->
-                                <div class="text">
-                                    <p><i class="fa fa-calendar"></i> 6 апр. 2016 г.</p>
-                                    <p style="margin-top: 10px;">dasdas
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
 
         </div>
 

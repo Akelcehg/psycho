@@ -13,7 +13,7 @@ use yii\widgets\ListView;
                 <form>
                     <div class="col-md-3">
                         <select class="form-control">
-                            <option>В каком городе </option>
+                            <option>В каком городе</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
@@ -64,7 +64,11 @@ use yii\widgets\ListView;
 
                                             <div class="event-header">
                                                 <span>' . $model['date'] . '</span>
-                                                <h1>' . $model['name'] . '</h1>
+                                                <h1>
+                                                <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '">
+                                                ' . $model['name'] . '
+                                                </a>
+                                                </h1>
                                                 <!-- <div class="data-tags">
                                                     <a href="#">Technology</a>
                                                 </div> -->
@@ -90,7 +94,6 @@ use yii\widgets\ListView;
                                                     </tr>
                                                 </table>
                                             </div>
-
                                             <div class="event-footer">
                                                 <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '" class="btn-style">Подробнее</a>
                                             </div>
