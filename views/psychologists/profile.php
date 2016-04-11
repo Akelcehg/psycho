@@ -32,29 +32,6 @@ use yii\widgets\ListView;
                             invidunt ut labore et dolore magna aliquyam erat, </p>-->
                     </div>
 
-
-                    <div class="widget widget-papular-post">
-                        <h2>Недавние статьи</h2>
-                        <ul>
-                            <?php foreach ($psychologistArticles as $post): ?>
-                                <?php
-                                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['title']))]) . '-' . $post['id'];
-                                ?>
-                                <li style="border-bottom: solid 2px #C7012E;">
-                                    <a href="<?= Url::base() . '/article/' . $link ?>">
-                                        <h4><?= $post['title'] ?></h4>
-                                    </a>
-                                    <div class="text">
-                                        <p>
-                                            <i class="fa fa-calendar"></i> <?= Yii::t('app', '{0,date}', strtotime($post['created_at'])) ?>
-                                        </p>
-                                    </div>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-
-
                 </div>
 
             </div>
@@ -107,21 +84,17 @@ use yii\widgets\ListView;
 
                                     <div id="video" class="tab-pane fade">
 
-                                    </div>
-
-                                    <div id="article" class="tab-pane fade active in">
-
                                         <div class="row">
 
 
                                             <?php $widget = ListView::begin([
-                                                'dataProvider' => $dataProvider,
+                                                'dataProvider' => $videoDataProvider,
                                                 'summary' => '',
                                                 'itemOptions' => ['class' => 'item'],
                                                 'itemView' => function ($model, $key, $index, $widget) {
 
                                                     $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['title']))]) . '-' . $model['id'];
-                                                    $abrvBody = strlen($model['description']) > 30 ? substr($model['description'], 0, 30).'...' : $model['description'];
+                                                    $abrvBody = strlen($model['description']) > 30 ? substr($model['description'], 0, 30) . '...' : $model['description'];
                                                     return ' <div class="col-md-3">
                                                                 <div class="f-stories">
                                                                     <div class="thumb">
@@ -142,157 +115,211 @@ use yii\widgets\ListView;
 
                                         </div>
 
+                                        <div class="pagination">
+                                            <?= $widget->renderPager(); ?>
+                                        </div>
+                                    </div>
+
+                                    <div id="article" class="tab-pane fade active in">
+
+                                        <?php $widget = ListView::begin([
+                                            'dataProvider' => $articleDataProvider,
+                                            'summary' => '',
+                                            'itemOptions' => ['class' => 'item'],
+                                            'itemView' => function ($model, $key, $index, $widget) {
+
+                                                $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['title']))]) . '-' . $model['id'];
+                                                $plainBody = strip_tags($model['text']);
+                                                $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) . '...' : $plainBody;
+
+                                                return '<div id="postlist">
+                                                                <div class="panel">
+                                                                    <div class="panel-heading">
+                                                                        <div class="text-center">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-9">
+                                                                                    <h3 class="pull-left">' . $model["title"] . '</h3>
+                                                                                </div>
+                                                                                <div class="col-sm-3">
+                                                                                    <h4 class="pull-right">
+                                                                                        <small>
+                                                                                        ' . $model['created_at'] . '
+                                                                                        </small>
+                                                                                    </h4>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="panel-body">
+                                                                    ' . $abrvBody . '
+                                                                    </div>
+                                                                    <div class="panel-footer">
+                                                                        <a href="' . Url::base() . '/article/' . $link . '" class="btn-style" style="float: right;">Читать</a>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>';
+                                            },
+                                        ]) ?>
+
+                                        <?php echo $widget->renderItems(); ?>
+
+
+                                        <div class="pagination">
+                                            <?= $widget->renderPager(); ?>
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
+
+
+                            <!--                  <h2>My Biography</h2>
+                                              <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit
+                                                  nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
+                                                  hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id,
+                                                  mattis vel, nisi. Nullam mollis.. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.
+                                                  hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id,
+                                                  mattis vel, nisi. Nullam mollis.. Phasellus hendrerit. Pellentesque aliquet nibh nec u
+                                                  In nisi neque, aliquet vel, dapiPhasellus hendrerit. Pellentesque aliquet nibh nec urna. In
+                                                  nisi neque, aliquet vel</p>-->
+
+                            <!--                      <div class="row">
+                                                      <div class="col-md-3"><h2>Пробелмы</h2>
+
+                                                          <ul style="list-style: none;">
+                                                              <li style="display: inline;">
+
+                                                                  <i class="fa fa-angle-double-right text-primary"></i>
+                                                                  <p style="display: inline; word-wrap: break-word;">IntroductionIntr oduction
+                                                                      Introduc tionIntro duction1</p>
+
+                                                              </li>
+                                                              <li>
+                                                                  <p>
+                                                                      <span class="fa fa-angle-double-right text-primary"></span> Getting
+                                                                      started
+                                                                  </p>
+                                                              </li>
+                                                              <li>
+                                                                  <p>
+                                                                      <span class="fa fa-angle-double-right text-primary"></span> Setting up
+                                                                      our page
+                                                                  </p>
+                                                              </li>
+                                                              <li>
+                                                                  <p>
+                                                                      <span class="fa fa-angle-double-right text-primary"></span> Conclusion
+                                                                  </p>
+                                                              </li>
+
+                                                          </ul>
+                                                      </div>
+                                                      <div class="col-md-3"><h2>Направления</h2>
+
+                                                          <ul style="list-style: none;">
+                                                              <li>
+                                                                  <p>
+                                                                      <span class="fa fa-angle-double-right text-primary"></span> Introduction
+                                                                  </p>
+                                                              </li>
+                                                              <li>
+                                                                  <p>
+                                                                      <span class="fa fa-angle-double-right text-primary"></span> Getting
+                                                                      started
+                                                                  </p>
+                                                              </li>
+                                                              <li>
+                                                                  <p>
+                                                                      <span class="fa fa-angle-double-right text-primary"></span> Setting up
+                                                                      our page
+                                                                  </p>
+                                                              </li>
+                                                              <li>
+                                                                  <p>
+                                                                      <span class="fa fa-angle-double-right text-primary"></span> Conclusion
+                                                                  </p>
+                                                              </li>
+
+                                                          </ul>
+                                                      </div>
+                                                  </div>-->
+
+                            <!--<a href="#" class="enroll">Enroll Now</a>-->
                         </div>
-
-
-                        <!--                  <h2>My Biography</h2>
-                                          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit
-                                              nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
-                                              hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id,
-                                              mattis vel, nisi. Nullam mollis.. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.
-                                              hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id,
-                                              mattis vel, nisi. Nullam mollis.. Phasellus hendrerit. Pellentesque aliquet nibh nec u
-                                              In nisi neque, aliquet vel, dapiPhasellus hendrerit. Pellentesque aliquet nibh nec urna. In
-                                              nisi neque, aliquet vel</p>-->
-
-                        <!--                      <div class="row">
-                                                  <div class="col-md-3"><h2>Пробелмы</h2>
-
-                                                      <ul style="list-style: none;">
-                                                          <li style="display: inline;">
-
-                                                              <i class="fa fa-angle-double-right text-primary"></i>
-                                                              <p style="display: inline; word-wrap: break-word;">IntroductionIntr oduction
-                                                                  Introduc tionIntro duction1</p>
-
-                                                          </li>
-                                                          <li>
-                                                              <p>
-                                                                  <span class="fa fa-angle-double-right text-primary"></span> Getting
-                                                                  started
-                                                              </p>
-                                                          </li>
-                                                          <li>
-                                                              <p>
-                                                                  <span class="fa fa-angle-double-right text-primary"></span> Setting up
-                                                                  our page
-                                                              </p>
-                                                          </li>
-                                                          <li>
-                                                              <p>
-                                                                  <span class="fa fa-angle-double-right text-primary"></span> Conclusion
-                                                              </p>
-                                                          </li>
-
-                                                      </ul>
-                                                  </div>
-                                                  <div class="col-md-3"><h2>Направления</h2>
-
-                                                      <ul style="list-style: none;">
-                                                          <li>
-                                                              <p>
-                                                                  <span class="fa fa-angle-double-right text-primary"></span> Introduction
-                                                              </p>
-                                                          </li>
-                                                          <li>
-                                                              <p>
-                                                                  <span class="fa fa-angle-double-right text-primary"></span> Getting
-                                                                  started
-                                                              </p>
-                                                          </li>
-                                                          <li>
-                                                              <p>
-                                                                  <span class="fa fa-angle-double-right text-primary"></span> Setting up
-                                                                  our page
-                                                              </p>
-                                                          </li>
-                                                          <li>
-                                                              <p>
-                                                                  <span class="fa fa-angle-double-right text-primary"></span> Conclusion
-                                                              </p>
-                                                          </li>
-
-                                                      </ul>
-                                                  </div>
-                                              </div>-->
-
-                        <!--<a href="#" class="enroll">Enroll Now</a>-->
                     </div>
+                    <!--
+                                    <div class="related-courses">
+                                        <h2>Information System</h2>
+                                        <ul>
+
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/related-course.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4>Bachelor Of Nursing</h4>
+                                                    <p>November 24, 2014</p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/related-course.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4>Bachelor Of Nursing</h4>
+                                                    <p>November 24, 2014</p>
+                                                </div>
+
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/related-course.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4>Bachelor Of Nursing</h4>
+                                                    <p>November 24, 2014</p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/related-course.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4>Bachelor Of Nursing</h4>
+                                                    <p>November 24, 2014</p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/related-course.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4>Bachelor Of Nursing</h4>
+                                                    <p>November 24, 2014</p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="thumb">
+                                                    <a href="#"><img src="../images/related-course.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4>Bachelor Of Nursing</h4>
+                                                    <p>November 24, 2014</p>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>-->
+
                 </div>
-                <!--
-                                <div class="related-courses">
-                                    <h2>Information System</h2>
-                                    <ul>
-
-                                        <li>
-                                            <div class="thumb">
-                                                <a href="#"><img src="../images/related-course.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h4>Bachelor Of Nursing</h4>
-                                                <p>November 24, 2014</p>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="thumb">
-                                                <a href="#"><img src="../images/related-course.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h4>Bachelor Of Nursing</h4>
-                                                <p>November 24, 2014</p>
-                                            </div>
-
-                                        <li>
-                                            <div class="thumb">
-                                                <a href="#"><img src="../images/related-course.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h4>Bachelor Of Nursing</h4>
-                                                <p>November 24, 2014</p>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="thumb">
-                                                <a href="#"><img src="../images/related-course.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h4>Bachelor Of Nursing</h4>
-                                                <p>November 24, 2014</p>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="thumb">
-                                                <a href="#"><img src="../images/related-course.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h4>Bachelor Of Nursing</h4>
-                                                <p>November 24, 2014</p>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="thumb">
-                                                <a href="#"><img src="../images/related-course.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h4>Bachelor Of Nursing</h4>
-                                                <p>November 24, 2014</p>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                                </div>-->
-
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
  

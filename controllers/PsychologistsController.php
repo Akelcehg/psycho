@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Article;
+use app\models\ArticleSearch;
 use app\models\City;
 use app\models\Directions;
 use app\models\Image;
@@ -36,8 +37,11 @@ class PsychologistsController extends \yii\web\Controller {
         $psychologistProblems = new Problems();
         $psychologistId = $id;
 
-        $searchModel = new VideosSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $videoSearchModel = new VideosSearch();
+        $videoDataProvider = $videoSearchModel->search(Yii::$app->request->queryParams);
+
+        $articleSearchModel = new ArticleSearch();
+        $articleDataProvider = $articleSearchModel->search(Yii::$app->request->queryParams);
 
         $profile = Profile::findOne(['user_id' => $psychologistId]);
         return $this->render('profile', [
@@ -47,7 +51,8 @@ class PsychologistsController extends \yii\web\Controller {
             'logo' => $imagesModel->getUserMediumProfilePhoto($id),
             'psychologistDirections' => $psychologistDirections->getPsychologistDirectionsList($psychologistId),
             'psychologistProblems' => $psychologistProblems->getPsychologistProblemsList($psychologistId),
-            'dataProvider' => $dataProvider
+            'videoDataProvider' => $videoDataProvider,
+            'articleDataProvider' => $articleDataProvider
         ]);
     }
 

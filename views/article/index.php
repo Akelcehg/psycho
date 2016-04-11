@@ -20,6 +20,7 @@ use yii\helpers\Url;
                         'summary' => '',
                         'itemOptions' => array('class' => 'item'),
                         'itemView' => function ($model, $key, $index, $widget) {
+
                             $a = new Article();
                             $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['title']))]) . '-' . $model['id'];
                             $plainBody = strip_tags($model['text']);
@@ -96,7 +97,9 @@ use yii\helpers\Url;
                                         <h4><?= $post['title'] ?></h4>
                                     </a>
                                     <div class="text">
-                                        <p><i class="fa fa-calendar"></i> <?= Yii::t('app', '{0,date}', strtotime($post['created_at'])) ?></p>
+                                        <p>
+                                            <i class="fa fa-calendar"></i> <?= Yii::t('app', '{0,date}', strtotime($post['created_at'])) ?>
+                                        </p>
                                     </div>
                                 </li>
                             <?php endforeach; ?>
