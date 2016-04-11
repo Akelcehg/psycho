@@ -1,5 +1,5 @@
 .gap {
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .src-image {
@@ -111,7 +111,6 @@
     width: 8em;
 }
 
-
 @media (max-width: 760px) {
     .forum.media-list li .user-info {
         float: none;
@@ -120,8 +119,6 @@
     }
 }
 
-
-
 .nav-collapse.in.collapse ul li a {
     color: #252525;
 }
@@ -129,7 +126,6 @@
 .navigation ul {
     background-color: transparent;
 }
-
 
 /***********TABLE STYLE****/
 .editing_table {
@@ -221,27 +217,24 @@
     font-weight: 300;
 }
 
-.link-white:focus{
+.link-white:focus {
     color: white;
 
 }
-
 
 .pagination ul li.active a {
     color: white;
 }
 
-.pagination ul li.next.disabled span{
+.pagination ul li.next.disabled span {
     background-color: white;
     cursor: not-allowed;
 }
 
-.pagination ul li.prev.disabled span{
+.pagination ul li.prev.disabled span {
     background-color: white;
     cursor: not-allowed;
 }
-
-
 
 .profile-checkbox input[type=checkbox].css-checkbox {
     position: absolute;
@@ -275,6 +268,7 @@
 .profile-checkbox .css-label {
     background-image: url(../../images/checkbox.png);
 }
+
 /*
 
 ul.nav.navbar-nav li a:focus {
@@ -282,14 +276,13 @@ ul.nav.navbar-nav li a:focus {
     color: white;
 }*/
 
-
-.pagination.default ul li{
+.pagination.default ul li {
     width: auto;
     margin: 0;
 }
 
 /***********************************************WIDGETS****************************************************************/
-.search{
+.search {
     border: solid 1px #dedede;
     padding: 20px;
 }
@@ -307,11 +300,14 @@ ul.nav.navbar-nav li a:focus {
     margin: 0px 5px 0px 0px;
 }
 
-
-.widget.search input[type="text"]:focus{
+.widget.search input[type="text"]:focus {
     border-color: rgba(199, 1, 46, 0.8);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(199, 1, 46, 0.6);
     outline: 0 none;
 }
 
 /***********************************************WIDGETS END************************************************************/
+
+.tabs ul.nav.nav-tabs li.active a {
+    color: white;
+}

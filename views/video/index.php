@@ -14,11 +14,6 @@ use yii\helpers\Url;
 
 
                 <div class="row">
-                    <!--<div class="videos">
-                        <a href="/mify-o-psihologah-2.html"><img src="	http://img.youtube.com/vi/CWUeglOYVAw/default.jpg" alt="видео психология"></a>
-                        <a href="/mify-o-psihologah-2.html" title="Мифы о психологах. Часть 2">Мифы о психологах. Часть 2</a>
-                    </div>-->
-
                     <div class="latest-news">
 
                         <?php $widget = ListView::begin([
@@ -62,11 +57,11 @@ use yii\helpers\Url;
                 <!--SIDEBAR START-->
                 <div class="sidebar">
                     <!--SEARCH WIDGET START-->
-                    <div class="widget widget-search-course">
-                        <h2><i class="fa fa-search"></i> Search Course</h2>
+                    <div class="widget search">
+                        <h2><i class="fa fa-search"></i>Искать видео</h2>
 
-                        <p><input type="text" class="input-block-level" placeholder="Search by Keyword"></p>
-                        <button class="btn-style">Search</button>
+                        <p><input type="text" class="form-control" placeholder="Введите слова для поиска"></p>
+                        <button class="btn-style">Искать</button>
                     </div>
                     <div class="widget widget-tags">
                         <h2>Papular Tags</h2>

@@ -3638,16 +3638,17 @@ SERVICES PAGE START
 }
 
 .tabs .tab-content {
-    background-color: #0f1521;
-    padding: 20px;
+    /*background-color: #0f1521;*/
+    padding-top: 20px;
 }
 
 .tabs .tab-content {
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .tabs .nav-tabs > .active > a, .tabs .nav-tabs > .active > a:hover, .tabs .nav-tabs > .active > a:focus {
-    background-color: #0f1521;
+    /*background-color: #0f1521;*/
+    background-color: #c7012e;
     border: none;
 }
 
@@ -4834,7 +4835,7 @@ EDIT PROFILE PAGE START
 .tutor-detail-section .text {
     float: left;
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
     background-color: #FFF;
 }
 
@@ -5829,7 +5830,7 @@ EDIT PROFILE PAGE START
 }
 
 .f-stories .text a:hover, .our-school .text a:hover {
-    background-color: #069;
+    background-color: #900;
     color: #fff;
 }
 

@@ -45,6 +45,14 @@ class VideosSearch extends Videos
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 8,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ]
+            ]
         ]);
 
         $this->load($params);

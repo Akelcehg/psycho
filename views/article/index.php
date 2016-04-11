@@ -90,21 +90,13 @@ use yii\helpers\Url;
                             <?php foreach ($popularPosts as $post): ?>
                                 <?php
                                 $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($post['title']))]) . '-' . $post['id'];
-                                $plainBody = strip_tags($post['text']);
-                                $abrvBody = strlen($plainBody) > 50 ? substr($plainBody, 0, 50).'...' : $plainBody;
                                 ?>
                                 <li style="border-bottom: solid 2px #C7012E;">
                                     <a href="<?= Url::base() . '/article/' . $link ?>">
                                         <h4><?= $post['title'] ?></h4>
                                     </a>
-                                    <!--<div class="thumb">
-                                        <a href="<?/*= Url::base() . '/article/' . $link */?>">
-                                            <img src="images/papular-post.jpg" alt="">
-                                        </a>
-                                    </div>-->
                                     <div class="text">
                                         <p><i class="fa fa-calendar"></i> <?= Yii::t('app', '{0,date}', strtotime($post['created_at'])) ?></p>
-                                        <p style="margin-top: 10px;"><?= $abrvBody ?></p>
                                     </div>
                                 </li>
                             <?php endforeach; ?>
@@ -117,5 +109,6 @@ use yii\helpers\Url;
         </div>
 
     </div>
+    <div class="gap"></div>
 
 </div>
