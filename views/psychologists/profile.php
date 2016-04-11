@@ -67,14 +67,14 @@ use yii\widgets\ListView;
                             <div class="row">
 
                                 <ul class="nav nav-tabs">
-                                    <li><a data-toggle="tab" href="#about">О психологе</a></li>
+                                    <li class="active"><a data-toggle="tab" href="#about">О психологе</a></li>
                                     <li><a data-toggle="tab" href="#video">Видео психолога</a></li>
-                                    <li class="active"><a data-toggle="tab" href="#article">Статьи психолога</a></li>
+                                    <li><a data-toggle="tab" href="#article">Статьи психолога</a></li>
                                 </ul>
 
                                 <div class="tab-content">
 
-                                    <div id="about" class="tab-pane fade">
+                                    <div id="about" class="tab-pane fade active in">
                                         <h2>Образование</h2>
                                         <p><?= nl2br($profile['education']) ?></p>
                                         <h2>Опыт работы</h2>
@@ -120,7 +120,7 @@ use yii\widgets\ListView;
                                         </div>
                                     </div>
 
-                                    <div id="article" class="tab-pane fade active in">
+                                    <div id="article" class="tab-pane fade">
 
                                         <?php $widget = ListView::begin([
                                             'dataProvider' => $articleDataProvider,

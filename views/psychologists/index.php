@@ -284,8 +284,7 @@ use app\models\Image;
                                         <h2 style="text-align: left; ">
                                         <a href="' . Url::base() . '/psychologists/profile?id=' . $model['user_id'] . '">' . $model['firstname'] . " " . $model['lastname'] . ' </a>
                                         </h2>
-                                        <p style="text-align: left; " class="profession">' . $model['education'] . '</p>
-                                        <p style="text-align: left; ">' . $model['experience'] . '</p>
+                                        <p style="text-align: left; ">' . nl2br($model['experience']) . '</p>
                                     </div>
                                 </div>';
                 },
@@ -302,48 +301,27 @@ use app\models\Image;
                         <h2>Самые активные психологи</h2>
                         <ul class="event-galley next-course">
 
-                            <li>
-                                <div class="thumb">
-                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
-                                </div>
-                                <div class="text">
-                                    <h4><a href="#">Computer</a></h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                                </div>
-                            </li>
-
-
-                            <li>
-                                <div class="thumb">
-                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
-                                </div>
-                                <div class="text">
-                                    <h4><a href="#">Computer</a></h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                                </div>
-                            </li>
-
-
-                            <li>
-                                <div class="thumb">
-                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
-                                </div>
-                                <div class="text">
-                                    <h4><a href="#">Computer</a></h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                                </div>
-                            </li>
-
-
-                            <li>
-                                <div class="thumb">
-                                    <a href="#"><img alt="" class="thumb" src="images/event1.png"></a>
-                                </div>
-                                <div class="text">
-                                    <h4><a href="#">Computer</a></h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                                </div>
-                            </li>
+                            <?php foreach ($activePsychologists as $psychologist): ?>
+                                <li>
+                                    <div class="thumb">
+                                        <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">
+                                            <img alt="" class="thumb"
+                                                 src="<?= Image::getUserProfilePhoto($psychologist['user_id']) ?>">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h4>
+                                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">
+                                                <?= $psychologist['firstname'] . ' ' . $psychologist['lastname'] ?>
+                                            </a>
+                                        </h4>
+                                        <div class="gap"></div>
+                                        <p>
+                                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">Посмотреть профиль</a>
+                                        </p>
+                                    </div>
+                                </li>
+                            <?php endforeach;; ?>
 
                         </ul>
                     </div>

@@ -27,7 +27,8 @@ class PsychologistsController extends \yii\web\Controller {
             'psychologistsTopDataProvider' => $psychologistsTop->getTopPsychologists(),
             'psychologistProblems' => Problems::getAllProblems(),
             'psychologistDirections' => Directions::getAllDirections(),
-            'allProblems' => Problems::find()->all()
+            'allProblems' => Problems::find()->all(),
+            'activePsychologists' => Profile::getMostActive()
         ]);
     }
 

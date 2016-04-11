@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Query;
 
 /**
  * This is the model class for table "profile".
@@ -82,6 +83,15 @@ class Profile extends \yii\db\ActiveRecord
         $this->user_id = $userId;
         $this->has_diplom = 0;
         return $this->save();
+    }
+
+    public static function getMostActive() {
+        $query = new Query();
+        $query->select('profile.*,(SELECT  COUNT(*) FROM discussion_post_reply WHERE profile.user_id = discussion_post_reply.user_id) as repliesCount');
+        $query->from('profile');
+        $query->orderBy('repliesCount DESC');
+        $query->limit('4');
+        return $query->all();
     }
 
 }

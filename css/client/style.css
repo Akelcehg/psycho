@@ -1465,7 +1465,7 @@ GALLERY AND COURSE SECTION START
 }
 
 .event-galley .text * {
-    margin: 0px;
+    /*margin: 0px;*/
 }
 
 .event-galley .text h4 {
