@@ -841,7 +841,7 @@ COURSES SECTION START
 }
 
 .course .course-detail-btn a {
-    width: 50%;
+    width: 100%;
     padding: 15px 15px;
     color: #7c7c7c;
     font-size: 14px;
@@ -3464,14 +3464,14 @@ EVENTS PAGE START
 
 .event-vanue p.color {
     font-size: 16px;
-    font-family: 'Crete Round', serif;
-    text-transform: uppercase
+    /*font-family: 'Crete Round', serif;
+    text-transform: uppercase*/
 }
 
 .text-detail {
     float: left;
     width: 100%;
-    margin: 20px 0px;
+    /*margin: 20px 0px;*/
 }
 
 .text-detail h2 {

@@ -22,7 +22,7 @@ use yii\widgets\ListView;
                 'itemView' => function ($model, $key, $index, $widget) {
 
                     $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['name']))]) . '-' . $model['id'];
-                    $abrvBody = strlen($model['about']) > 200 ? substr($model['about'], 0, 200) . '...' : $model['about'];
+                    $abrvBody = strlen($model['about']) > 300 ? substr($model['about'], 0, 300) . '...' : $model['about'];
                     $content = '<div class="row events">
                                     <div class="col-md-6">
                                         <div class="thumb">
@@ -36,7 +36,7 @@ use yii\widgets\ListView;
 
                                             <div class="event-header">
                                                 <span>' . $model['date'] . '</span>
-                                                <h2>' . $model['name'] . '</h2>
+                                                <h1>' . $model['name'] . '</h1>
                                                 <!-- <div class="data-tags">
                                                     <a href="#">Technology</a>
                                                 </div> -->
@@ -50,12 +50,15 @@ use yii\widgets\ListView;
                                                 <table>
                                                     <tr>
                                                         <td><p class="color">Дата:</p></td>
-                                                        <td><a href="#"><i class="fa fa-calendar-o"></i>' . $model['created_at'] . '</a> <a
-                                                                href="#"><i class="fa fa-clock-o"></i>' . $model['duration'] . '</a></td>
+                                                        <td><p><i class="fa fa-calendar-o"></i>' . $model['created_at'] . '</p></td>
                                                     </tr>
                                                     <tr>
                                                         <td><p class="color">Адрес:</p></td>
-                                                        <td><a href="#">' . $model['address'] . '</a></td>
+                                                        <td><p>' . $model['address'] . '</p></td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td><p class="color">Цена:</p></td>
+                                                        <td><p>' . $model['price'] . ' грн.</p></td>
                                                     </tr>
                                                 </table>
                                             </div>

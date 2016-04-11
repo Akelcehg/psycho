@@ -138,7 +138,7 @@ echo $this->render('//partials/slider'); ?>
                 <?php
 
                 $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($event['name']))]) . '-' . $event['id'];
-                $abrvBody = strlen($event['about']) > 50 ? substr($event['about'], 0, 50) . '...' : $event['about'];
+                $abrvBody = strlen($event['about']) > 100 ? substr($event['about'], 0, 100) . '...' : $event['about'];
 
                 ?>
                 <div class="col-md-3">
@@ -159,7 +159,7 @@ echo $this->render('//partials/slider'); ?>
                                 <p><?= $abrvBody ?></p>
                             </div>
                             <div class="course-detail-btn">
-                                <a href="#">Subscribe</a>
+                                <!--<a href="#">Subscribe</a>-->
                                 <a href="<?= Url::base() . '/trainings/' . $link ?>">Подробнее</a>
                             </div>
                         </div>

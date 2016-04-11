@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Events;
 use app\models\EventSearch;
+use app\models\Profile;
 use Yii;
 use yii\web\NotFoundHttpException;
 
@@ -22,9 +23,11 @@ class TrainingsController extends \yii\web\Controller {
 
         $eventId = explode('-', $title)[1];
         //$training = Events::find(['id' => $eventId[1]])->one();
-
+        $training = $this->findModel($eventId);
         return $this->render('training', [
-            'training' => $this->findModel($eventId)
+            'training' => $training,
+            'organizer' => Profile::findOne(['user_id'=>$training['organizer_id']]),
+            'eventsList' => Events::find()->all()
         ]);
 
     }
