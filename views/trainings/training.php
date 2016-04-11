@@ -6,13 +6,6 @@ use yii\helpers\Url;
 
 ?>
 
-<div class="page-heading">
-    <div class="container">
-        <h2>Event Detail</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-    </div>
-</div>
-
 <div class="contant">
     <div class="container">
         <div class="event-page">
@@ -127,7 +120,6 @@ use yii\helpers\Url;
                     <div id="map-canvas"></div>
                 </div>
             </div>
-
 
 
             <h2>Похожие тренинги</h2>

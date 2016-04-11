@@ -6,8 +6,36 @@ use yii\widgets\ListView;
 ?>
 <div class="page-heading">
     <div class="container">
-        <h2>Events</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+        <h2>Тренинги</h2>
+        <div class="gap"></div>
+        <div class="col-md-12">
+            <div class="row">
+                <form>
+                    <div class="col-md-3">
+                        <select class="form-control">
+                            <option>В каком городе </option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control">
+                            <option>Тренинги какой категории</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn-style">Искать</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
