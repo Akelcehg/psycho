@@ -92,11 +92,6 @@ use yii\helpers\Url;
 
 
             </div>
-
-            <div class="event-location-map">
-                <div id="map-canvas"></div>
-            </div>
-
             <h2>Организатор <i class="fa fa-user"></i></h2>
 
             <div class="admin">
@@ -126,6 +121,15 @@ use yii\helpers\Url;
                     <p><?= $organizer['experience'] ?></p>
                 </div>
             </div>
+            <h2>Положение на карте</h2>
+            <div class="row">
+                <div class="event-location-map">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+
+
+
             <h2>Похожие тренинги</h2>
             <div class="row">
 
