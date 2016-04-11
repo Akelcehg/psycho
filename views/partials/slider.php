@@ -9,7 +9,7 @@
         https://www.youtube.com/watch?v=d--v0NhjIfc
         -->
 
-        <h4>Search for online courses on Web development, Yoga, Guitar lessons, or anything else.</h4>
+        <h4>(Может что то вроде глобального поиска сюда вхуярить ?)for online courses on Web development, Yoga, Guitar lessons, or anything else.</h4>
         <div class="subscribe">
             <input type="text" class="input-block-level" placeholder="Введите что искать">
             <button>Найти</button>
