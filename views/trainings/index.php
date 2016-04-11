@@ -24,51 +24,49 @@ use yii\widgets\ListView;
                     $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($model['name']))]) . '-' . $model['id'];
                     $abrvBody = strlen($model['about']) > 200 ? substr($model['about'], 0, 200) . '...' : $model['about'];
                     $content = '<div class="row events">
-                <div class="col-md-6">
-                    <div class="thumb">
-                        <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '">
-                            <img src="' . Image::getEventPhoto($model['id']) . '" alt="">
-                        </a>
-                    </div>
-                </div>
-                <!--EVENT CONTANT START-->
-                <div class="col-md-6">
-                    <div class="text">
+                                    <div class="col-md-6">
+                                        <div class="thumb">
+                                            <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '">
+                                                <img src="' . Image::getEventPhoto($model['id']) . '" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="text">
 
-                        <div class="event-header">
-                            <span>' . $model['date'] . '</span>
-                            <h2>' . $model['name'] . '</h2>
-                            <!-- <div class="data-tags">
-                                <a href="#">Technology</a>
-                            </div> -->
-                        </div>
+                                            <div class="event-header">
+                                                <span>' . $model['date'] . '</span>
+                                                <h2>' . $model['name'] . '</h2>
+                                                <!-- <div class="data-tags">
+                                                    <a href="#">Technology</a>
+                                                </div> -->
+                                            </div>
 
-                        <div class="event-body">
-                            <p>' . $abrvBody . '</p>
-                        </div>
+                                            <div class="event-body">
+                                                <p>' . $abrvBody . '</p>
+                                            </div>
 
-                        <div class="event-vanue">
-                            <table>
-                                <tr>
-                                    <td><p class="color">Date:</p></td>
-                                    <td><a href="#"><i class="fa fa-calendar-o"></i>' . $model['created_at'] . '</a> <a
-                                            href="#"><i class="fa fa-clock-o"></i>' . $model['duration'] . '</a></td>
-                                </tr>
-                                <tr>
-                                    <td><p class="color">Venue:</p></td>
-                                    <td><a href="#">' . $model['address'] . '</a></td>
-                                </tr>
-                            </table>
-                        </div>
+                                            <div class="event-vanue">
+                                                <table>
+                                                    <tr>
+                                                        <td><p class="color">Дата:</p></td>
+                                                        <td><a href="#"><i class="fa fa-calendar-o"></i>' . $model['created_at'] . '</a> <a
+                                                                href="#"><i class="fa fa-clock-o"></i>' . $model['duration'] . '</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p class="color">Адрес:</p></td>
+                                                        <td><a href="#">' . $model['address'] . '</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
 
-                        <div class="event-footer">
-                            <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '" class="btn-style">Подробнее</a>
-                        </div>
+                                            <div class="event-footer">
+                                                <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '" class="btn-style">Подробнее</a>
+                                            </div>
 
-                    </div>
-                </div>
-                <!--EVENT CONTANT END-->
-            </div>';
+                                        </div>
+                                    </div>
+                                </div>';
                     return $content;
                 },
             ]) ?>

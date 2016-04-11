@@ -10,61 +10,58 @@ use app\models\Image;
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
     </div>
 </div>
-<!--BANNER END-->
-<!--CONTANT START-->
+
 <div class="contant">
     <div class="container">
         <div class="event-page">
-            <!--EVENT START-->
+
             <div class="row events">
                 <div class="col-md-6">
                     <div class="thumb">
                         <a href="#"><img src="<?= Image::getEventPhoto($training['id']) ?>" alt=""></a>
                     </div>
                 </div>
-                <!--EVENT CONTANT START-->
+
                 <div class="col-md-6">
                     <div class="text">
-                        <!--EVENT HEADER START-->
+
                         <div class="event-header">
                             <span><?= $training['date'] ?></span>
                             <h2><?= $training['name'] ?></h2>
-                            <div class="data-tags">
-                                <a href="#">Technology</a>
-                            </div>
+                            <!--                            <div class="data-tags">
+                                                            <a href="#">Technology</a>
+                                                        </div>-->
                         </div>
 
                         <div class="event-vanue">
                             <table>
                                 <tr>
-                                    <td><p class="color">Date:</p></td>
+                                    <td><p class="color">Дата:</p></td>
                                     <td><a href="#"><i class="fa fa-calendar-o"></i><?= $training['date'] ?></a> <a
                                             href="#"><i class="fa fa-clock-o"></i><?= $training['duration'] ?></a></td>
                                 </tr>
                                 <tr>
-                                    <td><p class="color">Venue:</p></td>
+                                    <td><p class="color">Адрес:</p></td>
                                     <td><a href="#"><?= $training['address'] ?></a></td>
                                 </tr>
                             </table>
                         </div>
-                        <!--EVENT VANUE END-->
-                        <!--EVENT FOOTER START-->
+
                         <div class="event-footer">
                             <a href="#" class="btn-style">Записаться</a>
                         </div>
-                        <!--EVENT FOOTER END-->
+
                     </div>
                 </div>
-                <!--EVENT CONTANT END-->
+
             </div>
-            <!--EVENT DETAIL TEXT START-->
+
             <div class="text-detail">
                 <p><?= $training['about'] ?></p>
 
                 <h2>Программма дня</h2>
 
-                <pre
-                    style="font-size: 18px; background-color: transparent; border: 0;"><?= $training['schedule'] ?></pre>
+                <p><?= $training['schedule'] ?></p>
                 <!--                <ul>
                                     <li><a href="#">Quisque ut mattis dolor, a gravida turpis.</a></li>
                                     <li><a href="#">At vero eos et accusamus et iusto odio dignissimos</a></li>
@@ -75,13 +72,11 @@ use app\models\Image;
 
 
             </div>
-            <!--EVENT DETAIL TEXT END-->
-            <!--EVENT LOCATION MAP START-->
+
             <div class="event-location-map">
                 <div id="map-canvas"></div>
             </div>
-            <!--EVENT LOCATION MAP END-->
-            <!--ADMIN START-->
+
             <div class="admin">
                 <div class="thumb">
                     <a href="#"><img alt="" src="../images/admin.jpg"></a>
@@ -106,11 +101,11 @@ use app\models\Image;
                         aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
                 </div>
             </div>
-            <!--ADMIN END-->
+
             <div class="row">
                 <div class="col-md-8">
                     <div class="leave-reply">
-                        <h2>Leave Us a Reply</h2>
+                        <h2>Leave Us a Reply (Чё тут ? )</h2>
                         <form>
                             <div class="row-fluid">
                                 <div class="col-md-12">
@@ -125,7 +120,7 @@ use app\models\Image;
                 </div>
                 <div class="col-md-4">
                     <div class="campaign">
-                        <h4>Campaign Launched on 25 January, 2014 at LONDON, UK</h4>
+                        <h4>Что тут надо писать ? и надо ли вообще ?</h4>
                         <p>share THIS CAMPAIGN</p>
                         <div class="social-icons">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -145,7 +140,9 @@ use app\models\Image;
 <script>
 
     function initMap() {
-        var myLatLng = {lat: 46.384241150566865, lng: 30.721131563186646};
+        var myLatLng = {
+            lat: <?=explode(';', $training['map_coordinates'])[0]?>,
+            lng: <?=explode(';', $training['map_coordinates'])[1]?>};
 
         var map = new google.maps.Map(document.getElementById('map-canvas'), {
             zoom: 15,

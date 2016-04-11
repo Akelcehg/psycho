@@ -58,8 +58,6 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
 
-
-
         <?= $form->field($model, 'training_program')->textarea(['rows' => 6]) ?>
 
         <?= $form->field($model, 'required_documents')->textarea(['rows' => 6]) ?>

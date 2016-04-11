@@ -71,7 +71,7 @@ $(document).ready(function () {
     });
     //2016-04-04
     $fp.on("fp:save", function (e, dateObj) {
-        $fp.val(dateObj.format("YYYY-DD-MM"));
+        $fp.val(dateObj.format("YYYY-DD-MM hh:mm:ss"));
         $fp.filthypillow("hide");
     });
 

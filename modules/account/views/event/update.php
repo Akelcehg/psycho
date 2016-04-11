@@ -10,6 +10,12 @@ $this->params['breadcrumbs'][] = ['label' => 'Events', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
+
+<?php
+
+$this->registerJsFile('https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete');
+
+?>
 <div class="col-md-9">
     <div class="profile-box editing">
         <h1><?= Html::encode($this->title) ?></h1>

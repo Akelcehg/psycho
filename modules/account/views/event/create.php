@@ -10,7 +10,11 @@ $this->title = 'Create Events';
 $this->params['breadcrumbs'][] = ['label' => 'Events', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php
 
+$this->registerJsFile('https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyAORdNzOZKnybtZPUaEZhJivJUcd565Nmo&libraries=places&callback=initAutocomplete');
+
+?>
 <div class="col-md-9">
     <div class="profile-box editing">
 

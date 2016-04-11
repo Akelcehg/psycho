@@ -60,6 +60,9 @@ class EventController extends Controller {
         $model = new Events();
         $imagesModel = new Image();
         if ($model->load(Yii::$app->request->post())) {
+            $userId = Yii::$app->user->id;
+            $model->is_user_organizer = $userId;
+            $model->organizer_id = $userId;
             if ($model->save()) {
                 $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
                 if ($imagesModel->image_file) $imagesModel->saveEventImage($model->id, 550, 330);
