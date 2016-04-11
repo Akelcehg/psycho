@@ -153,9 +153,7 @@ use yii\widgets\ListView;
 
                                                                     <div class="panel-body">
                                                                     ' . $abrvBody . '
-                                                                    </div>
-                                                                    <div class="panel-footer">
-                                                                        <a href="' . Url::base() . '/article/' . $link . '" class="btn-style" style="float: right;">Читать</a>
+                                                                     <a href="' . Url::base() . '/article/' . $link . '" class="btn-style" style="float: right;">Читать</a>
                                                                     </div>
 
                                                                 </div>
