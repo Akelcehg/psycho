@@ -16,7 +16,7 @@ class EventSearch extends Events {
      */
     public function rules() {
         return [
-            [['id', 'type', 'price', 'organizer_id', 'is_user_organizer'], 'integer'],
+            [['id', 'type', 'price', 'city_id', 'organizer_id', 'is_user_organizer'], 'integer'],
             [['direction', 'name', 'about', 'date', 'duration', 'schedule', 'address', 'phone', 'site', 'map_coordinates', 'updated_at', 'created_at'], 'safe'],
         ];
     }
@@ -66,6 +66,7 @@ class EventSearch extends Events {
             'price' => $this->price,
             'organizer_id' => $this->organizer_id,
             'is_user_organizer' => $this->is_user_organizer,
+            'city_id' => $this->city_id,
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
         ]);

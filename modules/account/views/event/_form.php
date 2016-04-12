@@ -1,5 +1,6 @@
 <?php
 
+use app\models\City;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -36,6 +37,13 @@ use \app\models\EventType;
 
     <?= $form->field($model, 'price')->textInput() ?>
 
+    <?= $form->field($model, 'city_id')->dropDownList(
+        ArrayHelper::map(City::find()->where([
+            'region_id' => '10373'
+        ])->orderBy('name')->all(), 'city_id', 'name'), [
+        'prompt' => 'Укажите в каком городе тренинг'
+    ]) ?>
+
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
@@ -46,7 +54,7 @@ use \app\models\EventType;
     <?= $form->field($model, 'map_coordinates')->hiddenInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
-    
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

@@ -22,6 +22,7 @@ use yii\data\ActiveDataProvider;
  * @property string $site
  * @property string $map_coordinates
  * @property integer $organizer_id
+ * @property integer $city_id
  * @property integer $is_user_organizer
  * @property string $updated_at
  * @property string $created_at
@@ -39,8 +40,8 @@ class Events extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['type', 'direction', 'name', 'about', 'date', 'duration', 'schedule', 'price', 'address', 'phone', 'map_coordinates', 'organizer_id', 'is_user_organizer'], 'required'],
-            [['type', 'price', 'organizer_id', 'is_user_organizer'], 'integer'],
+            [['type', 'direction', 'city_id', 'name', 'about', 'date', 'duration', 'schedule', 'price', 'address', 'phone', 'map_coordinates', 'organizer_id', 'is_user_organizer'], 'required'],
+            [['type', 'price', 'city_id', 'organizer_id', 'is_user_organizer'], 'integer'],
             [['about', 'schedule'], 'string'],
             [['date', 'updated_at', 'created_at'], 'safe'],
             [['direction', 'name', 'duration', 'address', 'phone', 'site', 'map_coordinates'], 'string', 'max' => 255]
@@ -67,6 +68,7 @@ class Events extends \yii\db\ActiveRecord {
             'map_coordinates' => 'Map Coordinates',
             'organizer_id' => 'Organizer ID',
             'is_user_organizer' => 'Is User Organizer',
+            'city_id' => 'City Id',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
         ];

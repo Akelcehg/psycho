@@ -23,6 +23,7 @@ class m160217_160537_events extends Migration
             'map_coordinates' => Schema::TYPE_STRING . ' NOT NULL',
             'organizer_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'is_user_organizer' => Schema::TYPE_INTEGER . ' NOT NULL',
+            'city_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => 'timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP',
             'updated_at' => 'timestamp ON UPDATE CURRENT_TIMESTAMP'
         ]);

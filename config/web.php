@@ -53,7 +53,11 @@ $config = [
                 'article/<title>' => 'article/view',
 
                 'video/<title>' => 'video/view',
+
+                'trainings/index' => 'trainings/index',
+
                 'trainings/<title>' => 'trainings/view',
+
                 'school/<title>' => 'educational-institution/view',
 
                 'topic/<title>' => 'discussion/topic',

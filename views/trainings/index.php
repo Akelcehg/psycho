@@ -1,6 +1,11 @@
 <?php
 use app\components\TranslitWidget;
+use app\models\City;
+use app\models\EventType;
 use app\models\Image;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use yii\widgets\ListView;
 
 ?>
@@ -10,30 +15,31 @@ use yii\widgets\ListView;
         <div class="gap"></div>
         <div class="col-md-12">
             <div class="row">
-                <form>
-                    <div class="col-md-3">
-                        <select class="form-control">
-                            <option>В каком городе</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-                        <select class="form-control">
-                            <option>Тренинги какой категории</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <button type="submit" class="btn-style">Искать</button>
-                    </div>
-
-                </form>
+                <?php $form = ActiveForm::begin([
+                    'action' => ['index'],
+                    'method' => 'get',
+                    'id' => 'event-search-form'
+                ]); ?>
+                <div class="col-md-3">
+                    <?= $form->field($searchModel, 'type')->dropDownList(
+                        ArrayHelper::map(EventType::find()->all(), 'id', 'name')
+                        , [
+                        'prompt' => 'Любой тип тренинга'
+                    ])->label(false); ?>
+                </div>
+                <div class="col-md-3">
+                    <?= $form->field($searchModel, 'city_id')->dropDownList(
+                        ArrayHelper::map(City::find()->where([
+                            'region_id' => '10373'
+                        ])->orderBy('name')->all(), 'city_id', 'name'), [
+                        'prompt' => 'В любом городе'
+                    ])->label(false); ?>
+                </div>
+                <div class="col-md-6">
+                    <!--<button type="submit" class="btn-style">Искать</button>-->
+                    <?= Html::submitButton('Искать', ['class' => 'btn-style']) ?>
+                </div>
+                <?php ActiveForm::end(); ?>
             </div>
         </div>
     </div>
