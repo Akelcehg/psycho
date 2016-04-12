@@ -15,18 +15,22 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'title')->textInput() ?>
+    <div class="form-group">
 
-    <div class="profile-checkbox" style="display: table;">
-        <ul>
-            <?php foreach ($articleCategories as $category): ?>
-                <li>
-                    <input id="category<?= $category['id'] ?>" class="css-checkbox" type="checkbox" name="categories[]"
-                           value="<?= $category['id'] ?>"
-                    <?php if ($category['active'] != NULL) echo "checked" ?> >
-                    <label for="category<?= $category['id'] ?>" class="css-label"><?= $category['name'] ?></label>
-                </li>
-            <?php endforeach; ?>
-        </ul>
+        <div class="profile-checkbox">
+            <ul>
+                <?php foreach ($articleCategories as $category): ?>
+                    <li>
+                        <input id="category<?= $category['id'] ?>" class="css-checkbox" type="checkbox"
+                               name="categories[]"
+                               value="<?= $category['id'] ?>"
+                            <?php if ($category['active'] != NULL) echo "checked" ?> >
+                        <label for="category<?= $category['id'] ?>" class="css-label"><?= $category['name'] ?></label>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+
     </div>
 
 

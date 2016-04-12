@@ -36,16 +36,20 @@ AppAsset::register($this);
                     <!--PROFILE IMAGE START-->
                     <div class="profile-box profile-view">
                         <div class="thumb">
-                            <a href="#"><img class="thumb" src="<?= Url::base() . '/' . $this->context->module->logo ?>" alt=""></a>
+                            <a href="#"><img class="thumb" src="<?= Url::base() . '/' . $this->context->module->logo ?>"
+                                             alt=""></a>
                         </div>
                         <div class="text">
-                            <p><?=$this->context->module->first_name." ".$this->context->module->last_name?></p>
+                            <p><?= $this->context->module->first_name . " " . $this->context->module->last_name ?></p>
                         </div>
+
                     </div>
+
                     <!--PROFILE IMAGE END-->
                     <!--EDIT PROFILE START-->
                     <div class="profile-box edit-profile">
-                        <h2>Account Setting</h2>
+                        <h2>Настройки</h2>
+
                         <ul>
                             <li><a href="<?= Url::base() ?>/account/profile">Мой профиль</a></li>
                             <li><a href="<?= Url::base() ?>/account/article">Мои статьи</a></li>
@@ -54,15 +58,20 @@ AppAsset::register($this);
                             <li><a href="<?= Url::base() ?>/account/event">Мои тренинги</a></li>
                         </ul>
                         <div class="logout">
-                            <a href="#">Log Out</a>
+                            <?= Html::a('Выйти', ['/site/logout'], [
+                                'data' => [
+                                    'method' => 'post',
+                                ],
+                            ]) ?>
                         </div>
                     </div>
-                    <!--EDIT PROFILE END-->
+
                 </div>
 
                 <?= $content ?>
 
             </div>
+            <div class="gap"></div>
         </div>
     </div>
 

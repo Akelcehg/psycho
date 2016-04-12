@@ -15,50 +15,67 @@ use \app\models\EventType;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-    <?= $form->field($imagesModel, 'image_file')->fileInput()->label('Выберите фото') ?>
+    <div class="col-md-12">
 
-    <?= $form->field($model, 'type')->dropDownList(
-        ArrayHelper::map(EventType::find()->all(), 'id', 'name')
-        , [
-        'prompt' => 'Укажите тип тренинга'
-    ]); ?>
+        <?= $form->field($imagesModel, 'image_file')->fileInput()->label('Выберите фото') ?>
 
-    <?= $form->field($model, 'direction')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'about')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'date')->textInput(['id' => 'eventDateInput']) ?>
-
-    <?= $form->field($model, 'duration')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'schedule')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'price')->textInput() ?>
-
-    <?= $form->field($model, 'city_id')->dropDownList(
-        ArrayHelper::map(City::find()->where([
-            'region_id' => '10373'
-        ])->orderBy('name')->all(), 'city_id', 'name'), [
-        'prompt' => 'Укажите в каком городе тренинг'
-    ]) ?>
-
-    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
-
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div id="map" style="width: 100%; height: 400px;"></div>
-
-    <?= $form->field($model, 'map_coordinates')->hiddenInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
-
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
+    <div class="col-md-4">
+        <?= $form->field($model, 'type')->dropDownList(
+            ArrayHelper::map(EventType::find()->all(), 'id', 'name')
+            , [
+            'prompt' => 'Укажите тип тренинга'
+        ]); ?>
+    </div>
+    <div class="col-md-4">
+        <?= $form->field($model, 'date')->textInput(['id' => 'eventDateInput']) ?>
+    </div>
+    <div class="col-md-4">
+        <?= $form->field($model, 'duration')->textInput(['maxlength' => true]) ?>
+    </div>
+
+    <div class="col-md-4">
+        <?= $form->field($model, 'price')->textInput() ?>
+    </div>
+    <div class="col-md-4">
+        <?= $form->field($model, 'city_id')->dropDownList(
+            ArrayHelper::map(City::find()->where([
+                'region_id' => '10373'
+            ])->orderBy('name')->all(), 'city_id', 'name'), [
+            'prompt' => 'Укажите в каком городе тренинг'
+        ]) ?>
+    </div>
+
+    <div class="col-md-6">
+        <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+    </div>
+    <div class="col-md-6">
+        <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
+    </div>
+
+    <div class="col-md-12">
+        <?= $form->field($model, 'direction')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'about')->textarea(['rows' => 6]) ?>
+
+
+        <?= $form->field($model, 'schedule')->textarea(['rows' => 6]) ?>
+
+
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map" style="width: 100%; height: 400px;"></div>
+
+        <?= $form->field($model, 'map_coordinates')->hiddenInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+
+        <div class="form-group">
+            <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        </div>
+    </div>
     <?php ActiveForm::end(); ?>
 
 </div>

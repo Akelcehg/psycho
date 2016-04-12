@@ -15,30 +15,29 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-    <?= $form->field($imagesModel, 'image_file')->fileInput()->label('Выберите фото') ?>
+    <div class="col-md-12">
+        <?= $form->field($imagesModel, 'image_file')->fileInput()->label('Выберите фото') ?>
 
-    <div class="grid grid_6">
 
         <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
-        <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
-
     </div>
-    <div class="grid grid_6">
 
-        <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
-            <h4 class="white nicdark_margin20">INFORMATION</h4>
-            <i class="icon-globe-1 nicdark_iconbg right medium yellow"></i>
-        </div>
 
+    <div class="col-md-4">
         <?= $form->field($model, 'city_id')->dropDownList(
             ArrayHelper::map(City::find()->where([
                 'region_id' => '10373'
             ])->orderBy('name')->all(), 'city_id', 'name')) ?>
-
+    </div>
+    <div class="col-md-4">
         <?= $form->field($model, 'year')->textInput() ?>
-
+    </div>
+    <div class="col-md-4">
         <?= $form->field($model, 'status')->dropDownList(['государственная' => 'государственная', 'не государственная' => 'не государственная',], ['prompt' => 'Выберите статус']) ?>
+    </div>
+
+    <div class="col-md-12">
+        <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
         <?= $form->field($model, 'accreditation')->textarea(['rows' => 6]) ?>
 
@@ -53,22 +52,30 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'map_coordinates')->hiddenInput(['maxlength' => true])->label(false) ?>
 
         <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+    </div>
+
+    <div class="col-md-6">
 
         <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
+    </div>
+
+    <div class="col-md-6">
+
         <?= $form->field($model, 'site')->textInput(['maxlength' => true]) ?>
 
+    </div>
+
+    <div class="col-md-12">
         <?= $form->field($model, 'training_program')->textarea(['rows' => 6]) ?>
 
         <?= $form->field($model, 'required_documents')->textarea(['rows' => 6]) ?>
 
+
+        <div class="form-group">
+            <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить изменения', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        </div>
     </div>
-
-
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
-
     <?php ActiveForm::end(); ?>
 
 </div>
