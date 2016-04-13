@@ -21,34 +21,34 @@ use yii\helpers\Html;
 
 
         <h2>Ваш профиль</h2>
+        <div class="col-md-12">
+            <!--<img alt="Test image" id="testImage"/>-->
+            <!--<img id="blah" src="#" alt="your image" />-->
+            <img id="testImage" style="max-width:400px; max-height:400px;"/>
+            <div id="previewWrap"></div>
+            <!--<div id="previewWrap"></div>-->
 
-        <!--<img alt="Test image" id="testImage"/>-->
-        <!--<img id="blah" src="#" alt="your image" />-->
-        <img id="testImage" style="max-width:400px; max-height:400px;"/>
-        <div id="previewWrap"></div>
-        <!--<div id="previewWrap"></div>-->
+            <?php
+            $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
+                'action' => Url::base() . '/account/profile/update-photo',
+            ]);
+            ?>
 
-        <?php
-        $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
-            'action' => Url::base() . '/account/profile/update-photo',
-        ]);
-        ?>
+            <input type="hidden" id="disp_x" name="disp_x"/>
+            <input type="hidden" id="disp_y" name="disp_y"/>
+            <input type="hidden" id="x" name="x"/>
+            <input type="hidden" id="y" name="y"/>
+            <input type="hidden" id="w" name="w"/>
+            <input type="hidden" id="h" name="h"/>
 
-        <input type="hidden" id="disp_x" name="disp_x"/>
-        <input type="hidden" id="disp_y" name="disp_y"/>
-        <input type="hidden" id="x" name="x"/>
-        <input type="hidden" id="y" name="y"/>
-        <input type="hidden" id="w" name="w"/>
-        <input type="hidden" id="h" name="h"/>
+            <?= $form->field(new \app\models\Image(), 'image_file')->fileInput(['id' => 'imgInp'])->label('Выберите фото') ?>
 
-        <?= $form->field(new \app\models\Image(), 'image_file')->fileInput(['id' => 'imgInp'])->label('Выберите фото') ?>
+            <div style="color: white; display: table; ">
+                <?= Html::submitButton('Сохранить фото', ['class' => 'btn-style']) ?>
+            </div>
 
-        <div style="color: white; display: table; ">
-            <?= Html::submitButton('Сохранить фото', ['class' => 'btn-style']) ?>
+            <?php ActiveForm::end(); ?>
         </div>
-
-        <?php ActiveForm::end(); ?>
-
 
 
         <?php
@@ -58,72 +58,69 @@ use yii\helpers\Html;
         ?>
 
         <div class="gap"></div>
+        <div class="col-md-6">
+            <?=
+            $form->field($profileModel, 'firstname')->textInput()
+            ?>
+        </div>
+        <div class="col-md-6">
+            <?=
+            $form->field($profileModel, 'lastname')->textInput()
+            ?>
+        </div>
+        <div class="col-md-6">
+            <?=
+            $form->field($profileModel, 'secondname')->textInput()
+            ?>
+        </div>
 
-        <ul>
-            <li>
-                <?=
-                $form->field($profileModel, 'firstname')->textInput()
-                ?>
-            </li>
-            <li>
-                <?=
-                $form->field($profileModel, 'lastname')->textInput()
-                ?>
-            </li>
-            <li>
-                <?=
-                $form->field($profileModel, 'secondname')->textInput()
-                ?>
-            </li>
-
-            <li>
-                <label>Gender</label>
-                <?= $form->field($profileModel, 'gender')->dropDownList([
-                    '0' => 'Выберите пол',
-                    'мужской' => 'мужской',
-                    'женский' => 'женский'
-                ])->label(false);
-                ?>
-            </li>
-
-            <li>
-                <?= $form->field($profileModel, 'city_id')->dropDownList(
-                    ArrayHelper::map(City::find()->where([
-                        'region_id' => '10373'
-                    ])->orderBy('name')->all(), 'city_id', 'name'),
-                    ['prompt' => 'Выберите город']) ?>
-            </li>
-
-        </ul>
+        <!--<label>Gender</label>-->
+        <div class="col-md-6">
+            <?= $form->field($profileModel, 'gender')->dropDownList([
+                '0' => 'Выберите пол',
+                'мужской' => 'мужской',
+                'женский' => 'женский'
+            ]);
+            ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($profileModel, 'city_id')->dropDownList(
+                ArrayHelper::map(City::find()->where([
+                    'region_id' => '10373'
+                ])->orderBy('name')->all(), 'city_id', 'name'),
+                ['prompt' => 'Выберите город']) ?>
 
 
+        </div>
     </div>
 
     <div class="profile-box editing">
-        <h2>Цена и образование</h2>
 
-        <?=
-        $form->field($profileModel, 'price')->textInput()
-        ?>
-
-        <?=
-        $form->field($profileModel, 'education')->textArea([
-            'id' => 'profile_education_input',
-            'placeholder' => "Введите ваше образование бла бла",
-            ///'style' => 'overflow:automin-height:100px;resize: none;border: 2px solid #52b7e7;'
-            //'style' => 'overflow:auto;width:100%;'
-        ])
-        ?>
-
-        <?=
-        $form->field($profileModel, 'experience')->textArea([
-            'id' => 'profile_experience_input',
-            'placeholder' => "Введите ваш опыт работы бла бла",
-            //'style' => 'overflow:automin-height:100px;resize: none;border: 2px solid #52b7e7;'
-            //'style' => 'overflow:auto;width:100%;'
-        ])
-        ?>
-
+        <div class="col-md-6">
+            <?=
+            $form->field($profileModel, 'price')->textInput()
+            ?>
+        </div>
+        <div class="col-md-12">
+            <?=
+            $form->field($profileModel, 'education')->textArea([
+                'id' => 'profile_education_input',
+                'placeholder' => "Введите ваше образование бла бла",
+                ///'style' => 'overflow:automin-height:100px;resize: none;border: 2px solid #52b7e7;'
+                //'style' => 'overflow:auto;width:100%;'
+            ])
+            ?>
+        </div>
+        <div class="col-md-12">
+            <?=
+            $form->field($profileModel, 'experience')->textArea([
+                'id' => 'profile_experience_input',
+                'placeholder' => "Введите ваш опыт работы бла бла",
+                //'style' => 'overflow:automin-height:100px;resize: none;border: 2px solid #52b7e7;'
+                //'style' => 'overflow:auto;width:100%;'
+            ])
+            ?>
+        </div>
         <?= Html::submitButton('Сохранить изменения профиля', ['class' => 'btn-style']) ?>
         <?php ActiveForm::end(); ?>
     </div>
