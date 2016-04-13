@@ -33,47 +33,17 @@ class ProfileController extends Controller
                 return $this->render('index', [
                     'profileModel' => $profile,
                     'message' => 'Профиль успешно обновлён',
-                    /*'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
-                    'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId),*/
                     'imagesModel' => $imagesModel,
                     'logo' => $imagesModel->getProfilePhoto()
                 ]);
             }
         } else {
-
-            //$this->logo = $imagesModel->getProfilePhoto();
             return $this->render('index', [
                 'profileModel' => $profile,
-                'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
-                'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId),
                 'imagesModel' => $imagesModel,
-                //'logo' => $imagesModel->getProfilePhoto()
             ]);
         }
     }
-
-   /* public function actionUpdateDirections() {
-
-        $directionsArray = Yii::$app->request->post('directions');
-
-        $currentPsychologistId = Yii::$app->user->id;
-
-        $psychologistDirections = new PsychologistDirections();
-        if ($psychologistDirections->setNewPsychologistDirections($currentPsychologistId, $directionsArray))
-            return $this->redirect('index');
-        else throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-    public function actionUpdateProblems() {
-        $problemsArray = Yii::$app->request->post('problems');
-
-        $currentPsychologistId = Yii::$app->user->id;
-
-        $psychologistProblems = new PsychologistProblems();
-        if ($psychologistProblems->setNewPsychologistProblems($currentPsychologistId, $problemsArray))
-            return $this->redirect('index');
-        else throw new NotFoundHttpException('The requested page does not exist.');
-    }*/
 
     public function actionUpdatePhoto() {
         $imagesModel = new Image();

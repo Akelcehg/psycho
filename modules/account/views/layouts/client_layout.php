@@ -50,14 +50,10 @@ AppAsset::register($this);
                         <!--<h2>Настройки</h2>-->
                         <ul>
                             <li><a href="<?= Url::base() ?>/account/settings">Настройки</a></li>
+                            <li><a href="<?= Url::base() ?>/account/profile">Профиль</a></li>
                             <?php foreach ($this->context->module->userModules as $module): ?>
-                                <li><a href="<?=Url::base().$module['link'] ?>"><?=$module['name']?></a></li>
-                            <?php endforeach;?>
-                            <!--<li><a href="<?/*= Url::base() */?>/account/profile">Мой профиль</a></li>
-                            <li><a href="<?/*= Url::base() */?>/account/article">Мои статьи</a></li>
-                            <li><a href="<?/*= Url::base() */?>/account/educational-institution">Мои школы</a></li>
-                            <li><a href="<?/*= Url::base() */?>/account/videos">Мои видео</a></li>
-                            <li><a href="<?/*= Url::base() */?>/account/event">Мои тренинги</a></li>-->
+                                <li><a href="<?= Url::base() . $module['link'] ?>"><?= $module['name'] ?></a></li>
+                            <?php endforeach; ?>
                         </ul>
                         <div class="logout">
                             <?= Html::a('Выйти', ['/site/logout'], [
