@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use yii\helpers\Url;
+use \app\models\UsersModules;
 
 AppAsset::register($this);
 ?>
@@ -33,7 +34,7 @@ AppAsset::register($this);
             <div style="margin-top: 15px;"></div>
             <div class="row">
                 <div class="col-md-3">
-                    <!--PROFILE IMAGE START-->
+
                     <div class="profile-box profile-view">
                         <div class="thumb">
                             <a href="#"><img class="thumb" src="<?= Url::base() . '/' . $this->context->module->logo ?>"
@@ -45,17 +46,18 @@ AppAsset::register($this);
 
                     </div>
 
-                    <!--PROFILE IMAGE END-->
-                    <!--EDIT PROFILE START-->
                     <div class="profile-box edit-profile">
-                        <h2>Настройки</h2>
-
+                        <!--<h2>Настройки</h2>-->
                         <ul>
-                            <li><a href="<?= Url::base() ?>/account/profile">Мой профиль</a></li>
-                            <li><a href="<?= Url::base() ?>/account/article">Мои статьи</a></li>
-                            <li><a href="<?= Url::base() ?>/account/educational-institution">Мои школы</a></li>
-                            <li><a href="<?= Url::base() ?>/account/videos">Мои видео</a></li>
-                            <li><a href="<?= Url::base() ?>/account/event">Мои тренинги</a></li>
+                            <li><a href="<?= Url::base() ?>/account/settings">Настройки</a></li>
+                            <?php foreach ($this->context->module->userModules as $module): ?>
+                                <li><a href="<?=Url::base().$module['link'] ?>"><?=$module['name']?></a></li>
+                            <?php endforeach;?>
+                            <!--<li><a href="<?/*= Url::base() */?>/account/profile">Мой профиль</a></li>
+                            <li><a href="<?/*= Url::base() */?>/account/article">Мои статьи</a></li>
+                            <li><a href="<?/*= Url::base() */?>/account/educational-institution">Мои школы</a></li>
+                            <li><a href="<?/*= Url::base() */?>/account/videos">Мои видео</a></li>
+                            <li><a href="<?/*= Url::base() */?>/account/event">Мои тренинги</a></li>-->
                         </ul>
                         <div class="logout">
                             <?= Html::a('Выйти', ['/site/logout'], [

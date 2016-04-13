@@ -4,6 +4,7 @@ namespace app\modules\account;
 
 use app\models\Image;
 use app\models\Profile;
+use app\models\UsersModules;
 use app\modules\account\controllers\ProfileController;
 use Yii;
 use yii\web\NotFoundHttpException;
@@ -14,6 +15,7 @@ class Module extends \yii\base\Module {
     public $logo;
     public $first_name;
     public $last_name;
+    public $userModules;
 
     public function init() {
         $this->layout = 'client_layout';
@@ -23,6 +25,7 @@ class Module extends \yii\base\Module {
 
         $this->first_name = $profile->firstname;
         $this->last_name = $profile->lastname;
+        $this->userModules = UsersModules::getUsersModules();
         parent::init();
 
         // custom initialization code goes here

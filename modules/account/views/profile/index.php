@@ -9,17 +9,14 @@ use yii\helpers\Html;
 ?>
 
 <div class="col-md-9">
-    <!--EDIT PROFILE START-->
+
     <div class="profile-box editing">
 
 
         <?php if (isset($message)): ?>
-            <div class="nicdark_alerts nicdark_bg_blue nicdark_radius nicdark_shadow" id="profileUpdateAlert"
-                 style="text-align: center;">
-                <p class="white nicdark_size_medium"><i class="icon-cancel-circled-outline iconclose"></i>
-                    <?= $message ?></p>
-                <i class="icon-ok-outline nicdark_iconbg right medium white"></i>
-            </div>
+
+            <?= $message ?></p>
+
         <?php endif; ?>
 
 
@@ -60,26 +57,22 @@ use yii\helpers\Html;
         ]);
         ?>
 
+        <div class="gap"></div>
+
         <ul>
             <li>
                 <?=
-                $form->field($profileModel, 'firstname')->textInput([
-                    'class' => 'input-block-level'
-                ])
+                $form->field($profileModel, 'firstname')->textInput()
                 ?>
             </li>
             <li>
                 <?=
-                $form->field($profileModel, 'lastname')->textInput([
-                    'class' => 'input-block-level'
-                ])
+                $form->field($profileModel, 'lastname')->textInput()
                 ?>
             </li>
             <li>
                 <?=
-                $form->field($profileModel, 'secondname')->textInput([
-                    'class' => 'input-block-level'
-                ])
+                $form->field($profileModel, 'secondname')->textInput()
                 ?>
             </li>
 
@@ -101,10 +94,6 @@ use yii\helpers\Html;
                     ['prompt' => 'Выберите город']) ?>
             </li>
 
-            <!--<li class="fw">
-                <button class="btn-style">Update</button>
-            </li>-->
-
         </ul>
 
 
@@ -122,7 +111,7 @@ use yii\helpers\Html;
             'id' => 'profile_education_input',
             'placeholder' => "Введите ваше образование бла бла",
             ///'style' => 'overflow:automin-height:100px;resize: none;border: 2px solid #52b7e7;'
-            'style' => 'overflow:auto;width:100%;'
+            //'style' => 'overflow:auto;width:100%;'
         ])
         ?>
 
@@ -131,7 +120,7 @@ use yii\helpers\Html;
             'id' => 'profile_experience_input',
             'placeholder' => "Введите ваш опыт работы бла бла",
             //'style' => 'overflow:automin-height:100px;resize: none;border: 2px solid #52b7e7;'
-            'style' => 'overflow:auto;width:100%;'
+            //'style' => 'overflow:auto;width:100%;'
         ])
         ?>
 
@@ -173,7 +162,7 @@ use yii\helpers\Html;
 
         <?php ActiveForm::end(); ?>
 
-
+        <div class="gap"></div>
         <h2>С какими поблемами работаете</h2>
 
         <?php
