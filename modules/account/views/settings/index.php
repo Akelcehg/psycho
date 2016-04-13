@@ -1,4 +1,7 @@
 <?php
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\widgets\ActiveForm;
 
 ?>
 
@@ -7,56 +10,47 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="panel panel-default">
-                    <!-- Default panel contents -->
-                    <div class="panel-heading">Material Design Switch Demos</div>
 
-                    <!-- List group -->
+                <?php $form = ActiveForm::begin([
+                    'action' => Url::base() . '/account/settings/update-settings'
+                ]);
+                ?>
+                <div class="panel panel-default">
+
+                    <!--<div class="panel-heading">Material Design Switch Demos</div>-->
+
                     <ul class="list-group">
-                        <li class="list-group-item">
-                            Bootstrap Switch Default
-                            <div class="material-switch pull-right">
-                                <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                <label for="someSwitchOptionDefault" class="label-default"></label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            Bootstrap Switch Primary
-                            <div class="material-switch pull-right">
-                                <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
-                                <label for="someSwitchOptionPrimary" class="label-primary"></label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            Bootstrap Switch Success
-                            <div class="material-switch pull-right">
-                                <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
-                                <label for="someSwitchOptionSuccess" class="label-success"></label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            Bootstrap Switch Info
-                            <div class="material-switch pull-right">
-                                <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox"/>
-                                <label for="someSwitchOptionInfo" class="label-info"></label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            Bootstrap Switch Warning
-                            <div class="material-switch pull-right">
-                                <input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox"/>
-                                <label for="someSwitchOptionWarning" class="label-warning"></label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            Bootstrap Switch Danger
-                            <div class="material-switch pull-right">
-                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
-                                <label for="someSwitchOptionDanger" class="label-danger"></label>
-                            </div>
-                        </li>
+
+                        <?php foreach ($userModules as $module): ?>
+                            <li class="list-group-item">
+                                <?= $module['name'] ?>
+                                <div class="material-switch pull-right">
+                                    <?php if ($module['active']) { ?>
+                                        <input id="module<?= $module['id'] ?>" name="settings[]"
+                                               value="<?= $module['id'] ?>" type="checkbox"
+                                               checked/>
+                                    <?php } else { ?>
+                                        <input id="module<?= $module['id'] ?>" name="settings[]"
+                                               value="<?= $module['id'] ?>" type="checkbox"/>
+                                    <?php } ?>
+
+                                    <label for="module<?= $module['id'] ?>" class="label-info"></label>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+
                     </ul>
+
+
                 </div>
+
+                <div style="color: white; display: table; margin-top: 20px;">
+                    <?= Html::submitButton('Сохранить настройки', ['class' => 'btn-style']) ?>
+                </div>
+
+
+                <?php ActiveForm::end(); ?>
+
             </div>
 
         </div>

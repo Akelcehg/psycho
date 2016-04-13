@@ -53,4 +53,46 @@ class UsersModules extends \yii\db\ActiveRecord {
         return $modules->all();
     }
 
+    public static function getUsersModulesList() {
+        $query = new Query();
+
+        $query->select('modules.*,users_modules.user_id as active')
+            ->from('modules')
+            ->join('left join', 'users_modules',
+                'modules.id = users_modules.module_id and
+                users_modules.user_id= ' . Yii::$app->user->id
+            )->orderBy('modules.id');
+
+        return $query->all();
+    }
+
+    public function setNewUserSettings($psychologistId, $settingsArray) {
+
+        if (count($settingsArray) > 0) {
+            $this->deleteUserSettings($psychologistId);
+
+            return $this->insertNewData($psychologistId, $settingsArray);
+        } else {
+            return $this->deleteUserSettings($psychologistId);
+        }
+    }
+
+    private function insertNewData($psychologistId, $settingsArray) {
+
+        $command = Yii::$app->db->createCommand();
+        $valuesArray = [];
+
+        for ($i = 0; $i < count($settingsArray); $i++) {
+            array_push($valuesArray, [$psychologistId, $settingsArray[$i]]);
+        }
+
+        $command->batchInsert('users_modules',
+            ['user_id', 'module_id'], $valuesArray);
+
+        return $command->execute();
+    }
+
+    private function deleteUserSettings($psychologistId) {
+        return UsersModules::deleteAll('user_id = ' . $psychologistId);
+    }
 }
