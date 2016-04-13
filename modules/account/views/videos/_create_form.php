@@ -16,14 +16,12 @@ use yii\widgets\ActiveForm;
 
     <div class="form-group">
 
-        <div class="profile-checkbox">
+        <div class="profile-checkbox" style="display: table;">
             <ul>
                 <?php foreach ($videosCategories as $category): ?>
                     <li>
-                        <input id="category<?= $category['id'] ?>" class="css-checkbox" type="checkbox"
-                               name="categories[]"
-                               value="<?= $category['id'] ?>"
-                            <?php if ($category['active'] != NULL) echo "checked" ?> >
+                        <input id="category<?= $category['id'] ?>" class="css-checkbox" type="checkbox" name="categories[]"
+                               value="<?= $category['id'] ?>">
                         <label for="category<?= $category['id'] ?>" class="css-label"><?= $category['name'] ?></label>
                     </li>
                 <?php endforeach; ?>

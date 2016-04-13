@@ -64,20 +64,11 @@ use yii\helpers\Url;
                         <button class="btn-style">Искать</button>
                     </div>
                     <div class="widget widget-tags">
-                        <h2>Papular Tags</h2>
+                        <h2>Выбрать видео по категории</h2>
                         <ul>
-                            <li><a href="#">resource</a></li>
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">art</a></li>
-                            <li><a href="#">icon</a></li>
-                            <li><a href="#">Photoshop</a></li>
-                            <li><a href="#">Template</a></li>
-                            <li><a href="#">resource</a></li>
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">art</a></li>
-                            <li><a href="#">icon</a></li>
-                            <li><a href="#">Photoshop</a></li>
-                            <li><a href="#">Template</a></li>
+                            <?php foreach ($videosCategories as $category): ?>
+                                <li><a href="?video=<?= $category['id'] ?>"><?= $category['name'] ?></a></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
 

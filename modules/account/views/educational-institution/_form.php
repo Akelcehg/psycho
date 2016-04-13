@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'city_id')->dropDownList(
             ArrayHelper::map(City::find()->where([
                 'region_id' => '10373'
-            ])->orderBy('name')->all(), 'city_id', 'name')) ?>
+            ])->orderBy('name')->all(), 'city_id', 'name'),['prompt' => 'Выберите город']) ?>
     </div>
     <div class="col-md-4">
         <?= $form->field($model, 'year')->textInput() ?>

@@ -2,6 +2,7 @@
 
 namespace app\modules\account\controllers;
 
+use app\models\VideosCategories;
 use Yii;
 use app\models\Videos;
 use app\models\VideosSearch;
@@ -65,11 +66,21 @@ class VideosController extends Controller {
             $model->user_id = Yii::$app->user->id;
             $model->img_link = $model->getVideoImage($model->link);
             $model->link = $model->getEmbedLink($model->link);
-            if ($model->save())
-                return $this->redirect(['view', 'id' => $model->id]);
+            $videoCategories = new VideosCategories();
+            if ($model->save()) {
+                if ($videoCategories->saveVideosCategories($model->id, Yii::$app->request->post('categories'))) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                    'videosCategories' => VideosCategories::find()->all()
+                ]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'videosCategories' => VideosCategories::find()->all()
             ]);
         }
     }
@@ -83,11 +94,17 @@ class VideosController extends Controller {
     public function actionUpdate($id) {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $videoCategories = new VideosCategories();
+            if ($model->save()) {
+                if ($videoCategories->saveVideosCategories($model->id, Yii::$app->request->post('categories'))) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'videosCategories' => VideosCategories::getVideosCategories($id)
             ]);
         }
     }

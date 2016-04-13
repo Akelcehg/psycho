@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Videos;
+use app\models\VideosCategories;
 use app\models\VideosSearch;
 use Yii;
 use yii\web\NotFoundHttpException;
@@ -14,10 +15,10 @@ class VideoController extends \yii\web\Controller {
         $searchModel = new VideosSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        //return $this->render('index');
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'videosCategories' => VideosCategories::find()->all(),
         ]);
 
     }

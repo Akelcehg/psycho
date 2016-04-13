@@ -3878,8 +3878,8 @@ FEATURED COURSE DETAIL PAGE START
 .course-detail {
     float: left;
     width: 100%;
-    padding: 40px 0px;
-    margin: 0px 0px 30px 0px;
+    padding: 20px 0px;
+    /*margin: 0px 0px 30px 0px;*/
 }
 
 .course-detail #bx-pager img {

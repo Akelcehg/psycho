@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Videos;
+use app\models\VideosCategories;
 
 /**
- * VideosSearch represents the model behind the search form about `app\models\Videos`.
+ * VideosCategoriesSearch represents the model behind the search form about `app\models\VideosCategories`.
  */
-class VideosSearch extends Videos
+class VideosCategoriesSearch extends VideosCategories
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class VideosSearch extends Videos
     public function rules()
     {
         return [
-            [['id', 'user_id'], 'integer'],
-            [['link', 'updated_at', 'created_at'], 'safe'],
+            [['id'], 'integer'],
+            [['name', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -41,18 +41,10 @@ class VideosSearch extends Videos
      */
     public function search($params)
     {
-        $query = Videos::find();
+        $query = VideosCategories::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => [
-                'pageSize' => 8,
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'id' => SORT_DESC,
-                ]
-            ]
         ]);
 
         $this->load($params);
@@ -65,17 +57,11 @@ class VideosSearch extends Videos
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'user_id' => $this->user_id,
-            'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ]);
 
-        if (isset($params['video'])) {
-            $query->join("join", "video_categories_bind", "video_categories_bind.video_id=videos.id");
-            $query->where("video_categories_bind.category_id = " . $params['video']);
-        }
-
-        $query->andFilterWhere(['like', 'link', $this->link]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

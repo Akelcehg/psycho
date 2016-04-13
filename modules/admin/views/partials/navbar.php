@@ -311,6 +311,9 @@ use yii\helpers\Url;
                         <li>
                             <a href="<?= Url::base() ?>/admin/videos">Список видео</a>
                         </li>
+                        <li>
+                            <a href="<?= Url::base() ?>/admin/videos-categories">Категории видео</a>
+                        </li>
                     </ul>
                 </li>
 
