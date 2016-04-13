@@ -22,8 +22,8 @@ class ProfileController extends Controller
 
         $profile = $this->findModel($currentPsychologistId);
 
-        $directions = new Directions();
-        $problems = new Problems();
+ /*       $directions = new Directions();
+        $problems = new Problems();*/
 
         $imagesModel = new Image();
 
@@ -33,8 +33,8 @@ class ProfileController extends Controller
                 return $this->render('index', [
                     'profileModel' => $profile,
                     'message' => 'Профиль успешно обновлён',
-                    'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
-                    'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId),
+                    /*'psychologistDirections' => $directions->getPsychologistDirections($currentPsychologistId),
+                    'psychologistProblems' => $problems->getPsychologistProblems($currentPsychologistId),*/
                     'imagesModel' => $imagesModel,
                     'logo' => $imagesModel->getProfilePhoto()
                 ]);
@@ -52,7 +52,7 @@ class ProfileController extends Controller
         }
     }
 
-    public function actionUpdateDirections() {
+   /* public function actionUpdateDirections() {
 
         $directionsArray = Yii::$app->request->post('directions');
 
@@ -73,7 +73,7 @@ class ProfileController extends Controller
         if ($psychologistProblems->setNewPsychologistProblems($currentPsychologistId, $problemsArray))
             return $this->redirect('index');
         else throw new NotFoundHttpException('The requested page does not exist.');
-    }
+    }*/
 
     public function actionUpdatePhoto() {
         $imagesModel = new Image();
