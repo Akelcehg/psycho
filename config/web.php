@@ -52,6 +52,8 @@ $config = [
 
                 'article/<title>' => 'article/view',
 
+                'psychologists/profile/<name>' => 'psychologists/profile',
+
                 'video/<title>' => 'video/view',
 
                 'trainings/index' => 'trainings/index',

@@ -16,6 +16,7 @@ class ArticleController extends \yii\web\Controller {
         $searchModel = new ArticleSearch();
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize = 6;
 
         return $this->render('index', [
             'searchModel' => $searchModel,

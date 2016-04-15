@@ -260,11 +260,12 @@ use app\models\Image;
                 'itemOptions' => array('class' => 'item'),
                 'itemView' => function ($model, $key, $index, $widget) {
 
+                    $link = $model['user_id'];
                     return '<div class="admin">
 
-                                    <div class="thumb">
-                                        <a href="' . Url::base() . '/psychologists/profile?id=' . $model['user_id'] . '">
-                                            <img class="thumb" alt="" src="' . Image::getUserProfilePhoto($model['user_id']) . '" style="max-width: 120px;"/>
+                                    <div class="col-md-3">
+                                        <a href="' . Url::base() . '/psychologists/profile/' . $link . '" class="thumbnail">
+                                            <img class="img-responsive" alt="" src="' . Image::getUserProfilePhoto($model['user_id']) . '"/>
                                         </a>
                                     </div>
 
@@ -317,7 +318,8 @@ use app\models\Image;
                                         </h4>
                                         <div class="gap"></div>
                                         <p>
-                                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">Посмотреть профиль</a>
+                                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">Посмотреть
+                                                профиль</a>
                                         </p>
                                     </div>
                                 </li>

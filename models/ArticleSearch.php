@@ -43,7 +43,7 @@ class ArticleSearch extends Article {
             'query' => $query,
             'pagination' => [
                 'route' => '/article',
-                'pageSize' => 8,
+                //'pageSize' => 8,
             ],
             'sort' => [
                 'defaultOrder' => [

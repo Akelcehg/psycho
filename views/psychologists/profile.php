@@ -37,6 +37,7 @@ use yii\widgets\ListView;
             </div>
             <div class="col-md-9">
 
+                <div class="gap"></div>
                 <div class="tutor-detail-section">
 
 
@@ -87,7 +88,7 @@ use yii\widgets\ListView;
                                         <div class="row">
 
 
-                                            <?php $widget = ListView::begin([
+                                            <?php $videoWidget = ListView::begin([
                                                 'dataProvider' => $videoDataProvider,
                                                 'summary' => '',
                                                 'itemOptions' => ['class' => 'item'],
@@ -111,18 +112,18 @@ use yii\widgets\ListView;
                                                 },
                                             ]) ?>
 
-                                            <?php echo $widget->renderItems(); ?>
+                                            <?php echo $videoWidget->renderItems(); ?>
 
                                         </div>
 
                                         <div class="pagination">
-                                            <?= $widget->renderPager(); ?>
+                                            <?= $videoWidget->renderPager(); ?>
                                         </div>
                                     </div>
 
                                     <div id="article" class="tab-pane fade">
 
-                                        <?php $widget = ListView::begin([
+                                        <?php $articleWidget = ListView::begin([
                                             'dataProvider' => $articleDataProvider,
                                             'summary' => '',
                                             'itemOptions' => ['class' => 'item'],
@@ -153,8 +154,14 @@ use yii\widgets\ListView;
 
                                                                     <div class="panel-body">
                                                                     ' . $abrvBody . '
-                                                                     <a href="' . Url::base() . '/article/' . $link . '" class="btn-style" style="float: right;">Читать</a>
+                                                                     <!-- <a href="' . Url::base() . '/article/' . $link . '" class="btn-style" style="float: right;">Читать</a> -->
                                                                     </div>
+                                                                   <div class="blog-comments">
+                                <a href="#"><i class="fa fa-user"></i>user@gmail.com</a>
+                                <a href="#"><i class="fa fa-calendar"></i>13 апр. 2016 г.</a>
+                                <!-- <a href="#" class="pull-right"><i class="fa fa-comment"></i>35 Comments</a> -->
+                                <a href="' . Url::base() . '/article/' . $link . '" class="btn-style pull-right" style="color:white;">Читать</a>
+                            </div>
 
                                                                 </div>
 
@@ -162,11 +169,11 @@ use yii\widgets\ListView;
                                             },
                                         ]) ?>
 
-                                        <?php echo $widget->renderItems(); ?>
+                                        <?php echo $articleWidget ->renderItems(); ?>
 
 
                                         <div class="pagination">
-                                            <?= $widget->renderPager(); ?>
+                                            <?= $articleWidget ->renderPager(); ?>
                                         </div>
 
                                     </div>
