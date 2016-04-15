@@ -92,7 +92,10 @@ use yii\helpers\Url;
 
                 <div class="admin">
                     <div class="thumb">
-                        <a href="<?= Url::base() . '/psychologists/profile?id=' . $organizer['user_id'] ?>">
+                        <?php
+                            $link = TranslitWidget::widget(['link' => $organizer['firstname'] . '_' . $organizer['lastname']]) . '-' . $organizer['user_id'];
+                        ?>
+                        <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
                             <img alt="" class="thumb" src="<?= Image::getUserProfilePhoto($organizer['user_id']) ?>"
                                  style="max-width: 120px;">
                         </a>
@@ -111,7 +114,8 @@ use yii\helpers\Url;
                                                         class="fa fa-google-plus"></i></a>
                                             </div>-->
                         <h2>
-                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $organizer['user_id'] ?>"><?= $organizer['firstname'] . ' ' . $organizer['lastname'] ?></a>
+                            <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
+                                <?= $organizer['firstname'] . ' ' . $organizer['lastname'] ?></a>
                         </h2>
                         <!--<p class="profession">Photographer</p>-->
                         <p><?= $organizer['experience'] ?></p>
