@@ -6,7 +6,7 @@ use app\models\Image;
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?= Image::getSchoolPhoto($educationInstitute['id']) ?>" alt="">
+                <img class="img-responsive" src="<?= Image::getSchoolPhoto($educationInstitute['id']) ?>" alt="">
                 <!--<ul class="bxslider2">-->
                 <!--<li><img src="<? /*= Image::getSchoolPhoto($educationInstitute['id']) */ ?>" alt=""></li>-->
                 <!--<li><img src="../images/course-detail2.png" alt=""></li>
@@ -35,8 +35,10 @@ use app\models\Image;
                           </div>
                       </div>-->
 
-                    <h3>О школе</h3>
-                    <p><?= $educationInstitute['description'] ?></p>
+                    <h3>Акредитация</h3>
+                    <div class="text">
+                        <p><?= $educationInstitute['accreditation'] ?></p>
+                    </div>
 
                     <!--   <ul>
                            <li><a href="#">HTML5, CSS3, and Media Queries</a></li>
@@ -49,12 +51,54 @@ use app\models\Image;
             </div>
 
             <div class="col-md-12">
+                <h3>О школе</h3>
+                <div class="col-md-6">
+                    <p><?= $educationInstitute['description'] ?></p>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="event-vanue">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+
+                                <tr>
+                                    <td><p class="color">Адрес:</p></td>
+                                    <td><p><?= $educationInstitute['address'] ?></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="color">Год основаниия :</p></td>
+                                    <td><p><?= $educationInstitute['year'] ?> г.</p></td>
+                                </tr>
+
+                                <tr>
+                                    <td><p class="color">Сайт :</p></td>
+                                    <td><p><?= $educationInstitute['site'] ?></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="color">Телефон:</p></td>
+                                    <td><p><?= $educationInstitute['phone'] ?></p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-12">
                 <h3>Необходимые документы</h3>
                 <div class="text">
 
                     <p><?= $educationInstitute['required_documents'] ?></p>
                 </div>
+
             </div>
+
 
         </div>
     </div>

@@ -100,13 +100,14 @@ use yii\widgets\ListView;
                                                     </tr>
                                                 </table>
                                             </div>
-                                            <div class="event-footer">
+                                            <!-- <div class="event-footer">
                                                 <a href="' . \yii\helpers\Url::base() . '/trainings/' . $link . '" class="btn-style">Подробнее</a>
-                                            </div>
+                                            </div> -->
 
                                         </div>
                                     </div>
-                                </div>';
+                                </div>
+                                <div class="gap"></div>';
                     return $content;
                 },
             ]) ?>
