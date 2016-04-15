@@ -19,8 +19,8 @@ use yii\widgets\ListView;
             <div class="col-md-3 sidebar">
 
                 <div class="widget course-tutor">
-                    <div class="thumb">
-                        <img src="<?= $logo ?>" alt="">
+                    <div>
+                        <img class="img-responsive" src="<?= $logo ?>" alt="">
                     </div>
                     <div class="text">
                         <p class="tutor-name color"><?= $profile['firstname'] . ' ' . $profile['lastname'] ?></p>
@@ -169,11 +169,11 @@ use yii\widgets\ListView;
                                             },
                                         ]) ?>
 
-                                        <?php echo $articleWidget ->renderItems(); ?>
+                                        <?php echo $articleWidget->renderItems(); ?>
 
 
                                         <div class="pagination">
-                                            <?= $articleWidget ->renderPager(); ?>
+                                            <?= $articleWidget->renderPager(); ?>
                                         </div>
 
                                     </div>

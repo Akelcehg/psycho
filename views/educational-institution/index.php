@@ -29,9 +29,9 @@ use \app\models\Image;
 
                         $content = '<div class="row">
                                     <div class="col-md-5">
-                                    <div class="thumb">
+                                    <div class="thumb" style="background-color: #c7012e;">
                                         <a href="' . Url::base() . '/school/' . $link . '">
-                                            <img class="img-responsive" src="' . Image::getSchoolPhoto($model['id']) . '" alt="">
+                                            <img class="school-list-img img-responsive" src="' . Image::getSchoolPhoto($model['id']) . '" alt="">
                                         </a>
                                     </div>
 

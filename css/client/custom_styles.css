@@ -357,3 +357,7 @@ ul.nav.navbar-nav li a:focus {
     left: 20px;
 }
 /*********************************************SWITCHES END*************************************************************/
+
+img.school-list-img:hover {
+    opacity: 0.4;
+}

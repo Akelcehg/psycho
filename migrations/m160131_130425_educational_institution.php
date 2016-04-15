@@ -3,8 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m160131_130425_educational_institution extends Migration
-{
+class m160131_130425_educational_institution extends Migration {
 
     public function up() {
 
@@ -13,7 +12,7 @@ class m160131_130425_educational_institution extends Migration
             'id' => Schema::TYPE_PK,
 
             //'logo' => Schema::TYPE_STRING,
-
+            'user_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'name' => Schema::TYPE_STRING . ' NOT NULL',
             'description' => Schema::TYPE_TEXT . ' NOT NULL',
             'city_id' => Schema::TYPE_INTEGER . ' NOT NULL',
