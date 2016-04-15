@@ -7,6 +7,7 @@ use yii\widgets\ActiveForm;
 use yii\widgets\ListView;
 use \yii\helpers\Url;
 use app\models\Image;
+use \app\components\TranslitWidget;
 
 ?>
 
@@ -260,11 +261,12 @@ use app\models\Image;
                 'itemOptions' => array('class' => 'item'),
                 'itemView' => function ($model, $key, $index, $widget) {
 
-                    $link = $model['user_id'];
+                    $link = TranslitWidget::widget(['link' => $model['firstname'].'_'.$model['lastname']]).'-'.$model['user_id'];
+
                     return '<div class="admin">
 
                                     <div class="col-md-3">
-                                        <a href="' . Url::base() . '/psychologists/profile/' . $link . '" class="thumbnail">
+                                        <a href="' . Url::base() . '/psychologists/profile/' . $link . '">
                                             <img class="img-responsive" alt="" src="' . Image::getUserProfilePhoto($model['user_id']) . '"/>
                                         </a>
                                     </div>
@@ -283,7 +285,7 @@ use app\models\Image;
                                                     class="fa fa-google-plus"></i></a>
                                         </div>
                                         <h2 style="text-align: left; ">
-                                        <a href="' . Url::base() . '/psychologists/profile?id=' . $model['user_id'] . '">' . $model['firstname'] . " " . $model['lastname'] . ' </a>
+                                        <a href="' . Url::base() . '/psychologists/profile/' . $link . '">' . $model['firstname'] . " " . $model['lastname'] . ' </a>
                                         </h2>
                                         <p style="text-align: left; ">' . nl2br($model['experience']) . '</p>
                                     </div>
