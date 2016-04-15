@@ -40,6 +40,12 @@ use app\models\Image;
                         <p><?= $educationInstitute['accreditation'] ?></p>
                     </div>
 
+                    <h3>Необходимые документы</h3>
+                    <div class="text">
+
+                        <p><?= $educationInstitute['required_documents'] ?></p>
+                    </div>
+
                     <!--   <ul>
                            <li><a href="#">HTML5, CSS3, and Media Queries</a></li>
                            <li><a href="#">HTML5Shiv for Internet Explorer</a></li>
@@ -90,14 +96,14 @@ use app\models\Image;
             </div>
 
 
-            <div class="col-md-12">
+<!--            <div class="col-md-12">
                 <h3>Необходимые документы</h3>
                 <div class="text">
 
-                    <p><?= $educationInstitute['required_documents'] ?></p>
+                    <p><?/*= $educationInstitute['required_documents'] */?></p>
                 </div>
 
-            </div>
+            </div>-->
 
 
         </div>

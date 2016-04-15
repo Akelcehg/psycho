@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\EducationalInstitution;
 use app\models\EducationalInstitutionSearch;
 use app\models\EducationalInstitutionTop;
+use app\models\Profile;
 use Yii;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
@@ -28,8 +29,10 @@ class EducationalInstitutionController extends \yii\web\Controller {
 
         $educationInstituteId = explode('-', $title);
 
+        $institute = $this->findModel($educationInstituteId[1]);
         return $this->render('institute', [
-            'educationInstitute' => $this->findModel($educationInstituteId[1]),
+            'educationInstitute' => $institute,
+            //'organizer' => Profile::findOne(['user_id'=>$institute['organizer_id']]),
         ]);
 
     }

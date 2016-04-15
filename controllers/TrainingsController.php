@@ -27,7 +27,7 @@ class TrainingsController extends \yii\web\Controller {
         return $this->render('training', [
             'training' => $training,
             'organizer' => Profile::findOne(['user_id'=>$training['organizer_id']]),
-            'eventsList' => Events::find()->all()
+            'eventsList' => Events::find()->limit('4')->all()
         ]);
 
     }

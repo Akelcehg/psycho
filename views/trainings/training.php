@@ -85,34 +85,39 @@ use yii\helpers\Url;
 
 
             </div>
-            <h2>Организатор <i class="fa fa-user"></i></h2>
 
-            <div class="admin">
-                <div class="thumb">
-                    <a href="<?= Url::base() . '/psychologists/profile?id=' . $organizer['user_id'] ?>">
-                        <img alt="" class="thumb" src="<?= Image::getUserProfilePhoto($organizer['user_id']) ?>"
-                             style="max-width: 120px;">
-                    </a>
+
+            <div class="text-detail">
+                <h2>Организатор</h2>
+
+                <div class="admin">
+                    <div class="thumb">
+                        <a href="<?= Url::base() . '/psychologists/profile?id=' . $organizer['user_id'] ?>">
+                            <img alt="" class="thumb" src="<?= Image::getUserProfilePhoto($organizer['user_id']) ?>"
+                                 style="max-width: 120px;">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <!--                    <div class="social-icons">
+                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                                        class="fa fa-facebook"></i></a>
+                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                                        class="fa fa-linkedin"></i></a>
+                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                                        class="fa fa-dribbble"></i></a>
+                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                                        class="fa fa-twitter"></i></a>
+                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                                        class="fa fa-google-plus"></i></a>
+                                            </div>-->
+                        <h2>
+                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $organizer['user_id'] ?>"><?= $organizer['firstname'] . ' ' . $organizer['lastname'] ?></a>
+                        </h2>
+                        <!--<p class="profession">Photographer</p>-->
+                        <p><?= $organizer['experience'] ?></p>
+                    </div>
                 </div>
-                <div class="text">
-                    <!--                    <div class="social-icons">
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                                    class="fa fa-facebook"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                                    class="fa fa-linkedin"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                                    class="fa fa-dribbble"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                                    class="fa fa-twitter"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                                    class="fa fa-google-plus"></i></a>
-                                        </div>-->
-                    <h2>
-                        <a href="<?= Url::base() . '/psychologists/profile?id=' . $organizer['user_id'] ?>"><?= $organizer['firstname'] . ' ' . $organizer['lastname'] ?></a>
-                    </h2>
-                    <!--<p class="profession">Photographer</p>-->
-                    <p><?= $organizer['experience'] ?></p>
-                </div>
+
             </div>
             <h2>Положение на карте</h2>
             <div class="row">

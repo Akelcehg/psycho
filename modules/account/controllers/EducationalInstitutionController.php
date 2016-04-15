@@ -63,7 +63,7 @@ class EducationalInstitutionController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
                 $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
-                if ($imagesModel->image_file) $imagesModel->saveSchoolImage($model->id, 500, 400);
+                if ($imagesModel->image_file) $imagesModel->saveSchoolImage($model->id, 850, 400);
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 return $this->render('create', [
@@ -91,7 +91,7 @@ class EducationalInstitutionController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
                 $imagesModel->image_file = UploadedFile::getInstance($imagesModel, 'image_file');
-                if ($imagesModel->image_file) $imagesModel->saveSchoolImage($model->id, 500, 400);
+                if ($imagesModel->image_file) $imagesModel->saveSchoolImage($model->id, 850, 400);
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 return $this->render('create', [
