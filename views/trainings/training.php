@@ -68,61 +68,59 @@ use yii\helpers\Url;
 
             </div>
 
+
             <div class="text-detail">
                 <h2>О тренинге</h2>
                 <p><?= nl2br($training['about']) ?></p>
 
-                <h2>Программма дня</h2>
+                <div class="col-md-6">
+                    <div class="text-detail">
+                        <h2>Организатор</h2>
 
-                <p><?= nl2br($training['schedule']) ?></p>
-                <!--                <ul>
-                                    <li><a href="#">Quisque ut mattis dolor, a gravida turpis.</a></li>
-                                    <li><a href="#">At vero eos et accusamus et iusto odio dignissimos</a></li>
-                                    <li><a href="#">Ducimus qui blanditiis praesentium voluptatum</a></li>
-                                    <li><a href="#">Deleniti atque corrupti quosed dolores</a></li>
-                                    <li><a href="#">Quas molestias excepturi sint occaecati</a></li>
-                                </ul>-->
+                        <div class="admin">
+                            <div class="thumb">
+                                <?php
+                                $link = TranslitWidget::widget(['link' => $organizer['firstname'] . '_' . $organizer['lastname']]) . '-' . $organizer['user_id'];
+                                ?>
+                                <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
+                                    <img alt="" class="thumb"
+                                         src="<?= Image::getUserProfilePhoto($organizer['user_id']) ?>"
+                                         style="max-width: 120px;">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <!--                    <div class="social-icons">
+                                                        <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
+                                                                class="fa fa-facebook"></i></a>
+                                                        <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
+                                                                class="fa fa-linkedin"></i></a>
+                                                        <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
+                                                                class="fa fa-dribbble"></i></a>
+                                                        <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
+                                                                class="fa fa-twitter"></i></a>
+                                                        <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
+                                                                class="fa fa-google-plus"></i></a>
+                                                    </div>-->
+                                <h2>
+                                    <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
+                                        <?= $organizer['firstname'] . ' ' . $organizer['lastname'] ?></a>
+                                </h2>
+                                <!--<p class="profession">Photographer</p>-->
+                                <p><?= $organizer['experience'] ?></p>
+                            </div>
+                        </div>
 
-
-            </div>
-
-
-            <div class="text-detail">
-                <h2>Организатор</h2>
-
-                <div class="admin">
-                    <div class="thumb">
-                        <?php
-                            $link = TranslitWidget::widget(['link' => $organizer['firstname'] . '_' . $organizer['lastname']]) . '-' . $organizer['user_id'];
-                        ?>
-                        <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
-                            <img alt="" class="thumb" src="<?= Image::getUserProfilePhoto($organizer['user_id']) ?>"
-                                 style="max-width: 120px;">
-                        </a>
-                    </div>
-                    <div class="text">
-                        <!--                    <div class="social-icons">
-                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                                        class="fa fa-facebook"></i></a>
-                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                                        class="fa fa-linkedin"></i></a>
-                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                                        class="fa fa-dribbble"></i></a>
-                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                                        class="fa fa-twitter"></i></a>
-                                                <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                                        class="fa fa-google-plus"></i></a>
-                                            </div>-->
-                        <h2>
-                            <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
-                                <?= $organizer['firstname'] . ' ' . $organizer['lastname'] ?></a>
-                        </h2>
-                        <!--<p class="profession">Photographer</p>-->
-                        <p><?= $organizer['experience'] ?></p>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <h2>Программма дня</h2>
+
+                    <p><?= nl2br($training['schedule']) ?></p>
+                </div>
+
 
             </div>
+
             <h2>Положение на карте</h2>
             <div class="row">
                 <div class="event-location-map">

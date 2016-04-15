@@ -27,11 +27,13 @@ class DiscussionController extends \yii\web\Controller {
             $model->discussion_post_id = $postId;
             $model->user_id = Yii::$app->user->id;
             if ($model->save())
-                return $this->render('post', [
-                    'postModel' => $postModel,
-                    'model' => $model,
-                    'topics' => DiscussionPostReply::getPostReplies($postId)
-                ]);
+
+                $model->text = '';
+            return $this->render('post', [
+                'postModel' => $postModel,
+                'model' => $model,
+                'topics' => DiscussionPostReply::getPostReplies($postId)
+            ]);
         } else {
             return $this->render('post', [
                 'postModel' => $postModel,

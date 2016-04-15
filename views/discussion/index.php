@@ -14,7 +14,7 @@ use yii\helpers\Url;
 
             <?php
 
-            if ($categoryPosts[0]['id'])
+            if (isset($categoryPosts[0]['id']))
                 $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($categoryName))]) . '-' . $categoryPosts[0]['discussion_category_id'];
 
             ?>
@@ -24,7 +24,7 @@ use yii\helpers\Url;
                 <tr>
                     <th class="cell-stat"></th>
                     <th>
-                        <?php if ($categoryPosts[0]['id']) { ?>
+                        <?php if (isset($categoryPosts[0]['id'])) { ?>
                             <h3><a href="<?= Url::base() . '/topic/' . $link ?>"
                                    class="discussion-link"><?= $categoryName ?></a>
                                 <i class="fa fa-pencil"></i>
@@ -42,7 +42,7 @@ use yii\helpers\Url;
 
                 <?php
 
-                if ($categoryPosts[0]['id']) {
+                if (isset($categoryPosts[0]['id'])) {
                     foreach ($categoryPosts as $postId => $post):
                         ?>
                         <?php

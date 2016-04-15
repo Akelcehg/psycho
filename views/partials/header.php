@@ -25,7 +25,7 @@ use yii\helpers\Html;
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="<?= Url::base() ?>">Главная</a></li>
+                            <li><a href="<?= Url::base() ?>/">Главная</a></li>
                             <li><a href="<?= Url::base() ?>/interesting">Интересное</a></li>
                             <li><a href="<?= Url::base() ?>/article">Статьи</a></li>
                             <li><a href="<?= Url::base() ?>/video">Видео</a></li>

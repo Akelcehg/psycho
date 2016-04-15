@@ -30,7 +30,6 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
         return [
             [['name'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
-            [['text'], 'string', 'max' => 255]
         ];
     }
 
@@ -55,6 +54,8 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
         }
         if (!empty($q)) {
 
+            //var_dump(DiscussionCategories::_group_by(Yii::$app->db->createCommand(implode(' UNION ALL ', $q))->queryAll(), 'name'));
+            /*Yii::$app->end();*/
             return DiscussionCategories::_group_by(Yii::$app->db->createCommand(implode(' UNION ALL ', $q))->queryAll(), 'name');
 
         }
@@ -86,9 +87,11 @@ class DiscussionCategories extends \yii\db\ActiveRecord {
     public static function _group_by($array, $key) {
         $return = array();
         foreach ($array as $categoryId => $val) {
-            if ($val['id'])
+            if ($val['id']) {
                 $return[$val[$key]][] = $val;
-            else $return[$val[$key]][] = $categoryId;
+            } else {
+                $return[$val[$key]][] = $val['dcId'];
+            }
         }
         return $return;
     }

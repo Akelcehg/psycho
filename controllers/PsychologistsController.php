@@ -45,7 +45,7 @@ class PsychologistsController extends \yii\web\Controller {
 
             $videoSearchModel = new VideosSearch();
             $videoDataProvider = $videoSearchModel->search(Yii::$app->request->queryParams);
-            $videoDataProvider->pagination->pageSize = 4;
+            $videoDataProvider->pagination->pageSize = 8;
             $videoDataProvider->pagination->pageParam = 'video-page';
             $videoDataProvider->pagination->route = 'psychologists/profile';
 
