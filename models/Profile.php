@@ -23,24 +23,21 @@ use yii\db\Query;
  * @property string $created_at
  * @property string $updated_at
  */
-class Profile extends \yii\db\ActiveRecord
-{
+class Profile extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'profile';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-            [['user_id' ], 'required'],
-            [['user_id', 'price', 'has_diplom','city_id', 'is_active'], 'integer'],
+            [['user_id'], 'required'],
+            [['user_id', 'price', 'has_diplom', 'city_id', 'is_active'], 'integer'],
             [['gender', 'education', 'experience'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['firstname', 'lastname', 'secondname'], 'string', 'max' => 255]
@@ -50,8 +47,7 @@ class Profile extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
@@ -76,7 +72,7 @@ class Profile extends \yii\db\ActiveRecord
         ];
     }
 
-    public function initProfile($model,$userId) {
+    public function initProfile($model, $userId) {
         $this->firstname = $model->first_name;
         $this->lastname = $model->last_name;
         $this->secondname = $model->second_name;
