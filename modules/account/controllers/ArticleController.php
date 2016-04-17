@@ -97,10 +97,18 @@ class ArticleController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             $articleCategories = Yii::$app->request->post('categories');
             $categories = new ArticleCategories();
+
             if ($model->save()) {
+
                 if ($categories->saveArticleCategories($model->id, $articleCategories)) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
+            } else {
+                var_dump($model->errors);
+                return $this->render('update', [
+                    'model' => $model,
+                    'articleCategories' => ArticleCategories::getArticleCategories($id)
+                ]);
             }
         } else {
             return $this->render('update', [

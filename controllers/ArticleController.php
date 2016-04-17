@@ -6,6 +6,7 @@ use app\models\Article;
 use app\models\ArticleCategories;
 use app\models\ArticleComments;
 use app\models\ArticleSearch;
+use app\models\Profile;
 use Yii;
 use yii\web\NotFoundHttpException;
 
@@ -34,22 +35,26 @@ class ArticleController extends \yii\web\Controller {
 
         $model = new ArticleComments();
         $model->user_id = Yii::$app->user->id;
+        $article = $this->findModel($articleId[1]);
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->render('view', [
-                'model' => $this->findModel($articleId[1]),
+                'model' => $article,
                 'articleComments' => $articleModel,
                 'articleCommentsList' => ArticleComments::getArticleComments($articleId[1]),
-                'popularPosts' => Article::getPopularPosts()
+                'popularPosts' => Article::getPopularPosts(),
+                'author' => Profile::findOne(['user_id' => $article['psychologist_id']]),
             ]);
         }
 
         if ($articleId[1]) {
             $articleModel->article_id = $articleId[1];
             return $this->render('view', [
-                'model' => $this->findModel($articleId[1]),
+                'model' => $article,
                 'articleComments' => $articleModel,
                 'articleCommentsList' => ArticleComments::getArticleComments($articleId[1]),
-                'popularPosts' => Article::getPopularPosts()
+                'popularPosts' => Article::getPopularPosts(),
+                'author' => Profile::findOne(['user_id' => $article['psychologist_id']]),
             ]);
         }
     }

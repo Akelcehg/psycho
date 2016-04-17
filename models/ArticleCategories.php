@@ -45,7 +45,8 @@ class ArticleCategories extends \yii\db\ActiveRecord {
         ];
     }
 
-    public function saveArticleCategories($articleId,$categories){
+    public function saveArticleCategories($articleId, $categories) {
+
         if (count($categories) > 0) {
             $this->deleteArticleCategories($articleId);
             return $this->insertNewData($articleId, $categories);
@@ -55,8 +56,7 @@ class ArticleCategories extends \yii\db\ActiveRecord {
     }
 
 
-
-    private function insertNewData($articleId, $categoriesArray){
+    private function insertNewData($articleId, $categoriesArray) {
         $command = Yii::$app->db->createCommand();
         $valuesArray = [];
 
@@ -71,21 +71,24 @@ class ArticleCategories extends \yii\db\ActiveRecord {
     }
 
     private function deleteArticleCategories($articleId) {
-        return ArticleCategoriesBind::deleteAll('article_id = ' . $articleId);
+        if (ArticleCategoriesBind::findOne('article_id = ' . $articleId)) {
+            return ArticleCategoriesBind::deleteAll('article_id = ' . $articleId);
+        }
+        return true;
     }
 
-/*    public static function getArticleCategories($articleId) {
-        $query = new Query();
+    /*    public static function getArticleCategories($articleId) {
+            $query = new Query();
 
-        $query->select('article_categories.*')
-            ->from('article_categories')
-            ->join('left outer join', 'article_categories_bind',
-                'article_categories.id = article_categories_bind.categories and
-                article_categories_bind.article_id= ' . $articleId
-            )->orderBy('article_categories.id');
+            $query->select('article_categories.*')
+                ->from('article_categories')
+                ->join('left outer join', 'article_categories_bind',
+                    'article_categories.id = article_categories_bind.categories and
+                    article_categories_bind.article_id= ' . $articleId
+                )->orderBy('article_categories.id');
 
-        return $query->all();
-    }*/
+            return $query->all();
+        }*/
 
     public static function getArticleCategories($articleId) {
         $query = new Query();
