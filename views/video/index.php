@@ -29,7 +29,7 @@ use yii\helpers\Url;
                                 $content = '<div class="news-contant">
                                                 <div class="thumb">
                                                     <a href="' . Url::base() . '/video/' . $link . '">
-                                                        <img src="' . $model['img_link'] . '"
+                                                        <img class="img-responsive" src="' . $model['img_link'] . '"
                                                              alt="видео психология"/>
                                                     </a>
                                                 </div>
@@ -60,7 +60,7 @@ use yii\helpers\Url;
                 <div class="sidebar">
 
                     <div class="widget search">
-                        <h2><i class="fa fa-search"></i>Искать статью</h2>
+                        <h2><i class="fa fa-search"></i>Искать видео</h2>
 
                         <?php $form = ActiveForm::begin([
                             'action' => ['index'],
@@ -89,67 +89,35 @@ use yii\helpers\Url;
                 <div class="widget widget-papular-post">
                     <div class="gap"></div>
                     <h2>Популярное видео</h2>
+
                     <ul>
-                        <!--LIST ITEM START-->
-                        <li>
-                            <h4>Donec neque ipsum, sodales nec trist</h4>
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
-                                         alt="видео психология"/>
+                        <?php foreach ($popularVideos as $popularVideo): ?>
+                            <?php
+
+                            $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($popularVideo['title']))]) . '-' . $popularVideo['id'];
+
+                            ?>
+                            <li>
+
+                                <a href="<?= Url::base() . '/video/' . $link ?>">
+                                    <h4>
+                                        <?= $popularVideo['title'] ?>
+                                    </h4>
                                 </a>
-                            </div>
-                            <div class="text">
-                                <p class="date">19 May 2012 <span>Admin</span></p>
-                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                            </div>
-                        </li>
-                        <!--LIST ITEM END-->
-                        <!--LIST ITEM START-->
-                        <li>
-                            <h4>Donec neque ipsum, sodales nec trist</h4>
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
-                                         alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <p class="date">19 May 2012 <span>Admin</span></p>
-                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                            </div>
-                        </li>
-                        <!--LIST ITEM END-->
-                        <!--LIST ITEM START-->
-                        <li>
-                            <h4>Donec neque ipsum, sodales nec trist</h4>
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
-                                         alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <p class="date">19 May 2012 <span>Admin</span></p>
-                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                            </div>
-                        </li>
-                        <!--LIST ITEM END-->
-                        <!--LIST ITEM START-->
-                        <li>
-                            <h4>Donec neque ipsum, sodales nec trist</h4>
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
-                                         alt="видео психология"/>
-                                </a>
-                            </div>
-                            <div class="text">
-                                <p class="date">19 May 2012 <span>Admin</span></p>
-                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
-                            </div>
-                        </li>
-                        <!--LIST ITEM END-->
+
+                                <div class="thumb">
+                                    <a href="<?= Url::base() . '/video/' . $link ?>">
+                                        <img class="img-responsive" src="<?= $popularVideo['img_link'] ?>"
+                                             alt="видео психология"/>
+                                    </a>
+                                </div>
+                                <!--<div class="text">-->
+                                <!--<p class="date"><span><? /*= $popularVideo['created_at'] */ ?></span></p>-->
+                                <!--<p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>-->
+                                <!--</div>-->
+                            </li>
+                        <?php endforeach; ?>
+
                     </ul>
                 </div>
 
