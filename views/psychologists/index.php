@@ -261,7 +261,7 @@ use \app\components\TranslitWidget;
                 'itemOptions' => array('class' => 'item'),
                 'itemView' => function ($model, $key, $index, $widget) {
 
-                    $link = TranslitWidget::widget(['link' => $model['firstname'].'_'.$model['lastname']]).'-'.$model['user_id'];
+                    $link = TranslitWidget::widget(['link' => $model['firstname'] . '_' . $model['lastname']]) . '-' . $model['user_id'];
 
                     return '<div class="admin">
 
@@ -305,22 +305,25 @@ use \app\components\TranslitWidget;
                         <ul class="event-galley next-course">
 
                             <?php foreach ($activePsychologists as $psychologist): ?>
+                                <?php
+                                $link = TranslitWidget::widget(['link' => $psychologist['firstname'] . '_' . $psychologist['lastname']]) . '-' . $psychologist['user_id'];
+                                ?>
                                 <li>
                                     <div class="thumb">
-                                        <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">
+                                        <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
                                             <img alt="" class="thumb"
                                                  src="<?= Image::getUserProfilePhoto($psychologist['user_id']) ?>">
                                         </a>
                                     </div>
                                     <div class="text">
                                         <h4>
-                                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">
+                                            <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">
                                                 <?= $psychologist['firstname'] . ' ' . $psychologist['lastname'] ?>
                                             </a>
                                         </h4>
                                         <div class="gap"></div>
                                         <p>
-                                            <a href="<?= Url::base() . '/psychologists/profile?id=' . $psychologist['user_id'] ?>">Посмотреть
+                                            <a href="<?= Url::base() . '/psychologists/profile/' . $link ?>">Посмотреть
                                                 профиль</a>
                                         </p>
                                     </div>

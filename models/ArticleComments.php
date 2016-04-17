@@ -49,8 +49,19 @@ class ArticleComments extends \yii\db\ActiveRecord {
         ];
     }
 
+    public function getCommentOwner()
+    {
+        return $this->hasOne(Profile::className(), ['user_id' => 'user_id']);
+    }
+
     public static function getArticleComments($articleId) {
         $query = ArticleComments::find();
+        //$query->addSelect('article_comments.*,profile.firstname,profile.lastname');
+        $query->with('commentOwner');
+        //$query->innerJoin('profile', 'profile.user_id=article_comments.user_id');
+        $query->andFilterWhere([
+            'article_id' => $articleId,
+        ]);
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
@@ -62,10 +73,6 @@ class ArticleComments extends \yii\db\ActiveRecord {
                 ]
             ]
         ]);
-        $query->andFilterWhere([
-            'article_id' => $articleId,
-        ]);
-
         return $dataProvider;
     }
 }

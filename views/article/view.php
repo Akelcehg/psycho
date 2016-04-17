@@ -28,7 +28,7 @@ use app\models\Image;
                                 </div>
                                 <div class="blog-comments">
                                     <!--<a href="#"><i class="fa fa-user"></i>David</a>-->
-                                    <a href="#"><i class="fa fa-calendar"></i><?= $model['created_at'] ?>?</a>
+                                    <i class="fa fa-calendar"></i> <?= $model['created_at'] ?>
                                     <!--<a class="pull-right" href="#"><i class="fa fa-comment"></i>35 Comments</a>-->
                                 </div>
                             </div>
@@ -64,25 +64,28 @@ use app\models\Image;
                                 <div class="col-md-12">
                                     <div class="comments">
                                         <h2>Latest Comments</h2>
-
                                         <ul>
-
                                             <?php $widget = ListView::begin([
                                                 'dataProvider' => $articleCommentsList,
                                                 'summary' => '',
                                                 'itemOptions' => ['class' => 'item'],
                                                 'itemView' => function ($model, $key, $index, $widget) {
+                                                    $link = TranslitWidget::widget(['link' => $model['commentOwner']['firstname'] . '_' . $model['commentOwner']['lastname']]) . '-' . $model['commentOwner']['user_id'];
+                                                    $content = '<li>
+                                                    <div class="thumb" style="width: 70px;">
+                                                        <a href="' . Url::base() . '/psychologists/profile/' . $link . '">
+                                                        <img class="img-responsive"
+                                                        src="' . Image::getUserProfilePhoto($model['commentOwner']['user_id']) . '" alt=""></a>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h4><a href="' . Url::base() . '/psychologists/profile/' . $link . '">
+                                                        ' . $model['commentOwner']['firstname'] . ' ' . $model['commentOwner']['lastname'] . '
+                                                        </a></h4>
+                                                        <p class="date">' . $model['created_at'] . '</p>
+                                                        <p>' . $model['text'] . '</p>
+                                                    </div>
 
-                                                    $content = '<li><div class="thumb">
-                                                <a href="#"><img src="../images/comment-img.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h4><a href="#">John Doe</a></h4>
-                                                <p class="date">' . $model['created_at'] . '</p>
-                                                <p>' . $model['text'] . '</p>
-                                            </div>
-
-                                        </li>';
+                                                </li>';
                                                     return $content;
                                                 },
                                             ]) ?>

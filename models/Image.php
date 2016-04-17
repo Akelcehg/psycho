@@ -174,11 +174,11 @@ class Image extends Model {
 
     public static function getUserSmallProfilePhoto($psychologistId) {
 
-        $directory = 'img/profile_photos/' . $psychologistId . '/';
+        $directory = 'images/profile_photos/' . $psychologistId . '/';
 
         $logo = glob($directory . "logo_small.*");
         if ($logo) return Url::base() . '/' . $logo[0];
-        else return Url::base() . '/img/team/img_blank_small.jpg';
+        else return Url::base() . '/images/img_blank_small.jpg';
     }
 
     public function getSmallProfilePhoto() {
