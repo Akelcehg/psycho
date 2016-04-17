@@ -2,6 +2,8 @@
 
 use app\components\TranslitWidget;
 use app\models\Article;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use yii\widgets\ListView;
 use yii\helpers\Url;
 
@@ -69,8 +71,23 @@ use yii\helpers\Url;
                     <div class="widget search">
                         <h2><i class="fa fa-search"></i>Искать статью</h2>
 
-                        <p><input type="text" class="form-control" placeholder="Введите слова для поиска"></p>
-                        <button class="btn-style">Искать</button>
+                        <?php $form = ActiveForm::begin([
+                            'action' => ['index'],
+                            'method' => 'get',
+                        ]); ?>
+
+                        <?= $form->field($searchModel, 'text')->textInput([
+                            'class' => "form-control",
+                            'placeholder' => "Введите слова для поиска"
+                        ])->label(false) ?>
+
+                        <?= Html::submitButton('Искать', ['class' => 'btn-style']) ?>
+
+
+                        <?php ActiveForm::end(); ?>
+
+                        <!--                        <p><input type="text" class="form-control" placeholder="Введите слова для поиска"></p>
+                                                <button class="btn-style">Искать</button>-->
                     </div>
                     <div class="widget widget-course-categories">
                         <h2>Выбрать статью по категории</h2>

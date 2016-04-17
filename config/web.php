@@ -50,15 +50,15 @@ $config = [
             'showScriptName' => false,
             'rules' => [
 
-                'article/<title>' => 'article/view',
-
                 'psychologists/profile/<name>' => 'psychologists/profile',
 
                 'video/<title>' => 'video/view',
 
                 'trainings/index' => 'trainings/index',
+                'article/index' => 'article/index',
 
                 'trainings/<title>' => 'trainings/view',
+                'article/<title>' => 'article/view',
 
                 'school/<title>' => 'educational-institution/view',
 

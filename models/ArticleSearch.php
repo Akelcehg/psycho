@@ -68,9 +68,14 @@ class ArticleSearch extends Article {
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
         ]);
+        
+        $query->andFilterWhere(['like', 'source', $this->source]);
+            ///->andFilterWhere(['like', 'text', $this->text]);
+        foreach (explode(" ",$this->text) as $qs) {
+            $query->orWhere(['like', 'text', $qs]);
+        }
 
-        $query->andFilterWhere(['like', 'source', $this->source])
-            ->andFilterWhere(['like', 'text', $this->text]);
+        //$query->andOnCondition('Match(text) agaisnst("' . $this->text . '")');
 
         if (isset($params['article'])) {
             $query->join("join", "article_categories_bind", "article_categories_bind.article_id=article.id");
