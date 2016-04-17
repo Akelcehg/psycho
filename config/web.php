@@ -52,13 +52,13 @@ $config = [
 
                 'psychologists/profile/<name>' => 'psychologists/profile',
 
-                'video/<title>' => 'video/view',
-
                 'trainings/index' => 'trainings/index',
                 'article/index' => 'article/index',
+                'video/index' => 'video/index',
 
                 'trainings/<title>' => 'trainings/view',
                 'article/<title>' => 'article/view',
+                'video/<title>' => 'video/view',
 
                 'school/<title>' => 'educational-institution/view',
 

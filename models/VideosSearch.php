@@ -10,24 +10,21 @@ use app\models\Videos;
 /**
  * VideosSearch represents the model behind the search form about `app\models\Videos`.
  */
-class VideosSearch extends Videos
-{
+class VideosSearch extends Videos {
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id', 'user_id'], 'integer'],
-            [['link', 'updated_at', 'created_at'], 'safe'],
+            [['link', 'description', 'updated_at', 'created_at'], 'safe'],
         ];
     }
 
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,8 +36,7 @@ class VideosSearch extends Videos
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Videos::find();
 
         $dataProvider = new ActiveDataProvider([
@@ -62,6 +58,11 @@ class VideosSearch extends Videos
             // $query->where('0=1');
             return $dataProvider;
         }
+
+        foreach (explode(" ", trim($this->description)) as $qs) {
+            $query->orWhere(['like', 'description', $qs]);
+        }
+
 
         $query->andFilterWhere([
             'id' => $this->id,

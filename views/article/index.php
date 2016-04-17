@@ -83,11 +83,8 @@ use yii\helpers\Url;
 
                         <?= Html::submitButton('Искать', ['class' => 'btn-style']) ?>
 
-
                         <?php ActiveForm::end(); ?>
 
-                        <!--                        <p><input type="text" class="form-control" placeholder="Введите слова для поиска"></p>
-                                                <button class="btn-style">Искать</button>-->
                     </div>
                     <div class="widget widget-course-categories">
                         <h2>Выбрать статью по категории</h2>

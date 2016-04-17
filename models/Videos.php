@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Query;
 
 /**
  * This is the model class for table "videos".
@@ -11,6 +12,7 @@ use Yii;
  * @property string $link
  * @property string $img_link
  * @property string $title
+ * @property string $description
  * @property integer $user_id
  * @property string $updated_at
  * @property string $created_at
@@ -66,5 +68,14 @@ class Videos extends \yii\db\ActiveRecord {
         }
 
         return $image_link;
+    }
+
+    public static function getPopularVideos() {
+        $query = new Query();
+        $query->select('videos.*,(SELECT  COUNT(*) FROM videos_comments WHERE videos.id = videos_comments.video_id) as commentsCount');
+        $query->from('videos');
+        $query->orderBy('commentsCount DESC');
+        $query->limit('4');
+        return $query->all();
     }
 }

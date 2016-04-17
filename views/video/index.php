@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use yii\widgets\ListView;
 use app\components\TranslitWidget;
 use yii\helpers\Url;
@@ -54,14 +56,23 @@ use yii\helpers\Url;
 
             </div>
             <div class="col-md-4">
-                <!--SIDEBAR START-->
-                <div class="sidebar">
-                    <!--SEARCH WIDGET START-->
-                    <div class="widget search">
-                        <h2><i class="fa fa-search"></i>Искать видео</h2>
 
-                        <p><input type="text" class="form-control" placeholder="Введите слова для поиска"></p>
-                        <button class="btn-style">Искать</button>
+                <div class="sidebar">
+
+                    <div class="widget search">
+                        <h2><i class="fa fa-search"></i>Искать статью</h2>
+
+                        <?php $form = ActiveForm::begin([
+                            'action' => ['index'],
+                            'method' => 'get',
+                        ]); ?>
+                        <?= $form->field($searchModel, 'description')->textInput([
+                            'class' => "form-control",
+                            'placeholder' => "Введите слова для поиска"
+                        ])->label(false) ?>
+                        <?= Html::submitButton('Искать', ['class' => 'btn-style']) ?>
+                        <?php ActiveForm::end(); ?>
+
                     </div>
                     <div class="widget widget-tags">
                         <h2>Выбрать видео по категории</h2>
@@ -73,7 +84,76 @@ use yii\helpers\Url;
                     </div>
 
                 </div>
-                <!--SIDEBAR END-->
+
+
+                <div class="widget widget-papular-post">
+                    <div class="gap"></div>
+                    <h2>Популярное видео</h2>
+                    <ul>
+                        <!--LIST ITEM START-->
+                        <li>
+                            <h4>Donec neque ipsum, sodales nec trist</h4>
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
+                                         alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p class="date">19 May 2012 <span>Admin</span></p>
+                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
+                            </div>
+                        </li>
+                        <!--LIST ITEM END-->
+                        <!--LIST ITEM START-->
+                        <li>
+                            <h4>Donec neque ipsum, sodales nec trist</h4>
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
+                                         alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p class="date">19 May 2012 <span>Admin</span></p>
+                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
+                            </div>
+                        </li>
+                        <!--LIST ITEM END-->
+                        <!--LIST ITEM START-->
+                        <li>
+                            <h4>Donec neque ipsum, sodales nec trist</h4>
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
+                                         alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p class="date">19 May 2012 <span>Admin</span></p>
+                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
+                            </div>
+                        </li>
+                        <!--LIST ITEM END-->
+                        <!--LIST ITEM START-->
+                        <li>
+                            <h4>Donec neque ipsum, sodales nec trist</h4>
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="http://img.youtube.com/vi/CWUeglOYVAw/default.jpg"
+                                         alt="видео психология"/>
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p class="date">19 May 2012 <span>Admin</span></p>
+                                <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
+                            </div>
+                        </li>
+                        <!--LIST ITEM END-->
+                    </ul>
+                </div>
+
+
             </div>
         </div>
 
