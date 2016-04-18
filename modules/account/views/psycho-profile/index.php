@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
             'id' => 'profileForm'
         ]);
         ?>
-        <div class="col-md-6">
+        <div class="col-md-3">
             <?=
             $form->field($profileModel, 'price')->textInput()
             ?>

@@ -311,6 +311,7 @@ ul.nav.navbar-nav li a:focus {
 .tabs ul.nav.nav-tabs li.active a {
     color: white;
 }
+
 /*********************************************SWITCHES******************************************************************/
 .material-switch > input[type="checkbox"] {
     display: none;
@@ -330,11 +331,12 @@ ul.nav.navbar-nav li a:focus {
     content: '';
     height: 16px;
     margin-top: -8px;
-    position:absolute;
+    position: absolute;
     opacity: 0.3;
     transition: all 0.4s ease-in-out;
     width: 40px;
 }
+
 .material-switch > label::after {
     background: rgb(255, 255, 255);
     border-radius: 16px;
@@ -348,14 +350,17 @@ ul.nav.navbar-nav li a:focus {
     transition: all 0.3s ease-in-out;
     width: 24px;
 }
+
 .material-switch > input[type="checkbox"]:checked + label::before {
     background: inherit;
     opacity: 0.5;
 }
+
 .material-switch > input[type="checkbox"]:checked + label::after {
     background: inherit;
     left: 20px;
 }
+
 /*********************************************SWITCHES END*************************************************************/
 
 img.school-list-img:hover {

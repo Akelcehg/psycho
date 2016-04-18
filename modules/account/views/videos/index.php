@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\ListView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\VideosSearch */
@@ -14,54 +16,43 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="col-md-8">
     <div class="profile-box editing">
 
-
         <h1><?= Html::encode($this->title) ?></h1>
-        <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+        <div class="row">
+            <?php $widget = ListView::begin([
+                'dataProvider' => $dataProvider,
+                'summary' => '',
+                'itemOptions' => ['class' => 'item'],
+                'itemView' => function ($model, $key, $index, $widget) {
+                    $abrvBody = strlen($model['title']) > 30 ? substr($model['title'], 0, 30) . '...' : $model['title'];
+                    return '<div class="col-md-4">
+                <div class="course">
+                    <div class="thumb">
+                        <a href="#"><img alt="" src="' . $model['img_link'] . '"></a>
+                    </div>
+                    <div class="text">
+                        <div class="header">
+                             <h4>' . $abrvBody . '</h4>
+                        </div>
 
-        <?php $widget = GridView::begin([
-            'dataProvider' => $dataProvider,
+                        <div class="course-detail-btn">
 
-            'tableOptions' => [
-                'class' => 'table editing_table'
-            ],
+                        ' . Html::a('<span class="fa fa-trash-o"></span> Удалить',
+                        Url::base() . '/account/videos/delete?id=' . $model['id'], ['data-confirm' => "Are you sure you want to delete this item?",
+                            'data-method' => 'POST']) . '
 
-            'summary' => '',
-            'columns' => [
+                               ' . Html::a('<span class="fa fa-pencil-square-o"></span> Редактировать',
+                        Url::base() . '/account/videos/update?id=' . $model['id']) . '
+                        </div>
+                    </div>
+                </div>
+            </div>';
 
-                [
-                    'header' => 'Название видео',
-                    'attribute' => 'link',
-                ],
+                },
+            ]) ?>
 
-                [
-                    'class' => 'yii\grid\ActionColumn',
-                    'template' => '{view} {update} {delete} {link}',
-                    'buttons' => [
-                        'view' => function ($url, $model) {
-                            return Html::a(
-                                '<span class="fa fa-eye"></span>',
-                                $url);
-                        },
-                        'update' => function ($url, $model) {
-                            return Html::a(
-                                '<span class="fa fa-pencil-square-o"></span>',
-                                $url);
-                        },
-                        'delete' => function ($url, $model) {
-                            return Html::a(
-                                '<span class="fa fa-trash-o"></span>',
-                                $url);
-                        },
-                        /*'link' => function ($url,$model,$key) {
-                            return Html::a('Действие', $url);
-                        },*/
-                    ],
-                ],
-            ],
-        ]); ?>
+            <?php echo $widget->renderItems(); ?>
 
-        <?php echo $widget->renderItems(); ?>
-
+        </div>
 
         <div class="pagination default">
             <?= $widget->renderPager(); ?>

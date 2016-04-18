@@ -100,7 +100,10 @@ class VideosController extends Controller {
                 if ($videoCategories->saveVideosCategories($model->id, Yii::$app->request->post('categories'))) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
-            }
+            } else return $this->render('update', [
+                'model' => $model,
+                'videosCategories' => VideosCategories::getVideosCategories($id)
+            ]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -117,7 +120,6 @@ class VideosController extends Controller {
      */
     public function actionDelete($id) {
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 

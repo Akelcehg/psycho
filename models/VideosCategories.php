@@ -74,7 +74,10 @@ class VideosCategories extends \yii\db\ActiveRecord
     }
 
     private function deleteVideosCategories($videoId) {
-        return VideoCategoriesBind::deleteAll('video_id = ' . $videoId);
+        if (VideoCategoriesBind::findOne('video_id = ' . $videoId)) {
+            return VideoCategoriesBind::deleteAll('video_id = ' . $videoId);
+        }
+        return true;
     }
 
     public static function getVideosCategories($videoId) {
