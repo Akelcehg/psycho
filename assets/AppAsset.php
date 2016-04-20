@@ -58,7 +58,7 @@ class AppAsset extends AssetBundle {
 
 
         'js/client/modernizr.js',
-//        'js/client/skrollr.min.js',
+        'js/client/skrollr.min.js',
         'js/client/functions.js',
         'js/client/card_blur.js',
         'js/client/scripts.js',

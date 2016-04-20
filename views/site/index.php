@@ -71,7 +71,7 @@ echo $this->render('//partials/slider'); ?>
     </div>
 </section>
 
-
+Может убрать. как то не особо входит и похоже многовато всего на мейне
 <section class="happy-parents">
     <div class="container">
         <ul class="bxslider">
@@ -180,10 +180,10 @@ echo $this->render('//partials/slider'); ?>
         <!--SECTION HEADER START-->
         <div class="sec-header">
             <h2>Новые статьи</h2>
-            <p>Тут показывать новые статьи</p>
+            <!--<p>Тут показывать новые статьи</p>
             <span></span>
             <span></span>
-            <span></span>
+            <span></span>-->
         </div>
         <!--SECTION HEADER END-->
         <div class="row">
@@ -192,17 +192,19 @@ echo $this->render('//partials/slider'); ?>
                 <?php
 
                 $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($article['title']))]) . '-' . $article['id'];
+                $userLink = TranslitWidget::widget(['link' => $article['articleAuthor']['firstname'] . '_' . $article['articleAuthor']['lastname']]) . '-' . $article['articleAuthor']['user_id'];
                 $plainBody = strip_tags($article['text']);
-                $abrvBody = strlen($plainBody) > 500 ? substr($plainBody, 0, 500) : $plainBody;
-
-
+                $abrvBody = strlen($plainBody) > 200 ? substr($plainBody, 0, 200) : $plainBody;
                 ?>
                 <div class="col-md-6">
                     <div class="post">
-                        <div class="thumb"><img src="images/posts/post.png" alt=""></div>
-
+                        <a href="<?= Url::base() . '/psychologists/profile/' . $userLink ?>">
+                            <div class="thumb">
+                                <img class="img-responsive"
+                                     src="<?= Image::getUserProfilePhoto($article['psychologist_id']) ?>" alt="">
+                            </div>
+                        </a>
                         <div class="header">
-
                             <div class="post-date">
                                 <p><?= $article['created_at'] ?></p>
                             </div>
@@ -221,7 +223,7 @@ echo $this->render('//partials/slider'); ?>
                             <h2><?= $article['title'] ?></h2>
                             <!--<h5>Writer David / Poetry course</h5>-->
                             <p><?= $abrvBody ?></p>
-                            <a href="<?=Url::base() . '/article/' . $link?>" class="more">Читать статью</a>
+                            <a href="<?= Url::base() . '/article/' . $link ?>" class="more">Читать статью</a>
                         </div>
                     </div>
                 </div>

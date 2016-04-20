@@ -122,8 +122,6 @@ use app\models\Image;
                         </div>
                         <div class="col-md-3">
 
-
-                            <!--TUTOR PROFILE START-->
                             <div class="widget course-tutor">
                                 <div class="thumb">
                                     <img src="<?= Image::getUserMediumProfilePhoto($author['user_id']) ?>" alt="">

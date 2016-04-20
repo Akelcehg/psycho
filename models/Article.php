@@ -54,6 +54,10 @@ class Article extends \yii\db\ActiveRecord {
         ];
     }
 
+    public function getArticleAuthor()
+    {
+        return $this->hasOne(Profile::className(), ['user_id' => 'psychologist_id']);
+    }
 
     public function catch_that_image($text) {
 //        global $post, $posts;

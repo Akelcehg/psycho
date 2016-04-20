@@ -1268,7 +1268,7 @@ PAPULAR POST SECTION START
 }
 
 .post .thumb:after {
-    content: "\f067";
+    content: "\f007";
     font-family: FontAwesome;
     background-color: #fff;
     border-radius: 100%;

@@ -2,12 +2,14 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Url;
+use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Events';
+$this->title = 'Ваши тренинги';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="col-md-9">
@@ -15,49 +17,44 @@ $this->params['breadcrumbs'][] = $this->title;
         <h1><?= Html::encode($this->title) ?></h1>
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-
-
-        <?php $widget = GridView::begin([
+        <?php $widget = ListView::begin([
             'dataProvider' => $dataProvider,
-
-            'tableOptions' => [
-                'class' => 'table editing_table'
-            ],
-
             'summary' => '',
-            'columns' => [
+            'itemOptions' => ['class' => 'item'],
+            'itemView' => function ($model, $key, $index, $widget) {
 
-                [
-                    'header' => 'Название тренинга',
-                    'attribute' => 'name',
-                ],
+                return '<div class="event-vanue" style="margin-top: 10px;">
+                    <table>
+                        <tbody>
+                         <tr>
+                            <td><p class="color">Название :</p></td>
+                            <td>' . $model['name'] . '</td>
+                            <td style="text-align: left;">
+                               ' . Html::a('<span class="fa fa-pencil-square-o fa-2x"></span> Редактировать',
+                    Url::base() . '/account/event/update?id=' . $model['id']) . '
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="color">Дата :</p></td>
+                            <td><i class="fa fa-calendar-o"></i>' . $model['date'] . ' <i
+                                        class="fa fa-clock-o"></i>' . $model['duration'] . '</td>
+                                        <td style="text-align: left;">
+                        ' . Html::a('<span class="fa fa-trash-o fa-2x"></span> Удалить',
+                    Url::base() . '/account/event/delete?id=' . $model['id'], ['data-confirm' => "Are you sure you want to delete this item?",
+                        'data-method' => 'POST']) . '
+                                        </td>
+                        </tr>
+                        <tr>
+                            <td><p class="color">Адрес :</p></td>
+                            <td><i class="fa fa-map-marker"></i> ' . $model['address'] . '</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+        </div>';
 
-                [
-                    'class' => 'yii\grid\ActionColumn',
-                    'template' => '{view} {update} {delete} {link}',
-                    'buttons' => [
-                        'view' => function ($url, $model) {
-                            return Html::a(
-                                '<span class="fa fa-eye"></span>',
-                                $url);
-                        },
-                        'update' => function ($url, $model) {
-                            return Html::a(
-                                '<span class="fa fa-pencil-square-o"></span>',
-                                $url);
-                        },
-                        'delete' => function ($url, $model) {
-                            return Html::a(
-                                '<span class="fa fa-trash-o"></span>',
-                                $url);
-                        },
-                        /*'link' => function ($url,$model,$key) {
-                            return Html::a('Действие', $url);
-                        },*/
-                    ],
-                ],
-            ],
-        ]); ?>
+            },
+        ]) ?>
 
         <?php echo $widget->renderItems(); ?>
 

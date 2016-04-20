@@ -57,7 +57,7 @@ class SiteController extends Controller {
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => Events::find()->limit('4')->orderBy('id DESC')->all(),
-            'articlesList' => Article::find()->limit('2')->orderBy('id DESC')->all(),
+            'articlesList' => Article::find()->with('articleAuthor')->limit('2')->orderBy('id DESC')->all(),
         ]);
     }
 
