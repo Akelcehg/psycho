@@ -23,12 +23,15 @@ use yii\widgets\ListView;
                         <img class="img-responsive" src="<?= $logo ?>" alt="">
                     </div>
                     <div class="text">
+                        <div class="gap"></div>
                         <p class="tutor-name color"><?= $profile['firstname'] . ' ' . $profile['lastname'] ?></p>
                         <!--<p>Senior Lecturer - Marketing</p>-->
                         <p><i class="fa fa-map-marker"></i> <?= $city_name['name'] ?></p>
+                        <?php if ($profile['has_diplom']){?>
                         <a href="#" data-toggle="tooltip" title="Данный психолог подтвердил свой диплом">
                             <img src="<?= Url::base() ?>/images/diploma.png" class="img-responsive"/>
                         </a>
+                        <?php } ?>
                         <!--<p><i class="fa fa-link"></i> <a href="#" class="color">jackymichaels.com</a></p>
                         <p><i class="fa fa-clock-o"></i> Joind June 2005</p>-->
                         <!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
