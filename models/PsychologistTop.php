@@ -39,10 +39,14 @@ class PsychologistTop extends \yii\db\ActiveRecord {
     public function attributeLabels() {
         return [
             'id' => 'ID',
-            'psychologist_id' => 'Psychologist ID',
+            'psychologist_id' => 'Психолог для топа',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
         ];
+    }
+
+    public function getTopProfile() {
+        return $this->hasOne(Profile::className(), ['user_id' => 'psychologist_id']);
     }
 
     public function getTopPsychologists($amount = null) {
@@ -54,7 +58,10 @@ class PsychologistTop extends \yii\db\ActiveRecord {
 
         if ($amount) {
             $query->limit($amount);
-            return $query->all();
+            return $psychologistsTopDataProvider = new ActiveDataProvider([
+                'query' => $query,
+            ]);
+            //return $query->all();
         }
 
         return $psychologistsTopDataProvider = new ActiveDataProvider([

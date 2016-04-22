@@ -1,6 +1,7 @@
 <?php use app\components\TranslitWidget;
 use app\models\Image;
 use yii\helpers\Url;
+use yii\widgets\ListView;
 
 echo $this->render('//partials/slider'); ?>
 
@@ -75,46 +76,56 @@ echo $this->render('//partials/slider'); ?>
 <section class="happy-parents">
     <div class="container">
         <ul class="bxslider">
-            <!--LIST ITEM START-->
-            <li>
-                <div class="thumb">
-                    <a href="#"><img src="images/parents-says.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h2>What Our Happy Parents Say</h2>
-                    <p>Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo, ac aliquet
-                        magna. Vivamus ullamcorper mollis leo, at sagittis quis.</p>
-                    <a href="#" class="signature">Jack Marine</a>
-                </div>
-            </li>
 
-            <!--LIST ITEM END-->
-            <!--LIST ITEM START-->
-            <li>
-                <div class="thumb">
-                    <a href="#"><img src="images/parents-says2.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h2>What Our Happy Parents Say</h2>
-                    <p>Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo, ac aliquet
-                        magna. Vivamus ullamcorper mollis leo, at sagittis quis.</p>
-                    <a href="#" class="signature">Ricky Richerd</a>
-                </div>
-            </li>
-            <!--LIST ITEM END-->
-            <!--LIST ITEM START-->
-            <li>
-                <div class="thumb">
-                    <a href="#"><img src="images/parents-says3.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h2>What Our Happy Parents Say</h2>
-                    <p>Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo, ac aliquet
-                        magna. Vivamus ullamcorper mollis leo, at sagittis quis.</p>
-                    <a href="#" class="signature">Fiona Thomson</a>
-                </div>
-            </li>
-            <!--LIST ITEM END-->
+            <?php $widget = ListView::begin(array(
+                'dataProvider' => $topPsychologists,
+                'summary' => '',
+                'itemOptions' => array('class' => 'item'),
+                'itemView' => function ($model, $key, $index, $widget) {
+                    $link = TranslitWidget::widget(['link' => $model['firstname'] . '_' . $model['lastname']]) . '-' . $model['user_id'];
+                    $abrvBody = strlen($model['experience']) > 200 ? mb_substr($model['experience'], 0, 200) . '...' : $model['experience'];
+                    return '<li>
+                                <div class="thumb col-md-2">
+                                        <a href="' . Url::base() . '/psychologists/profile/' . $link . '">
+
+                                            <img alt="" class="thumb img-responsive"
+                                                 src="' . Image::getUserProfilePhoto($model['user_id']) . '">
+                                        </a>
+                                    </div>
+                                <div class="text">
+                                    <h2>' . $model['firstname'] . ' ' . $model['lastname'] . '</h2>
+                                    <p>' . $abrvBody . '</p>
+                                </div>
+                            </li>';
+                },
+            )) ?>
+
+            <?php echo $widget->renderItems(); ?>
+            <!--
+                        <li>
+                            <div class="thumb">
+                                <a href="#"><img src="images/parents-says2.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <h2>What Our Happy Parents Say</h2>
+                                <p>Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo, ac aliquet
+                                    magna. Vivamus ullamcorper mollis leo, at sagittis quis.</p>
+                                <a href="#" class="signature">Ricky Richerd</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="thumb">
+                                <a href="#"><img src="images/parents-says3.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <h2>What Our Happy Parents Say</h2>
+                                <p>Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo, ac aliquet
+                                    magna. Vivamus ullamcorper mollis leo, at sagittis quis.</p>
+                                <a href="#" class="signature">Fiona Thomson</a>
+                            </div>
+                        </li>
+                       -->
         </ul>
     </div>
 </section>

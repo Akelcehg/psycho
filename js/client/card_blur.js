@@ -369,9 +369,9 @@ $( document ).ready(function() {
         sourceImages.push($(this).attr('src'));
     });
 
-    $('.avatar img').each(function(index){
+    /*$('.avatar img').each(function(index){
         $(this).attr('src', sourceImages[index] );
-    });
+    });*/
 
     var drawBlur = function(canvas, image) {
         var w = canvas.width;

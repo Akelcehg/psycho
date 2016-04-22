@@ -54,6 +54,7 @@ class SiteController extends Controller {
     public function actionIndex() {
 
         $topPsychologists = new PsychologistTop();
+
         return $this->render('index', [
             'topPsychologists' => $topPsychologists->getTopPsychologists(4),
             'eventsList' => Events::find()->limit('4')->orderBy('id DESC')->all(),
