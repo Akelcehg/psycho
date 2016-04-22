@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
     <div class="form-group">
 
         <div class="profile-checkbox" style="display: table;">
-            <ul>
+            <ul class="list-inline">
                 <?php foreach ($videosCategories as $category): ?>
                     <li>
                         <input id="category<?= $category['id'] ?>" class="css-checkbox" type="checkbox" name="categories[]"

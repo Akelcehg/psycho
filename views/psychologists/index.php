@@ -44,8 +44,7 @@ use \app\components\TranslitWidget;
                                     </div>
                                 </div>
                             </div>
-                            <img class="src-image" src="' . Image::getUserProfilePhoto($model['user_id']) . '"/>
-                            ';
+                            <img class="src-image" src="' . Image::getUserProfilePhoto($model['user_id']) . '"/>';
                 },
             )) ?>
             <?php echo $widget->renderItems(); ?>
@@ -236,9 +235,16 @@ use \app\components\TranslitWidget;
                 'itemView' => function ($model, $key, $index, $widget) {
 
                     $link = TranslitWidget::widget(['link' => $model['firstname'] . '_' . $model['lastname']]) . '-' . $model['user_id'];
+                    $diplomaImage = '';
+                    $abrvBody = strlen($model['experience']) > 100 ? mb_substr($model['experience'], 0, 100) . '...' : $model['experience'];
+                    if ($model['has_diplom']) {
+                        $diplomaImage = '<a href="#" data-toggle="tooltip" title="Данный психолог подтвердил свой диплом">
+                                        <img src="' . Url::base() . '/images/diploma.png" class="img-responsive"/></a>';
+                    }
 
                     return '<div class="admin">
-
+                                <div class="row">
+                                <div class="col-md-10">
                                     <div class="col-md-3">
                                         <a href="' . Url::base() . '/psychologists/profile/' . $link . '">
                                             <img class="img-responsive" alt="" src="' . Image::getUserProfilePhoto($model['user_id']) . '"/>
@@ -246,23 +252,16 @@ use \app\components\TranslitWidget;
                                     </div>
 
                                     <div class="text">
-                                        <div class="social-icons">
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Facebook"><i
-                                                    class="fa fa-facebook"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Linkedin"><i
-                                                    class="fa fa-linkedin"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Dribbble"><i
-                                                    class="fa fa-dribbble"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Twitter"><i
-                                                    class="fa fa-twitter"></i></a>
-                                            <a title="" data-toggle="tooltip" href="#" data-original-title="Google Plus"><i
-                                                    class="fa fa-google-plus"></i></a>
-                                        </div>
                                         <h2 style="text-align: left; ">
                                         <a href="' . Url::base() . '/psychologists/profile/' . $link . '">' . $model['firstname'] . " " . $model['lastname'] . ' </a>
                                         </h2>
-                                        <p style="text-align: left; ">' . nl2br($model['experience']) . '</p>
+                                        <p style="text-align: left; ">' . nl2br($abrvBody) . '</p>
                                     </div>
+                                    </div>
+                                    <div class="col-md-2">' . $diplomaImage . '</div>
+
+                                    </div>
+
                                 </div>';
                 },
             )) ?>
