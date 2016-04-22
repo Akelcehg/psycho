@@ -14,13 +14,15 @@ class ProfileSearch extends Profile {
 
     public $directions;
     public $problems;
+    public $pricef;
+    public $pricet;
 
     /**
      * @inheritdoc
      */
     public function rules() {
         return [
-            [['id', 'user_id', 'city_id', 'price', 'has_diplom'], 'integer'],
+            [['id', 'user_id', 'city_id', 'price', 'pricef', 'pricet', 'has_diplom'], 'integer'],
             [['firstname', 'directions', 'problems', 'lastname', 'gender', 'secondname', 'education', 'experience', 'updated_at', 'created_at'], 'safe'],
         ];
     }
@@ -64,11 +66,18 @@ class ProfileSearch extends Profile {
             $query->join("inner join", "psychologist_problems", "psychologist_problems.psychologist_id=profile.user_id");
             $query->andOnCondition("psychologist_problems.problem_id in ('" . $this['problems'] . "')");
         }
+        if ($this['pricef'] != '') {
+            $query->andOnCondition('price >= ' . $this->pricef);
 
+        }
+        if ($this['pricet'] != '') {
+            $query->andOnCondition('price <= ' . $this->pricet);
+
+        }
         $query->andFilterWhere([
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'price' => $this->price,
+            //'price' => $this->price,
             'has_diplom' => $this->has_diplom,
             'city_id' => $this->city_id,
             'updated_at' => $this->updated_at,

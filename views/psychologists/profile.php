@@ -26,6 +26,9 @@ use yii\widgets\ListView;
                         <p class="tutor-name color"><?= $profile['firstname'] . ' ' . $profile['lastname'] ?></p>
                         <!--<p>Senior Lecturer - Marketing</p>-->
                         <p><i class="fa fa-map-marker"></i> <?= $city_name['name'] ?></p>
+                        <a href="#" data-toggle="tooltip" title="Данный психолог подтвердил свой диплом">
+                            <img src="<?= Url::base() ?>/images/diploma.png" class="img-responsive"/>
+                        </a>
                         <!--<p><i class="fa fa-link"></i> <a href="#" class="color">jackymichaels.com</a></p>
                         <p><i class="fa fa-clock-o"></i> Joind June 2005</p>-->
                         <!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor

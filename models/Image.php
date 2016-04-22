@@ -191,6 +191,14 @@ class Image extends Model {
         else return 'img/team/img_blank_small.jpg';
     }
 
+    public static function getPsychologistDiploma($psychologistId) {
+
+        $directory = 'images/diplomas/' . $psychologistId . '/';
+
+        $logo = glob($directory . "diploma.*");
+        if ($logo) return $logo[0];
+    }
+
     public function saveImageWithTransparentBg($width, $height, $img, $new_width, $new_height, $path) {
         $image = imagecreatetruecolor($width, $height);
         imagealphablending($image, false);
@@ -234,6 +242,14 @@ class Image extends Model {
         if (!file_exists($directory)) mkdir($directory);
         $image = $this->createImage($directory, $name);
         return $this->saveResized($image, $width, $height, $directory, $name);
+    }
+
+    public function saveDiploma($psychologistId) {
+        $directory = $this->base_image_path . 'diplomas/' . $psychologistId . '/';
+        $name = 'diploma';
+        if (!file_exists($this->base_image_path . 'diplomas')) mkdir('images/diplomas');
+        if (!file_exists($directory)) mkdir($directory);
+        return $image = $this->createImage($directory, $name);
     }
 
     public function createImage($directory, $name) {

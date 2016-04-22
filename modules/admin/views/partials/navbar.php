@@ -259,7 +259,7 @@ use yii\helpers\Url;
                             <a href="<?= Url::base() ?>/admin/problems">Список проблем</a>
                         </li>
                         <li>
-                            <a href="<?= Url::base() ?>/admin/users/diplomas">Подтверждение диплома</a>
+                            <a href="<?= Url::base() ?>/admin/diplomas">Подтверждение диплома</a>
                         </li>
                         <li>
                             <a href="<?= Url::base() ?>/admin/psychologists/top">Топ психологов</a>

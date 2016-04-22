@@ -170,6 +170,40 @@ use \app\components\TranslitWidget;
 
                                     )->label(false) ?>
                                 </div>
+                                <!--               <div class="col-md-2">
+                                                   <label>Стоимость сеанса от</label>
+                                                   <div class="form-group">
+                                                       <input type="text" name="pricef"/>
+                                                   </div>
+                                               </div>
+                                               <div class="col-md-2">
+                                                   <label>Стоимость сеанса до</label>
+                                                   <div class="form-group">
+                                                       <input type="text" name="pricet"/>
+                                                   </div>
+                                               </div>-->
+                                <div class="col-md-2">
+                                    <label>Стоимость сеанса от</label>
+                                    <?= $form->field($searchModel, 'pricef')->textInput()->label(false) ?>
+                                </div>
+                                <div class="col-md-2">
+                                    <label>Стоимость сеанса до</label>
+                                    <?= $form->field($searchModel, 'pricet')->textInput()->label(false) ?>
+                                </div>
+                                <div class="col-md-2">
+                                    <label>Наличие диплома</label>
+
+                                    <?= $form->field($searchModel, 'has_diplom')->dropDownList([
+                                        "" => 'Неважно',
+                                        "1" => 'Только с дипломом'
+                                    ])->label(false) ?>
+
+                                    <!--- <select class="input-block-level" name="ProfileSearch[gender]">
+                                        <option value="">Выберите пол</option>
+                                        <option value="мужской">Мужской</option>
+                                        <option value="женский">Женский</option>
+                                    </select> -->
+                                </div>
                                 <!-- <div class="col-md-3">
                                      <label>Education Level</label>
                                      <input type="text" placeholder="Enter your Education Level"
@@ -194,9 +228,9 @@ use \app\components\TranslitWidget;
                                     ])->label(false) ?>
 
                                     <div class="profile-checkbox">
-                                        <ul>
+                                        <ul class="list-inline">
                                             <?php foreach ($psychologistProblems as $problem): ?>
-                                                <li style="display: table-cell;">
+                                                <li>
 
                                                     <input id="problem<?= $problem['id'] ?>" class="css-checkbox"
                                                            type="checkbox"
@@ -220,9 +254,9 @@ use \app\components\TranslitWidget;
                                         'id' => "hidden_direction"
                                     ])->label(false) ?>
                                     <div class="profile-checkbox">
-                                        <ul>
+                                        <ul class="list-inline">
                                             <?php foreach ($psychologistDirections as $direction): ?>
-                                                <li style="display: table-cell;">
+                                                <li>
 
                                                     <input id="direction<?= $direction['id'] ?>"
                                                            class="css-checkbox"

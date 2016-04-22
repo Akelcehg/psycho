@@ -18,8 +18,4 @@ class UsersController extends Controller {
             'dataProvider' => $dataProvider,
         ]);
     }
-
-    public function actionDiplomas() {
-        return $this->render('diplomas');
-    }
 }

@@ -114,4 +114,37 @@ use yii\widgets\ActiveForm;
 
 
     </div>
+
+    <div class="profile-box editing">
+        <h2>Наличие диплома</h2>
+
+        <?php if (!$sentDiplomaRequest) { ?>
+            <?php
+            $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data'],
+                'action' => Url::base() . '/account/psycho-profile/update-diploma',
+            ]);
+            ?>
+
+            <?= $form->field(new \app\models\Image(), 'image_file')->fileInput(['id' => 'imgInp'])->label('Выберите фото диплома') ?>
+
+            <div style="color: white; display: table; ">
+                <?= Html::submitButton('Отправить диплом на проверку', ['class' => 'btn-style']) ?>
+            </div>
+
+            <?php ActiveForm::end(); ?>
+        <?php } else { ?>
+            <?php if ($sentDiplomaRequest['is_approved'] == '1') { ?>
+                <div class="alert alert-success" role="alert">Ваш диплом подтвердили. Пользователи будут
+                    видеть у вас в профиле этот знак
+                </div>
+                <div class="col-md-3">
+
+                    <img src="<?= Url::base() ?>/images/diploma.png" class="img-responsive"/>
+
+                </div>
+            <?php } else { ?>
+                <div class="alert alert-info" role="alert">Вы уже отправили заявку на проверку диплома</div>
+            <?php } ?>
+        <?php } ?>
+    </div>
 </div>
