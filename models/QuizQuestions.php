@@ -46,6 +46,10 @@ class QuizQuestions extends \yii\db\ActiveRecord {
         ];
     }
 
+    public function getQuizAnswers() {
+        return $this->hasMany(QuestionsAnswers::className(), ['question_id' => 'id']);
+    }
+
     public function saveQuizQuestions($questions, $quiz_id) {
 
         $questionAnswers = new QuestionsAnswers();

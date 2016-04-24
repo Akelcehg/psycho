@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\QuestionsAnswers;
 use app\models\QuizQuestions;
 use app\models\QuizResults;
 use Yii;
@@ -62,9 +63,6 @@ class QuizController extends Controller {
         $quizResults = new QuizResults();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //if ($model->load(Yii::$app->request->post())) {
-
-            //var_dump(Yii::$app->request->post('question'));
             if ($quizQuestion->saveQuizQuestions(Yii::$app->request->post('question'), $model['id'])) {
                 if ($quizResults->saveQuizResults($model['id'], Yii::$app->request->post('results'))) {
                     return $this->redirect(['view', 'id' => $model->id]);
@@ -89,11 +87,34 @@ class QuizController extends Controller {
     function actionUpdate($id) {
         $model = $this->findModel($id);
 
+        $quizQuestions = QuizQuestions::find()->where(['quiz_id' => $id])
+            ->with('quizAnswers')
+            ->all();
+        $quizResults = QuizResults::findAll(['quiz_id' => $id]);
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+
+            foreach ($quizQuestions as $question) {
+                QuestionsAnswers::deleteAll(['question_id' => $question['id']]);
+            }
+
+            QuizResults::deleteAll(['quiz_id' => $id]);
+            QuizQuestions::deleteAll(['quiz_id' => $id]);
+
+            $newQuizQuestion = new QuizQuestions();
+            $newQuizResults = new QuizResults();
+
+            if ($newQuizQuestion->saveQuizQuestions(Yii::$app->request->post('question'), $model['id'])) {
+                if ($newQuizResults->saveQuizResults($model['id'], Yii::$app->request->post('results'))) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
+            //return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'quizQuestions' => $quizQuestions,
+                'quizResults' => $quizResults
             ]);
         }
     }
@@ -107,8 +128,8 @@ class QuizController extends Controller {
     public
     function actionDelete($id) {
         $this->findModel($id)->delete();
-        QuizResults::deleteAll(['quiz_id'=>$id]);
-        QuizQuestions::deleteAll(['quiz_id'=>$id]);
+        QuizResults::deleteAll(['quiz_id' => $id]);
+        QuizQuestions::deleteAll(['quiz_id' => $id]);
         return $this->redirect(['index']);
     }
 

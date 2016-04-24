@@ -19,11 +19,11 @@ $(document).ready(function () {
         }
 
         for (var i = 0; i < quizQuestionsNumber.val(); i++) {
-            questionsDiv.append("<div class='form-group required'>" +
+            questionsDiv.append("<div class='form-group required well'>" +
                 "<label style='width: 100%;'> Введи сам вопрос<input type='text' class='form-control' name='question[][name]' maxlength='50'></label>" +
                 "<label>Кол-во ответов" +
                 "<input type='text' class='form-control answersNumberInput'>" +
-                "<input class='btn btn-info createQuizAnswersButton' id='" + i + "' type='button' value='Создать ответы'></label></div>" +
+                "<input class='btn btn-info createQuizAnswersButton' style='margin-top: 10px;' id='" + i + "' type='button' value='Создать ответы'></label></div>" +
                 "<div class='questionAnswersDiv'></div>");
         }
 
@@ -55,12 +55,13 @@ $(document).ready(function () {
             return alert("Введи кол-во результатов теста");
         }
 
+        testResultsValuesDiv.empty();
         for (var i = 0; i < resultsNumberInput.val(); i++) {
             testResultsValuesDiv.append("<div class='form-group required'>" +
                 "<label>Введи от балов<input type='text' class='form-control' name='results[" + i + "][from]' required></label>" +
                 "<label>Введи до балов<input type='text' class='form-control' name='results[" + i + "][to]' required></label>" +
                 "<label style='width: 100%;'>Введи результат" +
-                "<textarea class='form-control' name='results[" + i + "][text]' />" +
+                "<textarea class='form-control' name='results[" + i + "][text]'></textarea>" +
                 "</label>" +
                 "</div>");
         }
