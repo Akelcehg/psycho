@@ -72,66 +72,7 @@ echo $this->render('//partials/slider'); ?>
     </div>
 </section>
 
-Может убрать. как то не особо входит и похоже многовато всего на мейне
-<section class="happy-parents">
-    <div class="container">
-        <ul class="bxslider">
-
-            <?php $widget = ListView::begin(array(
-                'dataProvider' => $topPsychologists,
-                'summary' => '',
-                'itemOptions' => array('class' => 'item'),
-                'itemView' => function ($model, $key, $index, $widget) {
-                    $link = TranslitWidget::widget(['link' => $model['firstname'] . '_' . $model['lastname']]) . '-' . $model['user_id'];
-                    $abrvBody = strlen($model['experience']) > 200 ? mb_substr($model['experience'], 0, 200) . '...' : $model['experience'];
-                    return '<li>
-                                <div class="thumb col-md-2">
-                                        <a href="' . Url::base() . '/psychologists/profile/' . $link . '">
-
-                                            <img alt="" class="thumb img-responsive"
-                                                 src="' . Image::getUserProfilePhoto($model['user_id']) . '">
-                                        </a>
-                                    </div>
-                                <div class="text">
-                                    <h2>' . $model['firstname'] . ' ' . $model['lastname'] . '</h2>
-                                    <p>' . $abrvBody . '</p>
-                                </div>
-                            </li>';
-                },
-            )) ?>
-
-            <?php echo $widget->renderItems(); ?>
-            <!--
-                        <li>
-                            <div class="thumb">
-                                <a href="#"><img src="images/parents-says2.png" alt=""></a>
-                            </div>
-                            <div class="text">
-                                <h2>What Our Happy Parents Say</h2>
-                                <p>Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo, ac aliquet
-                                    magna. Vivamus ullamcorper mollis leo, at sagittis quis.</p>
-                                <a href="#" class="signature">Ricky Richerd</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="thumb">
-                                <a href="#"><img src="images/parents-says3.png" alt=""></a>
-                            </div>
-                            <div class="text">
-                                <h2>What Our Happy Parents Say</h2>
-                                <p>Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo, ac aliquet
-                                    magna. Vivamus ullamcorper mollis leo, at sagittis quis.</p>
-                                <a href="#" class="signature">Fiona Thomson</a>
-                            </div>
-                        </li>
-                       -->
-        </ul>
-    </div>
-</section>
-
-
-<section class="gray-bg">
+<section>
     <div class="container">
         <!--SECTION HEADER START-->
         <div class="sec-header">
@@ -205,7 +146,7 @@ echo $this->render('//partials/slider'); ?>
                 $link = TranslitWidget::widget(['link' => str_replace(' ', '_', trim($article['title']))]) . '-' . $article['id'];
                 $userLink = TranslitWidget::widget(['link' => $article['articleAuthor']['firstname'] . '_' . $article['articleAuthor']['lastname']]) . '-' . $article['articleAuthor']['user_id'];
                 $plainBody = strip_tags($article['text']);
-                $abrvBody = strlen($plainBody) > 200 ? substr($plainBody, 0, 200) : $plainBody;
+                $abrvBody = strlen($plainBody) > 150 ? substr($plainBody, 0, 150) : $plainBody;
                 ?>
                 <div class="col-md-6">
                     <div class="post">
